@@ -163,7 +163,7 @@ export function getPortfolioLongPage(singlePortfolio){
           <h2>
             <a href="#">
               <span>
-                <img src="assets/images/arrow-left.png" alt="previous project" />
+                <img src="../../arrow-left.png" alt="previous project" />
               </span>
               NEXT <br />
               PROJECT
@@ -179,7 +179,7 @@ export function getPortfolioLongPage(singlePortfolio){
           <h2>
             <a href="#">
               <span>
-                <img src="assets/images/arrow-right.png" alt="next project" />
+                <img src="../../arrow-right.png" alt="next project" />
               </span>
               NEXT <br />
               PROJECT
@@ -290,7 +290,7 @@ export function getPortfolioShortPage(singlePortfolio){
         <h2>
           <a href="#">
             <span>
-              <img src="../public/arrow-left.png" alt="previous project" />
+              <img src="../../arrow-left.png" alt="previous project" />
             </span>
             NEXT <br />
             PROJECT
@@ -306,7 +306,7 @@ export function getPortfolioShortPage(singlePortfolio){
         <h2>
           <a href="#">
             <span>
-              <img src="../public/arrow-right.png" alt="next project" />
+              <img src="../../arrow-right.png" alt="next project" />
             </span>
             NEXT <br />
             PROJECT
