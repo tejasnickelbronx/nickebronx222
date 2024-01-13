@@ -4,6 +4,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import SiteHeader from '../../components/siteheader.js';
 import SiteFooter from '../../components/sitefooter.js';
+import useScript from '../../hooks/useScript.js';
 import {getItemsPortfolioPage} from '../../lib/getPortfolioSections.js';
 
 
@@ -28,7 +29,10 @@ export default function About({portfoliositems}) {
 
   const header = portfoliositems.data.pageBy.portfolioPageFields.pageHeading;
   const allitems = portfoliositems.data.pageBy.portfolioPageFields.portfolioItems;
-  
+  useScript('https://code.jquery.com/jquery-3.7.0.min.js');
+    useScript('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js');
+    useScript('https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.min.js');
+    useScript('./custominit.js');
 
     return(
         <>
@@ -81,10 +85,10 @@ export default function About({portfoliositems}) {
                 <Link href={{pathname: "/portfolios/"+portitem.portfolioItemBig.slug+"/"+portitem.portfolioItemBig.portfolioId,}}
                   className="learn-btn color-yellow" >
                 {portitem.portfolioItemBig.portfoliolongfields.portfolioHeaderLong[0] &&(
-                    <Image src={portitem.portfolioItemBig.portfoliolongfields.portfolioHeaderLong[0].headerImage.sourceUrl} width={1200} height={500} /> 
+                    <Image src={portitem.portfolioItemBig.portfoliolongfields.portfolioHeaderLong[0].headerImage.sourceUrl} width={1200} height={500} alt={portitem.portfolioItemBig.slug} /> 
                 )}
                 {portitem.portfolioItemBig.portfolioshortfields.portfolioHeader[0] &&(
-                    <img src={portitem.portfolioItemBig.portfolioshortfields.portfolioHeader[0].headerImage.sourceUrl}/> 
+                    <img src={portitem.portfolioItemBig.portfolioshortfields.portfolioHeader[0].headerImage.sourceUrl} alt={portitem.portfolioItemBig.slug}/> 
                 )}
                 
                 </Link>
@@ -102,11 +106,13 @@ export default function About({portfoliositems}) {
                 <Link href={{pathname: "/portfolios/"+portitem.portfolioItemSide1.slug+"/"+portitem.portfolioItemSide1.portfolioId,}}
                   className="learn-btn color-yellow" >
                 {portitem.portfolioItemSide1.portfoliolongfields.portfolioHeaderLong[0] &&(
-                    <Image src={portitem.portfolioItemSide1.portfoliolongfields.portfolioHeaderLong[0].headerImage.sourceUrl} width={1200} height={500} className="portsideimg" /> 
+                    <Image src={portitem.portfolioItemSide1.portfoliolongfields.portfolioHeaderLong[0].headerImage.sourceUrl} width={1200} height={500} className="portsideimg" 
+                    alt={portitem.portfolioItemSide1.slug} /> 
                     
                 )}
                 {portitem.portfolioItemSide1.portfolioshortfields.portfolioHeader[0] &&(
-                    <Image src={portitem.portfolioItemSide1.portfolioshortfields.portfolioHeader[0].headerImage.sourceUrl}  width={600} height={600} className="portsideimg"  /> 
+                    <Image src={portitem.portfolioItemSide1.portfolioshortfields.portfolioHeader[0].headerImage.sourceUrl}  width={600} height={600} className="portsideimg"
+                    alt={portitem.portfolioItemSide1.slug}  /> 
                     
                 )}
                 </Link>
@@ -121,10 +127,12 @@ export default function About({portfoliositems}) {
                 <Link href={{pathname: "/portfolios/"+portitem.portfolioItemSide2.slug+"/"+portitem.portfolioItemSide2.portfolioId,}}
                   className="learn-btn color-yellow" >
                 {portitem.portfolioItemSide2.portfoliolongfields.portfolioHeaderLong[0] &&(
-                    <Image src={portitem.portfolioItemSide2.portfoliolongfields.portfolioHeaderLong[0].headerImage.sourceUrl} width={1200} height={500} className="portsideimg" /> 
+                    <Image src={portitem.portfolioItemSide2.portfoliolongfields.portfolioHeaderLong[0].headerImage.sourceUrl} width={1200} height={500} className="portsideimg"
+                    alt={portitem.portfolioItemSide2.slug} /> 
                 )}
                 {portitem.portfolioItemSide2.portfolioshortfields.portfolioHeader[0] &&(
-                    <Image src={portitem.portfolioItemSide2.portfolioshortfields.portfolioHeader[0].headerImage.sourceUrl}  width={600} height={600} className="portsideimg" /> 
+                    <Image src={portitem.portfolioItemSide2.portfolioshortfields.portfolioHeader[0].headerImage.sourceUrl}  width={600} height={600} className="portsideimg" 
+                    alt={portitem.portfolioItemSide2.slug} /> 
                 )}
               </Link>
                 </div>

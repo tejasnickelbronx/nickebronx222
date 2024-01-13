@@ -9,6 +9,7 @@ import {getSinglePost,getallPost} from '../../lib/getBlogsSection.js';
 
 import SiteHeader from '../../components/siteheader.js';
 import SiteFooter from '../../components/sitefooter.js';
+import useScript from '../../hooks/useScript.js';
 
 import {getAllPortfolioSlug} from '../../lib/getPortfolioSections.js';
 
@@ -36,14 +37,14 @@ export async function getStaticPaths(){
     const testetete  = await getallPost();
     const allpostitems = testetete.data.posts.nodes;
     console.log(allpostitems);
-    const allpostslugs = [];
+    let allpostslugs = [];
     allpostitems.map((postslug, index)=>( 
         allpostslugs.push("/blogs/"+postslug.slug+"/"+postslug.postId)
     ))
     console.log(allpostslugs);
   return{
       paths: allpostslugs,
-      fallback: true,
+      fallback: false,
 
 }}
 
@@ -61,7 +62,10 @@ export default function ServicePage({singlepostdata}) {
   // const searchParams = useSearchParams()
   // console.log(searchParams.get('serviceID'));
   
-  
+  useScript('https://code.jquery.com/jquery-3.7.0.min.js');
+    useScript('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js');
+    useScript('https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.min.js');
+    useScript('./custominit.js');
     return(
         <>
         <Head>
@@ -90,7 +94,7 @@ export default function ServicePage({singlepostdata}) {
     </div>
     <div className="singlepost-image">
       
-      <Image src={postcontent.featuredImage.node.sourceUrl} width={1400} height={300} className="blogimage"/>
+      <Image src={postcontent.featuredImage.node.sourceUrl} width={1400} height={300} className="blogimage" alt={postcontent.title}/>
     </div>
     <div className="singlepost-category">
         {
@@ -115,7 +119,7 @@ export default function ServicePage({singlepostdata}) {
         <div dangerouslySetInnerHTML={{ __html: relatedpost.content.substring(0, 300)}}></div>
       </div>
       <div className="relatedimg">
-      <Link href={"/blogs/"+relatedpost.slug+"/"+relatedpost.postId}><Image src={relatedpost.featuredImage.node.sourceUrl} width={600} height={300} className="blogimage"/></Link>
+      <Link href={"/blogs/"+relatedpost.slug+"/"+relatedpost.postId}><Image src={relatedpost.featuredImage.node.sourceUrl} width={600} height={300} className="blogimage" alt={relatedpost.slug}/></Link>
       </div>
     </div>
   </div>

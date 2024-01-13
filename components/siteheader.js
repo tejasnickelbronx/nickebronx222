@@ -11,7 +11,7 @@ export default function SiteHeader({className}){
             <div className="header-inner">
             <div className="logo-sec">
             <Link href="/" target="_self" >
-                <Image src="/logo.png" width={95} height={55}  />
+                <Image src="/logo.png" width={95} height={55} alt="Nickelbronx"  />
                 </Link>
             </div>
             <div className="toggle-button">

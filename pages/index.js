@@ -4,6 +4,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import SiteHeader from '../components/siteheader.js';
 import SiteFooter from '../components/sitefooter.js';
+import useScript from '../hooks/useScript.js';
 import GetPortfolioImagebyType from '../components/getPortfolioImagebyType.js';
 
 import {getsection1} from '../lib/getHomeSection.js';
@@ -49,9 +50,14 @@ export default function Home({pagefields, testisection,portfolioitems}) {
 
   
    console.log(ourservicesitems);
-  
+   useScript('https://code.jquery.com/jquery-3.7.0.min.js');
+   useScript('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js');
+   useScript('https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.min.js');
+   useScript('./custominit.js');
+   useScript('./locomativeinit.js');
    
-   const recordcount = allportfolioarr.length/5
+   const recordcount = allportfolioarr.length/5;
+   
   return (
     <>
     <Head>
@@ -60,17 +66,19 @@ export default function Home({pagefields, testisection,portfolioitems}) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
         
-        <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" async  />
+
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" async  />
-        <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.min.js" async ></script>
-	      <link rel="stylesheet" type="text/css" media="screen" href="assets/css/locomotive-scroll.css" async ></link>
-        <script src="/custominit.js" async></script>
-        <script src="/locomativeinit.js" async></script>
+        <link rel="stylesheet" type="text/css" media="screen" href="./locomotive-scroll.css" async ></link>
+        {/* <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" async  /> */}        
+        {/* <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.min.js" async ></script> */}	      
+        {/* <script src="/custominit.js" async></script>
+        <script src="/locomativeinit.js" async></script> */}
+        
         
       </Head>
       <SiteHeader className="headercls"/>
-     
+      
   {/* Header Section End */}
   {/* Banner Section Start */}
   <section className="banner-main">
@@ -98,8 +106,8 @@ export default function Home({pagefields, testisection,portfolioitems}) {
   <section className="blank-part">
     <div className="container">
       <div className="video-part">
-        <video id="myVideo" controls="" muted autoPlay>
-          <source src="/homevideo.mp4" type="video/mp4" />
+        <video id="myVideo" controls="" muted autoPlay loop> 
+          <source src="https://nickelbronx1.wpenginepowered.com/video/homevideo.mp4" type="video/mp4" />
           <source src="movie.ogg" type="video/ogg" />
         </video>
       </div>
@@ -150,7 +158,7 @@ export default function Home({pagefields, testisection,portfolioitems}) {
                   <div className="service-box">
                     <div  className={`service-box-inner sboxbg_${index}`}>
                       <div className="image">
-                        <img src={serviceitem.serviceIcon.sourceUrl} />
+                        <img src={serviceitem.serviceIcon.sourceUrl} alt={serviceitem.serviceTitle} />
                       </div>
                       <div className="box-title">                        
                         <h5 ><Link dangerouslySetInnerHTML={{ __html: serviceitem.serviceTitle}} href={"/services/"+serviceitem.link.slug+"/"+serviceitem.link.pageId}></Link></h5>
@@ -313,28 +321,28 @@ alltestimonial.map((testiItem, index)=>(
     <div className="logo-inner">
       <div className="logo-box-main">
         <div className="logo-box-inner bg-light-blue">
-          <img src="/our-latest-awards.png" />
+          <img src="/our-latest-awards.png" alt="logoclient" />
         </div>
       </div>
       <div className="logo-box-main">
-        <div className="logo-box-inner bg-pink">
-          <img src="/marcom.png" />
+        <div className="logo-box-inner bg-pink" >
+          <img src="/marcom.png" alt="logoclient" />
         </div>
       </div>
       <div className="logo-box-main">
-        <div className="logo-box-inner bg-yellow">
-          <img src="/hermes.png" />
+        <div className="logo-box-inner bg-yellow" >
+          <img src="/hermes.png" alt="logoclient" />
         </div>
       </div>
       <div className="logo-box-main">
         <div className="logo-box-inner">
-          <img src="/clutch.png" />
+          <img src="/clutch.png" alt="logoclient" />
         </div>
       </div>
     </div>
   </section>
   
-
+  
   <SiteFooter className="footercls"/>
 
     </>

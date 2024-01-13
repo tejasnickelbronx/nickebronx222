@@ -3,7 +3,7 @@ import Image from 'next/image'
 import  { useState, useEffect } from 'react';
 import SiteHeader from '../components/siteheader.js';
 import SiteFooter from '../components/sitefooter.js';
-
+import useScript from '../hooks/useScript.js';
 
 export async function getStaticProps(){
   
@@ -26,6 +26,10 @@ export default function Merch({merchfields}) {
 
   useEffect( () => { document.querySelector("body").classList.add("transparent-header") } );
   useEffect( () => { document.querySelector(".header").classList.add("whitetext") } );
+  useScript('https://code.jquery.com/jquery-3.7.0.min.js');
+  useScript('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js');
+  useScript('https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.min.js');
+  useScript('./custominit.js');
     return (
         <>
         <Head>
@@ -34,8 +38,7 @@ export default function Merch({merchfields}) {
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <link rel="icon" href="/favicon.ico" />
             
-            <script src="https://code.jquery.com/jquery-3.7.0.min.js" async></script>
-            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" async />
+            
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" async/>
             <script src="/custominit.js" async></script>
         </Head>
@@ -60,10 +63,10 @@ export default function Merch({merchfields}) {
         </div>
       </div>
     </div>
-    <Image src="/merch1.png" width={300} height={300} className="mergeimage1" />
-    <Image src="/merch2.png" width={500} height={300} className="mergeimage2" />
-    <Image src="/merch3.png" width={500} height={300} className="mergeimage3" />
-    <Image src="/merch4.png" width={300} height={300} className="mergeimage4" />
+    <Image src="/merch1.png" width={300} height={300} className="mergeimage1" alt="merchtext" />
+    <Image src="/merch2.png" width={500} height={300} className="mergeimage2" alt="merchtext" />
+    <Image src="/merch3.png" width={500} height={300} className="mergeimage3" alt="merchtext"  />
+    <Image src="/merch4.png" width={300} height={300} className="mergeimage4" alt="merchtext" />
   </section>
 </>
 

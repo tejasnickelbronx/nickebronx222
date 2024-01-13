@@ -685,3 +685,7 @@ width: 100%;
 .client-intro-sec .client-inner-sec .intro-box:first-child, .client-intro-sec .client-inner-sec .intro-box:nth-child(3) {
   margin-top: 0px;
 }
+.singlepost-content p span{
+
+  color: #FFF;
+}

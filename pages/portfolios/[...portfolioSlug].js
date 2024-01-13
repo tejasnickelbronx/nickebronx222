@@ -9,12 +9,13 @@ import GetPortfolioImagebyType from '../../components/getportfolioByType.js';
 
 import SiteHeader from '../../components/siteheader.js';
 import SiteFooter from '../../components/sitefooter.js';
-
+import useScript from '../../hooks/useScript.js';
 
 export async function getStaticProps({params} ){
     const portfolioID       = params.portfolioSlug[1];
     const getportfoliodata  = await getSinglePortfolio(portfolioID);
     const allSlugsssss =  await getAllPortfolioSlug();
+    console.log(params);
     
   return {
     props:{
@@ -29,27 +30,46 @@ export async function getStaticProps({params} ){
 export async function getStaticPaths(){ 
     
    
-  
+     const  allSlugs =  await getAllPortfolioSlug()
     
-    // const allPaths = [];
-    // const portslugs = allSlugs.data.allPortfolio.nodes;
-    // await allSlugs.data.allPortfolio.nodes.map((ps,index)=>(
-    //     allPaths.push (+ps.slug+"/"+ps.portfolioId)
+     const allPaths = [];
+     const portslugs = allSlugs.data.allPortfolio.nodes;
+    //  allSlugs.data.allPortfolio.nodes.map((ps,index)=>(
+    //   allPaths.push ("/portfolios/"+ps.slug+"/"+ps.portfolioId)
        
-    //  ));
-    console.log("Helllllla"); 
+    //   ));
+
+    // console.log(allSlugs); 
+    // return{
+    //     paths: portslugs.map((ps)=>({
+    //         params:{ portfolioSlug:[`${ps.slug}`, `${ps.portfolioId}`]}
+    //       })), 
+    //     fallback: false,  
+    // }
+
+      let aaaaa = [];
+      
+      portslugs.map((ps)=>(
+         aaaaa.push("/portfolios/"+ps.slug+"/"+ps.portfolioId)
+        
+      ));
+      console.log(aaaaa);
     return{
-        paths: ["/portfolios/joe-mechlinski/571","/portfolios/milkify/660"],
-        fallback: true,
-  
-  }}
+      paths: aaaaa,
+      fallback: false,
+    }
+
+}
 
   export default function PortfolioPage({singleportfolio, another, paths}) {
     
    
 
     useEffect( () => { document.querySelector("body").classList.add("transparent-header") } );
-
+    useScript('https://code.jquery.com/jquery-3.7.0.min.js');
+    useScript('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js');
+    useScript('https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.min.js');
+    useScript('./custominit.js');
         return( 
             <>
                 <Head>

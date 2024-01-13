@@ -37,7 +37,7 @@ export default function SiteFooter({className, globalsettings}){
                 <div className="menu-item">
                   <a href="">
                    
-                    <Image src="/footer-logo.png" width={250} height={35}  />
+                    <Image src="/footer-logo.png" width={250} height={35} alt="Nickelbronx"  />
                   </a>
                   <p>
                     Full Service Design <br />

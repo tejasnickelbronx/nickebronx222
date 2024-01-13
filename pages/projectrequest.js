@@ -4,7 +4,7 @@ import Link from 'next/link';
 import  { useState, useEffect } from 'react';
 import SiteHeader from '../components/siteheader.js';
 import SiteFooter from '../components/sitefooter.js';
-
+import useScript from '../hooks/useScript.js';
 
 export async function getStaticProps(){
   
@@ -24,7 +24,10 @@ export async function getStaticProps(){
 
 export default function Merch({merchfields}) {
     
-
+  useScript('https://code.jquery.com/jquery-3.7.0.min.js');
+  useScript('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js');
+  useScript('https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.min.js');
+  useScript('./custominit.js');
   
     return (
         <>

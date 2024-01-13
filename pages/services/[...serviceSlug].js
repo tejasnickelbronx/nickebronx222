@@ -7,6 +7,7 @@ import {getSingleService} from '../../lib/getServicesSection.js';
 import {getAllTestimonial} from '../../lib/testimonial.js';
 import SiteHeader from '../../components/siteheader.js';
 import SiteFooter from '../../components/sitefooter.js';
+import useScript from '../../hooks/useScript.js';
 
 
 
@@ -39,7 +40,7 @@ export async function getStaticPaths(){
         "/services/ux-ui-design/416",
         "/services/website-development/417",
       ],
-      fallback: true,
+      fallback: false,
 
 }}
 
@@ -55,6 +56,10 @@ export default function ServicePage({servicePageData, testisection}) {
   // console.log(searchParams.get('serviceID'));
   
   const alltestimonial = testisection.data.allTestimonial.nodes;
+    useScript('https://code.jquery.com/jquery-3.7.0.min.js');
+    useScript('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js');
+    useScript('https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.min.js');
+    useScript('./custominit.js');
     return(
         <>
         <Head>

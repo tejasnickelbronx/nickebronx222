@@ -45,7 +45,7 @@ export function getPortfolioLongPage(singlePortfolio){
         <>
     <section className="family-law-banner">
       <div className="image-sec">
-        <Image src={portfolioheader.headerImage.sourceUrl} height={1000} width={500} />
+        <Image src={portfolioheader.headerImage.sourceUrl} height={1000} width={500} alt={headertitle} />
       </div>
       <div className="container2">
         <div className="banner-title-sec">
@@ -89,13 +89,13 @@ export function getPortfolioLongPage(singlePortfolio){
         <div className="brand-inner-sec">
           <div className="brand-box">
             
-            <Image src={portbrandguid.brandImage1.sourceUrl} height={600} width={400} />
+            <Image src={portbrandguid.brandImage1.sourceUrl} height={600} width={400} alt={headertitle}/>
           </div>
           <div className="brand-box">
-          <Image src={portbrandguid.brandImage2.sourceUrl} height={600} width={400} />
+          <Image src={portbrandguid.brandImage2.sourceUrl} height={600} width={400} alt={headertitle} />
           </div>
           <div className="brand-box">
-          <Image src={portbrandguid.brandImage3.sourceUrl} height={600} width={400} />
+          <Image src={portbrandguid.brandImage3.sourceUrl} height={600} width={400} alt={headertitle} />
           </div>
           <div className="brand-box">
             <div className="box-content">
@@ -120,13 +120,13 @@ export function getPortfolioLongPage(singlePortfolio){
         </div>
         <div className="functionality-info-sec">
           <div className="functionality-image">
-              <Image src={websitedesign.sideImage1.sourceUrl} height={600} width={400} />
+              <Image src={websitedesign.sideImage1.sourceUrl} height={600} width={400} alt={headertitle} />
           </div>
           <div className="functionality-image">
-              <Image src={websitedesign.sideImage1.sourceUrl} height={600} width={400} />
+              <Image src={websitedesign.sideImage1.sourceUrl} height={600} width={400} alt={headertitle} />
           </div>
           <div className="functionality-image w-full">
-              <Image src={websitedesign.bigImage.sourceUrl} height={600} width={400} />
+              <Image src={websitedesign.bigImage.sourceUrl} height={600} width={400} alt={headertitle} />
           </div>
         </div>
       </div>
@@ -142,14 +142,14 @@ export function getPortfolioLongPage(singlePortfolio){
         <div className="takeaways-content-sec">
           <div className="takeaways-image-wrap w-full">
           {takeaways.bigImage && (
-              <Image src={takeaways.bigImage.sourceUrl} height={600} width={400} />
+              <Image src={takeaways.bigImage.sourceUrl} height={600} width={400} alt={headertitle} />
           )}
           </div>
           <div className="takeaways-image-wrap"> 
-          <Image src={takeaways.sideImage1.sourceUrl} height={600} width={400} />
+          <Image src={takeaways.sideImage1.sourceUrl} height={600} width={400} alt={headertitle} />
           </div>
           <div className="takeaways-image-wrap">
-          <Image src={takeaways.sideImage2.sourceUrl} height={600} width={400} />
+          <Image src={takeaways.sideImage2.sourceUrl} height={600} width={400} alt={headertitle} />
           </div>
         </div>
       </div>
@@ -163,7 +163,7 @@ export function getPortfolioLongPage(singlePortfolio){
           <h2>
             <a href="#">
               <span>
-                <img src="assets/images/arrow-left.png" />
+                <img src="assets/images/arrow-left.png" alt="previous project" />
               </span>
               NEXT <br />
               PROJECT
@@ -179,7 +179,7 @@ export function getPortfolioLongPage(singlePortfolio){
           <h2>
             <a href="#">
               <span>
-                <img src="assets/images/arrow-right.png" />
+                <img src="assets/images/arrow-right.png" alt="next project" />
               </span>
               NEXT <br />
               PROJECT
@@ -290,7 +290,7 @@ export function getPortfolioShortPage(singlePortfolio){
         <h2>
           <a href="#">
             <span>
-              <img src="/arrow-left.png" />
+              <img src="/arrow-left.png" alt="previous project" />
             </span>
             NEXT <br />
             PROJECT
@@ -306,7 +306,7 @@ export function getPortfolioShortPage(singlePortfolio){
         <h2>
           <a href="#">
             <span>
-              <img src="/arrow-right.png" />
+              <img src="/arrow-right.png" alt="next project" />
             </span>
             NEXT <br />
             PROJECT

@@ -4,6 +4,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import SiteHeader from '../../components/siteheader.js';
 import SiteFooter from '../../components/sitefooter.js';
+import useScript from '../../hooks/useScript.js';
 import {getFeaturedPost, getallPost} from '../../lib/getBlogsSection.js';
 
 
@@ -31,6 +32,10 @@ export default function About({allblogs,featuredblog}) {
   const featuredpost = featuredblog.data.posts.nodes[0];
   console.log(featuredpost);
 
+    useScript('https://code.jquery.com/jquery-3.7.0.min.js');
+    useScript('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js');
+    useScript('https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.min.js');
+    useScript('./custominit.js');
     return(
         <>
         <Head>
@@ -91,7 +96,7 @@ export default function About({allblogs,featuredblog}) {
                     <div className="featured-inner">
                         <div className="image-sec">
                         <Link href={"/blogs/"+featuredpost.slug+"/"+featuredpost.postId}>
-                            <Image src={featuredpost.featuredImage.node.sourceUrl} width={1200} height={300} className="blogimage"/>
+                            <Image src={featuredpost.featuredImage.node.sourceUrl} width={1200} height={300} className="blogimage" alt={featuredpost.slug}/>
                         </Link>
                         </div>
                         <div className="content-sec">
@@ -109,7 +114,7 @@ export default function About({allblogs,featuredblog}) {
                             <div className="item branding">
                                 <div className="image-sec"> {postitem.featuredImage &&                                       
                                     <Link href={"/blogs/"+postitem.slug+"/"+postitem.postId}>
-                                        <Image src={postitem.featuredImage.node.sourceUrl} width={300} height={100} className="blogimage"/>
+                                        <Image src={postitem.featuredImage.node.sourceUrl} width={300} height={100} className="blogimage" alt={postitem.slug}/>
                                     </Link> 
                                     }
                                 </div>
