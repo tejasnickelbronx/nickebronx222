@@ -1,0 +1,2456 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+html{scroll-behavior: smooth;}
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Kallisto';
+    src: url('../fonts/Kallisto-BoldItalic.eot');
+    src: url('../fonts/Kallisto-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Kallisto-BoldItalic.woff2') format('woff2'),
+        url('../fonts/Kallisto-BoldItalic.woff') format('woff'),
+        url('../fonts/Kallisto-BoldItalic.ttf') format('truetype'),
+        url('../fonts/Kallisto-BoldItalic.svg#Kallisto-BoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kallisto';
+    src: url('../fonts/Kallisto-Heavy.eot');
+    src: url('../fonts/Kallisto-Heavy.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Kallisto-Heavy.woff2') format('woff2'),
+        url('../fonts/Kallisto-Heavy.woff') format('woff'),
+        url('../fonts/Kallisto-Heavy.ttf') format('truetype'),
+        url('../fonts/Kallisto-Heavy.svg#Kallisto-Heavy') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kallisto';
+    src: url('../fonts/Kallisto-Bold.eot');
+    src: url('../fonts/Kallisto-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Kallisto-Bold.woff2') format('woff2'),
+        url('../fonts/Kallisto-Bold.woff') format('woff'),
+        url('../fonts/Kallisto-Bold.ttf') format('truetype'),
+        url('../fonts/Kallisto-Bold.svg#Kallisto-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kallisto';
+    src: url('../fonts/Kallisto-HeavyItalic.eot');
+    src: url('../fonts/Kallisto-HeavyItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Kallisto-HeavyItalic.woff2') format('woff2'),
+        url('../fonts/Kallisto-HeavyItalic.woff') format('woff'),
+        url('../fonts/Kallisto-HeavyItalic.ttf') format('truetype'),
+        url('../fonts/Kallisto-HeavyItalic.svg#Kallisto-HeavyItalic') format('svg');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kallisto';
+    src: url('../fonts/Kallisto-Light.eot');
+    src: url('../fonts/Kallisto-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Kallisto-Light.woff2') format('woff2'),
+        url('../fonts/Kallisto-Light.woff') format('woff'),
+        url('../fonts/Kallisto-Light.ttf') format('truetype'),
+        url('../fonts/Kallisto-Light.svg#Kallisto-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kallisto';
+    src: url('../fonts/Kallisto-LightItalic.eot');
+    src: url('../fonts/Kallisto-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Kallisto-LightItalic.woff2') format('woff2'),
+        url('../fonts/Kallisto-LightItalic.woff') format('woff'),
+        url('../fonts/Kallisto-LightItalic.ttf') format('truetype'),
+        url('../fonts/Kallisto-LightItalic.svg#Kallisto-LightItalic') format('svg');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kallisto';
+    src: url('../fonts/Kallisto-Medium.eot');
+    src: url('../fonts/Kallisto-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Kallisto-Medium.woff2') format('woff2'),
+        url('../fonts/Kallisto-Medium.woff') format('woff'),
+        url('../fonts/Kallisto-Medium.ttf') format('truetype'),
+        url('../fonts/Kallisto-Medium.svg#Kallisto-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kallisto';
+    src: url('../fonts/Kallisto-ThinItalic.eot');
+    src: url('../fonts/Kallisto-ThinItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Kallisto-ThinItalic.woff2') format('woff2'),
+        url('../fonts/Kallisto-ThinItalic.woff') format('woff'),
+        url('../fonts/Kallisto-ThinItalic.ttf') format('truetype'),
+        url('../fonts/Kallisto-ThinItalic.svg#Kallisto-ThinItalic') format('svg');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kallisto';
+    src: url('../fonts/Kallisto-MediumItalic.eot');
+    src: url('../fonts/Kallisto-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Kallisto-MediumItalic.woff2') format('woff2'),
+        url('../fonts/Kallisto-MediumItalic.woff') format('woff'),
+        url('../fonts/Kallisto-MediumItalic.ttf') format('truetype'),
+        url('../fonts/Kallisto-MediumItalic.svg#Kallisto-MediumItalic') format('svg');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kallisto';
+    src: url('../fonts/Kallisto-Thin.eot');
+    src: url('../fonts/Kallisto-Thin.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Kallisto-Thin.woff2') format('woff2'),
+        url('../fonts/Kallisto-Thin.woff') format('woff'),
+        url('../fonts/Kallisto-Thin.ttf') format('truetype'),
+        url('../fonts/Kallisto-Thin.svg#Kallisto-Thin') format('svg');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'CCSignLanguageW00';
+    src: url('../fonts/CCSignLanguageW00-Regular.woff2') format('woff2'),
+        url('../fonts/CCSignLanguageW00-Regular.woff') format('woff'),
+        url('../fonts/CCSignLanguageW00-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'CCSignLanguageW00';
+    src: url('../fonts/CCSignLanguageW00-Regular_1.woff2') format('woff2'),
+        url('../fonts/CCSignLanguageW00-Regular_1.woff') format('woff'),
+        url('../fonts/CCSignLanguageW00-Regular_1.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'CCSignLanguageW00';
+    src: url('../fonts/CCSignLanguageW00-Regular_2.woff2') format('woff2'),
+        url('../fonts/CCSignLanguageW00-Regular_2.woff') format('woff'),
+        url('../fonts/CCSignLanguageW00-Regular_2.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Proxima Nova Rg';
+    src: url('../fonts/ProximaNova-Regular.woff2') format('woff2'),
+        url('../fonts/ProximaNova-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+
+.container,
+.container2 {
+    width: 100%;
+    max-width: 1512px;
+    margin: 0 auto; 
+}
+.container2 {
+    max-width: 1250px;
+}
+.about-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+a.btn-cust {
+    color: #fff;
+    text-align: center;
+    font-family: 'Kallisto';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 22px;
+    letter-spacing: 1.8px;
+    text-decoration: none;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+}
+a.btn-cust:before {
+    position: absolute;
+    content: '';
+    width: 187px;
+    height: 50px;
+    background-image: url(../public/button-border.png);
+    left: -40px;
+    top: -13px;
+    right: 0;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+a.btn-cust:hover {
+    color: #FF2093 !important;
+}
+
+.bg-black {
+    background-color: #1F1F1F;
+}
+.bg-pink {
+    background-color: #FF2093;
+}
+.color-pink {
+    color: #FF2093;
+}
+.bg-light-blue {
+    background-color: #00C2FF;
+}
+.color-light-blue {
+    color: #00C2FF;
+}
+.bg-yellow {
+    background-color: #FFDC2A;
+}
+.color-yellow {
+    color: #FFDC2A;
+}
+
+.pink-blue-text-bg {
+    background: linear-gradient(90deg, #FF2093 1.81%, #00C2FF 42%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.blue-yellow-text-bg {
+    background: linear-gradient(90deg, #00C2FF 1.81%, #FFDC2A 80.9%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.yellow-pink-text-bg {
+    background: linear-gradient(90deg, #FFDC2A 1.81%, #FF2093 80.9%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Header CSS Start */
+
+.header {
+    width: 100%;
+    padding: 23px 20px 0 0px;
+    background-color: #1F1F1F;
+}
+section.header {
+    /* position: absolute; */
+    z-index: 999;
+    position: relative;
+    transition: all 0.3s linear !important;
+}
+.header .header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .menu-sec ul {
+    padding: 0;
+    display: flex;
+    margin: 0;
+}
+.header .menu-sec ul li {
+    list-style: none;
+    margin: 0 43px;
+}
+.header .menu-sec ul li.button {
+    position: relative;
+    margin-left: 57px;
+    z-index: 2;
+}
+.header .menu-sec ul li.button:before {
+    position: absolute;
+    content: '';
+    width: 187px;
+    height: 50px;
+    background-image: url(../public/button-border.png);
+    left: -45px;
+    top: -15px;
+    right: 0;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+.header .menu-sec ul li a {
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Kallisto';
+    transition: all 0.2s ease-in-out;
+}
+.header .menu-sec ul li a:hover {
+    color: #FF2093;
+}
+.header .toggle-button {
+    width: 50px;
+    height: 50px;
+    display: none;
+}
+.header .toggle-button-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+}
+.header .toggle-button-inner>span {
+    width: 40px;
+    height: 4px;
+    background-color: #000;
+    margin: 3px 0;
+    display: block;
+    border-radius: 10px;
+    transition: all 0.4s ease-in-out;
+}
+.header .header-inner .logo-sec a>img {
+    transition: all 0.3s linear !important;
+}
+
+/* Menu Toggle CSS Start */
+
+.menubar-btn-area {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.menubar-btn {
+    width: 34px;
+    height: 21px;
+    position: relative;
+    margin: 0px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+.menubar-btn span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: #FF2093;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.25s ease-in-out;
+    -moz-transition: 0.25s ease-in-out;
+    -o-transition: 0.25s ease-in-out;
+    transition: 0.25s ease-in-out;
+}
+.menubar-btn span:nth-child(1) {
+    top: 2px;
+}
+.menubar-btn span:nth-child(2),
+.menubar-btn span:nth-child(3) {
+    top: 10px;
+}
+.menubar-btn span:nth-child(4) {
+    bottom: 0px;
+}
+.menubar-btn.open span:nth-child(1) {
+    top: 10px;
+    width: 0%;
+    left: 50%;
+}
+.menubar-btn.open span:nth-child(2) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.menubar-btn.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+.menubar-btn.open span:nth-child(4) {
+    top: 10px;
+    width: 0%;
+    left: 50%;
+}
+
+/* Menu Toggle CSS End */
+
+/* Header Sticky CSS Start */
+
+.header.sticky {
+    position: fixed;
+    padding: 10px 20px 10px 20px;
+}
+
+/* Header Sticky CSS End */
+
+/* Header CSS End */
+
+/* Banner Section CSS Start */
+
+.banner-main {
+    width: 100%;
+    position: relative;
+    padding: 120px 0 310px 0;
+    background-color: #1F1F1F;
+    background-image: url(../public/banner-bg.png);
+    background-size: 100%;
+}
+.banner-title h1 {
+    max-width: 768px;
+    margin: 0 auto 25px auto;
+    text-align: center;
+    font-family: Kallisto;
+    font-size: 80px;
+    font-weight: 700;
+    color: #F7F9FC;
+    line-height: normal;
+    text-transform: uppercase;
+}
+.banner-title h1>span {
+    background: linear-gradient(90deg, #FF2093 34.92%, #00C2FF 98.6%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: italic;
+}
+.banner-title p {
+    max-width: 662px;
+    margin: 0 auto 40px auto;
+    color: #ABABAB;
+    text-align: center;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 34px;
+}
+.banner-title .banner-button {
+    display: flex;
+    justify-content: center;
+}
+
+/* Banner Section CSS End */
+
+/* Blank Part Section CSS Start */
+
+.blank-part {
+    width: 100%;
+    position: relative;
+    margin-top: -240px;
+}
+.blank-part .image-part img {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+}
+.video-part video {
+    width: 100%;
+}
+
+/* Blank Part Section CSS End */
+
+/* Who We Are Section Start */
+
+.we-are-sec {
+    width: 100%;
+    position: relative;
+    padding: 86px 0 120px 0;
+}
+.we-are-inner {
+    display: flex;
+    align-items: center;
+}
+.we-are-inner .title-part {
+    width: 50%;
+    padding-right: 84px;
+}
+.we-are-inner .title-part h2 {
+    color: #1F1F1F;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 23px;
+    letter-spacing: 6.4px;
+    margin: 0 0 6px 0;
+}
+.we-are-inner .title-part h3 {
+    color: #1F1F1F;
+    font-family: Kallisto;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: 4px;
+    margin: 0;
+}
+.we-are-inner .title-part h3>span {
+    position: relative;
+    z-index: 2;
+}
+.we-are-inner .title-part h3>span:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 25px;
+    background: linear-gradient(90deg, rgba(16,195,241,1) 0%, rgba(138,208,140,1) 50%, rgba(252,220,46,1) 100%);
+    z-index: -1;
+    bottom: 0;
+}
+.we-are-inner .discription-part {
+    width: 50%;
+}
+.we-are-inner .discription-part p {
+    color: #1F1F1F;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 31px;
+    margin: 0 0 40px 0;
+}
+.we-are-inner .discription-part>a.btn-cust {
+    color: #1F1F1F;
+    margin-left: 40px;
+}
+
+/* Who We Are Section End */
+
+
+/* Service Section CSS Start */
+
+.service-main-sec {
+    width: 100%;
+    position: relative;
+    padding: 82px 0 145px 0;
+    background-color: #1F1F1F;
+    overflow: hidden;
+}
+.service-main-sec .service-title {
+    margin-bottom: 70px;
+}
+.service-main-sec .service-title h2 {
+    color: #F7F9FC;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 23px;
+    letter-spacing: 6.4px;
+    margin: 0 0 10px 0;
+}
+.service-main-sec .service-title h3 {
+    color: #F7F9FC;
+    font-family: Kallisto;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin: 0 0 34px 0;
+    display: table;
+}
+.service-main-sec .service-title h3>span {
+    display: block;
+    position: relative;
+    z-index: 2;
+}
+.service-main-sec .service-title h3>span:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 25px;
+    background: linear-gradient(90deg, rgba(243,40,152,1) 0%, rgba(117,120,206,1) 50%, rgba(2,193,255,1) 100%);
+    z-index: -1;
+    bottom: 0;
+}
+.service-main-sec .service-title p {
+    max-width: 869px;
+    color: #F7F9FC;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 31px;
+    margin: 0;
+}
+.service-slider .service-box-inner {
+    min-height: 450px;
+    padding: 50px 50px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.service-slider .service-box-inner img {
+    display: block;
+    margin-left: auto;
+}
+.service-slider .service-box-inner .box-title h4 {
+    color: #F7F9FC;
+    font-family: Kallisto;
+    font-size: 16px;
+    font-weight: 900;
+    line-height: normal;
+    text-transform: uppercase;
+    margin: 0 0 5px 0;
+}
+.service-slider .service-box-inner .box-title h5 {
+    color: #F7F9FC;
+    font-family: Kallisto;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    margin: 0;
+}
+.service-slider {
+    width: 100vw;
+    padding-bottom: 100px;
+}
+.service-slider .swiper-scrollbar {
+    background-color: #F7F9FC;
+    height: 3px;
+    display: flex;
+    align-items: center;
+}
+.service-slider .swiper-scrollbar .swiper-scrollbar-drag {
+    background-color: #FF2093;
+    height: 7px;
+    border-radius: 0;
+}
+
+/* Service Section CSS End */
+
+
+/* Client Section CSS Start */
+
+.client-main-sec {
+    width: 100%;
+    position: relative;
+    padding: 72px 0 130px 0;
+    background-color: #F7F9FC;
+}
+.client-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 115px;
+}
+.client-title .client-count h2 {
+    color: #1F1F1F;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 23px;
+    letter-spacing: 6.4px;
+    margin: 0;
+}
+.client-title .client-count {
+    width: 50%;
+    padding-right: 82px;
+}
+.client-title .client-count h3 {
+    font-family: Kallisto;
+    font-size: 150px;
+    font-weight: 900;
+    line-height: 180px;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #FF2093 1.81%, #00C2FF 80.9%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: -20px 0 0 0;
+}
+.client-title .client-count h4 {
+    color: #1F1F1F;
+    font-family: Kallisto;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin: 0;
+}
+.client-title .client-description {
+    width: 50%;
+}
+.client-title .client-description p {
+    color: #1F1F1F;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 31px;
+    margin: 0 0 40px 0;
+}
+.client-title .client-description a.btn-cust {
+    color: #1F1F1F;
+    margin-left: 30px;
+}
+.client-title .client-description a.btn-cust:before {
+    width: 207px;
+    height: 60px;
+    left: -26px;
+    top: -16px;
+}
+.client-intro-sec {
+    width: 100%;
+    position: relative;
+}
+.client-intro-sec .client-inner-sec {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -28px;
+}
+.client-inner-sec .intro-box {
+    width: 33.3%;
+    padding: 0 28px;
+}
+.client-inner-sec .intro-box-inner .image img {
+    width: 100%;
+}
+.client-inner-sec .intro-box-inner .client-entro {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+.client-inner-sec .intro-box-inner .client-entro h5 {
+    color: #1F1F1F;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+}
+.client-inner-sec .intro-box-inner .client-entro p {
+    color: #ABABAB;
+    text-align: right;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+}
+.client-intro-sec .client-inner-sec .intro-box:first-child,
+.client-intro-sec .client-inner-sec .intro-box:nth-child(3) {
+    margin-top: 174px;
+}
+.client-intro-sec .client-inner-sec .intro-box:nth-child(5),
+.client-intro-sec .client-inner-sec .intro-box:nth-child(8) {
+    margin-top: -174px;
+}
+.client-intro-sec a.btn-cust {
+    color: #1F1F1F;
+    margin: -120px auto 0 auto;
+    display: table;
+}
+
+/* Client Section CSS End */
+
+
+/* Testimonial Section CSS Start */
+
+.testimonial-main {
+    width: 100%;
+    position: relative;
+    padding: 100px 0;
+    background-color: #1F1F1F;
+}
+.testi-box-inner {
+    display: flex;
+    align-items: center;
+}
+.testi-box-inner .testi-img {
+    width: 40%;
+    min-height: 474px;
+    position: relative;
+    z-index: 2;
+    margin-right: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.testi-box-inner .testi-img:before {
+    position: absolute;
+    content: '';
+    width: 437px;
+    height: 474px;
+    background-image: url(../public/testimonial-bg-shap.png);
+    z-index: -1;
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.testi-box-inner .testi-img img {
+    margin: 0 auto;
+    display: block;
+}
+.testi-box-inner .testi-content {
+    width: 60%;
+}
+.testi-box-inner .testi-content h2 {
+    color: #F7F9FC;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    margin: 0 0 15px 0;
+}
+.testi-box-inner .testi-content h3 {
+    color: #F7F9FC;
+    font-family: Kallisto;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 50px;
+    text-transform: uppercase;
+    margin: 0 0 15px 0;
+}
+.testi-box-inner .testi-content p {
+    color: #F7F9FC;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+}
+.testimonial-main .swiper-scrollbar {
+    width: 60%;
+    right: -30px;
+    left: auto;
+    background-color: #F7F9FC;
+    height: 3px;
+    display: flex;
+    align-items: center;
+}
+.testimonial-main .swiper-scrollbar .swiper-scrollbar-drag {
+    background-color: #FF2093;
+    height: 7px;
+    border-radius: 0;
+}
+
+/* Testimonial Section CSS End */
+
+
+/* Logo Section CSS Start */
+
+.logo-main {
+    width: 100%;
+    position: relative;
+}
+.logo-inner {
+    display: flex;
+}
+.logo-inner .logo-box-main {
+    width: 25%;
+}
+.logo-inner .logo-box-main .logo-box-inner {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.logo-inner .logo-box-main .logo-box-inner img {
+    width: auto;
+}
+
+/* Logo Section CSS End */
+
+/* Footer Section CSS Start */
+
+.footer-main {
+    padding: 80px 20px 500px 20px;
+    background-color: #1F1F1F;
+    background-image: url(../public/footer-bg.png);
+    background-size: 100%;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+}
+.footer-main .footer-title h2 {
+    color: var(--Soft-White, #F7F9FC);
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: 6.4px;
+    text-align: center;
+    margin: 0 0 25px 0;
+}
+.footer-main .footer-title h3 {
+    text-align: center;
+    font-family: Kallisto;
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 110px;
+    text-transform: uppercase;
+    margin: 0 0 70px 0;
+    background: linear-gradient(90deg, #FF2093 0.18%, #FFDC2A 43.31%, #00C2FF 87.35%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.footer-menu-main,
+.footer-menu-inner {
+    width: 100%;
+}
+.footer-menu-inner {
+    display: flex;
+    padding: 0;
+}
+.footer-menu-inner .menu-item {
+    width: 16.666%;
+    list-style: none;
+}
+.footer-menu-inner .menu-item a {
+    display: flex;
+    transition: all 0.2s linear;
+}
+.footer-menu-inner .menu-item a img {
+    margin-bottom: 10px;
+    width: 100%;
+}
+.footer-menu-inner .menu-item p {
+    color: #F7F9FC;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 31px;
+    margin: 0 0 30px 0;
+}
+.footer-menu-inner .menu-item .social ul {
+    padding: 0;
+    display: flex;
+}
+.footer-menu-inner .menu-item .social ul li {
+    list-style: none;
+    margin-right: 40px;
+}
+.footer-menu-inner .menu-item .social ul li a {
+    text-decoration: none;
+}
+.footer-menu-inner .menu-item .social ul li a i {
+    color: #fff;
+    transition: all 0.2s linear
+}
+.footer-menu-inner .menu-item .social ul li a:hover i {
+    color: #FF2093;
+}
+.menu-item ul.menu {
+    margin: 0;
+    padding: 0 20px 0 50px;
+}
+.menu-item ul.menu h2 {
+    color: #F7F9FC;
+    font-family: Kallisto;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    margin: 0 0 10px 0;
+} 
+.menu-item ul.menu a,
+.menu-item ul.menu h3 {
+    color: #F7F9FC;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    margin: 0 0 10px 0;
+    text-decoration: none;
+}
+.menu-item ul.menu li {
+    margin: 0 0 10px 0;
+    list-style: none;
+}
+.menu-item ul.menu li a {
+    color: #F7F9FC;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    transition: all 0.2s linear;
+}
+.menu-item ul.menu li a:hover,
+.footer-menu-inner .menu-item a:hover {
+    color: #FF2093 !important;
+}
+.menu-item ul.menu li a.menu-btn {
+    color: #F7F9FC;
+    font-family: Kallisto;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    position: relative;
+}
+.menu-item ul.menu li a.menu-btn:before {
+    position: absolute;
+    content: '';
+    width: 26px;
+    height: 14px;
+    background-image: url(../public/footer-btn-arrow.png);
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.menu-item ul.menu hr {
+    border-color: #757575;
+    margin: 20px 0;
+}
+.footer-main .footer-bottom {
+    margin: 20px 0 0 0;
+}
+.footer-main .footer-bottom p {
+    color: #BABABA;
+    text-align: center;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0.9px;
+    text-transform: uppercase;
+}
+
+/* Footer Section CSS End */
+
+/* About Banner Section CSS Start */
+
+.about-banner {
+    width: 100%;
+    position: relative;
+    padding: 150px 0;
+    background-color: #1F1F1F;
+    overflow: hidden;
+}
+.about-banner .banner-title {
+    margin-bottom: 80px;
+}
+.about-banner .banner-title h2 {
+    max-width: 880px;
+    color: #F7F9FC;
+    font-family: Kallisto;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    margin: 0 0 25px 0;
+}
+.about-banner .banner-title h2>span {
+    background: linear-gradient(107deg, #FF2093 25.24%, #00C2FF 65.84%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.about-banner .banner-title p {
+    color: #ABABAB;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 34px;
+    margin: 0;
+    text-align: left;
+}
+.team-slider .team-slide {
+    display: flex;
+    flex-direction: column;
+}
+.team-slider .team-slide .image-sec {
+    margin-bottom: 20px;
+}
+.team-slider .team-slide .image-sec img {
+    width: 100%;
+}
+.team-slider .team-slide .team-info h3 {
+    color: #F7F9FC;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    letter-spacing: 5.6px;
+    margin: 0 0 10px 0;
+}
+.team-slider .team-slide .team-info h4 {
+    color: #F7F9FC;
+    font-family: 'CCSignLanguageW00';
+    font-size: 30px;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    margin: 0 0 5px 0; 
+}
+.team-slider .team-slide .team-info p {
+    color: #F7F9FC;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    margin: 0 0 20px 0;
+}
+.team-slider .team-slide .team-info a.team-btn {
+    text-align: center;
+    font-family: Kallisto;
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 22px;
+    letter-spacing: 1.8px;
+    text-decoration: none;
+}
+
+/* About Banner Section CSS End */
+
+/* Core Values Section CSS Start */
+
+.core-values-sec {
+    width: 100%;
+    position: relative;
+    padding: 110px 0 140px 0;
+    background-image: url(../public/value-bg.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+.core-values-sec .core-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 80px;
+    align-items: center;
+}
+.core-values-sec .core-title .left-part {
+    width: 55%;
+    padding-right: 70px;
+}
+.core-values-sec .core-title .left-part h2 {
+    color: #1F1F1F;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: 6.4px;
+    margin: 0 0 16px 0;
+}
+.core-values-sec .core-title .left-part h3 {
+    color: #1F1F1F;
+    font-family: Kallisto;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin: 0;
+}
+.core-values-sec .core-title .left-part h3>span {
+    position: relative;
+    z-index: 2;
+    display: table;
+}
+.core-values-sec .core-title .left-part h3>span:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 25px;
+    background: linear-gradient(90deg, #FFDC2A 0%, #00C2FF 100%);
+    bottom: 0;
+    z-index: -1;
+}
+.core-values-sec .core-title .right-part {
+    width: 45%;
+}
+.core-values-sec .core-title .right-part p {
+    color: #1F1F1F;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 31px;
+    margin: 0 0 30px 0;
+}
+.core-values-sec .core-title .right-part a.btn-cust {
+    color: #1F1F1F;
+    margin-left: 30px;
+}
+.value-box-main {
+    width: 100%;
+    position: relative;
+}
+.value-box-inner {
+    display: flex;
+    margin: 0 -16px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.value-box-inner .box-wrap {
+    width: 33.3%;
+    padding: 0 16px 32px 16px;
+}
+.value-box-inner .box-wrap .box-wrap-inner {
+    padding: 25px;
+    border: 2px solid #ABABAB;
+    height: 100%;
+    background-color: #fff;
+}
+.value-box-inner .box-wrap .box-wrap-inner .image-sec {
+    min-height: 200px;
+}
+.value-box-inner .box-wrap .box-wrap-inner .image-sec img {
+    display: block;
+    margin: 0 0 40px auto;
+}
+.value-box-inner .box-wrap .box-wrap-inner .content svg {
+    margin: 0 0 20px 0;
+}
+.value-box-inner .box-wrap .box-wrap-inner .content p {
+    color: #1F1F1F;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    margin: 15px 0 0 0;
+}
+
+/* Core Values Section CSS End */
+
+/* Limits Section CSS Start */
+
+.limits-main-sec {
+    width: 100%;
+    position: relative;
+    padding: 80px 0 90px 0;
+    background-color: #1F1F1F;
+}
+.limits-main-sec .limits-title {
+    margin-bottom: 80px;
+}
+.limits-main-sec .limits-title h2 {
+    color: #F7F9FC;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: 6.4px;
+    margin: 0 0 10px 0;
+}
+.limits-main-sec .limits-title h3 {
+    color: #F7F9FC;
+    font-family: Kallisto;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin: 0 0 20px 0;
+}
+.limits-main-sec .limits-title h3>span {
+    position: relative;
+    z-index: 2;
+    display: table;
+}
+.limits-main-sec .limits-title h3>span:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 25px;
+    background: linear-gradient(90deg, #FF2093 0%, #00C2FF 100%);
+    z-index: -1;
+    bottom: 0;
+}
+.limits-main-sec .limits-title p {
+    max-width: 867px;
+    color: #F7F9FC;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 31px;
+    margin: 0;
+}
+.limits-boxes-main {
+    width: 100%;
+    position: relative;
+}
+.limits-boxes-inner {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -70px;
+}
+.limits-boxes-inner .boxes-wrap {
+    padding: 0 70px 55px 70px;
+    width: 33.3%;
+}
+.limits-boxes-inner .boxes-wrap .boxes-wrap-inner h4 {
+    font-family: Kallisto;
+    font-size: 50px;
+    font-weight: 900;
+    line-height: 60px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin: 0 0 25px 0;
+}
+.limits-boxes-inner .boxes-wrap .boxes-wrap-inner h5 {
+    color: #F7F9FC;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 0 0 10px 0;
+}
+.limits-boxes-inner .boxes-wrap .boxes-wrap-inner p {
+    color: #F7F9FC;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    margin: 0;
+}
+
+/* Limits Section CSS End */
+
+/* About Testimonial Section CSS Start */
+
+.about-testimonial {
+    background-color: #fff;
+    padding: 50px 0 100px 0;
+}
+.about-testimonial .testi-box-inner .testi-content h2,
+.about-testimonial .testi-box-inner .testi-content h3,
+.about-testimonial .testi-box-inner .testi-content p {
+    color: #1F1F1F;
+}
+.about-testimonial.testimonial-main .swiper-scrollbar {
+    background-color: #1F1F1F;
+}
+
+/* About Testimonial Section CSS End */
+
+
+/* Services Banner Section CSS Start */
+
+.service-banner-main {
+    width: 100%;
+    position: relative;
+    padding: 150px 0 130px 0;
+    background-color: #1F1F1F;
+    z-index: 9;
+}
+.service-banner-main:before {
+    position: absolute;
+    content: '';
+    width: 462px;
+    height: 754px;
+    /* background-image: url(../public/banner-shap-1.png); */
+    background-repeat: no-repeat;
+    bottom: -235px;
+    background-size: 100%;
+    z-index: -1;
+}
+.service-banner-main:after {
+    position: absolute;
+    content: '';
+    width: 1039px;
+    height: 701px;
+    /* background-image: url(../public/banner-shap-2.png); */
+    background-size: 100%;
+    background-repeat: no-repeat;
+    right: 0;
+    bottom: -300px;
+    z-index: -1;
+}
+.service-banner-main .service-title h2 {
+    color: #F7F9FC;
+    text-align: center;
+    font-family: Kallisto;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    margin: 0;
+}
+.service-banner-main .service-title h2>span {
+    background: var(--Soft-White, linear-gradient(92deg, #FF2093 34.12%, #00C2FF 74.47%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Services Banner Section CSS End */
+
+/* Identity Section CSS Start */
+
+.identity-main-sec {
+    width: 100%;
+    position: relative;
+    z-index: 9;
+    padding: 70px 0 100px 0;
+}
+.identity-main-sec .title-sec {
+    display: flex;
+    align-items: center;
+    margin-bottom: 45px;
+}
+.identity-main-sec .title-sec .title-part {
+    width: 50%;
+    padding-right: 48px;
+}
+.identity-main-sec .title-sec .title-part h3 {
+    color: #F7F9FC;
+    font-family: Kallisto;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 60px;
+    text-transform: uppercase;
+    margin: 0;
+}
+.identity-main-sec .title-sec .content-part {
+    width: 50%;
+}
+.identity-main-sec .title-sec .content-part p {
+    color: #F7F9FC;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    margin: 0 0 10px 0;
+}
+.identity-main-sec .title-sec .content-part a.learn-btn {
+    font-family: Kallisto;
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 20px;
+    letter-spacing: 1.6px;
+    text-decoration: none;
+    position: relative;
+}
+.identity-main-sec .title-sec .content-part a.learn-btn:before {
+    position: absolute;
+    content: '';
+    width: 41px;
+    height: 14px;
+    background-image: url(../public/yellow-arrow.png);
+    right: -55px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    transition: all 0.2s linear;
+}
+/* .identity-main-sec .title-sec .content-part a.learn-btn:hover:before {
+    right: -65px;
+} */
+.identity-main-sec .service-list {
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+.identity-main-sec .service-list .list-box {
+    width: 33.3%;
+}
+.identity-main-sec .service-list ul {
+    padding: 0;
+    width: 100%;
+}
+.identity-main-sec .service-list h2 {
+    color: #F7F9FC;
+    font-family: Kallisto;
+    font-size: 26.25px;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    margin: 0 0 18px 0;
+}
+.identity-main-sec .service-list ul li {
+    margin: 0 0 5px 20px;
+    list-style: disc;
+    color: #F7F9FC;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+/* Identity Section CSS End */
+
+/* Marketing Section CSS Start */
+
+.marketing-sec {
+    position: relative;
+}
+.marketing-sec:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    /* background-image: url(../public/marketing-shap.png); */
+    background-repeat: no-repeat;
+    bottom: 0;
+    background-position: bottom left;
+}
+
+/* Marketing Section CSS End */
+
+/* Development Section CSS Start */
+
+.development-sec {
+    position: relative;
+}
+.development-sec:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    /* background-image: url(../public/development-shap.png); */
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    bottom: 0;
+}
+
+/* Development Section CSS End */
+
+/* Social Media Section CSS Start */
+
+.social-media-sec .title-sec .title-part h3,
+.social-media-sec .title-sec .content-part p,
+.social-media-sec .service-list h2,
+.social-media-sec .service-list ul li {
+    color: #1F1F1F;
+}
+.social-media-sec .title-sec .content-part a.learn-btn {
+    color: #FF2093;
+}
+.social-media-sec .title-sec .content-part a.learn-btn:before {
+    background-image: url(../public/pink-arrow.png);
+}
+
+/* Social Media Section CSS End */
+
+/* Search Engine Section CSS Start */
+
+.search-engine-sec {
+    position: relative;
+}
+.search-engine-sec:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    /* background-image: url(../public/search-enginr-shap.png); */
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    bottom: 0;
+}
+
+/* Search Engine Section CSS End */
+
+/* Visual Identity Banner Section CSS Start */
+
+.identity-banner-sec {
+    width: 100%;
+    position: relative;
+    padding: 150px 0;
+    background-color: #1F1F1F;
+}
+.identity-banner-inner {
+    display: flex;
+    align-items: center;
+}
+.identity-banner-inner .identity-content-sec {
+    width: 70%;
+    padding-right: 50px;
+}
+.identity-banner-inner .identity-content-sec h2 {
+    color: #F7F9FC;
+    font-family: Kallisto;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    margin: 0 0 50px 0;
+}
+.identity-banner-inner .identity-content-sec p {
+    color: #F7F9FC;
+    font-family: 'Proxima Nova Rg';
+    font-size: 20px;
+    font-weight: 200;
+    line-height: 30px;
+    margin: 0;
+}
+.identity-banner-inner .identity-image-sec {
+    width: 30%;
+}
+.identity-banner-inner .identity-image-sec img {
+    width: 100%;
+}
+
+/* Visual Identity Banner Section CSS End */
+
+/* Identity Info Section Start */
+
+.identity-info-sec {
+    width: 100%;
+    position: relative;
+    padding: 100px 0 100px 0;
+    z-index: 9;
+}
+.identity-info-sec:before {
+    position: absolute;
+    content: '';
+    width: 531px;
+    height: 396px;
+    background-image: url(../public/identity-info-bg.png);
+    background-repeat: no-repeat;
+    bottom: 0;
+    z-index: -1;
+}
+.identity-info-sec .info-content {
+    display: flex;
+    margin-bottom: 80px;
+}
+.identity-info-sec .info-content:last-child {
+    margin-bottom: 0px;
+}
+.identity-info-sec .info-content .icon-part {
+    width: 15%;
+    padding-right: 80px;
+    margin-top: -30px;
+}
+.identity-info-sec .info-content .icon-part img {
+    width: 100%;
+}
+.identity-info-sec .info-list-sec {
+    width: 85%;
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 4px solid #1F1F1F;
+    padding: 30px 0 30px 40px;
+    justify-content: space-between;
+}
+.identity-info-sec .info-list-sec .list-sec h3 {
+    color: #1F1F1F;
+    font-family: Kallisto;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    margin: 0 0 16px 0;
+}
+.identity-info-sec .info-list-sec ul {
+    padding: 0;
+}
+.identity-info-sec .info-list-sec ul li {
+    color: #1F1F1F;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 48px;
+    list-style: none;
+}
+.identity-info-sec .info-list-sec .paragraph-sec {
+    width: 55%;
+}
+.identity-info-sec .info-list-sec .paragraph-sec p {
+    color: var(--Off-Black, #1F1F1F);
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    margin: 0;
+}
+.identity-info-sec .info-list-sec .button-sec {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+.identity-info-sec .info-list-sec .button-sec a.btn-cust {
+    color: #FF2093;
+}
+.identity-info-sec .info-list-sec .button-sec a.btn-cust:hover {
+    color: #1F1F1F !important;
+}
+.identity-info-sec .info-list-sec .button-sec a.btn-cust:before {
+    left: -35px;
+    width: 220px;
+    height: 70px;
+    top: -17px;
+}
+
+/* Identity Info Section End */
+
+/* FAQ Section CSS Start */
+
+.faq-main-sec {
+    width: 100%;
+    position: relative;
+    padding: 100px 0 10px 0;
+    background-color: #1F1F1F;
+}
+.faq-main-sec .faq-title {
+    margin-bottom: 50px;
+}
+.faq-main-sec .faq-title h2 {
+    color: #F7F9FC;
+    text-align: center;
+    font-family: Kallisto;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 60px;
+    margin: 0;
+}
+.faq-main-sec .accordion {
+    width: 100%;
+    max-width: 100%;
+    margin: 2rem auto;
+}
+.faq-main-sec .accordion-item {
+    background-color: #fff;
+    margin: 0 0 18px 0;
+}
+.faq-main-sec .accordion-item:last-child {
+    margin: 0;
+}
+.faq-main-sec .accordion-item-header {
+    padding: 30px 62px 30px 40px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    color: #1F1F1F;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: normal;
+}
+.faq-main-sec .accordion-item.active {
+    background-color: #FF2093;
+}
+.faq-main-sec .accordion-item-header::after {
+    content: "\002B";
+    font-size: 2rem;
+    position: absolute;
+    right: 36px;
+    color: #1F1F1F;
+}
+.faq-main-sec .accordion-item-header.active::after {
+    content: "\2212";
+    color: #fff;
+}
+.faq-main-sec .accordion-item-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+.faq-main-sec .accordion-item-header.active {
+    color: #fff;
+}
+.faq-main-sec .accordion-item-body-content {
+    color: #F7F9FC;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    padding: 0 62px 42px 40px;
+}
+
+/* FAQ Section CSS End */
+
+
+
+
+/* Responsive CSS Start */
+
+@media screen and (min-width: 1300px) {
+    .header {
+        padding: 23px 20px 0 20px;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .footer-main {
+        padding: 80px 20px 400px 20px;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .footer-main {
+        padding: 80px 20px 360px 20px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .header.sticky {
+        padding: 10px 20px 10px 0px;
+    }
+    .container, .container2, .about-container {
+        padding: 0 20px;
+    }
+    .client-inner-sec .intro-box {
+        padding: 0 18px;
+    }
+    .client-intro-sec .client-inner-sec {
+        margin: 0 -18px;
+    }
+    .header .menu-sec ul li {
+        margin: 0 28px;
+    }
+    .banner-main {
+        padding: 80px 0 320px 0;
+    }
+    .banner-title h1 {
+        font-size: 70px;
+    }
+    .we-are-inner .title-part h3,
+    .service-main-sec .service-title h3,
+    .client-title .client-count h4,
+    .client-title .client-count h4,
+    .testi-box-inner .testi-content h3,
+    .core-values-sec .core-title .left-part h3,
+    .limits-main-sec .limits-title h3 {
+        font-size: 35px;
+        line-height: 43px;
+    }
+    .service-slider .service-box-inner .box-title h5 {
+        font-size: 20px;
+    }
+    .service-slider .service-box-inner {
+        min-height: 350px;
+        padding: 40px 40px 30px 30px;
+    }
+    .client-title .client-count h3 {
+        font-size: 130px;
+        line-height: 160px;
+        margin: -10px 0 0 0;
+    }
+    .client-main-sec {
+        padding: 70px 0 80px 0;
+    }
+    .testi-box-inner .testi-content p {
+        font-size: 16px;
+        line-height: 26px;
+    }
+    .footer-main .footer-title h3 {
+        font-size: 80px;
+        line-height: 90px;
+    }
+    .footer-menu-inner .menu-item p {
+        font-size: 18px;
+        line-height: 26px;
+        margin: 0 0 20px 0;
+    }
+    .footer-menu-inner .menu-item .social ul li {
+        margin-right: 20px;
+    }
+    .menu-item ul.menu {
+        padding: 0 20px 0 20px;
+    }
+    .menu-item ul.menu li a.menu-btn:before {
+        width: 18px;
+        height: 9px;
+        background-size: 100%;
+    }
+    .footer-main {
+        padding: 80px 20px 300px 20px;
+    }
+    .about-banner .banner-title h2,
+    .service-banner-main .service-title h2,
+    .identity-main-sec .title-sec .title-part h3,
+    .identity-banner-inner .identity-content-sec h2,
+    .faq-main-sec .faq-title h2 {
+        font-size: 50px;
+    }
+    .limits-boxes-inner .boxes-wrap .boxes-wrap-inner h4 {
+        font-size: 40px;
+        line-height: 50px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .banner-main {
+        padding: 60px 0 320px 0;
+    }
+    .banner-title h1 {
+        font-size: 50px;
+        margin: 0 auto 15px auto;
+    }
+    .banner-title p {
+        font-size: 18px;
+        line-height: 30px;
+    }
+    .limits-boxes-inner .boxes-wrap {
+        padding: 0 10px 55px 10px;
+        width: 33.3%;
+    }
+    .limits-boxes-inner {
+        margin: 0 -10px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .header .toggle-button {
+        display: block;
+    }
+    .header .menu-sec {
+        display: none;
+    }
+    .header .menu-sec {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 100px;
+        background-color: #fff;
+        z-index: 9;
+    }
+    .header .menu-sec ul {
+        flex-direction: column;
+        margin: 0;
+        padding: 15px;
+        box-shadow: 0px 2px 10px rgb(0 0 0 / 20%);
+    }
+    .header .menu-sec ul li {
+        margin: 10px 0px;
+    }
+    .header .menu-sec ul li a {
+        color: #000;
+    }
+    .header.sticky .menu-sec {
+        top: 70px;
+    }
+    .header .menu-sec ul li.button {
+        margin: 20px 0 20px 45px;
+    }
+    .banner-main {
+        position: relative;
+        z-index: 0;
+        padding: 60px 0 220px 0;
+    }
+    .banner-main:before {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: rgb(0 0 0 / 30%);
+        z-index: -1;
+        top: 0;
+        left: 0;
+    }
+    /* .blank-part {
+        z-index: 9;
+    } */
+    .blank-part {
+        margin-top: -140px;
+    }
+    .we-are-inner .title-part,
+    .client-title .client-count,
+    .core-values-sec .core-title .left-part,
+    .identity-main-sec .title-sec .title-part {
+        padding-right: 30px;
+    }
+    .we-are-inner .title-part h2,
+    .client-title .client-count h2,
+    .core-values-sec .core-title .left-part h2 {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .we-are-inner .title-part h3, 
+    .service-main-sec .service-title h3, 
+    .client-title .client-count h4, 
+    .client-title .client-count h4, 
+    .testi-box-inner .testi-content h3,
+    .core-values-sec .core-title .left-part h3,
+    .limits-main-sec .limits-title h3 {
+        font-size: 25px;
+        line-height: 35px;
+    }
+    .we-are-inner .discription-part p,
+    .client-title .client-description p,
+    .core-values-sec .core-title .right-part p {
+        font-size: 16px;
+        line-height: 26px;
+    }
+    a.btn-cust {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    a.btn-cust:before {
+        left: -50px;
+    }
+    .service-main-sec,
+    .client-main-sec,
+    .we-are-sec,
+    .testimonial-main,
+    .core-values-sec,
+    .limits-main-sec {
+        padding: 60px 0 60px 0;
+    }
+    .identity-main-sec {
+        padding: 60px 0 30px 0;
+    }
+    .service-slider .service-box-inner {
+        min-height: 280px;
+        padding: 30px 30px 20px 20px;
+    }
+    .service-slider {
+        padding-bottom: 40px;
+    }
+    .service-slider .service-box-inner .box-title h5,
+    .about-banner .banner-title p,
+    .identity-banner-inner .identity-content-sec p {
+        font-size: 18px;
+    }
+    .service-slider .service-box-inner .box-title h4,
+    .footer-main .footer-title h2 {
+        font-size: 14px;
+    }
+    .client-title .client-count h3 {
+        font-size: 100px;
+        line-height: 120px;
+        margin: 0;
+    }
+    .client-title .client-description a.btn-cust:before {
+        left: -34px;
+    }
+    .client-title {
+        margin-bottom: 90px;
+    }
+    .client-intro-sec .client-inner-sec .intro-box:first-child, 
+    .client-intro-sec .client-inner-sec .intro-box:nth-child(3),
+    .client-intro-sec .client-inner-sec .intro-box:nth-child(5), 
+    .client-intro-sec .client-inner-sec .intro-box:nth-child(8) {
+        margin-top: 0;
+    }
+    .client-inner-sec .intro-box {
+        width: 50%;
+    }
+    .client-intro-sec a.btn-cust {
+        margin: 40px auto 0 auto;
+        width: 100%;
+    }
+    .client-intro-sec a.btn-cust:before {
+        left: 0px;
+        margin: 0 auto;
+    }
+    .testi-box-inner .testi-content {
+        z-index: 2;
+    }
+    .logo-inner .logo-box-main .logo-box-inner img {
+        width: 100%;
+    }
+    .footer-main .footer-title h3 {
+        font-size: 50px;
+        line-height: 60px;
+        margin: 0 0 50px 0;
+    }
+    .footer-menu-inner .menu-item {
+        width: 33.3%;
+        padding: 0 20px;
+        margin-bottom: 20px;
+    }
+    .footer-menu-inner {
+        flex-wrap: wrap;
+    }
+    .menu-item ul.menu {
+        padding: 0;
+    }
+    .footer-main {
+        padding: 60px 0px 250px 0px;
+    }
+    .header {
+        background-color: #161616;
+    }
+    .banner-title p {
+        color: #fff;
+    }
+    .about-banner .banner-title h2,
+    .service-banner-main .service-title h2,
+    .identity-banner-inner .identity-content-sec h2,
+    .faq-main-sec .faq-title h2 {
+        font-size: 45px;
+    }
+    .identity-main-sec .title-sec .title-part h3 {
+        font-size: 40px;
+        line-height: normal;
+    }
+    .limits-boxes-inner .boxes-wrap {
+        width: 50%;
+    }
+    .value-box-inner .box-wrap {
+        width: 50%;
+        padding: 0 10px 20px 10px;
+    }
+    .value-box-inner {
+        margin: 0 -10px;
+    }
+    .about-banner,
+    .identity-banner-sec,
+    .identity-info-sec {
+        padding: 60px 0;
+    }
+    .about-banner .banner-title {
+        margin-bottom: 40px;
+    }
+    .about-banner .banner-title p {
+        line-height: 30px;
+    }
+    .about-banner,
+    .identity-banner-sec {
+        background-color: #161616;
+    }
+    .limits-main-sec .limits-title {
+        margin-bottom: 40px;
+    }
+    .core-values-sec .core-title .right-part a.btn-cust {
+        margin-left: 50px;
+    }
+    .service-banner-main {
+        padding: 60px 0 60px 0;
+        background-color: #161616;
+    }
+    .service-banner-main:after {
+        width: 610px;
+        height: 550px;
+    }
+    .service-banner-main:before {
+        width: 362px;
+        height: 624px;
+    }
+    .identity-main-sec .service-list {
+        flex-wrap: wrap;
+    }
+    .identity-main-sec .service-list .list-box {
+        width: 50%;
+        margin-bottom: 20px;
+    }
+    .identity-banner-inner .identity-content-sec h2 {
+        margin: 0 0 20px 0;
+    }
+    .identity-info-sec .info-content {
+        flex-direction: column;
+    }
+    .identity-info-sec .info-content .icon-part {
+        width: 100%;
+        padding-right: 0;
+        margin: 0 0 30px 0;
+    }
+    .identity-info-sec .info-content .icon-part img {
+        width: 100px;
+    }
+    .identity-info-sec .info-list-sec {
+        width: 100%;
+        padding: 20px 0 20px 0px;
+    }
+    .identity-info-sec .info-list-sec .list-sec h3 {
+        font-size: 30px;
+    }
+    .identity-info-sec .info-list-sec ul li {
+        font-size: 20px;
+        line-height: 38px;
+    }
+    .identity-info-sec .info-list-sec .paragraph-sec p {
+        font-size: 18px;
+        line-height: 28px;
+    }
+    .identity-info-sec .info-content {
+        margin-bottom: 30px;
+    }
+    .identity-info-sec:before {
+        width: 270px;
+        height: 196px;
+        background-size: 100%;
+    }
+    .identity-info-sec .info-list-sec .button-sec {
+        margin-top: 50px;
+    }
+    .faq-main-sec {
+        padding: 0px 0 10px 0;
+    }
+    .faq-main-sec .faq-title {
+        margin-bottom: 30px;
+    }
+    .identity-info-sec .info-list-sec .list-sec {
+        width: 35%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .footer-main {
+        padding: 60px 0px 200px 0px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .we-are-inner,
+    .client-title,
+    .testi-box-inner,
+    .core-values-sec .core-title,
+    .identity-main-sec .title-sec {
+        flex-direction: column;
+    }
+    .we-are-inner .title-part, .client-title .client-count, .core-values-sec .core-title .left-part, .identity-main-sec .title-sec .title-part {
+        padding-right: 0px;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .identity-banner-inner .identity-content-sec {
+        width: 100%;
+        padding: 0;
+        margin-top: 40px;
+    }
+    .we-are-inner .discription-part,
+    .client-title .client-description,
+    .testi-box-inner .testi-content,
+    .core-values-sec .core-title .right-part,
+    .identity-main-sec .title-sec .content-part,
+    .identity-banner-inner .identity-image-sec {
+        width: 100%;
+    }
+    .identity-banner-inner .identity-image-sec img {
+        width: auto;
+        margin: 0 auto;
+        display: block;
+    }
+    .identity-main-sec .service-list .list-box {
+        width: 100%;
+    }
+    .service-banner-main:before {
+        display: none;
+    }
+    .core-values-sec .core-title .right-part a.btn-cust {
+        margin-left: 50px;
+    }
+    .client-inner-sec .intro-box {
+        width: 100%;
+    }
+    .client-title {
+        margin-bottom: 70px;
+    }
+    .testi-box-inner .testi-img {
+        width: 100%;
+        margin: 0 0 20px 0;
+    }
+    .logo-inner {
+        flex-wrap: wrap;
+    }
+    .logo-inner .logo-box-main {
+        width: 50%;
+    }
+    .footer-main {
+        padding: 60px 0px 200px 0px;
+    }
+    .footer-main .footer-title h3>br {
+        display: none;
+    }
+    .footer-main .footer-title h3 {
+        font-size: 35px;
+        line-height: 45px;
+        margin: 0 0 40px 0;
+    }
+    .footer-menu-inner .menu-item {
+        width: 50%;
+        padding: 0 10px;
+    }
+    .testimonial-main .swiper-scrollbar {
+        width: 100%;
+        right: 0px;
+    }
+    .banner-title h1 {
+        font-size: 40px;
+        margin: 0 auto 15px auto;
+    }
+    .banner-main {
+        background-repeat: no-repeat;
+        background-position: bottom;
+        padding: 60px 0 180px 0;
+    }
+    .blank-part {
+        margin-top: -100px;
+    }
+    .about-banner .banner-title h2,
+    .service-banner-main .service-title h2,
+    .identity-main-sec .title-sec .title-part h3,
+    .identity-banner-inner .identity-content-sec h2,
+    .faq-main-sec .faq-title h2 {
+        font-size: 40px;
+    }
+    .service-banner-main .service-title h2 br {
+        display: none;
+    }
+    .identity-main-sec .title-sec .title-part h3 br {
+        display: none;
+    }
+    .identity-banner-inner .identity-content-sec h2 br {
+        display: none;
+    }
+    .identity-banner-inner {
+        flex-direction: column-reverse;
+    }
+    .faq-main-sec .accordion {
+        width: 100%;
+        max-width: 100%;
+        margin: 2rem auto;
+    }
+    .faq-main-sec .accordion-item-header {
+        padding: 20px 52px 20px 20px;
+        font-size: 20px;
+    }
+    .faq-main-sec .accordion-item-body-content {
+        font-size: 18px;
+        line-height: 28px;
+        padding: 0 40px 20px 20px;
+    }
+}
+@media screen and (max-width: 640px) {
+    .value-box-inner .box-wrap {
+        width: 100%;
+        padding: 0 0px 20px 0px;
+    }
+    .value-box-inner {
+        margin: 0 0px;
+    }
+    .limits-boxes-inner .boxes-wrap {
+        width: 100%;
+        padding: 0 0px 50px 0px;
+    }
+    .limits-boxes-inner {
+        margin: 0 0px;
+    }
+    .value-box-inner .box-wrap .box-wrap-inner {
+        padding: 20px;
+    }
+    .service-banner-main .service-title h2 {
+        font-size: 35px;
+    }
+    .identity-main-sec .title-sec .title-part h3 {
+        font-size: 30px;
+    }
+    .service-banner-main:after {
+        width: 410px;
+        height: 350px;
+        bottom: -180px;
+    }
+    .identity-main-sec .title-sec .content-part p {
+        font-size: 18px;
+        line-height: 28px;
+    }
+    .identity-info-sec .info-list-sec {
+        flex-direction: column;
+    }
+    .identity-info-sec .info-list-sec .list-sec,
+    .identity-info-sec .info-list-sec .paragraph-sec {
+        width: 100%;
+    }
+    .identity-info-sec .info-list-sec ul li {
+        font-size: 18px;
+        line-height: 34px;
+    }
+    .faq-main-sec .accordion-item-header {
+        font-size: 18px;
+    }
+    .faq-main-sec .accordion-item-body-content {
+        font-size: 16px;
+        line-height: 26px;
+    }
+}
+@media screen and (max-width: 575px) {
+    /* .header .menu-sec {
+        top: 75px;
+    } */
+    .footer-main {
+        padding: 60px 0px 150px 0px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .footer-main {
+        padding: 60px 0px 120px 0px;
+    }
+    .footer-menu-inner .menu-item {
+        width: 100%;
+        padding: 0 0px;
+    }
+    .footer-menu-inner .menu-item a img {
+        width: auto;
+    }
+    .menu-item ul.menu li a.menu-btn:before {
+        right: auto;
+        left: 135px;
+    }
+}
+@media screen and (max-width: 414px) {
+    .about-banner .banner-title h2,
+    .banner-title h1,
+    .identity-banner-inner .identity-content-sec h2,
+    .faq-main-sec .faq-title h2 {
+        font-size: 35px;
+    }
+    .we-are-inner .title-part h3, .service-main-sec .service-title h3, .client-title .client-count h4, .client-title .client-count h4, .testi-box-inner .testi-content h3, .core-values-sec .core-title .left-part h3, .limits-main-sec .limits-title h3 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .limits-boxes-inner .boxes-wrap .boxes-wrap-inner h4 {
+        font-size: 35px;
+        line-height: 44px;
+        margin-bottom: 10px;
+    }
+    .limits-boxes-inner .boxes-wrap {
+        padding: 0 0px 40px 0px;
+    }
+    .footer-main .footer-title h3 {
+        font-size: 30px;
+        line-height: 40px;
+        margin: 0 0 30px 0;
+    }
+    .client-title .client-count h3 {
+        font-size: 80px;
+        line-height: 100px;
+        margin: 0;
+    }
+    .about-banner .banner-title p, .banner-title p {
+        font-size: 16px;
+        line-height: 26px !important;
+    }
+    .identity-main-sec .title-sec .title-part h3 {
+        font-size: 28px;
+    }
+}
+
+/* Responsive CSS Start */
