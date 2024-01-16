@@ -3312,3 +3312,328 @@ a.home-btn:hover {
     object-fit: cover;
   }
 /* Responsive CSS Start */
+
+
+
+/* Product Page*/
+.productbannertext{
+    width: 50%;
+    padding-right: 50px;
+  }
+  .productbannertext{
+    width: 50%;
+    padding-right: 50px;
+  }
+  .productbannerimage {
+        width: 50%;
+  }
+  .productbannertext h2 {
+        color: #F7F9FC;
+        font-family: Kallisto;
+        font-size: 60px;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+        margin: 0 0 50px 0;
+  }
+  .productbannertext span{
+      background: linear-gradient(107deg, #FF2093 25.24%, #00C2FF 65.84%);
+      background-clip: border-box;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+  }
+  .productbannertext p {
+      color: #F7F9FC;
+      font-family: 'Proxima Nova Rg';
+      font-size: 20px;
+      font-weight: 200;
+      line-height: 30px;
+      margin: 0 0 20px 0;
+  }
+  .whygetbundle {
+    width: 100%;
+    position: relative;
+    padding: 100px 0 100px 0;
+    z-index: 9;
+  }
+  .whybundlehead h2 span{
+      position: relative;  
+      z-index: 2;
+      
+  }
+  .whybundlehead h2 > span::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 25px;
+    background: linear-gradient(90deg, rgba(16,195,241,1) 0%, rgba(138,208,140,1) 50%, rgba(252,220,46,1) 100%);
+    z-index: -1;
+    bottom: 0;
+  }
+  .whybundlehead h2{			
+      font-family: 'Kallisto';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 48px;
+      /* identical to box height */
+      text-align: center;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;	
+      color: #1F1F1F;
+  }
+
+  .whybundlehead p{
+      
+      font-family: 'Lexend Deca', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 134.5%;
+      /* or 30px */
+      text-align: center;
+
+      /* Off Black */
+      color: #1F1F1F;	
+  }
+
+  .bundleboxs{			
+      display: grid;
+      grid-template-columns: 3fr 3fr 3fr;
+      grid-column-gap: 50px;
+      margin-top: 80px;
+  }
+
+  .bundletext h3{
+      font-family: 'Kallisto';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 120%;
+      /* or 22px */
+      text-align: center;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;	
+  }
+  .bundletext h3.magenta{
+      /* Magenta */
+      color: #FF2093;	
+      
+  }
+  .bundletext h3.yellow{
+      /* Yellow */
+      color: #FFDC2A;
+
+
+  }
+  .bundletext h3.cyan{
+      /* Cyan */
+      color: #00C2FF;
+  }		
+  
+  .bundletext p{
+    font-family: 'Lexend Deca', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 155%;
+      /* or 25px */
+      text-align: center;
+
+      /* Off Black */
+      color: #1F1F1F;
+  }
+  .bundleicon{
+      text-align: center;
+      
+  }
+  .whygetbundle.bgblack{
+      width: 100%;
+    position: relative;
+    padding: 100px 0;
+    background-color: #1F1F1F;
+      
+  }
+  .whychoosebndhead h2{
+      color: #F7F9FC;
+      font-family: 'Lexend Deca', sans-serif;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 24px;
+      letter-spacing: 6.4px;
+      margin: 0 0 10px 0;
+  }
+  .whychoosebndhead h3{			
+      color: #F7F9FC;
+      font-family: Kallisto;
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 48px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin: 0 0 20px 0;
+  }
+  .whychoosebndhead h3 span{
+      position: relative;
+      z-index: 2;
+      display: table;
+  }
+  .whychoosebndhead h3 span::before{			
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 25px;
+      background: linear-gradient(90deg, #FF2093 0%, #00C2FF 100%);
+      z-index: -1;
+      bottom: 0;
+  }
+  .whychoosebndtext p{	
+      font-family: 'Proxima Nova Rg';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 134.5%;
+      /* or 30px */
+       
+      /* Off Black */
+      color: #F7F9FC;
+  }
+  .whychoosebundle{		
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 50px;
+      margin-top: 80px;	
+  }
+  .getplansec{			
+      width: 100%;
+        position: relative;
+        padding: 100px 0;
+
+  }
+  .planhead{
+      font-family: 'Kallisto';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 180%;
+      /* or 48px */
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+
+      /* Off Black */
+      color: #1F1F1F;
+  }
+
+.getplanboxs{			
+    display: grid;
+  grid-template-columns: 3fr 3fr 3fr;
+  grid-column-gap: 10px;
+}
+.planbox{
+    border: 1px solid #B5B5B5	;
+    padding: 25px;
+     transition: 0.3s;
+}
+.planbox:hover{			
+    background-color: #00C2FF;			
+      
+}
+.planbox h3{
+    font-family: 'Lexend Deca', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 120%;
+    /* or 36px */
+    /* Off Black */
+    color: #1F1F1F;
+    margin: 0;
+}
+.planbox h2{			
+    font-family: 'Kallisto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 100px;
+    line-height: 120%;
+    /* or 120px */
+
+    /* Off Black */
+    color: #1F1F1F;
+    margin: 0;
+}
+.planbox h2 span{
+    font-family: 'Lexend Deca', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 120%;
+    /* or 48px */
+    color: #7F7F7F;
+}
+.planbox p{
+    font-family: 'Lexend Deca', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 155%;
+    /* or 25px */
+
+    /* Off Black */
+    color: #1F1F1F;	
+    
+}
+.planbxfeatures h3{
+    font-family: 'Lexend Deca', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 120%;			/* or 22px */
+
+    /* Off Black */
+    color: #1F1F1F;
+
+}
+.planbxfeatures ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+}
+.planbxfeatures ul li{
+    font-family: 'Lexend Deca', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 120%;			/* or 22px */
+
+    /* Off Black */
+    color: #1F1F1F;
+    padding-left: 35px;
+    position: relative;
+    margin-bottom: 5px;
+
+}
+.planbxfeatures ul li:before{
+    position: absolute;
+    background: url("../public/rightsign.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 24px;
+    height: 24px;
+    content: '';
+    left: 0;
+      top: 0;
+}
+
+.planbox:hover h2 span{
+    
+    color: #FFF;
+}
+.planstartbtn{
+    margin-top: 30px;
+    text-align: center;
+    display: flex;
+      justify-content: center;
+}
