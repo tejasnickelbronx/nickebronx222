@@ -57,22 +57,22 @@ export default function Merch({merchfields}) {
               <ul>
                 <li>
                   <Link className="contactformbtn" href="/projectrequest">
-                    <img src="/newprojecthead.png" title="contactlink" /> 
+                    <h3 className='headnewpro'>New Project request</h3>
                   </Link>
                 </li>
                 <li>
                   <Link className="contactformbtn" href="/about">
-                    <img src="/somethingelsehead.png" title="contactlink" />
+                  <h3 className='headsomething'>Something Else</h3>
                   </Link>
                 </li>
                 <li>
                   <Link className="contactformbtn" href="/about">
-                    <img src="/collab-brands.png" title="contactlink" />
+                  <h3 className='headcollabs'>Collabs/Brand Deals</h3>
                   </Link>
                 </li>
                 <li>
                   <Link className="contactformbtn" href="/about">
-                    <img src="/media-query.png" title="contactlink" />
+                  <h3 className='headmedia'>Media Inquiry</h3>
                   </Link>
                 </li>
               </ul>
