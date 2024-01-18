@@ -1,5 +1,5 @@
 import Image from "next/image";
-import {getAllSettings} from '../lib/settings.js';
+
 
 export async function getStaticProps(){
   const getllllllll  = await getAllSettings();
@@ -14,7 +14,7 @@ export async function getStaticProps(){
 
 }
 
-export default function SiteFooter({className, globalsettings}){
+export default function newsletterpopup(){
   
   
     return(
@@ -46,9 +46,11 @@ export default function SiteFooter({className, globalsettings}){
               id="npemail"
               placeholder="drop your email"
             />
+            <div className="newsletterbtn">
             <a href="#" className="btn-cust">
               SUBSCRIBE
             </a>
+            </div>
           </div>
         </div>
       </div>

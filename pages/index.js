@@ -1,9 +1,11 @@
-
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Head from 'next/head'
 import Image from 'next/image'
 import SiteHeader from '../components/siteheader.js';
 import SiteFooter from '../components/sitefooter.js';
+
+import NewsLetterPop from '../components/newsletterpopup.js';
 import useScript from '../hooks/useScript.js';
 import GetPortfolioImagebyType from '../components/getPortfolioImagebyType.js';
 
@@ -65,11 +67,12 @@ export default function Home({pagefields, testisection,portfolioitems}) {
    useScript('https://code.jquery.com/jquery-3.7.0.min.js');   
    
    useScript('./custominit.js');
+   useScript('./newletterinit.js');
    
    
    const recordcount = allportfolioarr.length/5;
 
-  
+   
    
   return (
     <>
@@ -82,8 +85,8 @@ export default function Home({pagefields, testisection,portfolioitems}) {
 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" async  />
         <link rel="stylesheet" type="text/css" media="screen" href="./locomotive-scroll.css" async ></link>
-        {/* <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" async  /> */}        
+         <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+        {/*<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" async  /> */}        
         {/* <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.min.js" async ></script> */}	      
         {/* <script src="/custominit.js" async></script>
         <script src="/locomativeinit.js" async></script> */}
@@ -385,7 +388,7 @@ export default function Home({pagefields, testisection,portfolioitems}) {
   
   
   <SiteFooter className="footercls"/>
-
+  <NewsLetterPop />
     </>
   )
 }

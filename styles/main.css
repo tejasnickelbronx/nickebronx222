@@ -3702,7 +3702,7 @@ a.home-btn:hover {
     color: #F7F9FC;
 }
 .newspop_head h3{
-font-family: 'Lexend Deca';
+    font-family: 'Lexend Deca', sans-serif;
 font-style: normal;
 font-weight: 400;
 font-size: 30px;
@@ -3788,5 +3788,9 @@ color:#000;
 }
 .team-slider{
     height: 670px;
+
+}
+.newsletterbtn{
+    margin-top: 30px;
 
 }

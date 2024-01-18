@@ -147,7 +147,7 @@ export default function SiteFooter({className, globalsettings}){
                     </li>
                     <hr />
                     <li>
-                      <a href="" className="menu-btn">
+                      <a href="#" className="menu-btn">
                         Newsletter
                       </a>
                       <a href="#" id="newsletterlink">sign up for our newsletter</a>

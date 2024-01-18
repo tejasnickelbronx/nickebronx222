@@ -102,17 +102,17 @@ $(window).scroll(function(){
 	if (scroll >= 100) sticky.addClass('sticky');
 	else sticky.removeClass('sticky');
 });
-jQuery(".team-btn").click(function(e) {
+$(".team-btn").click(function(e) {
     event.preventDefault();
-    var popupid = jQuery(this).attr("data-pop");
+    var popupid = $(this).attr("data-pop");
     
-      jQuery("#"+popupid).fadeIn(500);
+      $("#"+popupid).fadeIn(500);
       
     
 });
-jQuery(".close").click(function() {
+$(".close").click(function() {
     event.preventDefault();
-  jQuery(".teampopup").fadeOut(500);
+  $(".teampopup").fadeOut(500);
 });
 // const accordionItemHeaders = document.querySelectorAll(
 //     ".accordion-item-header"
@@ -148,13 +148,14 @@ $(".accordion-item").click(function () {
 
 /* Header Sticky Js End */
 
-jQuery("#newsletterlink").click(function(e) {			
-    event.preventDefault();
-      jQuery("#newsletterpop").fadeIn(500);			
+$("#newsletterlink").click(function(e) {			
+    e.preventDefault();
+      $("#newsletterpop").fadeIn(500);	
+      	
 });
-jQuery("#newsletterpop .npclose").click(function() {
-    event.preventDefault();
-  jQuery("#newsletterpop").fadeOut(500);
+$("#newsletterpop .npclose").click(function(e) {
+    e.preventDefault();
+  $("#newsletterpop").fadeOut(500);
 });
 
 
