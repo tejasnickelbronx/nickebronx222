@@ -150,7 +150,7 @@ export default function SiteFooter({className, globalsettings}){
                       <a href="" className="menu-btn">
                         Newsletter
                       </a>
-                      <a href="">sign up for our newsletter</a>
+                      <a href="#" id="newsletterlink">sign up for our newsletter</a>
                     </li>
                   </ul>
                 </div>

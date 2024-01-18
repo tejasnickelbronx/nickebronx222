@@ -2,18 +2,19 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link';
 import  { useState, useEffect } from 'react';
+import {getproductdata} from '../lib/getProductPlan.js';
 import SiteHeader from '../components/siteheader.js';
 import SiteFooter from '../components/sitefooter.js';
 import useScript from '../hooks/useScript.js';
 
 export async function getStaticProps(){
   
- 
+  const getproductfields = await getproductdata();
   
   
   return {
       props:{
-        merchfield: "",
+        productfields: getproductfields,
         
       },
 
@@ -22,7 +23,15 @@ export async function getStaticProps(){
 }
 
 
-export default function Merch({merchfields}) {
+export default function Merch({productfields}) {
+  console.log(productfields.data.pageBy.productLandingPageFields);
+
+  const pageheader        = productfields.data.pageBy.productLandingPageFields.header[0];
+  const whygetbundle      = productfields.data.pageBy.productLandingPageFields.whyGetBundle[0];
+  const bundleboxes       = productfields.data.pageBy.productLandingPageFields.bundleBoxes;
+  const whychoosebundle   = productfields.data.pageBy.productLandingPageFields.whyChooseBundle[0];
+  const planHeading       = productfields.data.pageBy.productLandingPageFields.planHeading;
+  const plansboxes       = productfields.data.pageBy.productLandingPageFields.plansSection;
     
   useScript('https://code.jquery.com/jquery-3.7.0.min.js');
   useScript('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js');
@@ -49,20 +58,17 @@ export default function Merch({merchfields}) {
         <div className="container2">
           <div className="identity-banner-inner">
             <div className="productbannertext">
-              <h2>
-                HOURLY <br />
-                <span>POWER</span> PACKS
-              </h2>
+              <h2 dangerouslySetInnerHTML={{ __html: pageheader.heading}}></h2>
               <p>
-                You’re the best at what you do — but how will anyone know that until
-                they actually work with you? Looks aren’t everything.
+              {pageheader.description}
               </p>
               <a className="home-btn" href="#">
                 Get Started
               </a>
             </div>
             <div className="productbannerimage">
-              <img src="./productplaceholder.png" height={529} width={529} alt={"hourly nickelbronx package"} />
+              <img src={pageheader.headerImage.sourceUrl} height={529} width={529} alt={"hourly nickelbronx package"} />
+             
             </div>
           </div>
         </div>
@@ -71,52 +77,28 @@ export default function Merch({merchfields}) {
       <section className="whygetbundle">
         <div className="container2">
           <div className="whybundlehead">
-            <h2>
-              WHY GET A <span>BUNDLE?</span>
-            </h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-              minim veniam, quis nostrud.
-            </p>
+            <h2 dangerouslySetInnerHTML={{ __html: whygetbundle.heading}}></h2>
+            <p>{whygetbundle.description}</p>
           </div>
           <div className="bundleboxs">
+            
+            {
+              bundleboxes.map((bundleitem, index)=>( 
+
+
+             
             <div className="bundlebx">
               <div className="bundleicon">
-                <img src="./productbundle3.png" height={103} width={48} alt="Package icon" />
+                <img src={bundleitem.boxIcon.sourceUrl} height={103} width={48} alt="Package icon" />
               </div>
               <div className="bundletext ">
-                <h3 className="magenta">BENEFIT 1</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                  eiusmod tempor incididunt ut labore et dolore magna aliqua
-                </p>
+                <h3>{bundleitem.heading}</h3>
+                <p>{bundleitem.description}</p>
               </div>
             </div>
-            <div className="bundlebx">
-              <div className="bundleicon">
-                <img src="./productbundle2.png" height={103} width={73} alt="Package icon" />
-              </div>
-              <div className="bundletext ">
-                <h3 className="yellow">BENEFIT 1</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                  eiusmod tempor incididunt ut labore et dolore magna aliqua
-                </p>
-              </div>
-            </div>
-            <div className="bundlebx">
-              <div className="bundleicon">
-                <img src="./productbundle.png" height={103} width={108}  alt="Package icon"/>
-              </div>
-              <div className="bundletext ">
-                <h3 className="cyan">BENEFIT 1</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                  eiusmod tempor incididunt ut labore et dolore magna aliqua
-                </p>
-              </div>
-            </div>
+             ))
+
+            }
           </div>
         </div>
       </section>
@@ -124,18 +106,11 @@ export default function Merch({merchfields}) {
         <div className="container2">
           <div className="whychoosebundle">
             <div className="whychoosebndhead">
-              <h2>WHY CHOOSE A BUNDLE?</h2>
-              <h3>
-                WE OFFER A RANGE OF SERVICES WITH <span>AN HOURLY BUNDLE</span>
-              </h3>
+              <h2>{whychoosebundle.subHeading}</h2>
+              <h3 dangerouslySetInnerHTML={{ __html: whychoosebundle.heading}}></h3>
             </div>
             <div className="whychoosebndtext">
-              <p>
-                our proprietary storytelling process delivers meaningful results for
-                partners who are dedicated to improving our world. Our outcomes
-                speak for themselves so reach out now to learn more. Our outcomes
-                speak for themselves so reach out now.
-              </p>
+              <p>{whychoosebundle.description}</p>
             </div>
           </div>
         </div>
@@ -143,81 +118,31 @@ export default function Merch({merchfields}) {
       <section className="getplansec">
         <div className="container2">
           <div className="planhead">
-            <h2>
-              We’ve got a plan that’s
-              <br /> perfect for you.
-            </h2>
+            <h2 dangerouslySetInnerHTML={{ __html: planHeading}}></h2>
           </div>
           <div className="getplanboxs">
+            
+          {
+              plansboxes.map((planitem, index)=>(
             <div className="planbox">
               <div className="planbxhead">
-                <h3>Basic Plan</h3>
+                <h3>{planitem.planName}</h3>
                 <h2>
-                  20<span>hrs</span>
+                {planitem.planPrice}<span>hrs</span>
                 </h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                  eiusmod.
-                </p>
+                <p>{planitem.description}</p>
                 <hr className="plansep" />
               </div>
               <div className="planbxfeatures">
                 <h3>FEATURES</h3>
-                <ul className="planfeatlist">
-                  <li>Lorem ipsum dolor sit amet</li>
-                  <li>Consectetur adipiscing elit</li>
-                  <li>tempor incididunt ut</li>
-                  <li>Exercitation ullamco laboris</li>
-                  <li>Occaecat cupidatat nonplan</li>
-                </ul>
+                
+                <ul dangerouslySetInnerHTML={{ __html: planitem.features}}></ul>
               </div>
             </div>
-            <div className="planbox">
-              <div className="planbxhead">
-                <h3>Basic Plan</h3>
-                <h2>
-                  40<span>hrs</span>
-                </h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                  eiusmod.
-                </p>
-                <hr className="plansep" />
-              </div>
-              <div className="planbxfeatures">
-                <h3>FEATURES</h3>
-                <ul className="planfeatlist">
-                  <li>Lorem ipsum dolor sit amet</li>
-                  <li>Consectetur adipiscing elit</li>
-                  <li>tempor incididunt ut</li>
-                  <li>Exercitation ullamco laboris</li>
-                  <li>Occaecat cupidatat nonplan</li>
-                </ul>
-              </div>
-            </div>
-            <div className="planbox">
-              <div className="planbxhead">
-                <h3>Basic Plan</h3>
-                <h2>
-                  80<span>hrs</span>
-                </h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                  eiusmod.
-                </p>
-                <hr className="plansep" />
-              </div>
-              <div className="planbxfeatures">
-                <h3>FEATURES</h3>
-                <ul className="planfeatlist">
-                  <li>Lorem ipsum dolor sit amet</li>
-                  <li>Consectetur adipiscing elit</li>
-                  <li>tempor incididunt ut</li>
-                  <li>Exercitation ullamco laboris</li>
-                  <li>Occaecat cupidatat nonplan</li>
-                </ul>
-              </div>
-            </div>
+            ))
+
+          }
+            
           </div>
           <div className="planstartbtn">
             <a className="home-btn" href="#">

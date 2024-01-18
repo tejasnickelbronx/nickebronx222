@@ -9,7 +9,14 @@ import SiteHeader from '../../components/siteheader.js';
 import SiteFooter from '../../components/sitefooter.js';
 import useScript from '../../hooks/useScript.js';
 
-
+import { Navigation, Pagination, Scrollbar, A11y,Mousewheel,FreeMode,Autoplay    } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+import 'swiper/css/mousewheel';
+import 'swiper/css/free-mode';
 
 
 
@@ -127,37 +134,39 @@ export default function ServicePage({servicePageData, testisection}) {
   <section className="testimonial-main">
     <div className="container2">
       <div className="testimonial-inner">
-        <div className="swiper testimonial-slider">
-          <div className="swiper-wrapper">
-          {
+      <Swiper  
+      modules={[Navigation, Pagination, Scrollbar, A11y,Mousewheel, Autoplay ]}
+      className="testimonial-slider" 
+      mousewheel={{releaseOnEdges: true, sensitivity: 0.5}}
+      scrollbar={{ draggable: true }} 
+      spaceBetween={25}
+      slidesPerView={1} 
+      onSlideChange={() => console.log('slide change')}
+      onSwiper={(swiper) => console.log(swiper)} 
+      direction="horizontal"
+      autoplay={{
+        delay: 3000,        
+      }}
+      >
 
-alltestimonial.map((testiItem, index)=>(    
-<div className="swiper-slide" key={index}>
-  <div className="testi-box">
-    <div className="testi-box-inner">
-      <div className="testi-img">
-        <img src="/sohale-razmjou.png" />
-      </div>
-      <div className="testi-content">
-        <h2>{testiItem.title} • {testiItem.customfield.company}</h2>
-        {/*<h3>they absolutely CRUSHED IT</h3>*/}
-        <div dangerouslySetInnerHTML={{ __html: testiItem.content}}></div>
-      </div>
-    </div>
-  </div>
-</div>
-))}
-            
-            
-            
-           
-           
-            
-            
-            
+        {alltestimonial.map((testiItem, index)=>(    
+        <SwiperSlide>
+          <div className="testi-box">
+            <div className="testi-box-inner">
+              <div className="testi-img">
+                <Image src={testiItem.customfield.clientPhoto.sourceUrl} alt={testiItem.title} height="300" width="300"/>
+              </div>
+              <div className="testi-content">
+                <h2>{testiItem.title} • {testiItem.customfield.company}</h2>
+                {/*<h3>they absolutely CRUSHED IT</h3>*/}
+                <div dangerouslySetInnerHTML={{ __html: testiItem.content}}></div>
+              </div>
+            </div>
           </div>
-          <div className="swiper-scrollbar" />
-        </div>
+          </SwiperSlide>
+        ))}
+            
+            </Swiper> 
       </div>
     </div>
   </section>

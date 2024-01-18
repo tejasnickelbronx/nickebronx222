@@ -6,6 +6,15 @@ import useScript from '../hooks/useScript.js';
 import {getAllTestimonial} from '../lib/testimonial.js';
 import {getAboutSections, getAboutSections2} from '../lib/getAboutSections.js';
 
+import { Navigation, Pagination, Scrollbar, A11y,Mousewheel,FreeMode,Autoplay    } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+import 'swiper/css/mousewheel';
+import 'swiper/css/free-mode';
+
 export async function getStaticProps(){
   const teamdata        = await getAboutSections();
   const corevaluedata   = await getAboutSections2();
@@ -69,12 +78,20 @@ export default function About({allteams,aboutfields, alltestiitems}) {
         {meetteamhead.description}
       </p>
     </div>
-    <div className="swiper service-slider team-slider">
-      <div className="swiper-wrapper">
+    <Swiper  
+    modules={[Navigation, Pagination, Scrollbar, A11y,Mousewheel, Autoplay ]}
+    className="team-slider service-slider" 
+    mousewheel={{releaseOnEdges: true, sensitivity: 0.5}}
+    scrollbar={{ draggable: true }} 
+    spaceBetween={25}
+    slidesPerView={4} 
+    onSlideChange={() => console.log('slide change')}
+    onSwiper={(swiper) => console.log(swiper)} 
+    direction="horizontal">
         {
            
             teamarray.map((testiItem, index)=>(   
-              <div className="swiper-slide" key={index}>
+              <SwiperSlide>
               <div className="team-slide">
                 <div className="image-sec">
                   <Image src={testiItem.teamFields.image.sourceUrl} height={200} width={200} alt={testiItem.title} />
@@ -90,20 +107,21 @@ export default function About({allteams,aboutfields, alltestiitems}) {
                   </a>
                 </div>
               </div>
-            </div>
+              </SwiperSlide>
 
             ))
                 
             }
+        <SwiperSlide></SwiperSlide>
+        <SwiperSlide></SwiperSlide>
+	
         
         
-        
+        </Swiper>     
         
         
        
-      </div>
-      <div className="swiper-scrollbar" />
-    </div>
+      
   </div>
   { 
   teamarray.map((testiItem, index)=>( 
@@ -237,17 +255,30 @@ export default function About({allteams,aboutfields, alltestiitems}) {
 
 <section className="testimonial-main about-testimonial">
   <div className="container2">
-    <div className="testimonial-inner">
-      <div className="swiper testimonial-slider">
-        <div className="swiper-wrapper">
+    <div className="testimonial-inner"> 
+
+    <Swiper  
+      modules={[Navigation, Pagination, Scrollbar, A11y,Mousewheel, Autoplay ]}
+      className="testimonial-slider " 
+      mousewheel={{releaseOnEdges: true, sensitivity: 0.5}}
+      scrollbar={{ draggable: true }} 
+      spaceBetween={25}
+      slidesPerView={1} 
+      onSlideChange={() => console.log('slide change')}
+      onSwiper={(swiper) => console.log(swiper)} 
+      direction="horizontal"
+      autoplay={{
+        delay: 3000,        
+      }}
+      >
           {
 
          testimonials.map((testiItem, index)=>( 
-          <div className="swiper-slide" key={index}>
+          <SwiperSlide>
             <div className="testi-box">
               <div className="testi-box-inner">
-                <div className="testi-img">
-                  <img src="/sohale-razmjou.png" title="testimonial" />
+                <div className="testi-img whitebglayer">
+                <Image src={testiItem.customfield.clientPhoto.sourceUrl} alt={testiItem.title} height="300" width="300"/>
                 </div>
                 <div className="testi-content">
                   {/* <h2>SOHALE RAZMJOU • BLACKWOOD</h2> */}
@@ -257,13 +288,11 @@ export default function About({allteams,aboutfields, alltestiitems}) {
                 </div>
               </div>
             </div>
-          </div>
-  )) 
+          </SwiperSlide>
+        )) 
   
-  }
-        </div>
-        <div className="swiper-scrollbar" />
-      </div>
+      } 
+     </Swiper>   
     </div>
   </div>
 </section>

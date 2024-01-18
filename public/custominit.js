@@ -1,90 +1,90 @@
-var swiper = new Swiper(".team-slider", {
-    slidesPerView: 4,
-    speed: 600,
-    spaceBetween: 23,
-    freeMode: true,
+// var swiper = new Swiper(".team-slider", {
+//     slidesPerView: 4,
+//     speed: 600,
+//     spaceBetween: 23,
+//     freeMode: true,
     
-    breakpoints: {
-        3600: {
-        slidesPerView: 4,
-        },
-        1025: {
-            slidesPerView: 4,
-        },
-        767: {
-            slidesPerView: 3,
-        },
-        320: {
-            slidesPerView: 1,
-        }
+//     breakpoints: {
+//         3600: {
+//         slidesPerView: 4,
+//         },
+//         1025: {
+//             slidesPerView: 4,
+//         },
+//         767: {
+//             slidesPerView: 3,
+//         },
+//         320: {
+//             slidesPerView: 1,
+//         }
         
-    },
-    scrollbar: {
-        el: ".swiper-scrollbar",
-    },
-    direction: 'horizontal',
-    mousewheel: true,
-    speed: 600,
-    parallax: true,
-    effect:'slide',
-    mousewheel: {
-        releaseOnEdges: true,
-    },
-});
+//     },
+//     scrollbar: {
+//         el: ".swiper-scrollbar",
+//     },
+//     direction: 'horizontal',
+//     mousewheel: true,
+//     speed: 600,
+//     parallax: true,
+//     effect:'slide',
+//     mousewheel: {
+//         releaseOnEdges: true,
+//     },
+// });
 
 
-var swiper = new Swiper(".testimonial-slider", {
-    slidesPerView: 1,
-    spaceBetween: 0,
-    freeMode: true,
-    // loop: true,
-    // breakpoints: {
-    //     769: {
-    //     slidesPerView: 2,
-    //     slidesPerGroup: 2,
-    //     },
-    // },
-    scrollbar: {
-        el: ".swiper-scrollbar",
-    },
-    direction: 'horizontal',
-    mousewheel: true,
-    mousewheel: {
-        releaseOnEdges: true,
-    },
-});
-var swiper = new Swiper(".service-slider", {
-    slidesPerView: 4,
-    spaceBetween: 23,
-    freeMode: true,
-    // loop: true,
-    breakpoints: {
-        3600: {
-        slidesPerView: 4,
-        },
-        1025: {
-            slidesPerView: 4,
-        },
-        767: {
-            slidesPerView: 3,
-        },
-        320: {
-            slidesPerView: 1,
-        }
+// var swiper = new Swiper(".testimonial-slider", {
+//     slidesPerView: 1,
+//     spaceBetween: 0,
+//     freeMode: true,
+//     // loop: true,
+//     // breakpoints: {
+//     //     769: {
+//     //     slidesPerView: 2,
+//     //     slidesPerGroup: 2,
+//     //     },
+//     // },
+//     scrollbar: {
+//         el: ".swiper-scrollbar",
+//     },
+//     direction: 'horizontal',
+//     mousewheel: true,
+//     mousewheel: {
+//         releaseOnEdges: true,
+//     },
+// });
+// var swiper = new Swiper(".service-slider", {
+//     slidesPerView: 4,
+//     spaceBetween: 23,
+//     freeMode: true,
+//     // loop: true,
+//     breakpoints: {
+//         3600: {
+//         slidesPerView: 4,
+//         },
+//         1025: {
+//             slidesPerView: 4,
+//         },
+//         767: {
+//             slidesPerView: 3,
+//         },
+//         320: {
+//             slidesPerView: 1,
+//         }
         
-    },
-    scrollbar: {
-        el: ".swiper-scrollbar",
-    },
-    mousewheel: true,
-    speed: 600,
-    parallax: true,
-    effect:'slide',
-    mousewheel: {
-        releaseOnEdges: true,
-    },
+//     },
+//     scrollbar: {
+//         el: ".swiper-scrollbar",
+//     },
+//     mousewheel: true,
+//     speed: 600,
+//     parallax: true,
+//     effect:'slide',
+//     mousewheel: {
+//         releaseOnEdges: true,
+//     },
     
-});
+// });
 $(".menubar-btn").click(function () {
 	$(".menu-sec").slideToggle();
 	$(this).toggleClass("open");
@@ -148,6 +148,13 @@ $(".accordion-item").click(function () {
 
 /* Header Sticky Js End */
 
-
+jQuery("#newsletterlink").click(function(e) {			
+    event.preventDefault();
+      jQuery("#newsletterpop").fadeIn(500);			
+});
+jQuery("#newsletterpop .npclose").click(function() {
+    event.preventDefault();
+  jQuery("#newsletterpop").fadeOut(500);
+});
 
 

@@ -11,6 +11,18 @@ import {getsection1} from '../lib/getHomeSection.js';
 import {getAllTestimonial} from '../lib/testimonial.js';
 import {getPorftoliositems} from '../lib/getPortfolioSections.js';
 
+import { Navigation, Pagination, Scrollbar, A11y,Mousewheel,FreeMode,Autoplay    } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+import 'swiper/css/mousewheel';
+import 'swiper/css/free-mode';
+// import LocomotiveScroll from 'locomotive-scroll';
+
+
+// const scroll = new LocomotiveScroll();
 
 
 export async function getStaticProps(){
@@ -50,13 +62,14 @@ export default function Home({pagefields, testisection,portfolioitems}) {
 
   
    console.log(ourservicesitems);
-   useScript('https://code.jquery.com/jquery-3.7.0.min.js');
-   useScript('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js');
-   useScript('https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.min.js');
+   useScript('https://code.jquery.com/jquery-3.7.0.min.js');   
+   
    useScript('./custominit.js');
-   useScript('./locomativeinit.js');
+   
    
    const recordcount = allportfolioarr.length/5;
+
+  
    
   return (
     <>
@@ -136,6 +149,7 @@ export default function Home({pagefields, testisection,portfolioitems}) {
   </section>
   {/* Who We Are Section End */}
   {/* Service Section Start */}
+  
   <section className="service-main-sec">
     <div className="container2">
       <div className="service-inner-sec">
@@ -147,14 +161,30 @@ export default function Home({pagefields, testisection,portfolioitems}) {
             {ourService.description}
           </p>
         </div>
-        <div className="swiper service-slider">
-          <div className="swiper-wrapper">
+        <Swiper  
+            modules={[Navigation, Pagination, Scrollbar, A11y,Mousewheel, Autoplay ]}
+            className="service-slider" 
+            mousewheel={{releaseOnEdges: true, sensitivity: 0.5}}
+            scrollbar={{ draggable: true }} 
+            spaceBetween={25}
+            slidesPerView={4} 
+            onSlideChange={() => console.log('slide change')}
+            onSwiper={(swiper) => console.log(swiper)} 
+            direction="horizontal"
+            
+           
+            
+            >
+   
             {
              
               ourservicesitems.map((serviceitem, index)=>(     
                 
               
-               <div className={`swiper-slide serviceitems${index}`} key={serviceitem.serviceTitle}>
+                <SwiperSlide virtualIndex={index}>
+                  <div className='serviceitems'>
+
+                  
                   <div className="service-box">
                     <div  className={`service-box-inner sboxbg_${index}`}>
                       <div className="image">
@@ -168,19 +198,20 @@ export default function Home({pagefields, testisection,portfolioitems}) {
                      
                     </div>
                   </div>
-                </div>
+                  </div>
+                </SwiperSlide>
               ))
 
-             }
-            
-            
-            
+             }  
+              
+              <SwiperSlide>
+              <div className='serviceitems'></div>
+              </SwiperSlide>
+            </Swiper>
             
             
           
-          </div>
-          <div className="swiper-scrollbar" />
-        </div>
+          
       </div>
     </div>
   </section>
@@ -205,7 +236,7 @@ export default function Home({pagefields, testisection,portfolioitems}) {
         </div>
         <div className="client-intro-sec">
           <div className="client-inner-sec " >
-          <div class="portclmn1" data-scroll="" data-scroll-speed=".5">
+          <div className="portclmn1" data-scroll="" data-scroll-speed=".5">
           {              
               allportfolioarr.slice(0, 5).map((portfolioItem, index)=>(               
               <div className="intro-box" key={portfolioItem.slug} >
@@ -225,7 +256,7 @@ export default function Home({pagefields, testisection,portfolioitems}) {
             ))
           }
           </div>
-          <div class="portclmn1" data-scroll="" data-scroll-speed=".10">
+          <div className="portclmn1" data-scroll="" data-scroll-speed=".10">
           {              
               allportfolioarr.slice(5, 10).map((portfolioItem, index)=>(               
               <div className="intro-box" key={portfolioItem.slug} >
@@ -245,7 +276,7 @@ export default function Home({pagefields, testisection,portfolioitems}) {
             ))
           }
           </div>
-          <div class="portclmn1" data-scroll="" data-scroll-speed=".5">
+          <div className="portclmn1" data-scroll="" data-scroll-speed=".5">
           {              
               allportfolioarr.slice(10,15).map((portfolioItem, index)=>(               
               <div className="intro-box" key={portfolioItem.slug} >
@@ -283,35 +314,45 @@ export default function Home({pagefields, testisection,portfolioitems}) {
   <section className="testimonial-main">
     <div className="container2">
       <div className="testimonial-inner">
-        <div className="swiper testimonial-slider">
-          <div className="swiper-wrapper">
+        
           
             
-          {
+      <Swiper  
+      modules={[Navigation, Pagination, Scrollbar, A11y,Mousewheel, Autoplay ]}
+      className="testimonial-slider" 
+      mousewheel={{releaseOnEdges: true, sensitivity: 0.5}}
+      scrollbar={{ draggable: true }} 
+      spaceBetween={25}
+      slidesPerView={1} 
+      onSlideChange={() => console.log('slide change')}
+      onSwiper={(swiper) => console.log(swiper)} 
+      direction="horizontal"
+      autoplay={{
+        delay: 3000,        
+      }}
+      >
 
-alltestimonial.map((testiItem, index)=>(    
-<div className="swiper-slide" key={index}>
-  <div className="testi-box">
-    <div className="testi-box-inner">
-      <div className="testi-img">
-        <img src="/sohale-razmjou.png" />
-      </div>
-      <div className="testi-content">
-        <h2>{testiItem.title} • {testiItem.customfield.company}</h2>
-        {/*<h3>they absolutely CRUSHED IT</h3>*/}
-        <div dangerouslySetInnerHTML={{ __html: testiItem.content}}></div>
-      </div>
-    </div>
-  </div>
-</div>
-))}
+        {alltestimonial.map((testiItem, index)=>(    
+        <SwiperSlide>
+          <div className="testi-box">
+            <div className="testi-box-inner">
+              <div className="testi-img">
+                <Image src={testiItem.customfield.clientPhoto.sourceUrl} alt={testiItem.title} height="300" width="300"/>
+              </div>
+              <div className="testi-content">
+                <h2>{testiItem.title} • {testiItem.customfield.company}</h2>
+                {/*<h3>they absolutely CRUSHED IT</h3>*/}
+                <div dangerouslySetInnerHTML={{ __html: testiItem.content}}></div>
+              </div>
+            </div>
+          </div>
+          </SwiperSlide>
+        ))}
             
-            
+            </Swiper>    
            
             
-          </div>
-          <div className="swiper-scrollbar" />
-        </div>
+          
       </div>
     </div>
   </section>
