@@ -178,7 +178,7 @@ export default function Merch({merchfields}) {
                   <div className='formthankyou'>
                     <h2>THANK YOU!</h2>
                     <h3>Your form has been submitted! A team member will<br/> get back to you soon via email. </h3>
-                    <div className="thankyouhome"><Link class="btn-cust" href="/">Home</Link></div>
+                    <div className="thankyouhome"><Link class="home-btn" href="/">Home</Link></div>
                   </div>
             </div>
              )}
