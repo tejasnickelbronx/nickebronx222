@@ -675,9 +675,8 @@ color: #F7F9FC;
   height: 60px;
   color: #F7F9FC;
   font-size: 36px;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #F7F9FC;
+  font-family: 'Kallisto';
+  
 }
 .prformtext::-webkit-input-placeholder { /* WebKit, Blink, Edge */
   -webkit-text-fill-color: transparent;
@@ -767,7 +766,7 @@ color: #F7F9FC;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #F7F9FC;
-  font-family: Kallisto;
+  font-family: 'Kallisto';
 }
 
 /* Hide the browser's default radio button */
@@ -1268,7 +1267,7 @@ color:#000;
   font-size: 60px;
   -webkit-text-fill-color: transparent; 
   -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: #9E2261;
+  -webkit-text-stroke-color: #FF2093;
   text-transform: uppercase;font-family: 'Kallisto';
   position: relative;
   display: inline;
@@ -1276,25 +1275,25 @@ color:#000;
 }
 .contactformlinks ul li h3.headsomething {
   
-  -webkit-text-stroke-color: #0A8AC0;
+  -webkit-text-stroke-color: #00C2FF;
 }
 .contactformlinks ul li h3.headmedia {
-  -webkit-text-stroke-color: #8F7D28;
+  -webkit-text-stroke-color: #FFDC2A;
 }/* Group 48096139 */
 
 
 .contactformlinks ul li h3.headnewpro:hover, .contactformlinks ul li h3.headcollabs:hover {
-  -webkit-text-stroke-color: #9E2261;
-  -webkit-text-fill-color: #9E2261;
+  -webkit-text-stroke-color: #FF2093;
+  -webkit-text-fill-color: #FF2093;
 }
 .contactformlinks ul li h3.headsomething:hover {
-  -webkit-text-stroke-color: #0A8AC0;
-  -webkit-text-fill-color: #0A8AC0;
+  -webkit-text-stroke-color: #00C2FF;
+  -webkit-text-fill-color: #00C2FF;
 }
 .contactformlinks ul li h3.headmedia:hover {
   
-  -webkit-text-stroke-color: #8F7D28;
-  -webkit-text-fill-color: #8F7D28;
+  -webkit-text-stroke-color: #FFDC2A;
+  -webkit-text-fill-color: #FFDC2A;
 }
 .contactformlinks ul li h3.headnewpro::before , 
 .contactformlinks ul li h3.headsomething::before, 
@@ -1322,6 +1321,18 @@ color:#000;
 }
 .contactformlinks ul li h3.headmedia::before{
   background-image: url('../public/medialinksign.png');
+}
+.contactformlinks ul li h3.headnewpro:hover::before{
+  background-image: url('../public/prlinksign2.png');
+}
+.contactformlinks ul li h3.headsomething:hover::before{
+  background-image: url('../public/someelselinksing2.png');
+}
+.contactformlinks ul li h3.headcollabs:hover::before{
+  background-image: url('../public/prlinksign2.png');
+}
+.contactformlinks ul li h3.headmedia:hover::before{
+  background-image: url('../public/medialinksign2.png');
 }
 
 .testi-box-inner .testi-img::before {

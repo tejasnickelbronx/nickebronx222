@@ -74,7 +74,7 @@ export default function Merch({merchfields}) {
                     <h3>What’s the name of your company?</h3>
                   </div>
                   <div className='formfield'>
-                      <input type='text' name="prcompany" id='prcompany' placeholder="Your company"></input>
+                      <input type='text' className='prformtext' name="prcompany" id='prcompany' placeholder="Your company"></input>
                       <button onClick={() => SetStep(step + 1)} className='btnnextstep'  type="submit" name="nextstep">
                         <img src="./btnnext.png" alt="nextstep" width={50} height={50}/>
                       </button>
@@ -119,7 +119,7 @@ export default function Merch({merchfields}) {
                     <p>What problem are you trying to solve? Do you have a timeline or budget in mind?</p>
                   </div>
                   <div className='formfield'>
-                      <input type='text' name="projectbrief" id='projectbrief' placeholder='Your project brief'></input>
+                      <input type='text' className='prformtext' name="projectbrief" id='projectbrief' placeholder='Your project brief'></input>
                       <button onClick={() => SetStep(step + 1)} className='btnnextstep'  type="submit" name="nextstep">
                         <img src="./btnnext.png" alt="nextstep" width={50} height={50}/>
                       </button>
@@ -134,7 +134,7 @@ export default function Merch({merchfields}) {
                     <h3>What’s an email we can reach you at?</h3>
                   </div>
                   <div className='formfield'>
-                      <input type='text' name="premail" id='premail' placeholder='Your email'></input>
+                      <input type='text' className='prformtext' name="premail" id='premail' placeholder='Your email'></input>
                       <button onClick={() => SetStep(step + 1)} className='btnnextstep'  type="submit" name="nextstep">
                         <img src="./btnnext.png" alt="nextstep" width={50} height={50}/>
                       </button>

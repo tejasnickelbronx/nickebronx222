@@ -74,7 +74,7 @@ export default function Merch({merchfields}) {
                     <h3>What’s the name of your company?</h3>
                   </div>
                   <div className='formfield'>
-                      <input type='text' name="miorganization" id='miorganization' placeholder="Your company"></input>
+                      <input type='text' className='prformtext' name="miorganization" id='miorganization' placeholder="Your company"></input>
                       <button onClick={() => SetStep(step + 1)} className='btnnextstep'  type="submit" name="nextstep">
                         <img src="./btnnext.png" alt="nextstep" width={50} height={50}/>
                       </button>
@@ -89,7 +89,7 @@ export default function Merch({merchfields}) {
                     <h3>How can we help?</h3>
                   </div>
                   <div className='formfield'>
-                      <input type='text' name="howcanhelp" id='howcanhelp' placeholder="Your company"></input>
+                      <input type='text' className='prformtext' name="howcanhelp" id='howcanhelp' placeholder="Your company"></input>
                       <button onClick={() => SetStep(step + 1)} className='btnnextstep'  type="submit" name="nextstep">
                         <img src="./btnnext.png" alt="nextstep" width={50} height={50}/>
                       </button>
@@ -104,7 +104,7 @@ export default function Merch({merchfields}) {
                     <h3>What’s an email we can reach you at?</h3>
                   </div>
                   <div className='formfield'>
-                      <input type='text' name="miemail" id='miemail' placeholder="Your company"></input>
+                      <input type='text' className='prformtext' name="miemail" id='miemail' placeholder="Your company"></input>
                       <button onClick={() => SetStep(step + 1)} className='btnnextstep'  type="submit" name="nextstep">
                         <img src="./btnnext.png" alt="nextstep" width={50} height={50}/>
                       </button>
@@ -147,7 +147,7 @@ export default function Merch({merchfields}) {
                   <div className='formthankyou'>
                     <h2>THANK YOU!</h2>
                     <h3>Your form has been submitted! A team member will<br/> get back to you soon via email. </h3>
-                    <div class="banner-button"><Link class="btn-cust" href="/">Home</Link></div>
+                    <div className="thankyouhome"><Link class="btn-cust" href="/">Home</Link></div>
 
                   </div>
             </div>
