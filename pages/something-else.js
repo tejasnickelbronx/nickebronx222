@@ -123,17 +123,19 @@ export default function Merch({merchfields}) {
                   </div>
                   <div className='formfieldradio'>
                       <div className='formfieldchoice'>
-                        <label className='prradiolable'>Yes
-                          <input type='radio' name="business" id='business' value="Yes"></input>
+                        <label className='prradiolable'>
+                          <input type='radio' name="nbemailnot" id='nbemailnot' value="Yes"></input>
                           <span class="radiocheck"></span>
+                          <span className="prradiohead">Yes</span>
                         </label>
                         
                         
                       </div>
                       <div className='formfieldchoice'>                        
-                        <label  className='prradiolable'>No
-                          <input type='radio' name="minbnotification" id='minbnotification' value="No"></input>
+                        <label  className='prradiolable'>
+                          <input type='radio' name="nbemailnot" id='nbemailnot' value="No"></input>
                           <span class="radiocheck"></span>
+                          <span className="prradiohead">No</span>
                         </label>
                         <button onClick={() => SetStep(step + 1)} className='btnnextstep'  type="submit" name="nextstep">
                         <img src="./btnnext.png" alt="nextstep" width={50} height={50}/>
