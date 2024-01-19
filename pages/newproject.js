@@ -28,7 +28,7 @@ export default function Merch({merchfields}) {
   useScript('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js');
   useScript('https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.min.js');
   useScript('./custominit.js');
-  
+  const [step, setStep] = useState(0);
   
     return (
         <>
@@ -61,18 +61,18 @@ export default function Merch({merchfields}) {
                   </Link>
                 </li>
                 <li>
-                  <Link className="contactformbtn" href="/media-inquiry">
+                  <Link className="contactformbtn" href="/about">
                   <h3 className='headmedia'>Media Inquiry</h3>
+                  </Link>
+                </li>
+                <li>
+                  <Link className="contactformbtn" href="/about">
+                  <h3 className='headcollabs'>Collabs/Brand Deals</h3>
                   </Link>
                 </li>
                 
                 <li>
-                  <Link className="contactformbtn" href="/brand-deals">
-                  <h3 className='headcollabs'>Collabs/Brand Deals</h3>
-                  </Link>
-                </li>
-                <li>
-                  <Link className="contactformbtn" href="/something-else">
+                  <Link className="contactformbtn" href="/about">
                   <h3 className='headsomething'>Something Else</h3>
                   </Link>
                 </li>
@@ -87,7 +87,7 @@ export default function Merch({merchfields}) {
   
 
 
-        {/* <SiteFooter className="footercls"/> */}
+        <SiteFooter className="footercls"/>
         </>
   )
 }

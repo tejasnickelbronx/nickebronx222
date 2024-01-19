@@ -59,7 +59,7 @@ export default function Merch({merchfields}) {
 
                   </div>
                   <div className='formfield'>
-                      <input type='text' className='prformtext' name="prname" id='prname' placeholder="Your name"/>
+                      <input type='text' className='prformtext' name="miname" id='miname' placeholder="Your name"/>
                       <button onClick={() => SetStep(step + 1)} className='btnnextstep'  type="submit" name="nextstep">
                         <img src="./btnnext.png" alt="nextstep" width={50} height={50}/>
                       </button>
@@ -74,7 +74,7 @@ export default function Merch({merchfields}) {
                     <h3>What’s the name of your company?</h3>
                   </div>
                   <div className='formfield'>
-                      <input type='text' name="prcompany" id='prcompany' placeholder="Your company"></input>
+                      <input type='text' name="miorganization" id='miorganization' placeholder="Your company"></input>
                       <button onClick={() => SetStep(step + 1)} className='btnnextstep'  type="submit" name="nextstep">
                         <img src="./btnnext.png" alt="nextstep" width={50} height={50}/>
                       </button>
@@ -82,66 +82,40 @@ export default function Merch({merchfields}) {
           
             </div>
             )}
-             {step===3 &&(
+            {step===3 &&(
             <div className='prstep1'>
                   <div className='formstepinner'>
                     <p>03/06 </p>
-                    <h3>Let us know where you’re at in your business and how we can help.</h3>
-                  </div>
-                  <div className='formfieldradio inputradio'>
-                      
-
-                      <div className='formfieldchoice'>
-                        <label className='prradiolable'>We’re launching a new product or service.
-                          <input type='radio' name="business" id='business' value="We re launching a new product or service."></input>
-                          <span class="radiocheck"></span>
-                        </label>
-                        
-                        
-                      </div>
-                      <div className='formfieldchoice'>                        
-                        <label  className='prradiolable'>We’re an establish product or service and looking to refresh.
-                          <input type='radio' name="business" id='business2' value="We are an establish product or service and looking to refresh"></input>
-                          <span class="radiocheck"></span>
-                        </label>
-                        <button onClick={() => SetStep(step + 1)} className='btnnextstep'  type="submit" name="nextstep">
-                        <img src="./btnnext.png" alt="nextstep" width={50} height={50}/>
-                        </button>
-                      </div>
-                  </div>
-            </div>
-             )}
-            {step===4 &&(
-            <div className='prstep1'>
-                  <div className='formstepinner'>
-                    <p>04/06 </p>
-                    <h3>Tell us more about your project and needs.</h3>
-                    <p>What problem are you trying to solve? Do you have a timeline or budget in mind?</p>
+                    <h3>How can we help?</h3>
                   </div>
                   <div className='formfield'>
-                      <input type='text' name="projectbrief" id='projectbrief' placeholder='Your project brief'></input>
+                      <input type='text' name="howcanhelp" id='howcanhelp' placeholder="Your company"></input>
                       <button onClick={() => SetStep(step + 1)} className='btnnextstep'  type="submit" name="nextstep">
                         <img src="./btnnext.png" alt="nextstep" width={50} height={50}/>
                       </button>
                   </div>
-
+          
             </div>
             )}
-             {step===5 &&(
+             {step===4 &&(
             <div className='prstep1'>
                   <div className='formstepinner'>
-                    <p>05/06 </p>
+                    <p>03/06 </p>
                     <h3>What’s an email we can reach you at?</h3>
                   </div>
                   <div className='formfield'>
-                      <input type='text' name="premail" id='premail' placeholder='Your email'></input>
+                      <input type='text' name="miemail" id='miemail' placeholder="Your company"></input>
                       <button onClick={() => SetStep(step + 1)} className='btnnextstep'  type="submit" name="nextstep">
                         <img src="./btnnext.png" alt="nextstep" width={50} height={50}/>
                       </button>
                   </div>
+          
             </div>
-             )}
-            {step===6 &&(
+            )}
+            
+            
+             
+            {step===5 &&(
             <div className='prstep1'>
                   <div className='formstepinner'>
                     <p>06/06 </p>
@@ -158,7 +132,7 @@ export default function Merch({merchfields}) {
                       </div>
                       <div className='formfieldchoice'>                        
                         <label  className='prradiolable'>No
-                          <input type='radio' name="business" id='business2' value="No"></input>
+                          <input type='radio' name="minbnotification" id='minbnotification' value="No"></input>
                           <span class="radiocheck"></span>
                         </label>
                         <button onClick={() => SetStep(step + 1)} className='btnnextstep'  type="submit" name="nextstep">
@@ -168,12 +142,13 @@ export default function Merch({merchfields}) {
                   </div>
             </div>
             )}
-             {step===7 &&(
+             {step===6 &&(
             <div className='prstep1'>
                   <div className='formthankyou'>
                     <h2>THANK YOU!</h2>
                     <h3>Your form has been submitted! A team member will<br/> get back to you soon via email. </h3>
-                    <div className="thankyouhome"><Link class="btn-cust" href="/">Home</Link></div>
+                    <div class="banner-button"><Link class="btn-cust" href="/">Home</Link></div>
+
                   </div>
             </div>
              )}
@@ -183,7 +158,8 @@ export default function Merch({merchfields}) {
         </section>
 
   
-        
+  
+
 
         {/* <SiteFooter className="footercls"/> */}
         </>
