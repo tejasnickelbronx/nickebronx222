@@ -68,12 +68,12 @@ export default function Merch({merchfields}) {
                 
                 <li>
                   <Link className="contactformbtn" href="/brand-deals">
-                  <h3 className='headcollabs'>Collabs/Brand Deals</h3>
+                  <h3 className='headsomething'>Collabs/Brand Deals</h3>
                   </Link>
                 </li>
                 <li>
                   <Link className="contactformbtn" href="/something-else">
-                  <h3 className='headsomething'>Something Else</h3>
+                  <h3 className=' headcollabs' >Something Else</h3>
                   </Link>
                 </li>
                 
