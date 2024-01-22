@@ -18,9 +18,9 @@ export default function HomePortfolioItems({portfolioitems}) {
     offset: ['start end', 'end start']
   })
   const { height } = dimension;
-  const y = useTransform(scrollYProgress, [0, 1], [0, height * 2])
-  const y2 = useTransform(scrollYProgress, [0, 1], [0, height * 3.3])
-  const y3 = useTransform(scrollYProgress, [0, 1], [0, height * 1.25])
+  const y = useTransform(scrollYProgress, [0, 1], [0, height * 0.5])
+  const y2 = useTransform(scrollYProgress, [0, 1], [0, height * 4])
+  const y3 = useTransform(scrollYProgress, [0, 1], [0, height *0.5])
   const y4 = useTransform(scrollYProgress, [0, 1], [0, height * 3])
 
   useEffect( () => {
@@ -46,8 +46,8 @@ export default function HomePortfolioItems({portfolioitems}) {
 
   const recordcount = portfolioitems.length/5;
   const portcol1 = portfolioitems.slice(0, 5);
-  const portcol2 = portfolioitems.slice(5, 10);
-  const portcol3 = portfolioitems.slice(10, 15);
+  const portcol2 = portfolioitems.slice(6, 10);
+  const portcol3 = portfolioitems.slice(11, 15);
 
   console.log(portcol1)
   return (
