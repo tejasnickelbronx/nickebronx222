@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from 'next/link';
 import {getAllSettings} from '../lib/settings.js';
 
 export async function getStaticProps(){
@@ -28,8 +29,8 @@ export default function SiteFooter({className, globalsettings}){
             <div className="footer-title">
               <h2>TELL US ABOUT YOUR PROJECT</h2>
               <h3>
-                LET’S MAKE COOL <br />
-                SHIT TOGETHER
+                <Link href="/contact">LET’S MAKE COOL <br />
+                SHIT TOGETHER</Link>
               </h3>
             </div>
             <div className="footer-menu-main">

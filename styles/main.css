@@ -958,6 +958,9 @@ section.header {
     text-align: center;
     margin: 0 0 25px 0;
 }
+.footer-main .footer-title h3 a{
+    text-decoration: none;;
+}
 .footer-main .footer-title h3 {
     text-align: center;
     font-family: Kallisto;
@@ -967,11 +970,46 @@ section.header {
     line-height: 110px;
     text-transform: uppercase;
     margin: 0 0 70px 0;
-    background: linear-gradient(90deg, #FF2093 0.18%, #FFDC2A 43.31%, #00C2FF 87.35%);
+    
+    background: linear-gradient(90.31deg, #FF2093 0.18%, #FFDC2A 43.31%, #00C2FF 87.35%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-size: 200% 200%;
+    
+
+    -webkit-animation: Animation 1s ease infinite alternate-reverse;
+    -moz-animation: Animation 1s ease infinite alternate-reverse;
+    animation: Animation 1s ease infinite alternate-reverse;
 }
+@-webkit-keyframes Animation {
+    50%{background-position:60%}
+    100%{background-position:100%}
+}
+@-moz-keyframes Animation {
+    50%{background-position:60%}
+    100%{background-position:100%}
+}
+@keyframes Animation { 
+    50%{background-position:60%}
+    100%{background-position:100%}
+   
+    
+    /* 50%{background-position:91% 100%}
+    100%{background-position:10% 0%} */
+}
+
+
+
+
+
+
+
+
+
+
+
+
 .footer-menu-main,
 .footer-menu-inner {
     width: 100%;
