@@ -191,7 +191,7 @@ export default function Home({pagefields, testisection,portfolioitems}) {
   
         
             
-        {/* <GetHomeServices allservices={ourservicesitems} servicesec={ourService} /> */}
+        <GetHomeServices allservices={ourservicesitems} servicesec={ourService} /> 
           
           
       
@@ -346,22 +346,97 @@ export default function Home({pagefields, testisection,portfolioitems}) {
     <div className="logo-inner">
       <div className="logo-box-main">
         <div className="logo-box-inner bg-light-blue">
-          <img src="/our-latest-awards.png" alt="logoclient" />
-        </div>
+          <h2 className='awardshead'>our LATEST<br/> AWARDS</h2>
+        </div>        
       </div>
       <div className="logo-box-main">
         <div className="logo-box-inner bg-pink" >
           <img src="/marcom.png" alt="logoclient" />
+        </div>
+        <div className="overlaylogo bg-light-blue">
+            <div className="awardoverlay_inner bg-pink">
+                <div className='awardlist_overlay'>
+                  <div><h3>23</h3></div>
+                  <div><h3>INFINIGODS</h3></div>
+                  <div><h3>Gold</h3></div>
+                </div>
+                <div className='awardlist_overlay'>
+                  <div><h3>23</h3></div>
+                  <div><h3>JOE MECHLINSKI</h3></div>
+                  <div><h3>Gold</h3></div>
+                </div>
+                
+                <div className='awardlist_overlay'>
+                  <div><h3>23</h3></div>
+                  <div><h3>DOYEN CONSULTING</h3></div>
+                  <div><h3>Platinum</h3></div>
+                </div>
+                <div className='awardlist_overlay'>
+                  <div><h3>23</h3></div>
+                  <div><h3>NICKELBRONX</h3></div>
+                  <div><h3>Platinum</h3></div>                  
+                </div>
+                <div className='awardlist_overlay'>
+                  <div><h3>23</h3></div>
+                  <div><h3>PHIN</h3></div>
+                  <div><h3>Platinum</h3></div>                  
+                </div>
+              
+            
+            </div>        
         </div>
       </div>
       <div className="logo-box-main">
         <div className="logo-box-inner bg-yellow" >
           <img src="/hermes.png" alt="logoclient" />
         </div>
+        <div className="overlaylogo bg-light-blue">
+            <div className="awardoverlay_inner bg-yellow">
+                <div className='awardlist_overlay textblack'>
+                  <div><h3>23</h3></div>
+                  <div><h3>NICKELBRONX</h3></div>
+                  <div><h3>Platinum</h3></div>
+                </div>
+                <div className='awardlist_overlay textblack'>
+                  <div><h3>23</h3></div>
+                  <div><h3>PHIN</h3></div>
+                  <div><h3>Gold</h3></div>
+                </div>           
+             </div>
+        </div>
       </div>
       <div className="logo-box-main">
-        <div className="logo-box-inner">
+        <div className="logo-box-inner bgsoftwhite">
           <img src="/clutch.png" alt="logoclient" />
+        </div>
+        <div className="overlaylogo ">
+            <div className="awardoverlay_inner bgsoftwhite">
+                <div className='awardlist_overlay textblack'>
+                  <div><h3>23</h3></div>
+                  <div><h3>TOP FULL SERVICE DIGITAL CO.</h3></div>
+                  
+                </div>
+                <div className='awardlist_overlay textblack'>
+                  <div><h3>23</h3></div>
+                  <div><h3>TOP CORPORATE BRANDING CO.</h3></div>
+                  
+                </div> 
+                <div className='awardlist_overlay textblack'>
+                  <div><h3>23</h3></div>
+                  <div><h3>TOP BRANDING COMPANY</h3></div>
+                  
+                </div> 
+                <div className='awardlist_overlay textblack'>
+                  <div><h3>23</h3></div>
+                  <div><h3>TOP SOCIAL MEDIA MARKETING CO.</h3></div>
+                  
+                </div> 
+                <div className='awardlist_overlay textblack'>
+                  <div><h3>23</h3></div>
+                  <div><h3>TOP SOCIAL MEDIA MARKETING CO.</h3></div>
+                  
+                </div>           
+             </div>
         </div>
       </div>
     </div>

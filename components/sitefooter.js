@@ -68,12 +68,12 @@ export default function SiteFooter({className, globalsettings}){
                       </li>
                       <li>
                         <a href="https://www.pinterest.com/nickelbronx">
-                        <i class="fa-brands fa-pinterest"></i>
+                        <i className="fa-brands fa-pinterest"></i>
                         </a>
                       </li>
                       <li>
                         <a href="https://www.tiktok.com/@nickelbronx">
-                        <i class="fa-brands fa-tiktok"></i>
+                        <i className="fa-brands fa-tiktok"></i>
                         </a>
                       </li>
                     </ul>

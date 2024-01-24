@@ -1406,10 +1406,13 @@ z-index: -1;
 
 .service-slider{
   display: flex;;
+  width: 250vw;
 }
 .serviceitem{
-  width: 300px;;
-
+  width: 450px;
+  margin-right: 20px;
+  
+  
 }
 
 /*Home Portfolio class*/
@@ -1468,3 +1471,71 @@ z-index: -1;
 .client-inner-sec .intro-box-inner .image img{
   height: 350px;
 }
+.service-main-sec {
+  overflow: hidden;
+}
+
+/* Service test Class */
+
+.positionstick {
+  position: sticky;
+}
+
+.awardoverlay_inner {
+  padding: 10px 10px;;
+}
+.awardlist_overlay {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+}
+.awardlist_overlay h3{font-family: 'Lexend Deca', sans-serif;color: #F7F9FC;font-size: 16px;line-height: 221.5%;font-weight: 400; text-transform: uppercase;;margin: 0;
+}
+.awardlist_overlay.textblack h3{
+  color: #1F1F1F;
+}
+.bgsoftwhite{
+  background-color: #F7F9FC;;
+}
+
+.overlaylogo{
+  display: none;;
+  position: absolute;
+  top: 150px;
+  left: 0;
+  width: 100%;
+ 
+}
+.logo-inner .logo-box-main { 
+  position: relative;
+}
+.logo-box-main:hover .overlaylogo{
+  display: block;;
+}
+
+.awardshead{font-family: 'Kallisto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;color: #F7F9FC; position: relative;}
+
+  .awardshead::after {
+    position: absolute;
+    content: '';
+    width: 50px;
+    height: 50px;
+    background-image: url('../public/awardarrow-white.png');
+    z-index: 1;
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    top: 30px;
+  right: 0;
+  }
+
+
+
+
+
+
+
