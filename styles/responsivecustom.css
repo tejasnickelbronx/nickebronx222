@@ -1,6 +1,13 @@
 
+@media screen and (min-width: 1280px) and (max-width: 1550px) {
+  .blank-part{
+    padding: 0 20px;
+  }
+
+}
+
 @media screen and (max-width: 767px) {
-  
+
 }
 
 @media screen and (max-width: 575px) {
