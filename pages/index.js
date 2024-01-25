@@ -6,6 +6,7 @@ import Image from 'next/image'
 import SiteHeader from '../components/siteheader.js';
 import SiteFooter from '../components/sitefooter.js';
 import HomePortfolioItems from '../components/getHomePortfolio.js';
+import HomePortfolioItemsMobile from '../components/getHomePortfolioMobile.js';
 
 
 import NewsLetterPop from '../components/newsletterpopup.js';
@@ -282,9 +283,13 @@ export default function Home({pagefields, testisection,portfolioitems}) {
       </div>
     </div>
     <div className="client-intro-sec" data-scroll-container >
-          <div className="client-inner-sec "  >
-            <HomePortfolioItems portfolioitems={allportfolioarr} />
-            </div>
+            
+              <HomePortfolioItems portfolioitems={allportfolioarr} />
+            
+           
+              <HomePortfolioItemsMobile portfolioitems={allportfolioarr} />
+            
+            
             <div className="homeportfoliobtn">
 							<Link href="/portfolios" className="home-btn">All WORK</Link> 
 						</div>
@@ -356,28 +361,28 @@ export default function Home({pagefields, testisection,portfolioitems}) {
         <div className="overlaylogo bg-light-blue">
             <div className="awardoverlay_inner bg-pink">
                 <div className='awardlist_overlay'>
-                  <div><h3>23</h3></div>
+                  <div><h3>'23</h3></div>
                   <div><h3>INFINIGODS</h3></div>
                   <div><h3>Gold</h3></div>
                 </div>
                 <div className='awardlist_overlay'>
-                  <div><h3>23</h3></div>
+                  <div><h3>'23</h3></div>
                   <div><h3>JOE MECHLINSKI</h3></div>
                   <div><h3>Gold</h3></div>
                 </div>
                 
                 <div className='awardlist_overlay'>
-                  <div><h3>23</h3></div>
+                  <div><h3>'23</h3></div>
                   <div><h3>DOYEN CONSULTING</h3></div>
                   <div><h3>Platinum</h3></div>
                 </div>
                 <div className='awardlist_overlay'>
-                  <div><h3>23</h3></div>
+                  <div><h3>'23</h3></div>
                   <div><h3>NICKELBRONX</h3></div>
                   <div><h3>Platinum</h3></div>                  
                 </div>
                 <div className='awardlist_overlay'>
-                  <div><h3>23</h3></div>
+                  <div><h3>'23</h3></div>
                   <div><h3>PHIN</h3></div>
                   <div><h3>Platinum</h3></div>                  
                 </div>
@@ -393,14 +398,14 @@ export default function Home({pagefields, testisection,portfolioitems}) {
         <div className="overlaylogo bg-light-blue">
             <div className="awardoverlay_inner bg-yellow">
                 <div className='awardlist_overlay textblack'>
-                  <div><h3>23</h3></div>
+                  <div><h3>'23</h3></div>
                   <div><h3>NICKELBRONX</h3></div>
                   <div><h3>Platinum</h3></div>
                 </div>
                 <div className='awardlist_overlay textblack'>
-                  <div><h3>23</h3></div>
-                  <div><h3>PHIN</h3></div>
-                  <div><h3>Gold</h3></div>
+                  <div><h3>'23</h3></div>
+                  <div><h3>'PHIN</h3></div>
+                  <div><h3>'Gold</h3></div>
                 </div>           
              </div>
         </div>
@@ -412,27 +417,27 @@ export default function Home({pagefields, testisection,portfolioitems}) {
         <div className="overlaylogo ">
             <div className="awardoverlay_inner bgsoftwhite">
                 <div className='awardlist_overlay textblack'>
-                  <div><h3>23</h3></div>
+                  <div><h3>'23</h3></div>
                   <div><h3>TOP FULL SERVICE DIGITAL CO.</h3></div>
                   
                 </div>
                 <div className='awardlist_overlay textblack'>
-                  <div><h3>23</h3></div>
-                  <div><h3>TOP CORPORATE BRANDING CO.</h3></div>
+                  <div><h3>'23</h3></div>
+                  <div><h3>'TOP CORPORATE BRANDING CO.</h3></div>
                   
                 </div> 
                 <div className='awardlist_overlay textblack'>
-                  <div><h3>23</h3></div>
+                  <div><h3>'23</h3></div>
                   <div><h3>TOP BRANDING COMPANY</h3></div>
                   
                 </div> 
                 <div className='awardlist_overlay textblack'>
-                  <div><h3>23</h3></div>
+                  <div><h3>'23</h3></div>
                   <div><h3>TOP SOCIAL MEDIA MARKETING CO.</h3></div>
                   
                 </div> 
                 <div className='awardlist_overlay textblack'>
-                  <div><h3>23</h3></div>
+                  <div><h3>'23</h3></div>
                   <div><h3>TOP SOCIAL MEDIA MARKETING CO.</h3></div>
                   
                 </div>           

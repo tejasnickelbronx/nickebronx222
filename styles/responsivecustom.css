@@ -4,6 +4,7 @@
     padding: 0 20px;
   }
 
+  
 }
 
 @media screen and (max-width: 767px) {
@@ -12,5 +13,120 @@
 
 @media screen and (max-width: 575px) {
 
+  /*temp class our service */
+  .service-slider {   
+    width: 1050vw;
+  }
+  .portclmn1 {
+   
+    height: 100%;
+    width: 100%;
+    min-width: 100%;
+    padding: 0px 20px;
+    
+  }
+    /*temp class our service end */
 
+    .logo-inner .logo-box-main {
+      width: 100%;
+    }
+    .logo-inner .logo-box-main .logo-box-inner img{      
+      height: auto;
+      width: 170px;
+    }
+    .overlaylogo {
+      top: 106px;
+
+    }
+    .client-inner-sec:not(.mobileportfolio){
+
+       display: none;;
+    }
+    .client-inner-sec.mobileportfolio{
+      display: flex !important;
+      overflow: visible;
+      height: auto;
+    }
+    .mobileportfolio .portclmn1:nth-of-type(3), .mobileportfolio .portclmn1:nth-of-type(2), .mobileportfolio .portclmn1:nth-of-type(1) { 
+      top: 0%;
+    }
+    .client-inner-sec.mobileportfolio {
+      height: auto;
+      overflow: visible;
+    }
+
+    .dedicated-title-sec h2 {
+      font-size: 20px;
+    }
+    .brand-inner-sec .brand-box img {  
+      height: auto;
+    }
+    .functionality-info-sec .functionality-image img{height: auto;}
+    .takeaways-main-sec .takeaways-image-wrap img {
+     
+      height: auto;
+    }
+    .team-slider {
+      width: 400vw;
+    }
+    .formstepinner h3 {
+      font-size: 18px;
+    }
+    .singlepost-title {
+      font-size: 15px;
+      line-height: 35px;
+    }
+    .singlepostmain {
+      padding: 50px 0 40px 0;
+    }
+    .contact-header h2 {
+      line-height: 46px;
+      font-size: 40px;
+    }
+    .contact-main-sec {
+
+      padding: 50px 0 160px 0;
+    }
+    .contactformlinks ul li h3.headnewpro, .contactformlinks ul li h3.headsomething, .contactformlinks ul li h3.headcollabs, .contactformlinks ul li h3.headmedia{
+      font-size: 26px;
+    }
+    .contactformlinks ul li h3.headnewpro::before, 
+    .contactformlinks ul li h3.headsomething::before, 
+    .contactformlinks ul li h3.headcollabs::before, .contactformlinks ul li h3.headmedia::before {
+
+      width: 35px;
+  height: 35px;right: -50px;
+    }
+    .talk-about-title h2{
+      font-size: 26px;
+    }
+    .mergeimage1 {
+      top: 68px;
+      width: 162px;
+  height: 241px;
+    }
+    .mergeimage4 {
+      
+      top: 44px;
+     
+      height: auto;
+      width: 118px;
+    }
+    .merch-header h2 {
+      font-size: 45px;
+    }
+    .mergeimage3 {
+      position: absolute;
+      bottom: -185px;
+      right: 180px;
+      height: auto;
+      width: 332px;
+    }
+    .mergeimage2 {
+      position: absolute;
+      bottom: -200px;
+      left: 200px;
+      height: auto;
+      width: 332px;
+    }
 }

@@ -80,7 +80,7 @@ export default function About({allteams,aboutfields, alltestiitems}) {
     </div>
     <Swiper  
     modules={[Navigation, Pagination, Scrollbar, A11y,Mousewheel, Autoplay ]}
-    className="team-slider service-slider" 
+    className="team-slider" 
     mousewheel={{releaseOnEdges: true, sensitivity: 0.5}}
     scrollbar={{ draggable: true }} 
     spaceBetween={25}

@@ -77,6 +77,7 @@ export default function GetHomeServices( {allservices, servicesec} ){
 
 
                           const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
+                          // const y = useTransform(scrollYProgress, [0, 1], [0, height * 0.5])
                           console.log(x)
 
                           const isInView = useInView(targetRef, { once: true });

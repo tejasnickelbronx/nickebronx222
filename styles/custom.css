@@ -1469,7 +1469,7 @@ z-index: -1;
   text-transform: uppercase;
 }
 .client-inner-sec .intro-box-inner .image img{
-  height: 350px;
+  height: 450px;
 }
 .service-main-sec {
   overflow: hidden;
@@ -1533,8 +1533,16 @@ z-index: -1;
   right: 0;
   }
 
+  
 
+.client-inner-sec.mobileportfolio{
+    display: none;;
 
+}
+.team-slider{
+  width: 90vw;
+
+}
 
 
 
