@@ -54,6 +54,7 @@ export default function GetHomeServices( {allservices, servicesec} ){
                                 pin: true,
                                 scrub: 3,
                                 snap:5 / (sbxitem.length - 1),
+                                start: "145px",
                                 end: "+=" + section_2.offsetWidth
                               }
                           });
