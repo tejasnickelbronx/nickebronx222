@@ -70,8 +70,8 @@ export default function GetHomeServices( {allservices, servicesec} ){
                           const { scrollYProgress } = useScroll({
 
                             target: targetRef,
-                            offset: ['center center', 'end center'],
-                            layoutEffect: false, // fix required for sticky elements
+                            offset: ['center center', 'end center'],                              
+                            layoutEffect: true, // fix required for sticky elements
 
                           });
 
@@ -97,7 +97,7 @@ export default function GetHomeServices( {allservices, servicesec} ){
       
       <>
      
-     <section className="service-main-sec" ref={targetRef}>
+     <section className="service-main-sec"  ref={targetRef}>
       <div className="container2">
         <div className="service-inner-sec">
           <div className="service-title">

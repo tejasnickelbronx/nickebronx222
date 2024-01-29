@@ -1,3 +1,10 @@
+
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -466,6 +473,7 @@ section.header {
 /* Header Sticky CSS Start */
 
 .header.sticky {
+    width: 95%;
     position: fixed;
     padding: 10px 20px 10px 20px;
 }
@@ -2433,13 +2441,15 @@ section.header {
 
 @media screen and (max-width: 1600px) {
     .footer-main {
-        padding: 80px 20px 400px 20px;
+        /* padding: 80px 20px 400px 20px; */      
+        padding: 80px 20px 40px 20px;
     }
 }
 
 @media screen and (max-width: 1400px) {
     .footer-main {
-        padding: 80px 20px 360px 20px;
+        /* padding: 80px 20px 360px 20px; */
+        padding: 80px 20px 30px 20px;
     }
 }
 
@@ -2515,7 +2525,8 @@ section.header {
         background-size: 100%;
     }
     .footer-main {
-        padding: 80px 20px 300px 20px;
+        /* padding: 80px 20px 300px 20px; */
+        padding: 60px 0px 20px 0px;
     }
     .about-banner .banner-title h2,
     .service-banner-main .service-title h2,
@@ -2988,7 +2999,8 @@ section.header {
 
 @media screen and (max-width: 800px) {
     .footer-main {
-        padding: 60px 0px 200px 0px;
+        /* padding: 60px 0px 200px 0px; */
+        padding: 60px 0px 20px 0px;
     }
 }
 
@@ -3086,7 +3098,8 @@ section.header {
         width: 50%;
     }
     .footer-main {
-        padding: 60px 0px 200px 0px;
+        /* padding: 60px 0px 200px 0px; */
+        padding: 60px 0px 20px 0px;
     }
     .footer-main .footer-title h3>br {
         display: none;
@@ -3111,7 +3124,8 @@ section.header {
     .banner-main {
         background-repeat: no-repeat;
         background-position: bottom;
-        padding: 60px 0 180px 0;
+        /* padding: 60px 0 180px 0; */
+        padding: 150px 0 180px 0;
     }
     .blank-part {
         margin-top: -100px;
@@ -3242,12 +3256,21 @@ section.header {
         top: 75px;
     } */
     .footer-main {
-        padding: 60px 0px 150px 0px;
+        /* padding: 60px 0px 150px 0px; */
+        padding: 60px 0px 20px 0px;
+    }
+    .homeportfoliobtn {
+        margin: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
 @media screen and (max-width: 480px) {
     .footer-main {
-        padding: 60px 0px 120px 0px;
+        /* padding: 60px 0px 120px 0px; */
+        padding: 60px 0px 20px 0px;
     }
     .footer-menu-inner .menu-item {
         width: 100%;

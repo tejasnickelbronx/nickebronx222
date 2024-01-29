@@ -307,7 +307,8 @@ export default function Home({pagefields, testisection,portfolioitems}) {
           
             
       <Swiper  
-      modules={[Navigation, Pagination, Scrollbar, A11y,Mousewheel, Autoplay ]}
+      // modules={[Navigation, Pagination, Scrollbar, A11y,Mousewheel, Autoplay ]}
+      modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay ]}
       className="testimonial-slider" 
       mousewheel={{releaseOnEdges: true, sensitivity: 0.5}}
       scrollbar={{ draggable: true }} 

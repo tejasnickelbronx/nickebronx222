@@ -85,7 +85,7 @@
 //     },
     
 // });
-$(".menubar-btn").click(function () {
+$(".").click(function () {
 	$(".menu-sec").slideToggle();
 	$(this).toggleClass("open");
 });

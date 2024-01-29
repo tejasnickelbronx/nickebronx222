@@ -84,8 +84,19 @@
   .servicesecng_4 .content-part a{color: #FF2093;}
   .servicesecng_4 .list-box h2, .servicesecng_4 .service-list ul li{color: #1F1F1F;}
 
+  @media screen and (max-width: 998px) {
+    .banner-main{
+      padding-top: 150px;
+    }
+    .client-inner-sec .intro-box-inner .image img {
+      height:200px;
+    }
+  }
 
   @media screen and (max-width: 575px) {
+    .client-inner-sec .intro-box-inner .image img {
+      height:auto;
+    }
   .filter-inner-sec .buttons {
     flex-direction: column;
   }
@@ -1469,7 +1480,7 @@ z-index: -1;
   text-transform: uppercase;
 }
 .client-inner-sec .intro-box-inner .image img{
-  height: 450px;
+  /* height: 450px; */
 }
 .service-main-sec {
   overflow: hidden;
@@ -1488,7 +1499,7 @@ z-index: -1;
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
 }
-.awardlist_overlay h3{font-family: 'Lexend Deca', sans-serif;color: #F7F9FC;font-size: 16px;line-height: 221.5%;font-weight: 400; text-transform: uppercase;;margin: 0;
+.awardlist_overlay h3{font-family: 'Lexend Deca', sans-serif;color: #F7F9FC;font-size: 12px;line-height: 221.5%;font-weight: 400; text-transform: uppercase;;margin: 0;
 }
 .awardlist_overlay.textblack h3{
   color: #1F1F1F;
@@ -1503,6 +1514,7 @@ z-index: -1;
   top: 150px;
   left: 0;
   width: 100%;
+  z-index: 1;
  
 }
 .logo-inner .logo-box-main { 
