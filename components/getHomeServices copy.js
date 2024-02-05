@@ -52,8 +52,9 @@ export default function GetHomeServices( {allservices, servicesec} ){
                               scrollTrigger:{
                                 trigger: section_2,
                                 pin: true,
-                                scrub: 1,
-                                snap:1 / (sbxitem.length - 1),
+                                scrub: 3,
+                                snap:5 / (sbxitem.length - 1),
+                                start: "145px",
                                 end: "+=" + section_2.offsetWidth
                               }
                           });
@@ -70,20 +71,19 @@ export default function GetHomeServices( {allservices, servicesec} ){
                           const { scrollYProgress } = useScroll({
 
                             target: targetRef,
-                            // offset: ['center center', 'end center'],
-                            offset: ["center center", "end center"],
+                            offset: ['center center', 'end center'],
                             layoutEffect: false, // fix required for sticky elements
 
                           });
 
 
-                          const x = useTransform(scrollYProgress, [0, 1], ["0%", "-95%"]);
+                          const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
                           // const y = useTransform(scrollYProgress, [0, 1], [0, height * 0.5])
                           console.log(x)
 
                           const isInView = useInView(targetRef, { once: true });
   
-                          //  const box = document.getElementById("serviceslider")
+                          // const box = document.getElementById("serviceslider")
 
 
                           // animate(box, { x: x }, { type: "spring" })

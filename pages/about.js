@@ -254,14 +254,13 @@ export default function About({allteams,aboutfields, alltestiitems}) {
 </section>
 
 <section className="testimonial-main about-testimonial">
-  <div className="container2">
+  <div className="container2*">
     <div className="testimonial-inner"> 
 
     <Swiper  
       modules={[Navigation, Pagination, Scrollbar, A11y,Mousewheel, Autoplay ]}
       className="testimonial-slider " 
-      mousewheel={{releaseOnEdges: true, sensitivity: 0.5}}
-      scrollbar={{ draggable: true }} 
+      navigation
       spaceBetween={25}
       slidesPerView={1} 
       onSlideChange={() => console.log('slide change')}
@@ -276,7 +275,7 @@ export default function About({allteams,aboutfields, alltestiitems}) {
          testimonials.map((testiItem, index)=>( 
           <SwiperSlide>
             <div className="testi-box">
-              <div className="testi-box-inner">
+              <div className="testi-box-inner container2">
                 <div className="testi-img whitebglayer">
                 <Image src={testiItem.customfield.clientPhoto.sourceUrl} alt={testiItem.title} height="300" width="300"/>
                 </div>
