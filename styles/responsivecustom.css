@@ -130,3 +130,110 @@
       width: 332px;
     }
 }
+/****NP CSS*****/
+@media screen and (max-width: 1550px) {
+  .video.blank-part {
+    padding: 0 60px;
+}
+.video.blank-part .container {
+  padding: 0px;
+}
+.testimonial-inner .swiper-button-prev {
+  left: 20px;
+}
+.testimonial-inner .swiper-button-prev:after {
+  right: 20px;
+}
+
+}
+@media screen and (max-width: 1400px) {
+.testi-box.container2 {
+  max-width: 1080px;
+}
+}
+@media screen and (max-width: 1200px) {
+  .testi-box.container2 {
+    max-width: 920px;
+  }
+  }
+  @media screen and (max-width: 1024px) {
+    .testi-box.container2 {
+      max-width: 670px;
+    }
+    .testi-box-inner .testi-img {
+      margin-right: 48px;
+      justify-content: start;
+      min-height: unset;
+  }
+  .testi-box-inner {
+    align-items: start;
+    padding-top: 50px;
+}
+  .testi-box-inner .testi-img img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+.testi-box-inner .testi-img::after {
+  top: 10px;
+  right: -10px;
+  width: 200px;
+  height: 200px;
+}
+.testi-box-inner .testi-img::before {
+  left: -46px;
+  width: 118px;
+  height: 96px;
+  top: -50px;
+}
+    }
+
+@media screen and (max-width: 767px) {
+  .testi-box-inner {
+    align-items: center;
+    gap: 34px;
+}
+.testi-box-inner .testi-img{
+  margin: 0;
+}
+.testimonial-inner .swiper-button-prev,
+.testimonial-inner .swiper-button-next{
+  top: 30%;
+}
+.logo-inner .logo-box-main .logo-box-inner {
+  height: unset;
+}
+.logo-box-main:hover .overlaylogo{
+  position: unset;
+}
+}
+
+@media screen and (max-width: 575px) {
+  .video.blank-part {
+    padding: 0 35px;
+}
+.serviceitem {
+  width: 315px;
+}
+.service-slider .service-box-inner {
+  width: 315px;
+  max-height: unset;
+  height: 360px;
+}
+.service-main-sec .service-title {
+  margin-bottom: 40px;
+}
+.service-slider .service-box-inner img {
+  height: 77px;
+}
+.service-box .box-title {
+  margin-top: 170px;
+}
+.service-box:hover .box-title {
+  margin-top: 68px;
+}
+.testimonial-inner .swiper-button-prev,
+.testimonial-inner .swiper-button-next{
+  top: 22%;
+}
+}
