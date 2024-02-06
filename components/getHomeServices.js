@@ -28,37 +28,37 @@ export default function GetHomeServices( {allservices, servicesec} ){
 
   useLayoutEffect(() => {
     
-                        //   let ctx = gsap.context(() => {
-                        //   const lenis = new Lenis({
-                        //     duration: 1.2,
-                        //     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
-                        //   });
+                          let ctx = gsap.context(() => {
+                          const lenis = new Lenis({
+                            duration: 1.2,
+                            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+                          });
                         
-                        //   function raf(time) {
-                        //       lenis.raf(time);
-                        //       ScrollTrigger.update();
-                        //       requestAnimationFrame(raf);
-                        //   }
+                          function raf(time) {
+                              lenis.raf(time);
+                              ScrollTrigger.update();
+                              requestAnimationFrame(raf);
+                          }
                         
-                        //   requestAnimationFrame(raf);
+                          requestAnimationFrame(raf);
                         
-                        //   requestAnimationFrame(raf);
-                        //   const section_2 = document.querySelector(".service-inner-sec");
-                        //   let sbxitem = gsap.utils.toArray(".serviceitem");
-                        //   alert(sbxitem.length);
-                        //   gsap.to(sbxitem, {
-                        //       XPercent: 200 * (sbxitem.length - 1),
-                        //       ease:"sine.out",  
-                        //       scrollTrigger:{
-                        //         trigger: section_2,
-                        //         pin: true,
-                        //         scrub: 3,
-                        //         snap:5 / (sbxitem.length - 1),
-                        //         end: "+=" + section_2.offsetWidth
-                        //       }
-                        //   });
-                        // });
-                        // return () => ctx.revert();
+                          requestAnimationFrame(raf);
+                          const section_2 = document.querySelector(".service-inner-sec");
+                          let sbxitem = gsap.utils.toArray(".serviceitem");
+                          // alert(sbxitem.length);
+                          gsap.to(sbxitem, {
+                              XPercent: 200 * (sbxitem.length - 1),
+                              ease:"sine.out",  
+                              scrollTrigger:{
+                                trigger: section_2,
+                                pin: true,
+                                scrub: 1,
+                                snap:1 / (sbxitem.length - 1),
+                                end: "+=" + section_2.offsetWidth
+                              }
+                          });
+                        });
+                        return () => ctx.revert();
 
 
                         
@@ -70,19 +70,20 @@ export default function GetHomeServices( {allservices, servicesec} ){
                           const { scrollYProgress } = useScroll({
 
                             target: targetRef,
-                            offset: ['center center', 'end center'],
+                            // offset: ['center center', 'end center'],
+                            offset: ["center center", "end center"],
                             layoutEffect: false, // fix required for sticky elements
 
                           });
 
 
-                          const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
+                          const x = useTransform(scrollYProgress, [0, 1], ["0%", "-95%"]);
                           // const y = useTransform(scrollYProgress, [0, 1], [0, height * 0.5])
                           console.log(x)
 
                           const isInView = useInView(targetRef, { once: true });
   
-                          // const box = document.getElementById("serviceslider")
+                          //  const box = document.getElementById("serviceslider")
 
 
                           // animate(box, { x: x }, { type: "spring" })
