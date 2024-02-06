@@ -11,9 +11,10 @@ import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 import { EaselPlugin } from "gsap/EaselPlugin";
 import { PixiPlugin } from "gsap/PixiPlugin";
 import { TextPlugin } from "gsap/TextPlugin";
-import Lenis from '@studio-freight/lenis'
-import { motion, useTransform, useScroll,useMotionValue,animate ,useInView  } from "framer-motion";
+import Lenis from '@studio-freight/lenis';
 import { useRef } from "react";
+import { motion, useTransform, useScroll,useMotionValue,animate ,useInView  } from "framer-motion";
+
 
 
 
@@ -28,37 +29,41 @@ export default function GetHomeServices( {allservices, servicesec} ){
 
   useLayoutEffect(() => {
     
-                          let ctx = gsap.context(() => {
-                          const lenis = new Lenis({
-                            duration: 1.2,
-                            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
-                          });
-                        
-                          function raf(time) {
-                              lenis.raf(time);
-                              ScrollTrigger.update();
-                              requestAnimationFrame(raf);
-                          }
-                        
-                          requestAnimationFrame(raf);
-                        
-                          requestAnimationFrame(raf);
-                          const section_2 = document.querySelector(".service-inner-sec");
-                          let sbxitem = gsap.utils.toArray(".serviceitem");
-                          // alert(sbxitem.length);
-                          gsap.to(sbxitem, {
-                              XPercent: 200 * (sbxitem.length - 1),
-                              ease:"sine.out",  
-                              scrollTrigger:{
-                                trigger: section_2,
-                                pin: true,
-                                scrub: 1,
-                                snap:1 / (sbxitem.length - 1),
-                                end: "+=" + section_2.offsetWidth
-                              }
-                          });
+                      let ctx = gsap.context(() => {
+                        const lenis = new Lenis({
+                          duration: 1.2,
+                          easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
                         });
-                        return () => ctx.revert();
+                      
+                        function raf(time) {
+                            lenis.raf(time);
+                            ScrollTrigger.update();
+                            requestAnimationFrame(raf);
+                        }
+                      
+                        requestAnimationFrame(raf);
+                      
+                        requestAnimationFrame(raf);
+                        const section_2 = document.querySelector(".service-inner-sec");
+                        let sbxitem = gsap.utils.toArray(".serviceitem");
+                        // alert(sbxitem.length);
+                        let tempwidth = section_2.offsetWidth + 2000;
+                        gsap.to(sbxitem, {
+                            x: -150 * (sbxitem.length+1),
+                            ease:"sine.out",  
+                            duration: 3,
+                          
+                            scrollTrigger:{
+                              trigger: section_2,
+                              pin: true,
+                              scrub: 3,
+                              snap:5 / (sbxitem.length + 5),
+                              start: "0x",
+                              end: "+=" + tempwidth
+                            }
+                        });
+                      });
+                      return () => ctx.revert();
 
 
                         
@@ -67,31 +72,7 @@ export default function GetHomeServices( {allservices, servicesec} ){
 
                         const targetRef = useRef(null);
 
-                          const { scrollYProgress } = useScroll({
-
-                            target: targetRef,
-                            // offset: ['center center', 'end center'],
-                            offset: ["center center", "end center"],
-                            layoutEffect: false, // fix required for sticky elements
-
-                          });
-
-
-                          const x = useTransform(scrollYProgress, [0, 1], ["0%", "-95%"]);
-                          // const y = useTransform(scrollYProgress, [0, 1], [0, height * 0.5])
-                          console.log(x)
-
-                          const isInView = useInView(targetRef, { once: true });
-  
-                          //  const box = document.getElementById("serviceslider")
-
-
-                          // animate(box, { x: x }, { type: "spring" })
-
-                          useEffect( () => {
-                            
-                           
-                          }, [])
+                          
 
     return(
       
@@ -110,7 +91,7 @@ export default function GetHomeServices( {allservices, servicesec} ){
             </p>
           </div>
 
-      <motion.div   className="service-slider"   id='serviceslider'     style={{ x }}>
+      <div   className="service-slider"   id='serviceslider'>
 
       
      
@@ -142,7 +123,7 @@ export default function GetHomeServices( {allservices, servicesec} ){
            <div  className="serviceitem"></div>
            <div  className="serviceitem"></div>
            <div  className="serviceitem"></div>
-        </motion.div>
+        </div>
         </div>
     </div>
   </section>

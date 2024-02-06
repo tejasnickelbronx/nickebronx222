@@ -1545,7 +1545,7 @@ z-index: -1;
 
 }
 .team-slider{
-  width: 90vw;
+  width: 260vw;
 
 }
 /****NP CSS*****/
@@ -1586,4 +1586,11 @@ z-index: -1;
 }
 .testi-box-inner .testi-content {
   width: unset;
+}
+.team-slider{
+  display: flex;
+}
+.teamslideitem{
+  width: 413px;
+  margin-right: 20px;
 }

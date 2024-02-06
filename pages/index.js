@@ -78,7 +78,7 @@ export default function Home({pagefields, testisection,portfolioitems}) {
    const allportfolioarr = portfolioitems.data.allPortfolio.nodes;
 
   
-   console.log(ourservicesitems);
+   
    useScript('https://code.jquery.com/jquery-3.7.0.min.js');   
    
    useScript('./custominit.js');
@@ -95,14 +95,7 @@ export default function Home({pagefields, testisection,portfolioitems}) {
 
    useEffect(() => {
     
-    const lenis = new Lenis()
-
-
-    const raf = (time) => {
-      lenis.raf(time)
-      requestAnimationFrame(raf)
-    }
-    requestAnimationFrame(raf)
+    
     
   }, [])
    
@@ -119,7 +112,7 @@ export default function Home({pagefields, testisection,portfolioitems}) {
         <link rel="icon" href="/favicon.ico" />
         
 
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" async  />
+       
         
          <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
         {/*<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" async  /> */}        
