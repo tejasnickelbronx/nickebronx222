@@ -1,3 +1,6 @@
+* {
+  scroll-behavior: smooth;
+}
 .sboxbg_0 {
     background-color: #FF2093;
   }
@@ -10,7 +13,9 @@
   .sboxbg_3 {
     background-color: #FF2093;
   }
-
+  .service-inner-sec{
+    top: 75px !important;
+  }
   .servicedescbx{
       display: none;;
       transition: width 2s
@@ -1543,7 +1548,42 @@ z-index: -1;
   width: 90vw;
 
 }
-
-
-
-
+/****NP CSS*****/
+.service-slider .service-box-inner {
+  width: 408px;
+  max-height: unset;
+  height: 450px;
+}
+.testimonial-inner .swiper-button-next:after,
+.testimonial-inner .swiper-button-prev:after
+ {
+  color: rgba(247, 249, 252, 1);
+}
+.about-testimonial .testimonial-inner .swiper-button-prev:after,
+.about-testimonial .testimonial-inner .swiper-button-next:after
+ {
+  color: rgb(31,31,31);
+}
+.testimonial-inner .swiper-button-prev {
+  left: 50px;
+}
+.testimonial-inner .swiper-button-prev:after {
+  right: 50px;
+}
+.testi-box-inner {
+  justify-content: center;
+}
+.testi-box-inner .testi-img {
+  width: unset;
+  margin-right: 88px;
+}
+.testi-box-inner .testi-img::after {
+  top: 96px;
+  right: -10px;
+}
+.testi-box-inner .testi-img::before {
+  left: -70px;
+}
+.testi-box-inner .testi-content {
+  width: unset;
+}
