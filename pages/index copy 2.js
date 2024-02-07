@@ -1,9 +1,13 @@
+'use client'
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Head from 'next/head'
 import Image from 'next/image'
 import SiteHeader from '../components/siteheader.js';
 import SiteFooter from '../components/sitefooter.js';
+import HomePortfolioItems from '../components/getHomePortfolio.js';
+import HomePortfolioItemsMobile from '../components/getHomePortfolioMobile.js';
+
 
 import NewsLetterPop from '../components/newsletterpopup.js';
 import useScript from '../hooks/useScript.js';
@@ -22,8 +26,16 @@ import 'swiper/css/scrollbar';
 import 'swiper/css/mousewheel';
 import 'swiper/css/free-mode';
 
+
+import GetHomeServices from '../components/getHomeServices.js';
+
 import SmoothScroll from '../components/getSmoothScroll.js';
 
+
+import {  useRef } from 'react';
+import { useTransform, useScroll, motion } from 'framer-motion';
+import Lenis from '@studio-freight/lenis'
+import { gsap } from "gsap";
 
 
 
@@ -66,7 +78,7 @@ export default function Home({pagefields, testisection,portfolioitems}) {
    const allportfolioarr = portfolioitems.data.allPortfolio.nodes;
 
   
-   console.log(ourservicesitems);
+   
    useScript('https://code.jquery.com/jquery-3.7.0.min.js');   
    
    useScript('./custominit.js');
@@ -75,10 +87,22 @@ export default function Home({pagefields, testisection,portfolioitems}) {
   
    const recordcount = allportfolioarr.length/5;
 
+   
+   
+   
+   
+   
+
    useEffect(() => {
+    
+    
     
   }, [])
    
+
+  
+
+ 
   return (
     <>
     <Head>
@@ -88,8 +112,8 @@ export default function Home({pagefields, testisection,portfolioitems}) {
         <link rel="icon" href="/favicon.ico" />
         
 
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" async  />
-        <link rel="stylesheet" type="text/css" media="screen" href="./locomotive-scroll.css" async ></link>
+       
+        
          <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
         {/*<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" async  /> */}        
         {/* <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.min.js" async ></script> */}	      
@@ -124,7 +148,7 @@ export default function Home({pagefields, testisection,portfolioitems}) {
   </section>
   {/* Banner Section End */}
   {/* Blank Part Section Start */}
-  <section className="blank-part">
+  <section className="video blank-part">
     <div className="container">
       <div className="video-part">
         <video id="myVideo" controls="" muted autoPlay loop> 
@@ -158,74 +182,16 @@ export default function Home({pagefields, testisection,portfolioitems}) {
   {/* Who We Are Section End */}
   {/* Service Section Start */}
   
-  <section className="service-main-sec">
-    <div className="container2">
-      <div className="service-inner-sec">
-        <div className="service-title">
-          <h2>OUR SERVICES</h2>
-          <h3 dangerouslySetInnerHTML={{ __html: ourService.heading}}></h3>
-          
-          <p>
-            {ourService.description}
-          </p>
-        </div>
-        <Swiper  
-            modules={[Navigation, Pagination, Scrollbar, A11y,Mousewheel, Autoplay ]}
-            className="service-slider" 
-            mousewheel={{releaseOnEdges: true, sensitivity: 0.5}}
-            scrollbar={{ draggable: true }} 
-            spaceBetween={25}
-            slidesPerView={4} 
-            onSlideChange={() => console.log('slide change')}
-            onSwiper={(swiper) => console.log(swiper)} 
-            direction="horizontal"
+  
+        
             
-           
-            
-            >
-   
-            {
-             
-              ourservicesitems.map((serviceitem, index)=>(     
-                
-              
-                <SwiperSlide virtualIndex={index}>
-                  <div className='serviceitems'>
-
-                  
-                  <div className="service-box">
-                    <div  className={`service-box-inner sboxbg_${index}`}>
-                      <div className="image">
-                        <img src={serviceitem.serviceIcon.sourceUrl} alt={serviceitem.serviceTitle} />
-                      </div>
-                      <div className="box-title">                        
-                        <h5 ><Link dangerouslySetInnerHTML={{ __html: serviceitem.serviceTitle}} href={"/services/"+serviceitem.link.slug+"/"+serviceitem.link.pageId}></Link></h5>
-                       
-                      </div>
-                      <div className='servicedescbx'><p>{serviceitem.description}</p></div>
-                     
-                    </div>
-                  </div>
-                  </div>
-                </SwiperSlide>
-              ))
-
-             }  
-              
-              <SwiperSlide>
-              <div className='serviceitems'></div>
-              </SwiperSlide>
-            </Swiper>
-            
-            
+        <GetHomeServices allservices={ourservicesitems} servicesec={ourService} /> 
           
           
-      </div>
-    </div>
-  </section>
+      
   {/* Service Section End */}
   {/* Client Section Start */}
-  <SmoothScroll root={"section.client-main-sec"} options={{wrapper:".client-main-sec",  content: ".client-main-sec", lerp:0.001, duration:1.5, smoothToush:true}}>
+  
   <section className="client-main-sec">
     <div className="container2">
       <div className="client-main-inner">
@@ -243,12 +209,11 @@ export default function Home({pagefields, testisection,portfolioitems}) {
             </a>
           </div>
         </div>
-        <div className="client-intro-sec" data-scroll-container>
-          <div className="client-inner-sec "  >
-          <div className="portclmn1" data-scroll="" data-scroll-speed=".5">
-          {              
+        
+          {/* <motion.div style={y } className="portclmn1" data-scroll="" data-scroll-speed=".5" >
+          {               
               allportfolioarr.slice(0, 5).map((portfolioItem, index)=>(               
-              <div className="intro-box" key={portfolioItem.slug} >
+              <div className="intro-box" key={portfolioItem.slug}   >
                 <div className="intro-box-inner">
                   <div className="image">
                   <Link href={{pathname: "/portfolios/"+portfolioItem.slug+"/"+portfolioItem.portfolioId,}}
@@ -264,8 +229,8 @@ export default function Home({pagefields, testisection,portfolioitems}) {
               </div>             
             ))
           }
-          </div>
-          <div className="portclmn1"  data-scroll="" data-scroll-speed=".10">
+          </motion.div>
+          <motion.div style={y2 }  className="portclmn1"  data-scroll="" data-scroll-speed=".10">
           {              
               allportfolioarr.slice(5, 10).map((portfolioItem, index)=>(               
               <div className="intro-box" key={portfolioItem.slug} >
@@ -284,8 +249,8 @@ export default function Home({pagefields, testisection,portfolioitems}) {
               </div>             
             ))
           }
-          </div>
-          <div className="portclmn1" data-scroll="" data-scroll-speed=".5">
+          </motion.div>
+          <motion.div style={y3 }  className="portclmn1" data-scroll="" data-scroll-speed=".5">
           {              
               allportfolioarr.slice(10,15).map((portfolioItem, index)=>(               
               <div className="intro-box" key={portfolioItem.slug} >
@@ -304,47 +269,53 @@ export default function Home({pagefields, testisection,portfolioitems}) {
               </div>             
             ))
           }
-          </div>
+          </motion.div> */}
            
            
+           
+      </div>
+    </div>
+    <div className="client-intro-sec" data-scroll-container >
+            
+              <HomePortfolioItems portfolioitems={allportfolioarr} />
+            
+           
+              <HomePortfolioItemsMobile portfolioitems={allportfolioarr} />
+            
+            
             <div className="homeportfoliobtn">
 							<Link href="/portfolios" className="home-btn">All WORK</Link> 
 						</div>
-            
-          </div>
         </div>
-      </div>
-    </div>
   </section>
-  </SmoothScroll >
+  
   {/* Client Section End */}
   {/* Testimonial Section Start */}
 
   
   <section className="testimonial-main">
-    <div className="container2">
+    <div className="container2*">
       <div className="testimonial-inner">
         
           
             
       <Swiper  
       modules={[Navigation, Pagination, Scrollbar, A11y,Mousewheel, Autoplay ]}
-      className="testimonial-slider" 
-      mousewheel={{releaseOnEdges: true, sensitivity: 0.5}}
-      scrollbar={{ draggable: true }} 
+      className="testimonial-slider"  
+      navigation
       spaceBetween={25}
       slidesPerView={1} 
       onSlideChange={() => console.log('slide change')}
       onSwiper={(swiper) => console.log(swiper)} 
       direction="horizontal"
       autoplay={{
-        delay: 3000,        
+        delay: 8000,        
       }}
       >
 
         {alltestimonial.map((testiItem, index)=>(    
         <SwiperSlide>
-          <div className="testi-box">
+          <div className="testi-box container2">
             <div className="testi-box-inner">
               <div className="testi-img">
                 <Image src={testiItem.customfield.clientPhoto.sourceUrl} alt={testiItem.title} height="300" width="300"/>
@@ -372,22 +343,97 @@ export default function Home({pagefields, testisection,portfolioitems}) {
     <div className="logo-inner">
       <div className="logo-box-main">
         <div className="logo-box-inner bg-light-blue">
-          <img src="/our-latest-awards.png" alt="logoclient" />
-        </div>
+          <h2 className='awardshead'>our LATEST<br/> AWARDS</h2>
+        </div>        
       </div>
       <div className="logo-box-main">
         <div className="logo-box-inner bg-pink" >
           <img src="/marcom.png" alt="logoclient" />
+        </div>
+        <div className="overlaylogo bg-light-blue">
+            <div className="awardoverlay_inner bg-pink">
+                <div className='awardlist_overlay'>
+                  <div><h3>'23</h3></div>
+                  <div><h3>INFINIGODS</h3></div>
+                  <div><h3>Gold</h3></div>
+                </div>
+                <div className='awardlist_overlay'>
+                  <div><h3>'23</h3></div>
+                  <div><h3>JOE MECHLINSKI</h3></div>
+                  <div><h3>Gold</h3></div>
+                </div>
+                
+                <div className='awardlist_overlay'>
+                  <div><h3>'23</h3></div>
+                  <div><h3>DOYEN CONSULTING</h3></div>
+                  <div><h3>Platinum</h3></div>
+                </div>
+                <div className='awardlist_overlay'>
+                  <div><h3>'23</h3></div>
+                  <div><h3>NICKELBRONX</h3></div>
+                  <div><h3>Platinum</h3></div>                  
+                </div>
+                <div className='awardlist_overlay'>
+                  <div><h3>'23</h3></div>
+                  <div><h3>PHIN</h3></div>
+                  <div><h3>Platinum</h3></div>                  
+                </div>
+              
+            
+            </div>        
         </div>
       </div>
       <div className="logo-box-main">
         <div className="logo-box-inner bg-yellow" >
           <img src="/hermes.png" alt="logoclient" />
         </div>
+        <div className="overlaylogo bg-light-blue">
+            <div className="awardoverlay_inner bg-yellow">
+                <div className='awardlist_overlay textblack'>
+                  <div><h3>'23</h3></div>
+                  <div><h3>NICKELBRONX</h3></div>
+                  <div><h3>Platinum</h3></div>
+                </div>
+                <div className='awardlist_overlay textblack'>
+                  <div><h3>'23</h3></div>
+                  <div><h3>'PHIN</h3></div>
+                  <div><h3>'Gold</h3></div>
+                </div>           
+             </div>
+        </div>
       </div>
       <div className="logo-box-main">
-        <div className="logo-box-inner">
+        <div className="logo-box-inner bgsoftwhite">
           <img src="/clutch.png" alt="logoclient" />
+        </div>
+        <div className="overlaylogo ">
+            <div className="awardoverlay_inner bgsoftwhite">
+                <div className='awardlist_overlay textblack'>
+                  <div><h3>'23</h3></div>
+                  <div><h3>TOP FULL SERVICE DIGITAL CO.</h3></div>
+                  
+                </div>
+                <div className='awardlist_overlay textblack'>
+                  <div><h3>'23</h3></div>
+                  <div><h3>'TOP CORPORATE BRANDING CO.</h3></div>
+                  
+                </div> 
+                <div className='awardlist_overlay textblack'>
+                  <div><h3>'23</h3></div>
+                  <div><h3>TOP BRANDING COMPANY</h3></div>
+                  
+                </div> 
+                <div className='awardlist_overlay textblack'>
+                  <div><h3>'23</h3></div>
+                  <div><h3>TOP SOCIAL MEDIA MARKETING CO.</h3></div>
+                  
+                </div> 
+                <div className='awardlist_overlay textblack'>
+                  <div><h3>'23</h3></div>
+                  <div><h3>TOP SOCIAL MEDIA MARKETING CO.</h3></div>
+                  
+                </div>           
+             </div>
         </div>
       </div>
     </div>

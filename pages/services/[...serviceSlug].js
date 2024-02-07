@@ -20,6 +20,11 @@ import 'swiper/css/free-mode';
 
 
 
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+
 export async function getStaticProps({params } ){
     const serviceID = params.serviceSlug[1];
     const getservicesdata  = await getSingleService(serviceID);
@@ -55,18 +60,26 @@ export async function getStaticPaths(){
 
 export default function ServicePage({servicePageData, testisection}) {
   
-  console.log(servicePageData.data.pageBy.serviceInnerFields);
+  console.log(servicePageData.data.pageBy.serviceInnerFields.serviceFaq);
   const serviceheader     = servicePageData.data.pageBy.serviceInnerFields.header[0];
   const serviceProcesarr  = servicePageData.data.pageBy.serviceInnerFields.serviceProcess
   
   // const searchParams = useSearchParams()
   // console.log(searchParams.get('serviceID'));
   
+  const faqlist   = servicePageData.data.pageBy.serviceInnerFields.serviceFaq;
+
   const alltestimonial = testisection.data.allTestimonial.nodes;
-    useScript('https://code.jquery.com/jquery-3.7.0.min.js');
-    useScript('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js');
-    useScript('https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.min.js');
-    useScript('./custominit.js');
+    //useScript('https://code.jquery.com/jquery-3.7.0.min.js');
+    //useScript('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js');
+   // useScript('https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.min.js');
+    //useScript('./custominit.js');
+
+    // const [expanded, setExpanded] = React.useState(false);
+
+    // const handleChange = (panel) => (event, isExpanded) => {
+    //   setExpanded(isExpanded ? panel : false);
+    // };
     return(
         <>
         <Head>
@@ -132,26 +145,25 @@ export default function ServicePage({servicePageData, testisection}) {
   {/* Identity Info Section End */}
   {/* Testimonial Section Start */}
   <section className="testimonial-main">
-    <div className="container2">
+    <div className="container2*">
       <div className="testimonial-inner">
       <Swiper  
       modules={[Navigation, Pagination, Scrollbar, A11y,Mousewheel, Autoplay ]}
-      className="testimonial-slider" 
-      mousewheel={{releaseOnEdges: true, sensitivity: 0.5}}
-      scrollbar={{ draggable: true }} 
+      className="testimonial-slider"  
+      navigation
       spaceBetween={25}
       slidesPerView={1} 
       onSlideChange={() => console.log('slide change')}
       onSwiper={(swiper) => console.log(swiper)} 
       direction="horizontal"
       autoplay={{
-        delay: 3000,        
+        delay: 8000,        
       }}
       >
 
         {alltestimonial.map((testiItem, index)=>(    
         <SwiperSlide>
-          <div className="testi-box">
+          <div className="testi-box container2">
             <div className="testi-box-inner">
               <div className="testi-img">
                 <Image src={testiItem.customfield.clientPhoto.sourceUrl} alt={testiItem.title} height="300" width="300"/>
@@ -166,7 +178,7 @@ export default function ServicePage({servicePageData, testisection}) {
           </SwiperSlide>
         ))}
             
-            </Swiper> 
+            </Swiper>   
       </div>
     </div>
   </section>
@@ -177,68 +189,25 @@ export default function ServicePage({servicePageData, testisection}) {
       <div className="faq-title">
         <h2>FAQs</h2>
       </div>
+
+      
       <div className="accordion">
-        <div className="accordion-item">
-          <div className="accordion-item-header">
-            How do I create a memorable logo that reflects my brand?
-          </div>
-          <div className="accordion-item-body">
-            <div className="accordion-item-body-content">
-              Creating a memorable logo involves understanding your brand's
-              identity and target audience. Your logo should be simple yet
-              distinctive, conveying your brand's core message. Consider
-              elements like shapes, colors, and typography that align with your
-              brand's values.
-            </div>
-          </div>
-        </div>
-        <div className="accordion-item">
-          <div className="accordion-item-header">
-            How can I maintain consistency across all brand materials?
-          </div>
-          <div className="accordion-item-body">
-            <div className="accordion-item-body-content">
-              Creating a memorable logo involves understanding your brand's
-              identity and target audience. Your logo should be simple yet
-              distinctive, conveying your brand's core message. Consider
-              elements like shapes, colors, and typography that align with your
-              brand's values.
-            </div>
-          </div>
-        </div>
-        <div className="accordion-item">
-          <div className="accordion-item-header">
-            Can I adjust my brand identity as my business grows?
-          </div>
-          <div className="accordion-item-body">
-            <div className="accordion-item-body-content">
-              Creating a memorable logo involves understanding your brand's
-              identity and target audience. Your logo should be simple yet
-              distinctive, conveying your brand's core message. Consider
-              elements like shapes, colors, and typography that align with your
-              brand's values.
-            </div>
-          </div>
-        </div>
-        <div className="accordion-item">
-          <div className="accordion-item-header">
-            How does brand identity impact customer loyalty and business
-            success?
-          </div>
-          <div className="accordion-item-body">
-            <div className="accordion-item-body-content">
-              Creating a memorable logo involves understanding your brand's
-              identity and target audience. Your logo should be simple yet
-              distinctive, conveying your brand's core message. Consider
-              elements like shapes, colors, and typography that align with your
-              brand's values.
-            </div>
-          </div>
-        </div>
+      
+      {faqlist.map((faqitem, index)=>(        
+      <Accordion key={index}>
+          <AccordionSummary id={`panel${index}-header`}  expandIcon={<ExpandMoreIcon />}>
+            <h3>{faqitem.quetion}</h3>
+          </AccordionSummary>
+          <AccordionDetails>
+            <p>{faqitem.answer}</p>
+          </AccordionDetails>
+      </Accordion>
+       ))}
+    
       </div>
     </div>
   </section>
-
+  
 
 
         <SiteFooter className="footercls"/>

@@ -47,38 +47,65 @@ export default function Merch({merchfields}) {
 
         <section className="contact-main-sec">
         <div className="container">
-          <div className="contact-header">
-            <h2>LET’S TALK</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-              <br /> sed do eiusmod tempor incididunt ut labore et dolore.
-            </p>
-            <div className="contactformlinks">
-              <ul>
-                <li>
-                  <Link className="contactformbtn" href="/projectrequest">
-                    <h3 className='headnewpro'>New Project request</h3>
-                  </Link>
-                </li>
-                <li>
-                  <Link className="contactformbtn" href="/media-inquiry">
-                  <h3 className='headmedia'>Media Inquiry</h3>
-                  </Link>
-                </li>
-                
-                <li>
-                  <Link className="contactformbtn" href="/brand-deals">
-                  <h3 className='headsomething'>Collabs/Brand Deals</h3>
-                  </Link>
-                </li>
-                <li>
-                  <Link className="contactformbtn" href="/something-else">
-                  <h3 className=' headcollabs' >Something Else</h3>
-                  </Link>
-                </li>
-                
-              </ul>
-            </div>
+          <div className='contatpgmain'>
+              <div className='contactpgleft'>
+                    <div className='contactpghead'>
+                      <h3>We need<br/><span>copy here</span></h3>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                    </div>
+                    <div className='contactpglinks'>
+                        <p><a>hello@nickelbronx.com</a></p>
+                        <p><a>(703) 865-2600</a></p>
+
+                    </div>
+              </div>
+              <div className='contactpgright'>
+                  <div className='contactformwhite'>
+                      <div className='cnform_wtrow'>
+                          <div className='cnformfield_wt'>
+                            <label>Name</label>
+                            <input type='text' className='cnformwht_text' name='cnformname' id='cnformname' placeholder='John Doe' />
+                          </div>
+                          <div className='cnformfield_wt'>
+                            <label>Company Name</label>
+                            <input type='text' className='cnformwht_text' name='cnformname' id='cnformname' placeholder='NickelBronx' />
+                          </div>
+
+                      </div>
+                      <div className='cnform_wtrow mt_30'>
+                          <div className='cnformfield_wt'>
+                            <label>Email</label>
+                            <input type='text' className='cnformwht_text' name='cnformname' id='cnformname' placeholder='John Doe' />
+                          </div>
+                          <div className='cnformfield_wt'>
+                            <label>Phone</label>
+                            <input type='text' className='cnformwht_text' name='cnformname' id='cnformname' placeholder='NickelBronx' />
+                          </div>
+                      </div>
+                      <div className='cnform_wtrow mt_30 fullwidth'>
+                          <div className='cnformfield_wt'>
+                            <label>WHAT ARE YOU LOOKING FOR?</label>
+                            <select className='selectfield' name='lookingfor' id='lookingfor'>
+                              <option value="New Project Request">New Project Request</option>
+                              <option value="Media Inquiry">Media Inquiry</option>
+                              <option value="Collabs/Brand Deals">Collabs/Brand Deals</option>
+                              <option value="Something Else">Something Else</option>
+                            </select>
+                          </div>                          
+                      </div>
+                      <div className='cnform_wtrow mt_30 fullwidth'>
+                          <div className='cnformfield_wt'>
+                            <label>Project brief</label>
+                            <input type='text' className='cnformwht_text' name='cnformname' id='cnformname' placeholder='Please give a short description of your project request and business needs' />
+                          </div>                          
+                      </div>
+                      <div className='cnform_wtrow mt_30 fullwidth'>
+                          <div className='cnformbtn_wt'>
+                              <input className='submitbtn' type='button' name='submitform' id='submitform' value="Submit" />
+                          </div>                          
+                      </div>
+                  </div>
+              </div>
           </div>
         </div>
       </section>

@@ -114,13 +114,13 @@ export default function About({allblogs,featuredblog}) {
                             <div className="item branding">
                                 <div className="image-sec"> {postitem.featuredImage &&                                       
                                     <Link href={"/blogs/"+postitem.slug+"/"+postitem.postId}>
-                                        <Image src={postitem.featuredImage.node.sourceUrl} width={300} height={100} className="blogimage" alt={postitem.slug}/>
+                                        <Image src={postitem.featuredImage.node.sourceUrl} width={500} height={300} className="blogimage" alt={postitem.slug}/>
                                     </Link> 
                                     }
                                 </div>
                                 <div className="content-sec">
                                 <h3>{postitem.title}</h3>
-                                <div dangerouslySetInnerHTML={{ __html: postitem.content.substring(0, 100)}}></div>
+                                <div className='itemblogcontent' dangerouslySetInnerHTML={{ __html: postitem.content.substring(0, 100)}}></div>
                                 <Link href={"/blogs/"+postitem.slug+"/"+postitem.postId}>READ MORE</Link> 
                                 </div>
                             </div>

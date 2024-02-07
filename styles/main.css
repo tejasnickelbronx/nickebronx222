@@ -473,7 +473,7 @@ section.header {
 /* Header Sticky CSS Start */
 
 .header.sticky {
-    width: 95%;
+    width: 100%;
     position: fixed;
     padding: 10px 20px 10px 20px;
 }

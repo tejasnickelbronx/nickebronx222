@@ -63,8 +63,7 @@ export default function About({allteams,aboutfields, alltestiitems}) {
 
     
     useScript('https://code.jquery.com/jquery-3.7.0.min.js');
-    useScript('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js');
-    useScript('https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.min.js');
+    
     useScript('./custominit.js');
     gsap.registerPlugin(Flip,ScrollTrigger,Observer,ScrollToPlugin,Draggable,MotionPathPlugin,EaselPlugin,PixiPlugin,TextPlugin);
 
@@ -99,7 +98,7 @@ export default function About({allteams,aboutfields, alltestiitems}) {
                   pin: true,
                   scrub: 3,
                   snap:5 / (sbxitem.length + 5),
-                  start: "0x",
+                  start: "-50x",
                   end: "+=" + tempwidth
                 }
             });
