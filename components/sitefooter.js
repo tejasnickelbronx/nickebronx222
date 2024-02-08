@@ -16,14 +16,14 @@ export async function getStaticProps(){
 }
 
 export default function SiteFooter({className, globalsettings}){
-  
+   
   console.log(globalsettings)
     return(
       
       
       
 
-        <footer className="footer-main">
+        <footer className={`footer-main ${className}`}>
         <div className="container">
           <div className="footer-inner">
             <div className="footer-title">
@@ -32,6 +32,7 @@ export default function SiteFooter({className, globalsettings}){
                 <Link href="/contact">LET’S MAKE COOL <br />
                 SHIT TOGETHER</Link>
               </h3>
+              <div className="homeportfoliobtn fotoercontatbtn"><a className="home-btn" href="/portfolios">Contact Us</a></div>
             </div>
             <div className="footer-menu-main">
               <div className="footer-menu-inner">
@@ -159,7 +160,7 @@ export default function SiteFooter({className, globalsettings}){
             </div>
           </div>
           <div className="footer-bottom">
-            <p>NickelBronx, Copyright 2023</p>
+            <p>NickelBronx, Copyright 2024</p>
           </div>
         </div>
       </footer>

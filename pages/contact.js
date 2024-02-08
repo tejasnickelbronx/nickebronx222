@@ -24,9 +24,47 @@ export async function getStaticProps(){
 
 export default function Merch({merchfields}) {
     
-  useScript('https://code.jquery.com/jquery-3.7.0.min.js');
-  useScript('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js');
-  useScript('https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.min.js');
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    const data = {
+        cnformname        : event.target.cnformname.value,
+        cnformcompany     : event.target.cnformcompany.value,
+        cnformemail       : event.target.cnformemail.value,
+        cnformphone       : event.target.cnformphone.value,
+        lookingfor        : event.target.lookingfor.value,
+        cnformbrief        : event.target.cnformbrief.value,
+    }
+
+    const jsonData = JSON.stringify(data);
+
+    const response = await fetch('/api/form', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: jsonData,
+    });
+
+    const result = await response.json();
+    console.log(result.data);
+
+
+    setSumbitStatus(true);
+    setResponseMessage(result.data);
+
+    if(!response.ok) {
+        setAlertColor('bg-red-500');
+    }
+    else {
+        setAlertColor('bg-green-500');
+    }
+
+
+}
+
+  useScript('https://code.jquery.com/jquery-3.7.0.min.js');  
   useScript('./custominit.js');
   
   
@@ -47,6 +85,7 @@ export default function Merch({merchfields}) {
 
         <section className="contact-main-sec">
         <div className="container">
+        <form className="contact-form" onSubmit={handleSubmit}>
           <div className='contatpgmain'>
               <div className='contactpgleft'>
                     <div className='contactpghead'>
@@ -64,22 +103,22 @@ export default function Merch({merchfields}) {
                       <div className='cnform_wtrow'>
                           <div className='cnformfield_wt'>
                             <label>Name</label>
-                            <input type='text' className='cnformwht_text' name='cnformname' id='cnformname' placeholder='John Doe' />
+                            <input type='text' className='cnformwht_text' name='cnformname' id='cnformname' />
                           </div>
                           <div className='cnformfield_wt'>
                             <label>Company Name</label>
-                            <input type='text' className='cnformwht_text' name='cnformname' id='cnformname' placeholder='NickelBronx' />
+                            <input type='text' className='cnformwht_text' name='cnformcompany' id='cnformcompany'  />
                           </div>
 
                       </div>
                       <div className='cnform_wtrow mt_30'>
                           <div className='cnformfield_wt'>
                             <label>Email</label>
-                            <input type='text' className='cnformwht_text' name='cnformname' id='cnformname' placeholder='John Doe' />
+                            <input type='text' className='cnformwht_text' name='cnformemail' id='cnformemail' />
                           </div>
                           <div className='cnformfield_wt'>
                             <label>Phone</label>
-                            <input type='text' className='cnformwht_text' name='cnformname' id='cnformname' placeholder='NickelBronx' />
+                            <input type='text' className='cnformwht_text' name='cnformphone' id='cnformphone'  />
                           </div>
                       </div>
                       <div className='cnform_wtrow mt_30 fullwidth'>
@@ -96,25 +135,27 @@ export default function Merch({merchfields}) {
                       <div className='cnform_wtrow mt_30 fullwidth'>
                           <div className='cnformfield_wt'>
                             <label>Project brief</label>
-                            <input type='text' className='cnformwht_text' name='cnformname' id='cnformname' placeholder='Please give a short description of your project request and business needs' />
+                            <input type='text' className='cnformwht_text' name='cnformbrief' id='cnformbrief' />
                           </div>                          
                       </div>
                       <div className='cnform_wtrow mt_30 fullwidth'>
                           <div className='cnformbtn_wt'>
-                              <input className='submitbtn' type='button' name='submitform' id='submitform' value="Submit" />
+                              
+                              <button className='submitbtn' name='submitform' id='submitform' type="submit">Submit</button>
                           </div>                          
                       </div>
                   </div>
               </div>
           </div>
-        </div>
+          </form>
+        </div>        
       </section>
 
   
   
 
 
-        {/* <SiteFooter className="footercls"/> */}
+        <SiteFooter className="footercls contactpage"/>
         </>
   )
 }

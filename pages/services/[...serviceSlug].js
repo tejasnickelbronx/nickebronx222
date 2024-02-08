@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link';
 import React, { createContext, useContext } from 'react';
 import { useParams, useRouter, useSearchParams, usePathname } from 'next/navigation';
 
@@ -136,7 +137,9 @@ export default function ServicePage({servicePageData, testisection}) {
       </div>
       ))}
 
-      
+          <div className="homeportfoliobtn">
+							<Link href="/contact" className="home-btn">GET STARTED</Link> 
+						</div>
       
       
       

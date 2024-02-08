@@ -48,8 +48,9 @@ export default function HomePortfolioItems({portfolioitems}) {
   const portcol1 = portfolioitems.slice(0, 5);
   const portcol2 = portfolioitems.slice(6, 10);
   const portcol3 = portfolioitems.slice(11, 15);
+  console.log(portcol1);
 
-  console.log(portcol1)
+  
   return (
    
       
@@ -78,7 +79,10 @@ const Column = ({portcolarr, y}) => {
             <div className="image">
             <Link href={{pathname: "/portfolios/"+portfolioItem.slug+"/"+portfolioItem.portfolioId,}}
               className="learn-btn color-yellow" >
-              <GetPortfolioImagebyType portfolioItem={portfolioItem} />
+              {/* <GetPortfolioImagebyType portfolioItem={portfolioItem} /> */}
+                 {portfolioItem.featuredImage &&(
+                 <Image src={portfolioItem.featuredImage.node.sourceUrl} width={500} height={500} alt="Portfolio Item"/> 
+                 )} 
               </Link> 
             </div>
             <div className="client-entro">

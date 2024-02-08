@@ -30,7 +30,7 @@ import Lenis from '@studio-freight/lenis';
 import { useRef } from "react";
 
 
-
+import * as React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 
@@ -68,29 +68,6 @@ export default function About({allteams,aboutfields, alltestiitems}) {
 
     const testimonials  = alltestiitems.data.allTestimonial.nodes;;
 
-    const [open, setOpen] = React.useState(false);
-
-    
-    const handleOpen = () => setOpen(true);
-    const handleClose = () => setOpen(false);
-
-    const [teammodel, setTeammodel] = React.useState([]);
-    const loadmodel = (modeldata) => {       
-        setTeammodel(modeldata);
-        setOpen(true);
-    };
-
-    const style = {
-      position: 'absolute',
-      top: '50%',
-      left: '50%',
-      transform: 'translate(-50%, -50%)',
-      width: 1000,
-      bgcolor: 'background.paper',
-      border: '2px solid #000',
-      boxShadow: 24,
-      p: 4,
-    };
     
     useScript('https://code.jquery.com/jquery-3.7.0.min.js');
     
@@ -106,7 +83,7 @@ export default function About({allteams,aboutfields, alltestiitems}) {
             });
           
             function raf(time) {
-                // lenis.raf(time);
+                lenis.raf(time);
                 ScrollTrigger.update();
                 requestAnimationFrame(raf);
             }
@@ -121,14 +98,14 @@ export default function About({allteams,aboutfields, alltestiitems}) {
             gsap.to(sbxitem, {
                 x: -150 * (sbxitem.length+1),
                 ease:"sine.out",  
-                duration: 1,
+                duration: 3,
               
                 scrollTrigger:{
                   trigger: section_2,
                   pin: true,
                   scrub: 3,
                   snap:5 / (sbxitem.length + 5),
-                  start: "50px",
+                  start: "0px",
                   end: "+=" + tempwidth
                 }
             });
@@ -181,8 +158,7 @@ export default function About({allteams,aboutfields, alltestiitems}) {
                   <h4>{testiItem.title}</h4>
                   <div dangerouslySetInnerHTML={{ __html: testiItem.content.substring(0, 100)}}></div>
                  
-                 
-                  <a onClick={() => loadmodel(testiItem)} data-pop={"teammember"+index} href="#" className="team-btn color-light-blue">
+                  <a data-pop={"teammember"+index} href="#" className="team-btn color-light-blue">
                     Learn More
                   </a>
                 </div>
@@ -206,41 +182,42 @@ export default function About({allteams,aboutfields, alltestiitems}) {
        
       
   </div>
-  <Modal
-    open={open}
-    onClose={handleClose}
-    aria-labelledby="modal-modal-title"
-    aria-describedby="modal-modal-description">  
-    <Box sx={style}>
-      
-      {open && (
+  { 
+  teamarray.map((testiItem, index)=>( 
+  <div className="teampopup" id={"teammember"+index} key={index}>
+    <div className="popup__content">
+      <div className="close">
+        <span />
+        <span />
+      </div>
       <div className="teammemberpop">
-          <div className="teampopimage">        
-            <Image src={teammodel.teamFields.image.sourceUrl} height={200} width={200} alt={teammodel.title} />
-          </div>
-          <div className="teampoptext">
-            <h4  dangerouslySetInnerHTML={{ __html: teammodel.teamFields.role}}></h4>
-            <h3>{teammodel.title}</h3>
-            <div dangerouslySetInnerHTML={{ __html: teammodel.content}}></div>
-            <div className="teampopsocial">
-            {teammodel.teamFields.spotify && (
-              <a href={teammodel.teamFields.spotify}><i className="fa-brands fa-spotify" /></a>
+        <div className="teampopimage">        
+          <Image src={testiItem.teamFields.image.sourceUrl} height={200} width={200} alt={testiItem.title} />
+        </div>
+        <div className="teampoptext">
+          <h4  dangerouslySetInnerHTML={{ __html: testiItem.teamFields.role}}></h4>
+          <h3>{testiItem.title}</h3>
+          <div dangerouslySetInnerHTML={{ __html: testiItem.content}}></div>
+          <div className="teampopsocial">
+          {testiItem.teamFields.spotify && (
+            <a href={testiItem.teamFields.spotify}><i className="fa-brands fa-spotify" /></a>
+          )}
+          {testiItem.teamFields.instagram && (
+            <a href={testiItem.teamFields.instagram}><i className="fa-brands fa-instagram" /></a>
+          )}
+          {testiItem.teamFields.linkedin && (
+            <a href={testiItem.teamFields.linkedin}> <i className="fa-brands fa-linkedin" /></a>
             )}
-            {teammodel.teamFields.instagram && (
-              <a href={teammodel.teamFields.instagram}><i className="fa-brands fa-instagram" /></a>
+            {testiItem.teamFields.twitter && (
+            <a href={testiItem.teamFields.twitter}> <i class="fa-brands fa-x-twitter"></i></a>
             )}
-            {teammodel.teamFields.linkedin && (
-              <a href={teammodel.teamFields.linkedin}> <i className="fa-brands fa-linkedin" /></a>
-              )}
-              {teammodel.teamFields.twitter && (
-              <a href={teammodel.teamFields.twitter}> <i class="fa-brands fa-x-twitter"></i></a>
-              )}
-            </div>
           </div>
-        </div> 
-        )}
-    </Box>  
-  </Modal>    
+        </div>
+      </div>
+    </div>
+  </div>
+  ))                          
+  }
 </section>
 
 
@@ -257,8 +234,9 @@ export default function About({allteams,aboutfields, alltestiitems}) {
         <p>
           {coreValueSection.description}
         </p>
-        
-        <a class="home-btn" href="/portfolios">Our Work</a>
+        <a href="#" className="btn-cust">
+          Our Work
+        </a>
       </div>
     </div>
      
@@ -305,10 +283,9 @@ export default function About({allteams,aboutfields, alltestiitems}) {
         <h3 dangerouslySetInnerHTML={{ __html: whowearehead.heading}}>
           
         </h3>
-        <div dangerouslySetInnerHTML={{ __html: whowearehead.description}}></div>
-        {/* <p>
+        <p>
           {whowearehead.description}
-        </p> */}
+        </p>
       </div>
       <div className="limits-boxes-main">
         <div className="limits-boxes-inner">
@@ -319,10 +296,9 @@ export default function About({allteams,aboutfields, alltestiitems}) {
             <div className="boxes-wrap-inner">
               <h4 className="pink-blue-text-bg">{whoboxitem.heading1}</h4>
               <h5>{whoboxitem.subHeading}</h5>
-              <div></div>
-              {/* <p>
+              <p>
               {whoboxitem.description}
-              </p> */}
+              </p>
             </div>
           </div>
            ))

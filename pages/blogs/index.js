@@ -64,7 +64,7 @@ export default function About({allblogs,featuredblog}) {
                 </h2>
                 </div>
                 <div className="filter-inner-sec">
-                <div className="buttons">
+                {/* <div className="buttons">
                     <button className="button  active" data-attr="all">
                     <a href="#">
                         All 
@@ -90,7 +90,7 @@ export default function About({allblogs,featuredblog}) {
                         Social Media 
                     </a>
                     </button>
-                </div>
+                </div> */}
                 <div className="item-list">
                     <div className="item all">
                     <div className="featured-inner">
@@ -131,9 +131,9 @@ export default function About({allblogs,featuredblog}) {
                     
                     </div>
                     <div className="button-sec">
-                    <a href="#" className="home-btn">
+                    {/* <a href="#" className="home-btn">
                         VIEW MORE
-                    </a>
+                    </a> */}
                     </div>
                 </div>
                 </div>

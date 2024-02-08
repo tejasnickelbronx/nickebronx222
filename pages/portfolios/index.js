@@ -57,7 +57,7 @@ export default function About({portfoliositems}) {
       <h2 className="textcenter" dangerouslySetInnerHTML={{ __html: header}}></h2>
     </div>
     <div className="filter-inner-sec">
-      <div className="buttons">
+      {/* <div className="buttons">
         <button className="button  active" data-attr="all">
           <a href="#">All </a>
         </button>
@@ -73,7 +73,7 @@ export default function About({portfoliositems}) {
         <button className="button " data-attr="social-media">
           <a href="#">Social Media </a>
         </button>
-      </div>
+      </div> */}
       <div className="portfoliowraper">
       {
            

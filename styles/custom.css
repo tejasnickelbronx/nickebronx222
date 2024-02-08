@@ -166,7 +166,7 @@
 .teammemberpop{
   
   display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 40% 58%;
     column-gap: 30px;
 }
 .teampoptext{			
@@ -1474,7 +1474,8 @@ z-index: -1;
   text-transform: uppercase;
 }
 .client-inner-sec .intro-box-inner .image img{
-  height: 450px;
+  height: 100%;
+  width: 100%;
 }
 .service-main-sec {
   overflow: hidden;
@@ -1741,7 +1742,7 @@ margin-bottom: 20px !important;
 
 .contatpgmain{
 display: grid;
-grid-template-columns: 2fr 2fr;
+grid-template-columns: 3fr 4fr;
 }
 
 
@@ -1800,7 +1801,7 @@ margin: 0;
 }
 .contactformwhite{
   background: #F7F9FC;
-  padding: 20px;
+  padding: 40px;
 }
 .cnform_wtrow{
   display: grid;
@@ -1886,4 +1887,18 @@ color: #1F1F1F;
   font-family: 'Lexend Deca'; 
 }
 
+.fotoercontatbtn{
+  margin-bottom: 80px;
+  margin-top: 50px;
+}
+.contact-main-sec{
+  background-color: #1F1F1F;
+  background-image: url(../public/contactbg.svg);
+  background-size: 100%;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+}
+.contactpage .footer-title{
+display: none;
+}
 

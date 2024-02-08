@@ -140,7 +140,7 @@ export default function Home({pagefields, testisection,portfolioitems}) {
         </p>
         <div className="banner-button">
           <Link href="/portfolios" className="home-btn banner-btn">
-            Our Work
+          work with us
           </Link>
         </div>
       </div>
