@@ -99,7 +99,7 @@ export default function GetHomeServices( {allservices, servicesec} ){
          ourservicesitems.map((serviceitem, index)=>(     
           
         
-          <div  className="serviceitem" virtualIndex={index}>
+          <div  className={`serviceitem hmsbx${index}`} virtualIndex={index}>
             <div className='serviceitems'>
 
             

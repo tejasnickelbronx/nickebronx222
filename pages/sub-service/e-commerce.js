@@ -159,6 +159,7 @@ export default function About({servicesData,testisection}) {
               <div className="testi-content">
                 <h2>{testiItem.title} • {testiItem.customfield.company}</h2>
                 {/*<h3>they absolutely CRUSHED IT</h3>*/}
+                <h3>{testiItem.customfield.testimonialTitle}</h3>
                 <div dangerouslySetInnerHTML={{ __html: testiItem.content}}></div>
               </div>
             </div>

@@ -49,10 +49,15 @@ export default function About({servicesData}) {
         <SiteHeader className="headercls"/>
        
   {/* Services Banner Section Start */}
-  <section className="service-banner-main">
+  <section className="service-banner-main servicebg">
     <div className="container2">
-      <div className="service-title">
+      <div className="service-title alignleft">
         <h2 dangerouslySetInnerHTML={{ __html: topheading}}></h2>
+      </div>
+      <div className='pricingbannerpdf'>
+          <h3>Questions about our pricing? Download our PDF.</h3>
+          <p>At NickelBronx, we believe in transparency and clarity when it comes to pricing. Our straightforward pricing packages are tailored to suit your needs, ensuring you receive top-notch design services without hidden costs or surprises. Explore our pricing options below and find the perfect fit for your project.</p>
+          <a href="#" class="home-btn">Download PDF</a>
       </div>
     </div>
   </section>

@@ -132,6 +132,19 @@
     .client-inner-sec .intro-box-inner .image img {
       height: 400px;
     }
+    .contatpgmain {
+      display: block;
+    }
+    .contactpgright{
+
+      margin-top: 60px;
+    }
+    .cnform_wtrow{
+      display: block;;
+    }
+    .cnform_wtrow div:last-child{
+      margin-top: 60px;
+    }
 }
 /****NP CSS*****/
 @media screen and (max-width: 1550px) {

@@ -366,6 +366,7 @@ export default function About({allteams,aboutfields, alltestiitems}) {
                   {/* <h2>SOHALE RAZMJOU • BLACKWOOD</h2> */}
                   {/* <h3>they absolutely CRUSHED IT</h3>  */}
                   <h2>{testiItem.title} • {testiItem.customfield.company}</h2>
+                  <h3>{testiItem.customfield.testimonialTitle}</h3>
                   <div dangerouslySetInnerHTML={{ __html: testiItem.content}}></div>
                 </div>
               </div>

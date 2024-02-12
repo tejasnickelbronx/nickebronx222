@@ -77,7 +77,7 @@ export default function Home({pagefields, testisection,portfolioitems}) {
   
    const allportfolioarr = portfolioitems.data.allPortfolio.nodes;
 
-  
+  console.log(alltestimonial);
    
    useScript('https://code.jquery.com/jquery-3.7.0.min.js');   
    
@@ -322,7 +322,7 @@ export default function Home({pagefields, testisection,portfolioitems}) {
               </div>
               <div className="testi-content">
                 <h2>{testiItem.title} • {testiItem.customfield.company}</h2>
-                {/*<h3>they absolutely CRUSHED IT</h3>*/}
+                <h3>{testiItem.customfield.testimonialTitle}</h3>
                 <div dangerouslySetInnerHTML={{ __html: testiItem.content}}></div>
               </div>
             </div>

@@ -1854,6 +1854,7 @@ text-transform: uppercase;
 color: #1F1F1F;
 }
 .mt_30{margin-top: 30px;}
+.mt_60{margin-top: 60px;}
 .submitbtn{
   padding: 10px 0;
   background-color: #00C2FF;
@@ -1910,5 +1911,83 @@ color: #1F1F1F;
 }
 .contactpage .footer-title{
 display: none;
+}
+.service-box-inner.sboxbg_1 .box-title h5, 
+.service-box-inner.sboxbg_2 .box-title h5, 
+.service-box-inner.sboxbg_4 .box-title h5,
+.service-box-inner.sboxbg_5 .box-title h5{
+   color: #000;;
+}
+.service-box-inner.sboxbg_1 .servicedescbx p, 
+.service-box-inner.sboxbg_2 .servicedescbx p, 
+.service-box-inner.sboxbg_4 .servicedescbx p,
+.service-box-inner.sboxbg_5 .servicedescbx p{
+  color: #000;;
+  
+}
+.sboxbg_1:hover  .box-title h5, 
+.sboxbg_2:hover  .box-title h5, 
+.sboxbg_4:hover  .box-title h5,.sboxbg_5:hover  .box-title h5{
+  background: url('../public/blackarrow.svg');
+  background-repeat: no-repeat;
+  background-position: right;
+  
+}
+.testi-box-inner .testi-content h2 {
+  text-transform: uppercase;
+}
+.servicesecng_2 .title-sec .title-part h3 {
+  color: #1F1F1F;
+}
+.servicesecng_2 .title-sec .content-part p {
+  color: #1F1F1F;
+}
+.servicesecng_2 .list-box h2, .servicesecng_2 .service-list ul li {
+  color: #1F1F1F;
+}
+
+.service-title.alignleft h2{
+
+  text-align: left;;
+}
+.servicebg::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 35%;
+  height: 110%;
+  right: -20%;
+  top: 76%;
+  background-image: url(/_next/static/media/servicebg.6af46865.svg);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  transform: translate(-50%,-50%) rotate(-9deg);
+  background-size: contain;
+}
+.pricingbannerpdf h3{  
+
+font-family: 'Lexend Deca';
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 120%;/* or 38px */
+
+color: #FFDC2A;
+}
+
+.pricingbannerpdf p{  
+
+font-family: 'Lexend Deca';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 155%;
+/* or 31px */
+
+/* Soft White */
+color: #F7F9FC;
+}
+.home-btn.btnwhiteshadow{
+  box-shadow: 6px 6px #fff;
 }
 

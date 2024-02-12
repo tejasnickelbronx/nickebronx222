@@ -133,7 +133,7 @@ export function getPortfolioLongPage(singlePortfolio){
     </section>
     {/* Functionality Section End */}
     {/* Takeaways Section Start */}
-    <section className="takeaways-main-sec">
+    {/* <section className="takeaways-main-sec">
       <div className="container2">
         <div className="takeaways-title">
           <h2>Takeaways</h2>
@@ -153,11 +153,13 @@ export function getPortfolioLongPage(singlePortfolio){
           </div>
         </div>
       </div>
-    </section>
+    </section> */}
+
+
     {/* Takeaways Section End */}
     {/* Project Section Start */}
-    <section className="project-main-sec">
-      {/* <div class="container2"> */}
+    {/* <section className="project-main-sec">
+      
       <div className="project-inner-sec">
         <div className="left-part">
           <h2>
@@ -192,8 +194,8 @@ export function getPortfolioLongPage(singlePortfolio){
           </p>
         </div>
       </div>
-      {/* </div> */}
-    </section>
+      
+    </section> */}
     {/* Project Section End */}
 
     </>
@@ -283,8 +285,7 @@ export function getPortfolioShortPage(singlePortfolio){
   </section>
  
   {/* Project Section Start */}
-  <section className="project-main-sec">
-    {/* <div class="container2"> */}
+  {/* <section className="project-main-sec">    
     <div className="project-inner-sec">
       <div className="left-part">
         <h2>
@@ -318,9 +319,8 @@ export function getPortfolioShortPage(singlePortfolio){
           eiusmod tempor. Lorem ipsum dolor sit amet, consectetur adipiscing.
         </p>
       </div>
-    </div>
-    {/* </div> */}
-  </section>
+    </div>   
+  </section> */}
   {/* Project Section End */}
   </>
 

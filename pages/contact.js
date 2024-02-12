@@ -111,7 +111,7 @@ export default function Merch({merchfields}) {
                           </div>
 
                       </div>
-                      <div className='cnform_wtrow mt_30'>
+                      <div className='cnform_wtrow mt_60'>
                           <div className='cnformfield_wt'>
                             <label>Email</label>
                             <input type='text' className='cnformwht_text' name='cnformemail' id='cnformemail' />
@@ -121,7 +121,7 @@ export default function Merch({merchfields}) {
                             <input type='text' className='cnformwht_text' name='cnformphone' id='cnformphone'  />
                           </div>
                       </div>
-                      <div className='cnform_wtrow mt_30 fullwidth'>
+                      <div className='cnform_wtrow mt_60 fullwidth'>
                           <div className='cnformfield_wt'>
                             <label>WHAT ARE YOU LOOKING FOR?</label>
                             <select className='selectfield' name='lookingfor' id='lookingfor'>
@@ -132,13 +132,13 @@ export default function Merch({merchfields}) {
                             </select>
                           </div>                          
                       </div>
-                      <div className='cnform_wtrow mt_30 fullwidth'>
+                      <div className='cnform_wtrow mt_60 fullwidth'>
                           <div className='cnformfield_wt'>
                             <label>Project brief</label>
                             <input type='text' className='cnformwht_text' name='cnformbrief' id='cnformbrief' />
                           </div>                          
                       </div>
-                      <div className='cnform_wtrow mt_30 fullwidth'>
+                      <div className='cnform_wtrow mt_60 fullwidth'>
                           <div className='cnformbtn_wt'>
                               
                               <button className='submitbtn' name='submitform' id='submitform' type="submit">Submit</button>
