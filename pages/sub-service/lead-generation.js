@@ -99,31 +99,31 @@ export default function About({servicesData,testisection}) {
       </div>
       <div className="subservice-boxes">
         <div className="subservice-itembx servcebx1">
-          <h4>Content Marketing</h4>
+          <h4>Content<br /> Marketing</h4>
           <p>
           Engage prospects with compelling content that drives interest and converts leads and elevate your content marketing game.
           </p>
         </div>
         <div className="subservice-itembx servcebx2">
-          <h4>SEO Boost</h4>
+          <h4>SEO <br /> Boost</h4>
           <p>
           Amplify demand with enhanced online visibility. Our proven SEO solutions drive more qualified traffic to you.
           </p>
         </div>
         <div className="subservice-itembx servcebx3">
-          <h4>Social Engagement</h4>
+          <h4>Social <br /> Engagement</h4>
           <p>
           Convert social interactions into solid leads. Our strategic approach maximizes impact on platforms and increases online visibility.
           </p>
         </div>
         <div className="subservice-itembx servcebx2">
-          <h4>Email Campaigns</h4>
+          <h4>Email <br /> Campaigns</h4>
           <p>
           Cultivate relationships, ignite demand. Expertly crafted email campaigns for sustainable lead growth.
           </p>
         </div>
         <div className="subservice-itembx servcebx3">
-          <h4>Precision Ads</h4>
+          <h4>Precision <br /> Ads</h4>
           <p>
           Pinpoint audience targets, boost demand & leads through precise ad campaigns. Expert digital marketing strategies at your service.
           </p>

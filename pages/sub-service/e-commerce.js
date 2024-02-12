@@ -89,39 +89,39 @@ export default function About({servicesData,testisection}) {
       </div>
       <div className="subservice-boxes">
         <div className="subservice-itembx servcebx1">
-          <h4>Search Engine Optimization</h4>
+          <h4>Search Engine<br/> Optimization</h4>
           <p>
           Enhance your online store's visibility in search engines by optimizing keywords, meta tags, 
           and website structure to attract organic traffic and improve search rankings.
           </p>
         </div>
         <div className="subservice-itembx servcebx2">
-          <h4>Social Media Marketing</h4>
+          <h4>Social Media<br/> Marketing</h4>
           <p>
           Leverage platforms like Facebook and Instagram to engage with your audience through content, 
           ads, and more, building brand awareness and driving sales.
           </p>
         </div>
         <div className="subservice-itembx servcebx3">
-          <h4>Email Marketing</h4>
+          <h4>Email <br/>Marketing</h4>
           <p>
           Craft personalized email campaigns to nurture leads, promote products, and re-engage past customers, fostering loyalty and repeat business.
           </p>
         </div>
         <div className="subservice-itembx servcebx2">
-          <h4>website design & development</h4>
+          <h4>website design &<br/> development</h4>
           <p>
           Create and design a functional and visually appealing e-commerce website tailored to your brand and products, attracting your target audience.
           </p>
         </div>
         <div className="subservice-itembx servcebx3">
-          <h4>Digital Marketing Campaigns</h4>
+          <h4>Digital Marketing<br/> Campaigns</h4>
           <p>
           Plan and execute strategic online marketing campaigns, including social media ads, PPC, and email marketing, to boost brand awareness and sales.
           </p>
         </div>
         <div className="subservice-itembx servcebx1">
-          <h4>Analytics and Reporting</h4>
+          <h4>Analytics and<br/> Reporting</h4>
           <p>
           Monitor key metrics like traffic, sales, and customer behavior using analytics tools to gain insights and refine your e-commerce strategy.
           </p>

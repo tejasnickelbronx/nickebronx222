@@ -108,39 +108,39 @@ export default function About({servicesData,testisection}) {
       </div>
       <div className="subservice-boxes">
         <div className="subservice-itembx servcebx1">
-          <h4>Brand 
+          <h4>Brand <br/>
 Strategy</h4>
           <p>
           Define your values, mission, and unique selling points to create a strong foundation for your brand.
           </p>
         </div>
         <div className="subservice-itembx servcebx2">
-          <h4>Visual Identity</h4>
+          <h4>Visual <br/>Identity</h4>
           <p>
           Our designers will create a customized logo, color palette, and graphic elements that reflect your personality and resonate with your audience.
           </p>
         </div>
         <div className="subservice-itembx servcebx3">
-          <h4>Social Media Presence</h4>
+          <h4>Social Media <br/>Presence</h4>
           <p>
           We'll optimize your profiles, curate engaging content, and implement strategies to grow your followers authentically.
           </p>
         </div>
         <div className="subservice-itembx servcebx2">
-          <h4>Content 
+          <h4>Content <br/>
 Creation</h4>
           <p>
           Our team can provide you with unique and impactful content as well as guide you to personally produce compelling blogs, videos, and social media posts.
           </p>
         </div>
         <div className="subservice-itembx servcebx3">
-          <h4>Online Presence</h4>
+          <h4>Online <br/>Presence</h4>
           <p>
           We design and develop a personalized website and provide actionable insights on how to enhance your visibility, engagement, in the digital landscape.
           </p>
         </div>
         <div className="subservice-itembx servcebx1">
-          <h4>Analytics and Reporting</h4>
+          <h4>Analytics and <br/>Reporting</h4>
           <p>
           Monitor key metrics like traffic, and customer behavior using analytics tools to gain insights and refine your personal brand strategy.
           </p>

@@ -89,7 +89,12 @@
   .servicesecng_4 .content-part a{color: #FF2093;}
   .servicesecng_4 .list-box h2, .servicesecng_4 .service-list ul li{color: #1F1F1F;}
 
-
+  .identity-main-sec.servicesecng_4 .title-sec .content-part a.learn-btn::before {    
+    background-image: url('../public/rightarrowsvg.svg');
+  }
+  .list-sec{
+    width: 45%;
+  }
   @media screen and (max-width: 575px) {
   .filter-inner-sec .buttons {
     flex-direction: column;
@@ -1603,7 +1608,7 @@ z-index: -1;
 			
   width: 100%;
     position: relative;
-    padding: 150px 0;
+    padding: 150px 0 50px 0;
     background-color: #1F1F1F;
   
 }
@@ -1638,6 +1643,8 @@ z-index: -1;
 
   /* Soft White */
   color: #F7F9FC;
+  margin-top: 40px;
+  margin-bottom: 0;
 }
 .subservice-text-inner p{
   font-family: 'Lexend Deca';
@@ -1659,6 +1666,7 @@ z-index: -1;
 }
 .subservice-itembx{			
   margin-top: 10px;
+  padding: 50px;
 }
 .subservice-itembx h4{		
 
@@ -1669,7 +1677,8 @@ z-index: -1;
   line-height: 40px;
   text-align: center;
   /* Off Black */
-  color: #fff;			
+  color: #fff;		
+  margin-bottom: 0;	
 }
 
 .subservice-itembx p{
@@ -1890,6 +1899,7 @@ color: #1F1F1F;
 .fotoercontatbtn{
   margin-bottom: 80px;
   margin-top: 50px;
+  width: 203px;
 }
 .contact-main-sec{
   background-color: #1F1F1F;
