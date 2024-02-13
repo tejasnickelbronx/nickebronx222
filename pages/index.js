@@ -19,6 +19,10 @@ import {getPorftoliositems} from '../lib/getPortfolioSections.js';
 
 import { Navigation, Pagination, Scrollbar, A11y,Mousewheel,FreeMode,Autoplay    } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
+
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import Modal from '@mui/material/Modal';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -89,12 +93,34 @@ export default function Home({pagefields, testisection,portfolioitems}) {
 
    
    
-   
+   const [open, setOpen] = React.useState(false);
+
+    
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
+
+    const [teammodel, setTeammodel] = React.useState([]);
+    const loadmodel = (modeldata) => {       
+        setTeammodel(modeldata);
+        setOpen(true);
+    };
+
+    const style = {
+      position: 'absolute',
+      top: '50%',
+      left: '50%',
+      transform: 'translate(-50%, -50%)',
+      width: 1000,
+      bgcolor: '#00C2FF',
+      border: '2px solid #000',
+      boxShadow: 24,
+      p: 4,
+    };
    
    
 
    useEffect(() => {
-    
+    setOpen(true);
     
     
   }, [])
@@ -204,9 +230,9 @@ export default function Home({pagefields, testisection,portfolioitems}) {
           <div className="client-description">
             <p dangerouslySetInnerHTML={{ __html: ourclients.description}}></p>
             
-            <a href="#" className="home-btn">
+            <Link href="/contact" className="home-btn">
               GET IN TOUCH
-            </a>
+            </Link>
           </div>
         </div>
         
@@ -441,6 +467,18 @@ export default function Home({pagefields, testisection,portfolioitems}) {
   
   
   <SiteFooter className="footercls"/>
+  <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description">  
+        <Box sx={style}>
+          <a className='teampopclose' onClick={handleClose}></a>
+          {open && (
+            <NewsLetterPop />
+            )}
+        </Box>  
+      </Modal> 
   {/* <NewsLetterPop /> */}
     </>
   )

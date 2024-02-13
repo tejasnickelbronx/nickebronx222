@@ -57,7 +57,7 @@ export default function About({servicesData}) {
       <div className='pricingbannerpdf'>
           <h3>Questions about our pricing? Download our PDF.</h3>
           <p>At NickelBronx, we believe in transparency and clarity when it comes to pricing. Our straightforward pricing packages are tailored to suit your needs, ensuring you receive top-notch design services without hidden costs or surprises. Explore our pricing options below and find the perfect fit for your project.</p>
-          <a href="#" class="home-btn">Download PDF</a>
+          <a href="#" class="home-btn btnwhiteshadow">Download PDF</a>
       </div>
     </div>
   </section>
@@ -71,14 +71,10 @@ export default function About({servicesData}) {
     <div className="container2">
       <div className="title-sec">
         <div className="title-part">
-          <h3 dangerouslySetInnerHTML={{ __html: servicesection.serviceTitle}}>
-            
-          </h3>
+          <h3 dangerouslySetInnerHTML={{ __html: servicesection.serviceTitle}}></h3>
         </div>
         <div className="content-part">
-          <p>
-            {servicesection.serviceDescription}
-          </p>
+          <p>{servicesection.serviceDescription}</p>
           {/* <Link href={{
                       pathname: "/services/[[serviceSlug]]",
                       query: {"serviceSlug": [servicesection.button, '413']} 
@@ -127,6 +123,7 @@ export default function About({servicesData}) {
 
 
         <SiteFooter className="footercls"/>
+        
         </>
 
     )

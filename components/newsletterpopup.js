@@ -22,12 +22,9 @@ export default function newsletterpopup(){
       
       
 
-      <div className="newsletterpop" id="newsletterpop">
+      
       <div className="newspop_content">
-        <div className="npclose">
-          <span />
-          <span />
-        </div>
+        
         <div className="newspop_box">
           <div className="newspop_head">
             <h2>
@@ -54,7 +51,7 @@ export default function newsletterpopup(){
           </div>
         </div>
       </div>
-    </div>
+    
     
       
     

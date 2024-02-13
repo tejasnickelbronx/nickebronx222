@@ -82,13 +82,16 @@ export default function GetHomeServices( {allservices, servicesec} ){
      <section className="service-main-sec" ref={targetRef}>
       <div className="container2">
         <div className="service-inner-sec">
-          <div className="service-title">
-            <h2>OUR SERVICES</h2>
-            <h3 dangerouslySetInnerHTML={{ __html: ourService.heading}}></h3>
-            
-            <p>
-              {ourService.description}
-            </p>
+          <div className="service-title serviceintromain">
+            <div className='serviceintroleft'>
+              <h2>OUR SERVICES</h2>
+              <h3 dangerouslySetInnerHTML={{ __html: ourService.heading}}></h3>
+            </div>
+            <div className='serviceintroright'> 
+              <p>
+                {ourService.description}
+              </p>
+            </div>
           </div>
 
       <div   className="service-slider"   id='serviceslider'>
@@ -112,7 +115,7 @@ export default function GetHomeServices( {allservices, servicesec} ){
                   <h5 ><Link dangerouslySetInnerHTML={{ __html: serviceitem.serviceTitle}} href={"/services/"+serviceitem.link.slug+"/"+serviceitem.link.pageId}></Link></h5>
                  
                 </div>
-                <div className='servicedescbx'><p>{serviceitem.description}</p></div>
+                <div className='servicedescbx'><p>{serviceitem.description.substring(0, 100)}</p></div>
                
               </div>
             </div>

@@ -219,6 +219,19 @@
   object-fit: contain;
   height: auto;
 }
+.teampopclose{ 
+  position: absolute;
+  z-index: 1000;
+  width: 30px;
+  height: 20px;
+  right: 1px;
+  top: 10px;
+  background-image: url('../public/popclose.svg');
+  background-repeat: no-repeat;
+  background-position: center;  
+  background-size: contain; 
+  cursor: pointer;;
+}
 .blogimage{
 
     height: auto;;
@@ -1209,15 +1222,15 @@ grid-column-gap: 10px;
   position: fixed;
   }
 .newspop_content {
-  width: 600px;
+  /* width: 600px; */
   overflow:auto;
   padding: 50px;
   background: #00C2FF;
   color: black;
   position: relative;
-  top: 50%;
+  /* top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
     box-sizing: border-box;
 }
 .npclose {
@@ -1386,6 +1399,7 @@ z-index: -1;
 }
 .newsletterbtn{
   margin-top: 30px;
+  text-align: center;
 
 }
 .btnnextstep{
@@ -1900,7 +1914,7 @@ color: #1F1F1F;
 .fotoercontatbtn{
   margin-bottom: 80px;
   margin-top: 50px;
-  width: 203px;
+  width: 241px;
 }
 .contact-main-sec{
   background-color: #1F1F1F;
@@ -1958,7 +1972,7 @@ display: none;
   height: 110%;
   right: -20%;
   top: 76%;
-  background-image: url(/_next/static/media/servicebg.6af46865.svg);
+  background-image: url('../public/servicebg.svg');
   background-repeat: no-repeat;
   background-position: bottom right;
   transform: translate(-50%,-50%) rotate(-9deg);
@@ -1990,4 +2004,40 @@ color: #F7F9FC;
 .home-btn.btnwhiteshadow{
   box-shadow: 6px 6px #fff;
 }
+.lineartext_0, .lineartext_3, .lineartext_6 {
+background: linear-gradient(89.62deg, #FF2093 1.81%, #00C2FF 42%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+text-fill-color: transparent;
+} 
+.lineartext_1, .lineartext_4, .lineartext_7{   
+  background: linear-gradient(89.62deg, #00C2FF 1.81%, #FFDC2A 80.9%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.lineartext_2, .lineartext_5, .lineartext_8{   
+background: linear-gradient(89.62deg, #FFDC2A 1.81%, #FF2093 80.9%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+text-fill-color: transparent;
+}
+.limits-boxes-inner .boxes-wrap .boxes-wrap-inner h5 {
+  text-transform: capitalize;
+}
+.corevalueabout p{
+  margin-bottom: 15px !important;
+}
 
+
+.teamintromain{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.serviceintromain{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}

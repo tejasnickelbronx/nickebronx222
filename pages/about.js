@@ -114,7 +114,7 @@ export default function About({allteams,aboutfields, alltestiitems}) {
             requestAnimationFrame(raf);
           
             requestAnimationFrame(raf);
-            const section_2 = document.querySelector(".about-container");
+            const section_2 = document.querySelector(".about-banner");
             let sbxitem = gsap.utils.toArray(".teamslideitem");
             // alert(sbxitem.length);
             let tempwidth = section_2.offsetWidth + 2000;
@@ -153,58 +153,50 @@ export default function About({allteams,aboutfields, alltestiitems}) {
         <SiteHeader className="headercls"/>
         
         <section className="about-banner">
-  <div className="about-container">
-    <div className="banner-title">
-      <h2 dangerouslySetInnerHTML={{ __html: meetteamhead.heading1}}>
-        
-      </h2>
-      <p>
-        {meetteamhead.description}
-      </p>
-    </div>
-    <div className='team-slider'>
-
-      
-    
-    
-        {
-           
-            teamarray.map((testiItem, index)=>(   
-              <div className='teamslideitem'>
-              <div className="team-slide">
-                <div className="image-sec">
-                  <Image src={testiItem.teamFields.image.sourceUrl} height={200} width={200} alt={testiItem.title} />
-                  
-                </div>
-                <div className="team-info">
-                  <h3 dangerouslySetInnerHTML={{ __html: testiItem.teamFields.role}}></h3>
-                  <h4>{testiItem.title}</h4>
-                  <div dangerouslySetInnerHTML={{ __html: testiItem.content.substring(0, 100)}}></div>
-                 
-                 
-                  <a onClick={() => loadmodel(testiItem)} data-pop={"teammember"+index} href="#" className="team-btn color-light-blue">
-                    Learn More
-                  </a>
-                </div>
-              </div>
-              </div>
-
-            ))
+        <div className="about-container">
+          <div className="banner-title teamintromain">
+            <div className='teamintroleft'>
+              <h2 dangerouslySetInnerHTML={{ __html: meetteamhead.heading1}}></h2>
+            </div>
+            <div className='teamintroleft'>
+            <p>
+              {meetteamhead.description}
+            </p>
+            </div> 
+          </div>
+          <div className='team-slider'>      
+          
+          
+              {
                 
-            }
-          <div className='teamslideitem'></div>
-          <div className='teamslideitem'></div>
-          <div className='teamslideitem'></div>
-          <div className='teamslideitem'></div>
-       </div>
-	
-        
-        
-       
-        
-        
-       
-      
+                  teamarray.map((testiItem, index)=>(   
+                    <div className='teamslideitem'>
+                    <div className="team-slide">
+                      <div className="image-sec">
+                        <Image src={testiItem.teamFields.image.sourceUrl} height={200} width={200} alt={testiItem.title} />
+                        
+                      </div>
+                      <div className="team-info">
+                        <h3 dangerouslySetInnerHTML={{ __html: testiItem.teamFields.role}}></h3>
+                        <h4>{testiItem.title}</h4>
+                        <div dangerouslySetInnerHTML={{ __html: testiItem.content.substring(0, 100)}}></div>
+                      
+                      
+                        <a onClick={() => loadmodel(testiItem)} data-pop={"teammember"+index} href="#" className="team-btn color-light-blue">
+                          Learn More
+                        </a>
+                      </div>
+                    </div>
+                    </div>
+
+                  ))
+                      
+                  }
+                <div className='teamslideitem'></div>
+                <div className='teamslideitem'></div>
+                <div className='teamslideitem'></div>
+                <div className='teamslideitem'></div>
+            </div> 
   </div>
   <Modal
     open={open}
@@ -212,7 +204,7 @@ export default function About({allteams,aboutfields, alltestiitems}) {
     aria-labelledby="modal-modal-title"
     aria-describedby="modal-modal-description">  
     <Box sx={style}>
-      
+      <a className='teampopclose' onClick={handleClose}></a>
       {open && (
       <div className="teammemberpop">
           <div className="teampopimage">        
@@ -244,16 +236,14 @@ export default function About({allteams,aboutfields, alltestiitems}) {
 </section>
 
 
-<section className="core-values-sec">
+<section className="core-values-sec" id='aboutcorevaluesa'>
   <div className="about-container">
     <div className="core-title">
-      <div className="left-part">
+      <div className="left-part">        
         <h2>CORE VALUES</h2>
-        <h3 dangerouslySetInnerHTML={{ __html: coreValueSection.heading}}>
-          
-        </h3>
+        <h3 dangerouslySetInnerHTML={{ __html: coreValueSection.heading}}></h3>
       </div>
-      <div className="right-part">
+      <div className="right-part corevalueabout">
         <p>
           {coreValueSection.description}
         </p>
@@ -317,7 +307,7 @@ export default function About({allteams,aboutfields, alltestiitems}) {
            whowearebox.map((whoboxitem, index)=>(  
           <div className="boxes-wrap" key={index}>
             <div className="boxes-wrap-inner">
-              <h4 className="pink-blue-text-bg">{whoboxitem.heading1}</h4>
+              <h4 className={`pink-blue-text-bg lineartext_${index}`}>{whoboxitem.heading1}</h4>
               <h5>{whoboxitem.subHeading}</h5>
               <div></div>
               {/* <p>
