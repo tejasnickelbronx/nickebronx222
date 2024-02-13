@@ -112,8 +112,8 @@ export default function Home({pagefields, testisection,portfolioitems}) {
       transform: 'translate(-50%, -50%)',
       width: 1000,
       bgcolor: '#00C2FF',
-      border: '2px solid #000',
-      boxShadow: 24,
+      border: '0',
+      boxShadow: 0,
       p: 4,
     };
    
