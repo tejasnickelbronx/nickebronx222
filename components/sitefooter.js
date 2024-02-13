@@ -44,7 +44,7 @@ export default function SiteFooter({className, globalsettings}){
       border: '0',
       boxShadow: 0,
       p: 4,
-    };
+    };   
    
   console.log(globalsettings)
     return(
