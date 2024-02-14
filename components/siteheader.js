@@ -1,8 +1,27 @@
 import Link from 'next/link';
 import Image from "next/image";
+import React, { useState, useEffect } from 'react';
+import ReactDOM from 'react-dom';
+import $ from 'jquery';
 
 export default function SiteHeader({className}){
+    const [showMe, setShowMe] = useState(false);
+    function toggle(){
+        setShowMe(true);
+        $(".menu-sec").slideToggle();
+         $(this).toggleClass("open");
+    }
+    
+    useEffect(() => {
+        if(showMe){
+            document.querySelector(".menu-sec").classList.add("showmenu") 
+        }else{
 
+
+        }
+        
+        
+      }, [])
     return(
       
       
@@ -14,9 +33,9 @@ export default function SiteHeader({className}){
                 <Image src="/logo.png" width={95} height={55} alt="Nickelbronx"  />
                 </Link>
             </div>
-            <div className="toggle-button">
+            <div className="toggle-button" >
                 <div className="menubar-btn-area">
-                <a href="#" className="menubar-btn">
+                <a onClick={toggle} href="#" className="menubar-btn">
                     <span />
                     <span />
                     <span />

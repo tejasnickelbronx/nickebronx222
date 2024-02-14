@@ -151,6 +151,26 @@
     .serviceintromain{
       display: block;     
     }
+    .MuiBox-root{
+      width: 90%!important;
+    }
+    .newspop_head h2 {
+      font-size: 22px;
+    }
+    .newspop_head h3 {
+      font-size: 18px;
+    }
+    a.btn-cust::before {
+      left: -40px;
+    }
+    .newspop_content {
+      padding: 20px;
+    }
+    
+    .team-slider {
+      width: 1554vw;
+    }
+  
 }
 /****NP CSS*****/
 @media screen and (max-width: 1550px) {

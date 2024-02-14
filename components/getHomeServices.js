@@ -25,15 +25,16 @@ export default function GetHomeServices( {allservices, servicesec} ){
   const ourService = servicesec;
   const ourservicesitems = allservices;
   
-  gsap.registerPlugin(Flip,ScrollTrigger,Observer,ScrollToPlugin,Draggable,MotionPathPlugin,EaselPlugin,PixiPlugin,TextPlugin);
+  //gsap.registerPlugin(Flip,ScrollTrigger,Observer,ScrollToPlugin,Draggable,MotionPathPlugin,EaselPlugin,PixiPlugin,TextPlugin);
+  gsap.registerPlugin(ScrollTrigger,ScrollToPlugin);
 
   useLayoutEffect(() => {
     
                       let ctx = gsap.context(() => {
-                        const lenis = new Lenis({
-                          duration: 1.2,
+                         const lenis = new Lenis({
+                           duration: 1.2,
                           easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
-                        });
+                         });
                       
                         function raf(time) {
                             lenis.raf(time);
@@ -43,7 +44,7 @@ export default function GetHomeServices( {allservices, servicesec} ){
                       
                         requestAnimationFrame(raf);
                       
-                        requestAnimationFrame(raf);
+                        
                         const section_2 = document.querySelector(".service-inner-sec");
                         let sbxitem = gsap.utils.toArray(".serviceitem");
                         // alert(sbxitem.length);

@@ -85,7 +85,8 @@ export default function About({allteams,aboutfields, alltestiitems}) {
       top: '50%',
       left: '50%',
       transform: 'translate(-50%, -50%)',
-      width: 1000,
+      width: '90%',
+      maxWidth: 800,
       bgcolor: 'background.paper',
       border: '2px solid #000',
       boxShadow: 24,
@@ -100,20 +101,20 @@ export default function About({allteams,aboutfields, alltestiitems}) {
     useLayoutEffect(() => {
     
           let ctx = gsap.context(() => {
-            const lenis = new Lenis({
-              duration: 1.2,
-              easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
-            });
+            // const lenis = new Lenis({
+            //   duration: 1.2,
+            //   easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+            // });
           
             function raf(time) {
-                // lenis.raf(time);
+                //  lenis.raf(time);
                 ScrollTrigger.update();
                 requestAnimationFrame(raf);
             }
           
             requestAnimationFrame(raf);
           
-            requestAnimationFrame(raf);
+            
             const section_2 = document.querySelector(".about-banner");
             let sbxitem = gsap.utils.toArray(".teamslideitem");
             // alert(sbxitem.length);

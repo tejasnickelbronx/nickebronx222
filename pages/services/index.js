@@ -1,11 +1,13 @@
 import Link from 'next/link';
 import Head from 'next/head'
-
+import React, { useState, useEffect, useLayoutEffect  } from 'react';
 import Image from 'next/image'
 import SiteHeader from '../../components/siteheader.js';
 import SiteFooter from '../../components/sitefooter.js';
 import useScript from '../../hooks/useScript.js';
 import {getServicesSections} from '../../lib/getServicesSection.js';
+import Lenis from '@studio-freight/lenis';
+
 
 
 
@@ -29,9 +31,10 @@ export default function About({servicesData}) {
   const topheading = servicesData.data.pageBy.servicePageFieldTest.topHeading;
   const servicesections = servicesData.data.pageBy.servicePageFieldTest.serviceItems;
 
+  
     useScript('https://code.jquery.com/jquery-3.7.0.min.js');
-    useScript('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js');
-    useScript('https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.min.js');
+    // useScript('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js');
+    // useScript('https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.min.js');
     useScript('./custominit.js');
     return(
         <>
@@ -42,8 +45,8 @@ export default function About({servicesData}) {
             <link rel="icon" href="/favicon.ico" />
             
             <script src="https://code.jquery.com/jquery-3.7.0.min.js" async></script>
-            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"  async/>
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" async/>
+            {/* <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"  async/>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" async/> */}
             <script src="/custominit.js" async></script>
         </Head>
         <SiteHeader className="headercls"/>

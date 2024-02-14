@@ -86,8 +86,12 @@
     
 // });
 $(".menubar-btn").click(function () {
-	$(".menu-sec").slideToggle();
-	$(this).toggleClass("open");
+	
+    // $(".menu-sec").slideToggle();
+    // $(this).toggleClass("open");
+ 
+  
+	
 });
 
 /* Menu Js End */
@@ -140,22 +144,5 @@ $(".close").click(function() {
 //         }
 //     });
 // });
-
-$(".accordion-item").click(function () {
-    $(".accordion-item").not(this).removeClass("active");
-    $(this).toggleClass("active");
-});
-
-/* Header Sticky Js End */
-
-$("#newsletterlink").click(function(e) {			
-    e.preventDefault();
-      $("#newsletterpop").fadeIn(500);	
-      	
-});
-$("#newsletterpop .npclose").click(function(e) {
-    e.preventDefault();
-  $("#newsletterpop").fadeOut(500);
-});
 
 

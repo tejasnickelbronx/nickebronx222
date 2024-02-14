@@ -1,6 +1,13 @@
 import { Html, Head, Main, NextScript } from 'next/document'
-
+import { useEffect, useRef, useState } from 'react';
+import Lenis from '@studio-freight/lenis'
 export default function Document() {
+  
+  useEffect( () => {
+    // const lenis = new Lenis()   
+
+    
+  }, [])
   return (
     <Html lang="en">
       <Head>

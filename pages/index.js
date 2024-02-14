@@ -86,7 +86,7 @@ export default function Home({pagefields, testisection,portfolioitems}) {
    useScript('https://code.jquery.com/jquery-3.7.0.min.js');   
    
    useScript('./custominit.js');
-   useScript('./newletterinit.js');
+  
    
   
    const recordcount = allportfolioarr.length/5;
@@ -110,7 +110,8 @@ export default function Home({pagefields, testisection,portfolioitems}) {
       top: '50%',
       left: '50%',
       transform: 'translate(-50%, -50%)',
-      width: 1000,
+      width: '90%',
+      maxWidth: 800,
       bgcolor: '#00C2FF',
       border: '0',
       boxShadow: 0,
@@ -143,8 +144,8 @@ export default function Home({pagefields, testisection,portfolioitems}) {
          <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
         {/*<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" async  /> */}        
         {/* <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.min.js" async ></script> */}	      
-        {/* <script src="/custominit.js" async></script>
-        <script src="/locomativeinit.js" async></script> */}
+        <script src="/custominit.js" async></script>
+        
         
         
       </Head>

@@ -16,6 +16,7 @@
     "@studio-freight/react-lenis": "^0.0.43",
     "framer-motion": "^10.18.0",
     "gsap": "^3.12.5",
+    "jquery": "^3.7.1",
     "locomotive-scroll": "^4.1.4",
     "next": "14.0.4",
     "react": "^18",
