@@ -1,0 +1,30 @@
+{
+  "name": "nickelsite",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.15.8",
+    "@mui/material": "^5.15.7",
+    "@studio-freight/react-lenis": "^0.0.43",
+    "framer-motion": "^10.18.0",
+    "gsap": "^3.12.5",
+    "jquery": "^3.7.1",
+    "locomotive-scroll": "^4.1.4",
+    "next": "14.0.4",
+    "react": "^18",
+    "react-dom": "^18",
+    "swiper": "^11.0.5"
+  },
+  "devDependencies": {
+    "eslint": "^8",
+    "eslint-config-next": "14.0.4"
+  }
+}
