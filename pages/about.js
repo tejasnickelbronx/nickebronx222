@@ -125,11 +125,12 @@ export default function About({allteams,aboutfields, alltestiitems}) {
                 duration: 1,
               
                 scrollTrigger:{
-                  trigger: section_2,
+                  trigger: document.querySelector(".team-slider"),
                   pin: true,
                   scrub: 3,
                   snap:5 / (sbxitem.length + 5),
-                  start: "50px",
+                  // TODO: Replace hard-coded 82px value with variable representing height of nav bar
+                  start: "top top+=82px",
                   end: "+=" + tempwidth
                 }
             });
