@@ -55,11 +55,11 @@ export default function GetHomeServices( {allservices, servicesec} ){
                             duration: 3,
                           
                             scrollTrigger:{
-                              trigger: section_2,
+                              trigger: document.querySelector('.service-slider'),
                               pin: true,
                               scrub: 3,
                               snap:5 / (sbxitem.length + 5),
-                              start: "0x",
+                              start: "bottom bottom",
                               end: "+=" + tempwidth
                             }
                         });
