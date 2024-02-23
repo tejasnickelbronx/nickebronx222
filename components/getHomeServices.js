@@ -29,12 +29,12 @@ export default function GetHomeServices( {allservices, servicesec} ){
   //gsap.registerPlugin(Flip,ScrollTrigger,Observer,ScrollToPlugin,Draggable,MotionPathPlugin,EaselPlugin,PixiPlugin,TextPlugin);
   gsap.registerPlugin(ScrollTrigger,ScrollToPlugin);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     
                       let ctx = gsap.context(() => {
                          const lenis = new Lenis({
-                           duration: 1.2,
-                          easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+                            duration: 1.2,
+                            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
                          });
                       
                         function raf(time) {
@@ -44,10 +44,9 @@ export default function GetHomeServices( {allservices, servicesec} ){
                         }
                       
                         requestAnimationFrame(raf);
-                      
                         
                         const section_2 = document.querySelector(".service-main-sec"); // .service-inner-sec
-                        const service_slider = document.querySelector(".service-slider"); // .service-inner-sec
+                        // const service_slider = document.querySelector(".service-slider"); // .service-inner-sec
                         let sbxitem = gsap.utils.toArray(".serviceitem");
                         // alert(sbxitem.length);
                         
@@ -57,34 +56,75 @@ export default function GetHomeServices( {allservices, servicesec} ){
 
                         let tempwidth = (section_2.offsetWidth / window.innerWidth) * 100 ;
                         let containerServiceSlider = serviceSlider.current.getBoundingClientRect();
+                        let relativeX = (containerServiceSlider.x + containerServiceSlider.width);
                         let relativeY = (containerServiceSlider.y + containerServiceSlider.height / 2) - targetRef.current.getBoundingClientRect().y;
                         let newStartPoint = relativeY - window.innerHeight / 2;
+                        let newEndPoint = relativeX ;
 
+                        let mm = gsap.matchMedia();
+                        mm.add("(min-width: 1024px)",  () => {
+                            gsap.to(sbxitem, {
+                              x: -200 * ( sbxitem.length + 2 ),
+                              ease:"sine.out",  
+                              duration: 3,
+                            
+                              scrollTrigger:{
+                                trigger: section_2,
+                                pin: true,
+                                // pinSpacing: false,
+                                preventOverlaps: false, // or arbitrary string
+                                scrub: 3,
+                                markers: true,
+                                snap: 1 / (sbxitem.length - 1),
+                                start: `${newStartPoint}px`, // 0x you can't start at 0px because the size of the content  150px
+                                end: `+=${newEndPoint}px`
+                              }
+                          });
+                      });
 
-                        console.log('tempwidth:', tempwidth);
-                        console.log(serviceSlider);
-                        console.log(relativeY);
-
+                      mm.add("(min-width: 768px) and (max-width: 1023px)",  () => {
                         gsap.to(sbxitem, {
-                            x: -150 * (sbxitem.length+1),
-                            ease:"sine.out",  
-                            duration: 3,
-                          
-                            scrollTrigger:{
-                              trigger: section_2,
-                              pin: true,
-                              scrub: 3,
-                              markers: true,
-                              snap:5 / (sbxitem.length + 5),
-                              start: `${newStartPoint}px`, // 0x you can't start at 0px because the size of the content  150px
-                              end: `+=${tempwidth}%`
-                            }
+                          x: -250 * ( sbxitem.length + 2 ),
+                          ease:"sine.out",  
+                          duration: 3,
+                        
+                          scrollTrigger:{
+                            trigger: section_2,
+                            pin: true,
+                            // pinSpacing: false,
+                            preventOverlaps: false, // or arbitrary string
+                            scrub: 3,
+                            markers: true,
+                            snap: 1 / (sbxitem.length - 1),
+                            start: `${newStartPoint}px`, // 0x you can't start at 0px because the size of the content  150px
+                            end: `+=${newEndPoint}px`
+                          }
                         });
                       });
-                      return () => ctx.revert();
-
-
+                  
+                      mm.add("(max-width: 767px)", () => {
+                        gsap.to(sbxitem, {
+                          x: -250 * ( sbxitem.length + 1 ),
+                          ease:"sine.out",  
+                          duration: 3,
                         
+                          scrollTrigger:{
+                            trigger: section_2,
+                            pin: true,
+                            // pinSpacing: false,
+                            preventOverlaps: false, // or arbitrary string
+                            scrub: 3,
+                            markers: true,
+                            snap: 1 / (sbxitem.length - 1),
+                            start: `${newStartPoint}px`, // 0x you can't start at 0px because the size of the content  150px
+                            end: `+=${newEndPoint}px`
+                          }
+                        });
+                      });
+                      
+                    });
+                      
+                    return () => ctx.revert();
   }, [])
 
 
@@ -119,7 +159,7 @@ export default function GetHomeServices( {allservices, servicesec} ){
          ourservicesitems.map((serviceitem, index)=>(     
           
         
-          <div  className={`serviceitem hmsbx${index}`} virtualIndex={index}>
+          <div key={index}  className={`serviceitem hmsbx${index}`}>
             <div className='serviceitems'>
 
             
@@ -139,10 +179,6 @@ export default function GetHomeServices( {allservices, servicesec} ){
             </div>
           </div>
           ))}
-           <div  className="serviceitem"></div>
-           <div  className="serviceitem"></div>
-           <div  className="serviceitem"></div>
-           <div  className="serviceitem"></div>
         </div>
         </div>
     </div>

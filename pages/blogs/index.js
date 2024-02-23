@@ -30,7 +30,7 @@ export default function About({allblogs,featuredblog}) {
  
   const allpostitems = allblogs.data.posts.nodes;
   const featuredpost = featuredblog.data.posts.nodes[0];
-  console.log(featuredpost);
+//   console.log(featuredpost);
 
     useScript('https://code.jquery.com/jquery-3.7.0.min.js');
     useScript('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js');
@@ -103,7 +103,7 @@ export default function About({allblogs,featuredblog}) {
                         <h2>FEATURED</h2>
                         <h3>{featuredpost.title}</h3>
                         <div dangerouslySetInnerHTML={{ __html: featuredpost.content.substring(0, 100)}}></div>
-                        <Link className="home-btn" href={"/blogs/"+featuredpost.slug+"/"+featuredpost.postId}>READ MORE</Link> 
+                        <Link className="home-btn banner-btn" href={"/blogs/"+featuredpost.slug+"/"+featuredpost.postId}>READ MORE</Link> 
                         </div>
                     </div>
                     </div>

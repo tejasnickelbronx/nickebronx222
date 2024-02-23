@@ -35,17 +35,18 @@ export function getPortfolioLongPage(singlePortfolio){
     const websitedesign        = portfoliollongfield.websiteDesign[0];
     const takeaways             = portfoliollongfield.takeaways[0];
    
+    console.log(takeaways);
     // const bigimage = singlePortfolio.bigImag[0];
     // const bigimage2 = singlePortfolio.bigImag[0];
     // const sideimage = singlePortfolio.sideImages1[0];
     // const sideimage2 = singlePortfolio.sideImages2[0];
     const  headertitle      = singlePortfolio.title;
-    console.log(singlePortfolio);
+    // console.log(singlePortfolio);
     return (
         <>
     <section className="family-law-banner">
       <div className="image-sec">
-        <Image src={portfolioheader.headerImage.sourceUrl} height={1000} width={500} alt={headertitle} />
+        <img src={portfolioheader.headerImage.sourceUrl} height={1000} width={500} alt={headertitle} />
       </div>
       <div className="container2">
         <div className="banner-title-sec">
@@ -87,15 +88,14 @@ export function getPortfolioLongPage(singlePortfolio){
     <section className="brand-main-sec">
       <div className="container2">
         <div className="brand-inner-sec">
-          <div className="brand-box">
-            
-            <Image src={portbrandguid.brandImage1.sourceUrl} height={600} width={400} alt={headertitle}/>
+          <div className="brand-box">    
+            <img src={portbrandguid.brandImage1.sourceUrl} height={600} width={400} alt={headertitle}/>
           </div>
           <div className="brand-box">
-          <Image src={portbrandguid.brandImage2.sourceUrl} height={600} width={400} alt={headertitle} />
+            <img src={portbrandguid.brandImage2.sourceUrl} height={600} width={400} alt={headertitle} />
           </div>
           <div className="brand-box">
-          <Image src={portbrandguid.brandImage3.sourceUrl} height={600} width={400} alt={headertitle} />
+            <img src={portbrandguid.brandImage3.sourceUrl} height={600} width={400} alt={headertitle} />
           </div>
           <div className="brand-box">
             <div className="box-content">
@@ -120,14 +120,22 @@ export function getPortfolioLongPage(singlePortfolio){
         </div>
         <div className="functionality-info-sec">
           <div className="functionality-image">
-              <Image src={websitedesign.sideImage1.sourceUrl} height={600} width={400} alt={headertitle} />
+              <img src={websitedesign.sideImage1.sourceUrl} height={600} width={400} alt={headertitle} />
           </div>
           <div className="functionality-image">
-              <Image src={websitedesign.sideImage1.sourceUrl} height={600} width={400} alt={headertitle} />
+              <img src={websitedesign.sideImage2.sourceUrl} height={600} width={400} alt={headertitle} />
           </div>
           <div className="functionality-image w-full">
-              <Image src={websitedesign.bigImage.sourceUrl} height={600} width={400} alt={headertitle} />
+              <img src={websitedesign.bigImage.sourceUrl} height={600} width={400} alt={headertitle} />
           </div>
+          { takeaways.sideImage1 !== null 
+            ?  <div className="functionality-image"><img src={takeaways.sideImage1.sourceUrl} height={600} width={400} alt={headertitle} /></div>
+            : null
+          }
+          { takeaways.sideImage2 !== null 
+            ?  <div className="functionality-image"><img src={takeaways.sideImage2.sourceUrl} height={600} width={400} alt={headertitle} /></div>
+            : null
+          }
         </div>
       </div>
     </section>

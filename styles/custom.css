@@ -473,6 +473,7 @@ line-height: 165%;
 
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin-top: 5px;
+  text-transform: uppercase;
 
 }
 /* Brand & Website */
@@ -602,16 +603,20 @@ line-height: 165%;
   font-family: 'Lexend Deca';
   font-style: normal;
   font-weight: 500;
-  font-size: 22.9093px;
+  font-size: 18px;
   line-height: 122.9%;
   /* or 28px */
   text-align: center;
   color: #1F1F1F;
+  position: relative;
+  z-index: 10;
 }
 .merch-btn{
   
   display: flex;
     justify-content: center;
+    position: relative;
+    z-index: 10;
 }
 .contact-main-sec{
   background-color: #1F1F1F;	
@@ -1430,12 +1435,12 @@ z-index: -1;
 
 .service-slider{
   display: flex;;
-  width: 250vw;
+  width: 100%;
+  /* width: 250vw; */
 }
 .serviceitem{
   width: 450px;
   margin-right: 20px;
-  
   
 }
 
@@ -1445,7 +1450,8 @@ z-index: -1;
   
   position: relative;
   display: flex;
-  gap: 2vw;
+  /* gap: 2vw; */
+  gap: 6vw;
   padding: 2vw;
   box-sizing: border-box;
   overflow: hidden;
@@ -1764,8 +1770,10 @@ margin-bottom: 20px !important;
 }
 
 .contatpgmain{
-display: grid;
-grid-template-columns: 3fr 4fr;
+  display: grid;
+  grid-template-columns: 3fr 4fr;
+  padding: 0 2vw;
+  gap: 50px;
 }
 
 
@@ -1791,7 +1799,7 @@ color: #F7F9FC;
 .contactpghead h3 > span::before {
   position: absolute;
   content: '';
-  width: 100%;
+  width: 90%;
   height: 25px;
   background: linear-gradient(90deg, rgba(243,40,152,1) 0%, rgba(117,120,206,1) 50%, rgba(2,193,255,1) 100%);
   z-index: -1;
@@ -1914,7 +1922,7 @@ color: #1F1F1F;
 .fotoercontatbtn{
   margin-bottom: 80px;
   margin-top: 50px;
-  width: 241px;
+  /* width: 241px; */
 }
 .contact-main-sec{
   background-color: #1F1F1F;

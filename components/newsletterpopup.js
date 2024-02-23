@@ -1,27 +1,24 @@
-import Image from "next/image";
+// import Image from "next/image";
 
 
-export async function getStaticProps(){
-  const getllllllll  = await getAllSettings();
+// export async function getStaticProps(){
+//   const getllllllll  = await getAllSettings();
 
-  return {
-    props:{
-      globalsettings: "hellllll",      
+//   return {
+//     props:{
+//       globalsettings: "hellllll",      
        
-    },
+//     },
 
-}
+// }
 
-}
+// }
 
 export default function newsletterpopup(){
   
   
     return(
       
-      
-      
-
       
       <div className="newspop_content">
         

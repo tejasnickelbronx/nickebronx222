@@ -3,14 +3,11 @@ import Link from 'next/link';
 
 import React, { createContext, useContext } from 'react';
 import { useParams, useRouter, useSearchParams, usePathname } from 'next/navigation';
-
 import Image from 'next/image'
 import {getSinglePost,getallPost} from '../../lib/getBlogsSection.js';
-
 import SiteHeader from '../../components/siteheader.js';
 import SiteFooter from '../../components/sitefooter.js';
 import useScript from '../../hooks/useScript.js';
-
 import {getAllPortfolioSlug} from '../../lib/getPortfolioSections.js';
 
 

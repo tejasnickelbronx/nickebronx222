@@ -48,7 +48,7 @@ export default function Merch({merchfields}) {
     });
 
     const result = await response.json();
-    console.log(result.data);
+    // console.log(result.data);
 
 
     setSumbitStatus(true);
@@ -89,8 +89,8 @@ export default function Merch({merchfields}) {
           <div className='contatpgmain'>
               <div className='contactpgleft'>
                     <div className='contactpghead'>
-                      <h3>We need<br/><span>copy here</span></h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                      <h3>Tell us what you really<br/><span> really want</span></h3>
+                      <p>We're here to Help You</p>
                     </div>
                     <div className='contactpglinks'>
                         <p><a>hello@nickelbronx.com</a></p>
@@ -123,7 +123,7 @@ export default function Merch({merchfields}) {
                       </div>
                       <div className='cnform_wtrow mt_60 fullwidth'>
                           <div className='cnformfield_wt'>
-                            <label>WHAT ARE YOU LOOKING FOR?</label>
+                            <label>Type of Request</label>
                             <select className='selectfield' name='lookingfor' id='lookingfor'>
                               <option value="New Project Request">New Project Request</option>
                               <option value="Media Inquiry">Media Inquiry</option>
@@ -134,7 +134,7 @@ export default function Merch({merchfields}) {
                       </div>
                       <div className='cnform_wtrow mt_60 fullwidth'>
                           <div className='cnformfield_wt'>
-                            <label>Project brief</label>
+                            <label>Tell us what you’re looking for.</label>
                             <input type='text' className='cnformwht_text' name='cnformbrief' id='cnformbrief' />
                           </div>                          
                       </div>

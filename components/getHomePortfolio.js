@@ -48,7 +48,7 @@ export default function HomePortfolioItems({portfolioitems}) {
   const portcol1 = portfolioitems.slice(0, 5);
   const portcol2 = portfolioitems.slice(6, 10);
   const portcol3 = portfolioitems.slice(11, 15);
-  console.log(portcol1);
+  // console.log(portcol1);
 
   
   return (

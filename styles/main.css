@@ -1,9 +1,9 @@
 
 html, body {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-    min-height: 100%;
+    /* width: 100%; */
+    /* max-width: 100%; */
+    /* overflow-x: hidden; */
+    /* min-height: 100%; */
 }
 
 body {
@@ -311,7 +311,13 @@ a.home-btn:hover {
 .header {
     width: 100%;
     padding: 23px 20px 0 0px;
-    background-color: #1F1F1F;
+    background: #1f1f1f;
+}
+.header .merch {
+    color: #1F1F1F;
+}
+.header .general {
+    color: #FFF;
 }
 .transparent-header .header {
     background-color: transparent;
@@ -320,6 +326,9 @@ a.home-btn:hover {
 }
 .transparent-header .header.sticky {
     background-color: #1F1F1F;
+}
+.transparent-header .header.sticky .merch {
+    color: #fff;
 }
 section.header {
     /* position: absolute; */
@@ -351,7 +360,7 @@ section.header {
     content: '';
     width: 187px;
     height: 50px;
-    background-image: url(../public/button-border.png);
+    background-image: url(../public/header-cta.svg);
     left: -45px;
     top: -15px;
     right: 0;
@@ -677,6 +686,7 @@ section.header {
 .service-slider .service-box-inner img {
     display: block;
     margin-left: auto;
+    max-width: 180px;
 }
 .service-slider .service-box-inner .box-title h4 {
     color: #F7F9FC;
@@ -791,11 +801,12 @@ section.header {
 .client-intro-sec .client-inner-sec {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -28px;
+    /* margin: 0 -28px; */ /* this css causing issues  */
+
 }
 .client-inner-sec .intro-box {
     width: 33.3%;
-    padding: 0 28px;
+    /* padding: 0 28px; */
 }
 .client-inner-sec .intro-box-inner .image img {
     width: 100%;
@@ -948,7 +959,9 @@ section.header {
 /* Logo Section CSS End */
 
 /* Footer Section CSS Start */
-
+.footer-main .general {
+    color: #fff;
+}
 .footer-main {
     padding: 80px 20px 10px 20px;
     background-color: #1F1F1F;
@@ -1120,7 +1133,7 @@ section.header {
     content: '';
     width: 26px;
     height: 14px;
-    background-image: url(../public/footer-btn-arrow.png);
+    background-image: url(../public/footer-arrow.svg);
     right: 0;
     top: 0;
     bottom: 0;
@@ -1237,7 +1250,7 @@ section.header {
     width: 100%;
     position: relative;
     padding: 110px 0 140px 0;
-    background-image: url(../public/value-bg.png);
+    background-image: url(../public/about-pattern.svg);
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: 100%;
@@ -1326,7 +1339,10 @@ section.header {
 .value-box-inner .box-wrap .box-wrap-inner .image-sec img {
     display: block;
     margin: 0 0 40px auto;
+    max-width: 130px;
+    max-height: 130px;
 }
+
 .value-box-inner .box-wrap .box-wrap-inner .content svg {
     margin: 0 0 20px 0;
 }
@@ -2463,10 +2479,10 @@ section.header {
         padding: 0 20px;
     }
     .client-inner-sec .intro-box {
-        padding: 0 18px;
+        /* padding: 0 18px; */  /* redundant */
     }
     .client-intro-sec .client-inner-sec {
-        margin: 0 -18px;
+        /* margin: 0 -18px; */ /* redundant */
     }
     .header .menu-sec ul li {
         margin: 0 28px;
@@ -2601,6 +2617,7 @@ section.header {
 @media screen and (max-width: 991px) {
     .header {
         padding: 23px 0px 0 0px;
+        background-color: #161616;
     }
     .header.sticky {
         padding: 10px 0px 10px 0px;
@@ -3375,8 +3392,13 @@ a.home-btn:hover {
 }
 .homeportfoliobtn {
 	text-align: center;
-	width: 150px;
-	margin: auto;
+	/* width: 150px; */
+	/* margin: auto; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .client-inner-sec .intro-box-inner .image img {
