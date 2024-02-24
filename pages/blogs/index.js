@@ -32,10 +32,10 @@ export default function About({allblogs,featuredblog}) {
   const featuredpost = featuredblog.data.posts.nodes[0];
 //   console.log(featuredpost);
 
-    useScript('https://code.jquery.com/jquery-3.7.0.min.js');
-    useScript('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js');
-    useScript('https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.min.js');
-    useScript('./custominit.js');
+    // useScript('https://code.jquery.com/jquery-3.7.0.min.js');
+    // useScript('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js');
+    // useScript('https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.min.js');
+    // useScript('./custominit.js');
     return(
         <div>
         <Head>
@@ -44,9 +44,9 @@ export default function About({allblogs,featuredblog}) {
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <link rel="icon" href="/favicon.ico" />
             
-            <script src="https://code.jquery.com/jquery-3.7.0.min.js" async></script>
-            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" async />
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"  async/>
+            <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+            {/* <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" async />
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"  async/> */}
             <script src="/custominit.js" async></script>
         </Head>
         <SiteHeader className="headercls"/>
@@ -111,7 +111,7 @@ export default function About({allblogs,featuredblog}) {
                     {
            
                             allpostitems.map((postitem, index)=>(     
-                            <div className="item branding">
+                            <div className="item branding" key={index}>
                                 <div className="image-sec"> {postitem.featuredImage &&                                       
                                     <Link href={"/blogs/"+postitem.slug+"/"+postitem.postId}>
                                         <Image src={postitem.featuredImage.node.sourceUrl} width={500} height={300} className="blogimage" alt={postitem.slug}/>
