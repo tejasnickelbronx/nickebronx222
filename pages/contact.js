@@ -155,7 +155,7 @@ export default function Merch({merchfields}) {
   
 
 
-        {/* <SiteFooter className="footercls contactpage"/> */}
+        <SiteFooter className="footercls contactpage"/>
         </div>
   )
 }
