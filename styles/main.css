@@ -1479,6 +1479,7 @@ section.header {
     padding: 150px 0 130px 0;
     background-color: #1F1F1F;
     z-index: 9;
+    overflow: hidden;
 }
 .service-banner-main:before {
     position: absolute;
