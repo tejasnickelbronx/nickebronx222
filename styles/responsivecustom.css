@@ -7,12 +7,51 @@
   
 }
 
-@media screen and (max-width: 767px) {
-
+@media screen and (max-width: 1023px) {
+  .mergeimage1 {
+    top: 47.55px;
+    width: 150px;
+    height: auto;
+    left: -32px;
+    transform: rotate(353deg);
+  }
+  .mergeimage4 {
+    top: 95.62px;
+    width: 100px;
+    height: auto;
+    right: -15px;
+  }
+  .merch-header h2 {
+    font-size: 55px;
+    margin-bottom: 26px;
+  }
+  .merch-header p {
+    max-width: 240px;
+    margin: 0 auto;
+    margin-bottom: 26px;
+  }
+  .mergeimage3 {
+    position: absolute;
+    bottom: -40px;
+    right: -45px;
+    width: 150px;
+    height: auto;
+  }
+  .mergeimage2 {
+    position: absolute;
+    bottom: -40px;
+    left: -30px;
+    width: 150px;
+    height: auto;
+  }
 }
 
 @media screen and (max-width: 575px) {
 
+  a.home-btn {
+    min-width: 196px;
+    font-size: 18px;
+  }
   /*temp class our service */
   .service-slider {   
     width: 1050vw;
@@ -101,33 +140,40 @@
       font-size: 26px;
     }
     .mergeimage1 {
-      top: 68px;
-      width: 162px;
-  height: 241px;
+      top: 47.55px;
+      width: 150px;
+      height: auto;
+      left: -32px;
+      transform: rotate(353deg);
     }
     .mergeimage4 {
-      
-      top: 44px;
-     
+      top: 95.62px;
+      width: 100px;
       height: auto;
-      width: 118px;
+      right: -15px;
     }
     .merch-header h2 {
-      font-size: 45px;
+      font-size: 55px;
+      margin-bottom: 26px;
+    }
+    .merch-header p {
+      max-width: 240px;
+      margin: 0 auto;
+      margin-bottom: 26px;
     }
     .mergeimage3 {
       position: absolute;
-      bottom: -185px;
-      right: 180px;
+      bottom: -40px;
+      right: -45px;
+      width: 150px;
       height: auto;
-      width: 332px;
     }
     .mergeimage2 {
       position: absolute;
-      bottom: -200px;
-      left: 200px;
+      bottom: -40px;
+      left: -30px;
+      width: 150px;
       height: auto;
-      width: 332px;
     }
     .client-inner-sec .intro-box-inner .image img {
       height: 400px;

@@ -100,11 +100,15 @@ $(".menubar-btn").click(function () {
 /* Header Sticky Js Start */
 
 $(window).scroll(function(){
+  const el = document.querySelector('.header');
+
 	var sticky = $('.header'),
-		scroll = $(window).scrollTop();
+	scroll = $(window).scrollTop();
   
-	if (scroll >= 100) sticky.addClass('sticky');
-	else sticky.removeClass('sticky');
+  if(el && sticky) {
+    if (scroll >= 100) sticky.addClass('sticky');
+    else sticky.removeClass('sticky');
+  }
 });
 $(".team-btn").click(function(e) {
     event.preventDefault();

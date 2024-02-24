@@ -222,7 +222,7 @@ export function getPortfolioShortPage(singlePortfolio){
      const sideimage = portfolioshort.sideImages1[0];
      const sideimage2 = portfolioshort.sideImages2[0];
     return (
-        <>
+        <div>
         
         
     <section className="family-law-banner">
@@ -330,7 +330,7 @@ export function getPortfolioShortPage(singlePortfolio){
     </div>   
   </section> */}
   {/* Project Section End */}
-  </>
+  </div>
 
     )
 }

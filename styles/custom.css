@@ -555,7 +555,10 @@ line-height: 165%;
 }/* Group 48096195 */
 .merch-header{
   text-align: center;
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .mergeimage1{			
   position:absolute;
@@ -2051,9 +2054,6 @@ text-fill-color: transparent;
 }
 .showmenu{
   display: block;;
-}
-html {
-  scroll-behavior: smooth;
 }
 html.lenis {
   height: auto;

@@ -1,8 +1,8 @@
 import Link from 'next/link';
-import Image from "next/image";
+// import Image from "next/image";
 import { useRouter } from "next/router";
 import React, { useState, useEffect } from 'react';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 import $ from 'jquery';
 
 export default function SiteHeader({className}){
@@ -13,7 +13,7 @@ export default function SiteHeader({className}){
     function toggle(){
         setShowMe(true);
         $(".menu-sec").slideToggle();
-         $(this).toggleClass("open");
+        $(this).toggleClass("open");
     }
     
     useEffect(() => {

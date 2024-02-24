@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useLayoutEffect  } from 'react';
-import Image from "next/image";
+// import Image from "next/image";
 import Link from 'next/link';
-import {getAllSettings} from '../lib/settings.js';
-import NewsLetterPop from '../components/newsletterpopup.js';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Modal from '@mui/material/Modal';
+// import {getAllSettings} from '../lib/settings.js';
+// import NewsLetterPop from '../components/newsletterpopup.js';
+// import Box from '@mui/material/Box';
+// import Button from '@mui/material/Button';
+// import Modal from '@mui/material/Modal';
 
 // export async function getStaticProps(){
 //   const getllllllll  = await getAllSettings();
@@ -47,23 +47,19 @@ export default function SiteFooter({className, globalsettings}){
       p: 4,
     }; 
    
-  // console.log(globalsettings)
+    // console.log(globalsettings)
     return(
-      
-      <>
-      
-
-      <footer className={`footer-main ${className}`}>
+    <footer className={`footer-main ${className}`}>
         <div className="container">
           <div className="footer-inner">
             <div className="footer-title">
               <h2>TELL US ABOUT YOUR PROJECT</h2>
               <h3>
-                <Link href="/contact">LET’S MAKE COOL <br />
-                SHIT TOGETHER</Link>
+                <a href="/contact">LET’S MAKE COOL <br />
+                SHIT TOGETHER</a>
               </h3>
               <div className="homeportfoliobtn fotoercontatbtn">
-              <Link href="/contact" className="home-btn banner-btn">Contact Us</Link>
+              <a href="/contact" className="home-btn banner-btn">Contact Us</a>
               
               </div>
             </div>
@@ -164,16 +160,16 @@ export default function SiteFooter({className, globalsettings}){
                 <div className="menu-item">
                   <ul className="menu">
                     <li>
-                      <Link href="/portfolios/z-family-law/661">Website Development</Link>
+                      <Link href="services/website-development/417">Website Development</Link>
                     </li>
                     <li>
-                      <Link href="/portfolios/milkify/660">Social Media</Link>
+                      <Link href="/services/social-media/418">Social Media</Link>
                     </li>
                     <li>
-                      <Link href="/portfolios/brand-builders/640">Search Engine and Marketing </Link>
+                      <Link href="/services/search-engine-marketing/432">Search Engine and Marketing </Link>
                     </li>
                     <li>
-                      <Link href="/portfolios/blackwood/596">Content and Messaging </Link>
+                      <Link href="/services/content-and-messaging/420">Content and Messaging </Link>
                     </li>
                   </ul>
                 </div>
@@ -181,9 +177,9 @@ export default function SiteFooter({className, globalsettings}){
                   <ul className="menu">
                     <li>
                       <Link href="/contact">Lets's work together</Link>
-                      <Link href="/contact" className="menu-btn">
+                      <a href="/contact" className="menu-btn">
                         Get Started
-                      </Link>
+                      </a>
                     </li>
                     <hr />
                     <li>
@@ -201,8 +197,7 @@ export default function SiteFooter({className, globalsettings}){
             <p>NickelBronx, Copyright 2024</p>
           </div>
         </div>
-      </footer>
-      <Modal
+              {/* <Modal
         open={open}
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
@@ -213,8 +208,7 @@ export default function SiteFooter({className, globalsettings}){
             <NewsLetterPop />
             )}
         </Box>  
-      </Modal>    
-      </>
-      
+      </Modal>     */}      
+      </footer>
     );
 }

@@ -1,7 +1,8 @@
 import '@/styles/globals.css'
-import stylemain from '../styles/main.css';
-import stylecustom from '../styles/custom.css';
-import customresponsive from '../styles/responsivecustom.css';
+import '../styles/main.css';
+import '../styles/custom.css';
+import '../styles/responsivecustom.css';
+
 export default function App({ Component, pageProps }) {
   return <Component {...pageProps} />
 }

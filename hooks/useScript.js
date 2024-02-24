@@ -6,11 +6,15 @@ const useScript = url => {
 
     script.src = url;
     script.async = true;
-
+    
     document.body.appendChild(script);
-
+    
     return () => {
-      document.body.removeChild(script);
+      if(script && document.body.contains(script)) {
+        console.log('removing script');
+        document.body.removeChild(script);
+        console.log(document);
+      }
     }
   }, [url]);
 };

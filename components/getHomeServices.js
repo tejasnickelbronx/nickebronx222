@@ -1,32 +1,17 @@
-import React, { useState, useEffect, useLayoutEffect, useRef  } from 'react';
-import Image from "next/image";
+import React, { useEffect, useRef  } from 'react';
 import Link from 'next/link';
 import { gsap } from "gsap";
-import { Flip } from "gsap/Flip";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Observer } from "gsap/Observer";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-import { Draggable } from "gsap/Draggable";
-import { MotionPathPlugin } from "gsap/MotionPathPlugin";
-import { EaselPlugin } from "gsap/EaselPlugin";
-import { PixiPlugin } from "gsap/PixiPlugin";
-import { TextPlugin } from "gsap/TextPlugin";
 import Lenis from '@studio-freight/lenis';
-import { motion, useTransform, useScroll,useMotionValue,animate ,useInView  } from "framer-motion";
 
-
-
-
-
-
-export default function GetHomeServices( {allservices, servicesec} ){
+export default function GetHomeServices( {children, allservices, servicesec} ){
 
   const ourService = servicesec;
   const ourservicesitems = allservices;
   const targetRef = useRef(null);
   const serviceSlider = useRef(null);
 
-  //gsap.registerPlugin(Flip,ScrollTrigger,Observer,ScrollToPlugin,Draggable,MotionPathPlugin,EaselPlugin,PixiPlugin,TextPlugin);
   gsap.registerPlugin(ScrollTrigger,ScrollToPlugin);
 
   useEffect(() => {
@@ -131,12 +116,9 @@ export default function GetHomeServices( {allservices, servicesec} ){
 
                           
 
-    return(
-      
-      
-      <>
-     
+    return(     
      <section className="service-main-sec" ref={targetRef}>
+      {children}
       <div className="container2">
         <div className="service-inner-sec">
           <div className="service-title serviceintromain">
@@ -182,10 +164,7 @@ export default function GetHomeServices( {allservices, servicesec} ){
         </div>
         </div>
     </div>
-  </section>
-      
-        
-      
+  </section>  
     
-        </> )
+  )
 }
