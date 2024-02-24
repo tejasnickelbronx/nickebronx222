@@ -292,7 +292,7 @@ export default function About({allteams,aboutfields, alltestiitems}) {
               <a href={teammodel.teamFields.linkedin}> <i className="fa-brands fa-linkedin" /></a>
               )}
               {teammodel.teamFields.twitter && (
-              <a href={teammodel.teamFields.twitter}> <i class="fa-brands fa-x-twitter"></i></a>
+              <a href={teammodel.teamFields.twitter}> <i className="fa-brands fa-x-twitter"></i></a>
               )}
             </div>
           </div>
