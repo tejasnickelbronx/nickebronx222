@@ -82,7 +82,7 @@ export default function About({portfoliositems}) {
             <div className="pfrow1">
             <div className="pfitem1 pfitemfilter branding">
                 <div className="portfolioimg">
-                <Link href={{pathname: "/portfolios/"+portitem.portfolioItemBig.slug+"/"+portitem.portfolioItemBig.portfolioId,}}
+                <a href={"/portfolios/"+portitem.portfolioItemBig.slug+"/"+portitem.portfolioItemBig.portfolioId}
                   className="learn-btn color-yellow" >
                 {portitem.portfolioItemBig.portfoliolongfields.portfolioHeaderLong[0] &&(
                     <Image src={portitem.portfolioItemBig.portfoliolongfields.portfolioHeaderLong[0].headerImage.sourceUrl} width={1200} height={500} alt={portitem.portfolioItemBig.slug} /> 
@@ -91,7 +91,7 @@ export default function About({portfoliositems}) {
                     <img src={portitem.portfolioItemBig.portfolioshortfields.portfolioHeader[0].headerImage.sourceUrl} alt={portitem.portfolioItemBig.slug}/> 
                 )}
                 
-                </Link>
+                </a>
                 
                 </div>
                 <div className="pftitlewraper">
@@ -103,7 +103,7 @@ export default function About({portfoliositems}) {
             <div className="pfrow2">
             <div className="pfitem1 pfitemfilter visual-design">
                 <div className="portfolioimg">
-                <Link href={{pathname: "/portfolios/"+portitem.portfolioItemSide1.slug+"/"+portitem.portfolioItemSide1.portfolioId,}}
+                <a href={"/portfolios/"+portitem.portfolioItemSide1.slug+"/"+portitem.portfolioItemSide1.portfolioId}
                   className="learn-btn color-yellow" >
                 {portitem.portfolioItemSide1.portfoliolongfields.portfolioHeaderLong[0] &&(
                     <Image src={portitem.portfolioItemSide1.portfoliolongfields.portfolioHeaderLong[0].headerImage.sourceUrl} width={1200} height={500} className="portsideimg" 
@@ -115,7 +115,7 @@ export default function About({portfoliositems}) {
                     alt={portitem.portfolioItemSide1.slug}  /> 
                     
                 )}
-                </Link>
+                </a>
                 </div>
                 <div className="pftitlewraper">
                 <h3>{portitem.portfolioItemSide1.title}</h3>
@@ -124,7 +124,7 @@ export default function About({portfoliositems}) {
             </div>
             <div className="pfitem1 pfitemfilter  ">
                 <div className="portfolioimg ">
-                <Link href={{pathname: "/portfolios/"+portitem.portfolioItemSide2.slug+"/"+portitem.portfolioItemSide2.portfolioId,}}
+                <a href={"/portfolios/"+portitem.portfolioItemSide2.slug+"/"+portitem.portfolioItemSide2.portfolioId}
                   className="learn-btn color-yellow" >
                 {portitem.portfolioItemSide2.portfoliolongfields.portfolioHeaderLong[0] &&(
                     <Image src={portitem.portfolioItemSide2.portfoliolongfields.portfolioHeaderLong[0].headerImage.sourceUrl} width={1200} height={500} className="portsideimg"
@@ -134,7 +134,7 @@ export default function About({portfoliositems}) {
                     <Image src={portitem.portfolioItemSide2.portfolioshortfields.portfolioHeader[0].headerImage.sourceUrl}  width={600} height={600} className="portsideimg" 
                     alt={portitem.portfolioItemSide2.slug} /> 
                 )}
-              </Link>
+              </a>
                 </div>
                 <div className="pftitlewraper">
                 <h3>{portitem.portfolioItemSide2.title}</h3>

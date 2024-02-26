@@ -59,7 +59,7 @@ export default function GetHomeServices( {children, allservices, servicesec} ){
                                 // pinSpacing: false,
                                 preventOverlaps: false, // or arbitrary string
                                 scrub: 3,
-                                markers: true,
+                                markers: false,
                                 snap: 1 / (sbxitem.length - 1),
                                 start: `${newStartPoint}px`, // 0x you can't start at 0px because the size of the content  150px
                                 end: `+=${newEndPoint}px`
@@ -79,7 +79,7 @@ export default function GetHomeServices( {children, allservices, servicesec} ){
                             // pinSpacing: false,
                             preventOverlaps: false, // or arbitrary string
                             scrub: 3,
-                            markers: true,
+                            markers: false,
                             snap: 1 / (sbxitem.length - 1),
                             start: `${newStartPoint}px`, // 0x you can't start at 0px because the size of the content  150px
                             end: `+=${newEndPoint}px`
@@ -99,7 +99,7 @@ export default function GetHomeServices( {children, allservices, servicesec} ){
                             // pinSpacing: false,
                             preventOverlaps: false, // or arbitrary string
                             scrub: 3,
-                            markers: true,
+                            markers: false,
                             snap: 1 / (sbxitem.length - 1),
                             start: `${newStartPoint}px`, // 0x you can't start at 0px because the size of the content  150px
                             end: `+=${newEndPoint}px`
@@ -151,7 +151,7 @@ export default function GetHomeServices( {children, allservices, servicesec} ){
                   <img src={serviceitem.serviceIcon.sourceUrl} alt={serviceitem.serviceTitle} />
                 </div>
                 <div className="box-title">                        
-                  <h5 ><Link dangerouslySetInnerHTML={{ __html: serviceitem.serviceTitle}} href={"/services/"+serviceitem.link.slug+"/"+serviceitem.link.pageId}></Link></h5>
+                  <h5 ><a dangerouslySetInnerHTML={{ __html: serviceitem.serviceTitle}} href={"/services/"+serviceitem.link.slug+"/"+serviceitem.link.pageId}></a></h5>
                  
                 </div>
                 <div className='servicedescbx'><p>{serviceitem.description.substring(0, 100)}</p></div>

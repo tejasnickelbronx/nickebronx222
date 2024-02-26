@@ -2,10 +2,10 @@ import React, { useState, useEffect, useLayoutEffect  } from 'react';
 // import Image from "next/image";
 import Link from 'next/link';
 // import {getAllSettings} from '../lib/settings.js';
-// import NewsLetterPop from '../components/newsletterpopup.js';
-// import Box from '@mui/material/Box';
-// import Button from '@mui/material/Button';
-// import Modal from '@mui/material/Modal';
+import NewsLetterPop from '../components/newsletterpopup.js';
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import Modal from '@mui/material/Modal';
 
 // export async function getStaticProps(){
 //   const getllllllll  = await getAllSettings();
@@ -80,8 +80,7 @@ export default function SiteFooter({className, globalsettings}){
                     </svg>
                   </a>
                   <p>
-                    Full Service Design <br />
-                    and Marketing Agency
+                    An integrated branding, strategy, and marketing agency.
                   </p>
                   <div className="social">
                     <ul>
@@ -186,7 +185,7 @@ export default function SiteFooter({className, globalsettings}){
                       <a href="#" className="menu-btn">
                         Newsletter
                       </a>
-                      <a onClick={handleOpen} href="#" id="newsletterlink">sign up for our newsletter</a>
+                      <a onClick={handleOpen} href="#" id="newsletterlink">Sign up for our newsletter</a>
                     </li>
                   </ul>
                 </div>
@@ -197,7 +196,7 @@ export default function SiteFooter({className, globalsettings}){
             <p>NickelBronx, Copyright 2024</p>
           </div>
         </div>
-              {/* <Modal
+              <Modal
         open={open}
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
@@ -208,7 +207,7 @@ export default function SiteFooter({className, globalsettings}){
             <NewsLetterPop />
             )}
         </Box>  
-      </Modal>     */}      
+      </Modal>          
       </footer>
     );
 }

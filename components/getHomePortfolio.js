@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Lenis from '@studio-freight/lenis'
 import { useTransform, useScroll, motion } from 'framer-motion';
-import GetPortfolioImagebyType from './getPortfolioImagebyType.js';
+// import GetPortfolioImagebyType from './getPortfolioImagebyType.js';
 
 
 
@@ -77,13 +77,13 @@ const Column = ({portcolarr, y}) => {
           <div className="intro-box" key={portfolioItem.slug} >
           <div className="intro-box-inner">
             <div className="image">
-            <Link href={{pathname: "/portfolios/"+portfolioItem.slug+"/"+portfolioItem.portfolioId,}}
+            <a href={"/portfolios/"+portfolioItem.slug+"/"+portfolioItem.portfolioId}
               className="learn-btn color-yellow" >
               {/* <GetPortfolioImagebyType portfolioItem={portfolioItem} /> */}
                  {portfolioItem.featuredImage &&(
                  <Image src={portfolioItem.featuredImage.node.sourceUrl} width={500} height={500} alt="Portfolio Item"/> 
                  )} 
-              </Link> 
+              </a> 
             </div>
             <div className="client-entro">
               <h5>{portfolioItem.title} </h5>

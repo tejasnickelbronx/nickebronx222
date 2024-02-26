@@ -116,7 +116,9 @@ export default function ServicePage({singlepostdata}) {
         <div dangerouslySetInnerHTML={{ __html: relatedpost.content.substring(0, 300)}}></div>
       </div>
       <div className="relatedimg">
-      <Link href={"/blogs/"+relatedpost.slug+"/"+relatedpost.postId}><Image src={relatedpost.featuredImage.node.sourceUrl} width={600} height={300} className="blogimage" alt={relatedpost.slug}/></Link>
+        <Link href={"/blogs/"+relatedpost.slug+"/"+relatedpost.postId}>
+          <Image src={relatedpost.featuredImage.node.sourceUrl} width={600} height={300} className="blogimage" alt={relatedpost.slug}/>
+        </Link>
       </div>
     </div>
   </div>

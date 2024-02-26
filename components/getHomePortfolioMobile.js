@@ -32,10 +32,10 @@ export default function getPortfolioItemsMobile({portfolioitems}) {
           <div className="intro-box" key={portfolioItem.slug} >
           <div className="intro-box-inner">
             <div className="image">
-            <Link href={{pathname: "/portfolios/"+portfolioItem.slug+"/"+portfolioItem.portfolioId,}}
+            <a href={"/portfolios/"+portfolioItem.slug+"/"+portfolioItem.portfolioId}
               className="learn-btn color-yellow" >
               <GetPortfolioImagebyType portfolioItem={portfolioItem} />
-              </Link> 
+              </a> 
             </div>
             <div className="client-entro">
               <h5>{portfolioItem.title} </h5>

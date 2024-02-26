@@ -95,15 +95,15 @@ export default function About({allblogs,featuredblog}) {
                     <div className="item all">
                     <div className="featured-inner">
                         <div className="image-sec">
-                        <Link href={"/blogs/"+featuredpost.slug+"/"+featuredpost.postId}>
+                        <a href={"/blogs/"+featuredpost.slug+"/"+featuredpost.postId}>
                             <Image src={featuredpost.featuredImage.node.sourceUrl} width={1200} height={300} className="blogimage" alt={featuredpost.slug}/>
-                        </Link>
+                        </a>
                         </div>
                         <div className="content-sec">
                         <h2>FEATURED</h2>
                         <h3>{featuredpost.title}</h3>
                         <div dangerouslySetInnerHTML={{ __html: featuredpost.content.substring(0, 100)}}></div>
-                        <Link className="home-btn banner-btn" href={"/blogs/"+featuredpost.slug+"/"+featuredpost.postId}>READ MORE</Link> 
+                        <a className="home-btn banner-btn" href={"/blogs/"+featuredpost.slug+"/"+featuredpost.postId}>READ MORE</a> 
                         </div>
                     </div>
                     </div>
@@ -113,15 +113,15 @@ export default function About({allblogs,featuredblog}) {
                             allpostitems.map((postitem, index)=>(     
                             <div className="item branding" key={index}>
                                 <div className="image-sec"> {postitem.featuredImage &&                                       
-                                    <Link href={"/blogs/"+postitem.slug+"/"+postitem.postId}>
+                                    <a href={"/blogs/"+postitem.slug+"/"+postitem.postId}>
                                         <Image src={postitem.featuredImage.node.sourceUrl} width={500} height={300} className="blogimage" alt={postitem.slug}/>
-                                    </Link> 
+                                    </a> 
                                     }
                                 </div>
                                 <div className="content-sec">
                                 <h3>{postitem.title}</h3>
                                 <div className='itemblogcontent' dangerouslySetInnerHTML={{ __html: postitem.content.substring(0, 100)}}></div>
-                                <Link href={"/blogs/"+postitem.slug+"/"+postitem.postId}>READ MORE</Link> 
+                                <a href={"/blogs/"+postitem.slug+"/"+postitem.postId}>READ MORE</a> 
                                 </div>
                             </div>
                         ))}

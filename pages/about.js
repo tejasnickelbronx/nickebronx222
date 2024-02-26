@@ -138,7 +138,7 @@ export default function About({allteams,aboutfields, alltestiitems}) {
                   trigger: section_2,
                   pin: true,
                   preventOverlaps: false, // or arbitrary string
-                  markers: true,
+                  markers: false,
                   scrub: 3,
                   snap: 1 / (sbxitem.length + 1),
                   start: `${newStartPoint}px`,
@@ -158,7 +158,7 @@ export default function About({allteams,aboutfields, alltestiitems}) {
                   trigger: section_2,
                   pin: true,
                   preventOverlaps: false, // or arbitrary string
-                  markers: true,
+                  markers: false,
                   scrub: 3,
                   snap: 1 / (sbxitem.length + 1),
                   start: `${newStartPoint}px`,
@@ -179,7 +179,7 @@ export default function About({allteams,aboutfields, alltestiitems}) {
                   // pinSpacing: false,
                   preventOverlaps: false, // or arbitrary string
                   scrub: 3,
-                  markers: true,
+                  markers: false,
                   snap: 1 / (sbxitem.length - 1),
                   start: `${newStartPoint}px`, // 0x you can't start at 0px because the size of the content  150px
                   end: `+=${newEndPoint}px`
@@ -199,7 +199,7 @@ export default function About({allteams,aboutfields, alltestiitems}) {
                   // pinSpacing: false,
                   preventOverlaps: false, // or arbitrary string
                   scrub: 3,
-                  markers: true,
+                  markers: false,
                   snap: 1 / (sbxitem.length - 1),
                   start: `${newStartPoint}px`, // 0x you can't start at 0px because the size of the content  150px
                   end: `+=${newEndPoint}px`

@@ -358,7 +358,7 @@ color: #F7F9FC;
   display: grid;
   grid-template-columns: 2fr 2fr;	
   margin-top: 100px;
-  
+  gap: 25px;
 }
 
 

@@ -89,8 +89,8 @@ export default function Merch({merchfields}) {
           <div className='contatpgmain'>
               <div className='contactpgleft'>
                     <div className='contactpghead'>
-                      <h3>Tell us what you really<br/><span> really want</span></h3>
-                      <p>We're here to Help You</p>
+                      <h3>We’re Here to <br/><span>Help You.</span></h3>
+                      <p>Tell us what you want what you really really want</p>
                     </div>
                     <div className='contactpglinks'>
                         <p><a>hello@nickelbronx.com</a></p>
