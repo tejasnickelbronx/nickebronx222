@@ -2066,3 +2066,31 @@ html.lenis {
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
 }
+
+#newsLatterForm iframe .hs-email {display: none;}
+.newspop_box > span,.contactpgright > span {
+  font-family: 'Lexend Deca', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 110%;
+  text-align: center;
+  color: #F7F9FC;
+  display: block;
+}
+
+.newspop_form > span,span.errorMessages {
+  color: #f00;
+  display: flex;
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 14px;
+  margin-top: 10px;
+
+
+}
+
+div#newsLatterForm, #hubspotForm {
+  position: absolute;
+  top: 0;
+  visibility: hidden;
+}
