@@ -232,8 +232,8 @@ a.btn-cust:before {
     width: 187px;
     height: 50px;
     background-image: url(../public/button-border.png);
-    left: -40px;
-    top: -13px;
+    left: -30px;
+    top: -17px;
     right: 0;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -2039,6 +2039,11 @@ section.header {
     flex-wrap: wrap;
     margin: 0 -18px;
 }
+.brand-inner-big {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -9px;
+}
 .brand-inner-sec .brand-box {
     width: 50%;
     padding: 9px;
@@ -3237,6 +3242,17 @@ section.header {
     }
     .identity-info-sec .info-list-sec .button-sec a.btn-cust:before {
         left: -45px;
+    }
+    
+    .teammemberpop {
+        grid-template-columns: repeat(1,  1fr) !important;
+        gap: 20px;
+    }
+    .teampoptext h3 {
+        margin-top: 15px;
+    }
+    .teampoptext p {
+        margin-bottom: 40px;
     }
 }
 @media screen and (max-width: 640px) {

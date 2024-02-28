@@ -270,23 +270,23 @@ export function getPortfolioShortPage(singlePortfolio){
     <div className="container2">
       <div className="brand-inner-sec">
         <div className="brand-box">
-         <Image src={sideimage.image1.sourceUrl} height={200} width={500} className='ImageFullwidth' alt={headertitle} />
+         <img src={sideimage.image1.sourceUrl} height={200} width={500} className='ImageFullwidth' alt={headertitle} />
          
         </div>
         <div className="brand-box">
-            <Image src={sideimage.image2.sourceUrl} height={300} width={500} className='ImageFullwidth'alt={headertitle} />
+            <img src={sideimage.image2.sourceUrl} height={300} width={500} className='ImageFullwidth'alt={headertitle} />
         </div>        
       </div>
       <div className="brand-inner-big">
-            <Image src={bigimage.image.sourceUrl} height={300} width={500} className='ImageFullwidth' alt={headertitle} />
+            <img src={bigimage.image.sourceUrl} height={300} width={500} className='ImageFullwidth' alt={headertitle} />
       </div>
       <div className="brand-inner-sec">
         <div className="brand-box">
-         <Image src={sideimage2.image1.sourceUrl} height={200} width={500} className='ImageFullwidth' alt={headertitle} />
+         <img src={sideimage2.image1.sourceUrl} height={200} width={500} className='ImageFullwidth' alt={headertitle} />
          
         </div>
         <div className="brand-box">
-            <Image src={sideimage2.image2.sourceUrl} height={300} width={500} className='ImageFullwidth' alt={headertitle} />
+            <img src={sideimage2.image2.sourceUrl} height={300} width={500} className='ImageFullwidth' alt={headertitle} />
         </div>        
       </div>
     </div>

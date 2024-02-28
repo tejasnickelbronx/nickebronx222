@@ -167,7 +167,9 @@
   transform: rotate(135deg);
 }
 
-
+.teampopsocial {
+  display: flex;
+}
 .teammemberpop{
   
   display: grid;
@@ -348,7 +350,8 @@ color: #F7F9FC;
   color: #FFF;;
 }
 
-.singlepost-content a {
+.singlepost-content a,
+.singlepost-content ol {
 
   color: #fff;
 }
@@ -1896,7 +1899,7 @@ color: #1F1F1F;
   padding: 10px 0;
   background-color: #00C2FF;
   min-width: 202px;
- color: #fff;
+ color: #1F1F1F;
   text-align: center;
   font-family: Kallisto;
   font-size: 20px;
@@ -2085,4 +2088,11 @@ html.lenis {
 
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
+}
+
+.relatedimg {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

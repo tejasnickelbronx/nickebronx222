@@ -59,7 +59,7 @@ export default function About({servicesData}) {
             <div className='pricingbannerpdf'>
                 <h3>Questions about our pricing? Download our PDF.</h3>
                 <p>At NickelBronx, we believe in transparency and clarity when it comes to pricing. Our straightforward pricing packages are tailored to suit your needs, ensuring you receive top-notch design services without hidden costs or surprises. Explore our pricing options below and find the perfect fit for your project.</p>
-                <a href="#" className="home-btn btnwhiteshadow">Download PDF</a>
+                <a href="#" className="home-btn banner-btn">Download PDF</a>
             </div>
           </div>
         </section>
