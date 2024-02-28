@@ -348,6 +348,11 @@ color: #F7F9FC;
   color: #FFF;;
 }
 
+.singlepost-content a {
+
+  color: #fff;
+}
+
 .singlepost-innerimg{
   display: grid;
   grid-template-columns: 2fr 2fr;	
@@ -1274,7 +1279,7 @@ transform: rotate(135deg);
   /* or 48px */
   text-align: center;
   text-transform: uppercase;			/* Soft White */
-  color: #F7F9FC;
+  color: #1F1F1F;
 }
 .newspop_head h3{
   font-family: 'Lexend Deca', sans-serif;
@@ -1284,8 +1289,8 @@ font-size: 30px;
 line-height: 110%;
 /* or 33px */
 text-align: center;
-/* Soft White */
-color: #F7F9FC;
+/* Soft Black */
+color: #1F1F1F;
 }
 .newspop_form input[type="text"]{		
 width:100%;
