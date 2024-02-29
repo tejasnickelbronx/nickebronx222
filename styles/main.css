@@ -3243,7 +3243,7 @@ section.header {
     .identity-info-sec .info-list-sec .button-sec a.btn-cust:before {
         left: -45px;
     }
-    
+
     .teammemberpop {
         grid-template-columns: repeat(1,  1fr) !important;
         gap: 20px;
@@ -3251,11 +3251,26 @@ section.header {
     .teampoptext h3 {
         margin-top: 15px;
     }
-    .teampoptext p {
-        margin-bottom: 40px;
-    }
 }
 @media screen and (max-width: 640px) {
+
+    .team-pop-container {
+        top: 85% !important;
+      }
+
+    .teampoptext h4 {
+        font-size: 12px !important;
+    }
+
+    .teampoptext h3 {
+        font-size: 35px !important;
+        line-height: 1 !important;
+    }
+
+    .teampoptext p {
+        font-size: 12px !important;
+     }
+
     .value-box-inner .box-wrap {
         width: 100%;
         padding: 0 0px 20px 0px;

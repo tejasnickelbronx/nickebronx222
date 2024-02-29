@@ -2096,3 +2096,8 @@ html.lenis {
   justify-content: center;
   align-items: center;
 }
+
+.team-pop-container {
+  top: 50%;
+  left: 50%;
+}

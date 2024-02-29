@@ -82,8 +82,6 @@ export default function About({allteams,aboutfields, alltestiitems}) {
 
     const style = {
       position: 'absolute',
-      top: '50%',
-      left: '50%',
       transform: 'translate(-50%, -50%)',
       width: '90%',
       maxWidth: 800,
@@ -91,6 +89,7 @@ export default function About({allteams,aboutfields, alltestiitems}) {
       border: '2px solid #000',
       boxShadow: 24,
       p: 4,
+      overflowY: 'scroll'
     };
     
     // useScript('https://code.jquery.com/jquery-3.7.0.min.js');
@@ -269,8 +268,9 @@ export default function About({allteams,aboutfields, alltestiitems}) {
     open={open}
     onClose={handleClose}
     aria-labelledby="modal-modal-title"
+    style={{overflowY: 'scroll'}}
     aria-describedby="modal-modal-description">  
-    <Box sx={style}>
+    <Box className="team-pop-container" sx={style}>
       <a className='teampopclose' onClick={handleClose}></a>
       {open && (
       <div className="teammemberpop">
@@ -280,7 +280,7 @@ export default function About({allteams,aboutfields, alltestiitems}) {
           <div className="teampoptext">
             <h4  dangerouslySetInnerHTML={{ __html: teammodel.teamFields.role}}></h4>
             <h3>{teammodel.title}</h3>
-            <div dangerouslySetInnerHTML={{ __html: teammodel.content}}></div>
+            <div style={{marginBottom: '40px'}} dangerouslySetInnerHTML={{ __html: teammodel.content}}></div>
             <div className="teampopsocial">
             {teammodel.teamFields.spotify && (
               <a href={teammodel.teamFields.spotify}><i className="fa-brands fa-spotify" /></a>
