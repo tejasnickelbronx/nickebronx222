@@ -1,0 +1,3446 @@
+
+html, body {
+    /* width: 100%; */
+    /* max-width: 100%; */
+    /* overflow-x: hidden; */
+    /* min-height: 100%; */
+    height: 100%; 
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Kallisto';
+    src: url('../fonts/Kallisto-BoldItalic.eot');
+    src: url('../fonts/Kallisto-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Kallisto-BoldItalic.woff2') format('woff2'),
+        url('../fonts/Kallisto-BoldItalic.woff') format('woff'),
+        url('../fonts/Kallisto-BoldItalic.ttf') format('truetype'),
+        url('../fonts/Kallisto-BoldItalic.svg#Kallisto-BoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kallisto';
+    src: url('../fonts/Kallisto-Heavy.eot');
+    src: url('../fonts/Kallisto-Heavy.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Kallisto-Heavy.woff2') format('woff2'),
+        url('../fonts/Kallisto-Heavy.woff') format('woff'),
+        url('../fonts/Kallisto-Heavy.ttf') format('truetype'),
+        url('../fonts/Kallisto-Heavy.svg#Kallisto-Heavy') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kallisto';
+    src: url('../fonts/Kallisto-Bold.eot');
+    src: url('../fonts/Kallisto-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Kallisto-Bold.woff2') format('woff2'),
+        url('../fonts/Kallisto-Bold.woff') format('woff'),
+        url('../fonts/Kallisto-Bold.ttf') format('truetype'),
+        url('../fonts/Kallisto-Bold.svg#Kallisto-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kallisto';
+    src: url('../fonts/Kallisto-HeavyItalic.eot');
+    src: url('../fonts/Kallisto-HeavyItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Kallisto-HeavyItalic.woff2') format('woff2'),
+        url('../fonts/Kallisto-HeavyItalic.woff') format('woff'),
+        url('../fonts/Kallisto-HeavyItalic.ttf') format('truetype'),
+        url('../fonts/Kallisto-HeavyItalic.svg#Kallisto-HeavyItalic') format('svg');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kallisto';
+    src: url('../fonts/Kallisto-Light.eot');
+    src: url('../fonts/Kallisto-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Kallisto-Light.woff2') format('woff2'),
+        url('../fonts/Kallisto-Light.woff') format('woff'),
+        url('../fonts/Kallisto-Light.ttf') format('truetype'),
+        url('../fonts/Kallisto-Light.svg#Kallisto-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kallisto';
+    src: url('../fonts/Kallisto-LightItalic.eot');
+    src: url('../fonts/Kallisto-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Kallisto-LightItalic.woff2') format('woff2'),
+        url('../fonts/Kallisto-LightItalic.woff') format('woff'),
+        url('../fonts/Kallisto-LightItalic.ttf') format('truetype'),
+        url('../fonts/Kallisto-LightItalic.svg#Kallisto-LightItalic') format('svg');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kallisto';
+    src: url('../fonts/Kallisto-Medium.eot');
+    src: url('../fonts/Kallisto-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Kallisto-Medium.woff2') format('woff2'),
+        url('../fonts/Kallisto-Medium.woff') format('woff'),
+        url('../fonts/Kallisto-Medium.ttf') format('truetype'),
+        url('../fonts/Kallisto-Medium.svg#Kallisto-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kallisto';
+    src: url('../fonts/Kallisto-ThinItalic.eot');
+    src: url('../fonts/Kallisto-ThinItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Kallisto-ThinItalic.woff2') format('woff2'),
+        url('../fonts/Kallisto-ThinItalic.woff') format('woff'),
+        url('../fonts/Kallisto-ThinItalic.ttf') format('truetype'),
+        url('../fonts/Kallisto-ThinItalic.svg#Kallisto-ThinItalic') format('svg');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kallisto';
+    src: url('../fonts/Kallisto-MediumItalic.eot');
+    src: url('../fonts/Kallisto-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Kallisto-MediumItalic.woff2') format('woff2'),
+        url('../fonts/Kallisto-MediumItalic.woff') format('woff'),
+        url('../fonts/Kallisto-MediumItalic.ttf') format('truetype'),
+        url('../fonts/Kallisto-MediumItalic.svg#Kallisto-MediumItalic') format('svg');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kallisto';
+    src: url('../fonts/Kallisto-Thin.eot');
+    src: url('../fonts/Kallisto-Thin.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Kallisto-Thin.woff2') format('woff2'),
+        url('../fonts/Kallisto-Thin.woff') format('woff'),
+        url('../fonts/Kallisto-Thin.ttf') format('truetype'),
+        url('../fonts/Kallisto-Thin.svg#Kallisto-Thin') format('svg');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'CCSignLanguageW00';
+    src: url('../fonts/CCSignLanguageW00-Regular.woff2') format('woff2'),
+        url('../fonts/CCSignLanguageW00-Regular.woff') format('woff'),
+        url('../fonts/CCSignLanguageW00-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'CCSignLanguageW00';
+    src: url('../fonts/CCSignLanguageW00-Regular_1.woff2') format('woff2'),
+        url('../fonts/CCSignLanguageW00-Regular_1.woff') format('woff'),
+        url('../fonts/CCSignLanguageW00-Regular_1.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'CCSignLanguageW00';
+    src: url('../fonts/CCSignLanguageW00-Regular_2.woff2') format('woff2'),
+        url('../fonts/CCSignLanguageW00-Regular_2.woff') format('woff'),
+        url('../fonts/CCSignLanguageW00-Regular_2.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Proxima Nova Rg';
+    src: url('../fonts/ProximaNova-Regular.woff2') format('woff2'),
+        url('../fonts/ProximaNova-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lexend Deca';
+    src: url('../fonts/LexendDeca-Regular.woff2') format('woff2'),
+    url('../fonts/LexendDeca-Regular.woff') format('woff'),
+    url('../fonts/LexendDeca-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+
+.container,
+.container2 {
+    width: 100%;
+    max-width: 1512px;
+    margin: 0 auto; 
+}
+.container2 {
+    max-width: 1250px;
+}
+.about-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+a.btn-cust {
+    color: #1F1F1F;
+    text-align: center;
+    font-family: 'Kallisto';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 22px;
+    letter-spacing: 1.8px;
+    text-decoration: none;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+}
+a.btn-cust:before {
+    position: absolute;
+    content: '';
+    width: 187px;
+    height: 50px;
+    background-image: url(../public/button-border.png);
+    left: -30px;
+    top: -17px;
+    right: 0;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+a.btn-cust:hover {
+    color: #1F1F1F !important;
+}
+
+a.home-btn {
+    padding: 10px 25px;
+    background-color: #00C2FF;
+    min-width: 240px;
+    color: #000;
+    text-align: center;
+    font-family: Kallisto;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 24px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    box-shadow: 6px 6px #1F1F1F;
+    display: table;
+    transition: all 0.3s linear;
+}
+a.home-btn:hover {
+    box-shadow: none;
+}
+.font-CCSign {
+    font-family: 'CCSignLanguageW00' !important;
+}
+
+.bg-black {
+    background-color: #1F1F1F;
+}
+.bg-pink {
+    background-color: #FF2093;
+}
+.color-pink {
+    color: #FF2093;
+}
+.bg-light-blue {
+    background-color: #00C2FF;
+}
+.color-light-blue {
+    color: #00C2FF;
+}
+.bg-yellow {
+    background-color: #FFDC2A;
+}
+.color-yellow {
+    color: #FFDC2A;
+}
+
+.pink-blue-text-bg {
+    background: linear-gradient(90deg, #FF2093 1.81%, #00C2FF 42%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.blue-yellow-text-bg {
+    background: linear-gradient(90deg, #00C2FF 1.81%, #FFDC2A 80.9%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.yellow-pink-text-bg {
+    background: linear-gradient(90deg, #FFDC2A 1.81%, #FF2093 80.9%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Header CSS Start */
+
+.header {
+    width: 100%;
+    padding: 23px 20px 0 0px;
+    background: #1f1f1f;
+}
+.header .merch {
+    color: #1F1F1F;
+}
+.header .general {
+    color: #FFF;
+}
+.transparent-header .header {
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+}
+.transparent-header .header.sticky {
+    background-color: #1F1F1F;
+}
+.transparent-header .header.sticky .merch {
+    color: #fff;
+}
+section.header {
+    /* position: absolute; */
+    z-index: 999;
+    position: relative;
+    transition: all 0.3s linear !important;
+}
+.header .header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .menu-sec ul {
+    padding: 0;
+    display: flex;
+    margin: 0;
+}
+.header .menu-sec ul li {
+    list-style: none;
+    margin: 0 43px;
+}
+.header .menu-sec ul li.button {
+    position: relative;
+    margin-left: 57px;
+    z-index: 2;
+}
+.header .menu-sec ul li.button:before {
+    position: absolute;
+    content: '';
+    width: 187px;
+    height: 50px;
+    background-image: url(../public/header-cta.svg);
+    left: -45px;
+    top: -15px;
+    right: 0;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+.header .menu-sec ul li a {
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Kallisto';
+    transition: all 0.2s ease-in-out;
+}
+.header .menu-sec ul li a:hover {
+    color: #FF2093;
+}
+.header .toggle-button {
+    width: 50px;
+    height: 50px;
+    display: none;
+}
+.header .toggle-button-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+}
+.header .toggle-button-inner>span {
+    width: 40px;
+    height: 4px;
+    background-color: #000;
+    margin: 3px 0;
+    display: block;
+    border-radius: 10px;
+    transition: all 0.4s ease-in-out;
+}
+.header .header-inner .logo-sec a>img {
+    transition: all 0.3s linear !important;
+}
+
+/* Menu Toggle CSS Start */
+
+.menubar-btn-area {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.menubar-btn {
+    width: 34px;
+    height: 21px;
+    position: relative;
+    margin: 0px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+.menubar-btn span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: #FF2093;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.25s ease-in-out;
+    -moz-transition: 0.25s ease-in-out;
+    -o-transition: 0.25s ease-in-out;
+    transition: 0.25s ease-in-out;
+}
+.menubar-btn span:nth-child(1) {
+    top: 2px;
+}
+.menubar-btn span:nth-child(2),
+.menubar-btn span:nth-child(3) {
+    top: 10px;
+}
+.menubar-btn span:nth-child(4) {
+    bottom: 0px;
+}
+.menubar-btn.open span:nth-child(1) {
+    top: 10px;
+    width: 0%;
+    left: 50%;
+}
+.menubar-btn.open span:nth-child(2) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.menubar-btn.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+.menubar-btn.open span:nth-child(4) {
+    top: 10px;
+    width: 0%;
+    left: 50%;
+}
+
+/* Menu Toggle CSS End */
+
+/* Header Sticky CSS Start */
+
+.header.sticky {
+    width: 100%;
+    position: fixed;
+    padding: 10px 20px 10px 20px;
+}
+
+/* Header Sticky CSS End */
+
+/* Header CSS End */
+
+/* Banner Section CSS Start */
+
+.banner-main {
+    width: 100%;
+    position: relative;
+    padding: 120px 0 310px 0;
+    background-color: #1F1F1F;
+    
+    background-size: 100%;
+}
+.banner-title h1 {
+    max-width: 950px;
+    margin: 0 auto 25px auto;
+    text-align: center;
+    font-family: Kallisto;
+    font-size: 100px;
+    font-weight: 700;
+    color: #F7F9FC;
+    line-height: normal;
+    text-transform: uppercase;
+}
+.banner-title h1>span {
+    background: linear-gradient(90deg, #FF2093 34.92%, #00C2FF 98.6%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: italic;
+}
+.banner-title p {
+    max-width: 662px;
+    margin: 0 auto 40px auto;
+    color: #ABABAB;
+    text-align: center;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 34px;
+}
+.banner-title .banner-button {
+    display: flex;
+    justify-content: center;
+}
+
+/* Banner Section CSS End */
+
+/* Blank Part Section CSS Start */
+
+.blank-part {
+    width: 100%;
+    position: relative;
+    margin-top: -240px;
+}
+.blank-part .image-part img {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+}
+.video-part video {
+    width: 100%;
+}
+
+/* Blank Part Section CSS End */
+
+/* Who We Are Section Start */
+
+.we-are-sec {
+    width: 100%;
+    position: relative;
+    padding: 86px 0 120px 0;
+}
+.we-are-inner {
+    display: flex;
+    align-items: center;
+}
+.we-are-inner .title-part {
+    width: 50%;
+    padding-right: 84px;
+}
+.we-are-inner .title-part h2 {
+    color: #1F1F1F;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 23px;
+    letter-spacing: 6.4px;
+    margin: 0 0 6px 0;
+}
+.we-are-inner .title-part h3 {
+    color: #1F1F1F;
+    font-family: Kallisto;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: 4px;
+    margin: 0;
+}
+.we-are-inner .title-part h3>span {
+    position: relative;
+    z-index: 2;
+}
+.we-are-inner .title-part h3>span:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 25px;
+    background: linear-gradient(90deg, rgba(16,195,241,1) 0%, rgba(138,208,140,1) 50%, rgba(252,220,46,1) 100%);
+    z-index: -1;
+    bottom: 0;
+}
+.we-are-inner .discription-part {
+    width: 50%;
+}
+.we-are-inner .discription-part p {
+    color: #1F1F1F;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 31px;
+    margin: 0 0 40px 0;
+}
+.we-are-inner .discription-part>a.btn-cust {
+    color: #1F1F1F;
+    margin-left: 40px;
+}
+
+/* Who We Are Section End */
+
+
+/* Service Section CSS Start */
+
+.service-main-sec {
+    width: 100%;
+    position: relative;
+    padding: 82px 0 145px 0;
+    background-color: #1F1F1F;
+    overflow: hidden;
+}
+.service-main-sec .service-title {
+    margin-bottom: 70px;
+}
+.service-main-sec .service-title h2 {
+    color: #F7F9FC;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 23px;
+    letter-spacing: 6.4px;
+    margin: 0 0 10px 0;
+}
+.service-main-sec .service-title h3 {
+    color: #F7F9FC;
+    font-family: Kallisto;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin: 0 0 34px 0;
+    display: table;
+}
+.service-main-sec .service-title h3>span {
+    display: block;
+    position: relative;
+    z-index: 2;
+}
+.service-main-sec .service-title h3>span:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 25px;
+    background: linear-gradient(90deg, rgba(243,40,152,1) 0%, rgba(117,120,206,1) 50%, rgba(2,193,255,1) 100%);
+    z-index: -1;
+    bottom: 0;
+}
+.service-main-sec .service-title p {
+    max-width: 869px;
+    color: #F7F9FC;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 31px;
+    margin: 0;
+}
+.service-slider .service-box-inner {
+    min-height: 450px;
+    padding: 50px 50px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.service-slider .service-box-inner img {
+    display: block;
+    margin-left: auto;
+    max-width: 180px;
+}
+.service-slider .service-box-inner .box-title h4 {
+    color: #F7F9FC;
+    font-family: Kallisto;
+    font-size: 16px;
+    font-weight: 900;
+    line-height: normal;
+    text-transform: uppercase;
+    margin: 0 0 5px 0;
+}
+.service-slider .service-box-inner .box-title h5 {
+    color: #F7F9FC;
+    font-family: Kallisto;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    margin: 0;
+}
+.service-slider {
+    /* width: 100vw; */
+    padding-bottom: 100px;
+}
+.service-slider .swiper-scrollbar {
+    background-color: #F7F9FC;
+    height: 3px;
+    display: flex;
+    align-items: center;
+}
+.service-slider .swiper-scrollbar .swiper-scrollbar-drag {
+    background-color: #FF2093;
+    height: 7px;
+    border-radius: 0;
+}
+
+/* Service Section CSS End */
+
+
+/* Client Section CSS Start */
+
+.client-main-sec {
+    width: 100%;
+    position: relative;
+    padding: 72px 0 130px 0;
+    background-color: #F7F9FC;
+}
+.client-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 115px;
+}
+.client-title .client-count h2 {
+    color: #1F1F1F;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 23px;
+    letter-spacing: 6.4px;
+    margin: 0;
+}
+.client-title .client-count {
+    width: 50%;
+    padding-right: 82px;
+}
+.client-title .client-count h3 {
+    font-family: Kallisto;
+    font-size: 150px;
+    font-weight: 900;
+    line-height: 180px;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #FF2093 1.81%, #00C2FF 80.9%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: -20px 0 0 0;
+}
+.client-title .client-count h4 {
+    color: #1F1F1F;
+    font-family: Kallisto;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin: 0;
+}
+.client-title .client-description {
+    width: 50%;
+}
+.client-title .client-description p {
+    color: #1F1F1F;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 31px;
+    margin: 0 0 40px 0;
+}
+.client-title .client-description a.btn-cust {
+    color: #1F1F1F;
+    margin-left: 30px;
+}
+.client-title .client-description a.btn-cust:before {
+    width: 207px;
+    height: 60px;
+    left: -26px;
+    top: -16px;
+}
+.client-intro-sec {
+    width: 100%;
+    position: relative;
+}
+.client-intro-sec .client-inner-sec {
+    display: flex;
+    flex-wrap: wrap;
+    /* margin: 0 -28px; */ /* this css causing issues  */
+
+}
+.client-inner-sec .intro-box {
+    width: 33.3%;
+    /* padding: 0 28px; */
+}
+.client-inner-sec .intro-box-inner .image img {
+    width: 100%;
+}
+.client-inner-sec .intro-box-inner .client-entro {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+.client-inner-sec .intro-box-inner .client-entro h5 {
+    color: #1F1F1F;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+}
+.client-inner-sec .intro-box-inner .client-entro p {
+    color: #ABABAB;
+    text-align: right;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+}
+.client-intro-sec .client-inner-sec .intro-box:first-child,
+.client-intro-sec .client-inner-sec .intro-box:nth-child(3) {
+    margin-top: 174px;
+}
+.client-intro-sec .client-inner-sec .intro-box:nth-child(5),
+.client-intro-sec .client-inner-sec .intro-box:nth-child(8) {
+    margin-top: -174px;
+}
+.client-intro-sec a.btn-cust {
+    color: #1F1F1F;
+    margin: -120px auto 0 auto;
+    display: table;
+}
+
+/* Client Section CSS End */
+
+
+/* Testimonial Section CSS Start */
+
+.testimonial-main {
+    width: 100%;
+    position: relative;
+    padding: 100px 0;
+    background-color: #1F1F1F;
+}
+.testi-box-inner {
+    display: flex;
+    align-items: center;
+}
+.testi-box-inner .testi-img {
+    width: 40%;
+    min-height: 474px;
+    position: relative;
+    z-index: 2;
+    margin-right: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.testi-box-inner .testi-img:before {
+    position: absolute;
+    content: '';
+    width: 437px;
+    height: 474px;
+    background-image: url(../public/testimonial-bg-shap.png);
+    z-index: -1;
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.testi-box-inner .testi-img img {
+    margin: 0 auto;
+    display: block;
+}
+.testi-box-inner .testi-content {
+    width: 60%;
+}
+.testi-box-inner .testi-content h2 {
+    color: #F7F9FC;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    margin: 0 0 15px 0;
+}
+.testi-box-inner .testi-content h3 {
+    color: #F7F9FC;
+    font-family: Kallisto;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 50px;
+    text-transform: uppercase;
+    margin: 0 0 15px 0;
+}
+.testi-box-inner .testi-content p {
+    color: #F7F9FC;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+}
+.testimonial-main .swiper-scrollbar {
+    width: 60%;
+    right: -30px;
+    left: auto;
+    background-color: #F7F9FC;
+    height: 3px;
+    display: flex;
+    align-items: center;
+}
+.testimonial-main .swiper-scrollbar .swiper-scrollbar-drag {
+    background-color: #FF2093;
+    height: 7px;
+    border-radius: 0;
+}
+
+/* Testimonial Section CSS End */
+
+
+/* Logo Section CSS Start */
+
+.logo-main {
+    width: 100%;
+    position: relative;
+}
+.logo-inner {
+    display: flex;
+}
+.logo-inner .logo-box-main {
+    width: 25%;
+}
+.logo-inner .logo-box-main .logo-box-inner {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.logo-inner .logo-box-main .logo-box-inner img {
+    width: auto;
+}
+
+/* Logo Section CSS End */
+
+/* Footer Section CSS Start */
+.footer-main .general {
+    color: #fff;
+}
+.footer-main {
+    padding: 80px 20px 10px 20px;
+    background-color: #1F1F1F;
+    /* background-image: url(../public/footer-bg.png); */
+    background-size: 100%;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+}
+.footer-main .footer-title h2 {
+    color: var(--Soft-White, #F7F9FC);
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: 6.4px;
+    text-align: center;
+    margin: 0 0 25px 0;
+}
+.footer-main .footer-title h3 a{
+    text-decoration: none;;
+}
+.footer-main .footer-title h3 {
+    text-align: center;
+    font-family: Kallisto;
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 110px;
+    text-transform: uppercase;
+    margin: 0 0 70px 0;
+    
+    background: linear-gradient(90.31deg, #FF2093 0.18%, #FFDC2A 43.31%, #00C2FF 87.35%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 200%;
+    
+
+    -webkit-animation: Animation 1s ease infinite alternate-reverse;
+    -moz-animation: Animation 1s ease infinite alternate-reverse;
+    animation: Animation 1s ease infinite alternate-reverse;
+}
+@-webkit-keyframes Animation {
+    50%{background-position:60%}
+    100%{background-position:100%}
+}
+@-moz-keyframes Animation {
+    50%{background-position:60%}
+    100%{background-position:100%}
+}
+@keyframes Animation { 
+    50%{background-position:60%}
+    100%{background-position:100%}
+   
+    
+    /* 50%{background-position:91% 100%}
+    100%{background-position:10% 0%} */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.footer-menu-main,
+.footer-menu-inner {
+    width: 100%;
+}
+.footer-menu-inner {
+    display: flex;
+    padding: 0;
+}
+.footer-menu-inner .menu-item {
+    width: 16.666%;
+    list-style: none;
+}
+.footer-menu-inner .menu-item a {
+    display: flex;
+    transition: all 0.2s linear;
+}
+.footer-menu-inner .menu-item a img {
+    margin-bottom: 10px;
+    width: 100%;
+}
+.footer-menu-inner .menu-item p {
+    color: #F7F9FC;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 19px;
+    font-weight: 300;
+    line-height: 31px;
+    margin: 0 0 30px 0;
+}
+.footer-menu-inner .menu-item .social ul {
+    padding: 0;
+    display: flex;
+}
+.footer-menu-inner .menu-item .social ul li {
+    list-style: none;
+    margin-right: 35px;
+}
+.footer-menu-inner .menu-item .social ul li a {
+    text-decoration: none;
+}
+.footer-menu-inner .menu-item .social ul li a i {
+    color: #fff;
+    transition: all 0.2s linear
+}
+.footer-menu-inner .menu-item .social ul li a:hover i {
+    color: #FF2093;
+}
+.menu-item ul.menu {
+    margin: 0;
+    padding: 0 20px 0 50px;
+}
+.menu-item ul.menu h2 {
+    color: #F7F9FC;
+    font-family: Kallisto;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    margin: 0 0 10px 0;
+} 
+.menu-item ul.menu a,
+.menu-item ul.menu h3 {
+    color: #F7F9FC;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    margin: 0 0 10px 0;
+    text-decoration: none;
+}
+.menu-item ul.menu li {
+    margin: 0 0 10px 0;
+    list-style: none;
+}
+.menu-item ul.menu li a {
+    color: #F7F9FC;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    transition: all 0.2s linear;
+}
+.menu-item ul.menu li a:hover,
+.footer-menu-inner .menu-item a:hover {
+    color: #FF2093 !important;
+}
+.menu-item ul.menu li a.menu-btn {
+    color: #F7F9FC;
+    font-family: Kallisto;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    position: relative;
+}
+.menu-item ul.menu li a.menu-btn:before {
+    position: absolute;
+    content: '';
+    width: 26px;
+    height: 14px;
+    background-image: url(../public/footer-arrow.svg);
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.menu-item ul.menu hr {
+    border-color: #757575;
+    margin: 20px 0;
+}
+.footer-main .footer-bottom {
+    margin: 20px 0 0 0;
+}
+.footer-main .footer-bottom p {
+    color: #BABABA;
+    text-align: center;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0.9px;
+    text-transform: uppercase;
+}
+
+/* Footer Section CSS End */
+
+/* About Banner Section CSS Start */
+
+.about-banner {
+    width: 100%;
+    position: relative;
+    padding: 150px 0;
+    background-color: #1F1F1F;
+    overflow: hidden;
+}
+.about-banner .banner-title {
+    margin-bottom: 80px;
+}
+.about-banner .banner-title h2 {
+    max-width: 880px;
+    color: #F7F9FC;
+    font-family: Kallisto;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    margin: 0 0 25px 0;
+}
+.about-banner .banner-title h2>span {
+    background: linear-gradient(107deg, #FF2093 25.24%, #00C2FF 65.84%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.about-banner .banner-title p {
+    color: #ABABAB;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 34px;
+    margin: 0;
+    text-align: left;
+}
+.team-slider .team-slide {
+    display: flex;
+    flex-direction: column;
+}
+.team-slider .team-slide .image-sec {
+    margin-bottom: 20px;
+}
+.team-slider .team-slide .image-sec img {
+    width: 100%;
+}
+.team-slider .team-slide .team-info h3 {
+    color: #F7F9FC;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    letter-spacing: 5.6px;
+    margin: 0 0 10px 0;
+}
+.team-slider .team-slide .team-info h4 {
+    color: #F7F9FC;
+    font-family: 'CCSignLanguageW00';
+    font-size: 30px;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    margin: 0 0 5px 0; 
+}
+.team-slider .team-slide .team-info p {
+    color: #F7F9FC;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    margin: 0 0 20px 0;
+}
+.team-slider .team-slide .team-info a.team-btn {
+    text-align: center;
+    font-family: Kallisto;
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 22px;
+    letter-spacing: 1.8px;
+    text-decoration: none;
+}
+
+/* About Banner Section CSS End */
+
+/* Core Values Section CSS Start */
+
+.core-values-sec {
+    width: 100%;
+    position: relative;
+    padding: 110px 0 140px 0;
+    background-image: url(../public/about-pattern.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100%;
+}
+.core-values-sec .core-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 80px;
+    align-items: center;
+}
+.core-values-sec .core-title .left-part {
+    width: 55%;
+    padding-right: 70px;
+}
+.core-values-sec .core-title .left-part h2 {
+    color: #1F1F1F;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: 6.4px;
+    margin: 0 0 16px 0;
+}
+.core-values-sec .core-title .left-part h3 {
+    color: #1F1F1F;
+    font-family: Kallisto;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin: 0;
+}
+.core-values-sec .core-title .left-part h3>span {
+    position: relative;
+    z-index: 2;
+    display: table;
+}
+.core-values-sec .core-title .left-part h3>span:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 25px;
+    background: linear-gradient(90deg, #FFDC2A 0%, #00C2FF 100%);
+    bottom: 0;
+    z-index: -1;
+}
+.core-values-sec .core-title .right-part {
+    width: 45%;
+}
+.core-values-sec .core-title .right-part p {
+    color: #1F1F1F;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 31px;
+    margin: 0 0 30px 0;
+}
+.core-values-sec .core-title .right-part a.btn-cust {
+    color: #1F1F1F;
+    margin-left: 30px;
+}
+.value-box-main {
+    width: 100%;
+    position: relative;
+}
+.value-box-inner {
+    display: flex;
+    margin: 0 -16px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.value-box-inner .box-wrap {
+    width: 33.3%;
+    padding: 0 16px 32px 16px;
+}
+.value-box-inner .box-wrap .box-wrap-inner {
+    padding: 25px;
+    border: 2px solid #ABABAB;
+    height: 100%;
+    background-color: #fff;
+}
+.value-box-inner .box-wrap .box-wrap-inner .image-sec {
+    min-height: 200px;
+}
+.value-box-inner .box-wrap .box-wrap-inner .image-sec img {
+    display: block;
+    margin: 0 0 40px auto;
+    max-width: 130px;
+    max-height: 130px;
+}
+
+.value-box-inner .box-wrap .box-wrap-inner .content svg {
+    margin: 0 0 20px 0;
+}
+.value-box-inner .box-wrap .box-wrap-inner .content p {
+    color: #1F1F1F;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    margin: 15px 0 0 0;
+}
+
+/* Core Values Section CSS End */
+
+/* Limits Section CSS Start */
+
+.limits-main-sec {
+    width: 100%;
+    position: relative;
+    padding: 80px 0 90px 0;
+    background-color: #1F1F1F;
+}
+.limits-main-sec .limits-title {
+    margin-bottom: 80px;
+}
+.limits-main-sec .limits-title h2 {
+    color: #F7F9FC;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: 6.4px;
+    margin: 0 0 10px 0;
+}
+.limits-main-sec .limits-title h3 {
+    color: #F7F9FC;
+    font-family: Kallisto;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin: 0 0 20px 0;
+}
+.limits-main-sec .limits-title h3>span {
+    position: relative;
+    z-index: 2;
+    display: table;
+}
+.limits-main-sec .limits-title h3>span:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 25px;
+    background: linear-gradient(90deg, #FF2093 0%, #00C2FF 100%);
+    z-index: -1;
+    bottom: 0;
+}
+.limits-main-sec .limits-title p {
+    max-width: 867px;
+    color: #F7F9FC;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 31px;
+    margin: 0;
+}
+.limits-boxes-main {
+    width: 100%;
+    position: relative;
+}
+.limits-boxes-inner {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -70px;
+}
+.limits-boxes-inner .boxes-wrap {
+    padding: 0 70px 55px 70px;
+    width: 33.3%;
+}
+.limits-boxes-inner .boxes-wrap .boxes-wrap-inner h4 {
+    font-family: Kallisto;
+    font-size: 50px;
+    font-weight: 900;
+    line-height: 60px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin: 0 0 25px 0;
+}
+.limits-boxes-inner .boxes-wrap .boxes-wrap-inner h5 {
+    color: #F7F9FC;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 0 0 10px 0;
+}
+.limits-boxes-inner .boxes-wrap .boxes-wrap-inner p {
+    color: #F7F9FC;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    margin: 0;
+}
+
+/* Limits Section CSS End */
+
+/* About Testimonial Section CSS Start */
+
+.about-testimonial {
+    background-color: #fff;
+    padding: 50px 0 100px 0;
+}
+.about-testimonial .testi-box-inner .testi-content h2,
+.about-testimonial .testi-box-inner .testi-content h3,
+.about-testimonial .testi-box-inner .testi-content p {
+    color: #1F1F1F;
+}
+.about-testimonial.testimonial-main .swiper-scrollbar {
+    background-color: #1F1F1F;
+}
+
+/* About Testimonial Section CSS End */
+
+
+/* Services Banner Section CSS Start */
+
+.service-banner-main {
+    width: 100%;
+    position: relative;
+    padding: 150px 0 130px 0;
+    background-color: #1F1F1F;
+    z-index: 9;
+    overflow: hidden;
+}
+.service-banner-main:before {
+    position: absolute;
+    content: '';
+    width: 462px;
+    height: 754px;
+/*    background-image: url(../public/banner-shap-1.png);*/
+    background-repeat: no-repeat;
+    bottom: -235px;
+    background-size: 100%;
+    z-index: -1;
+}
+.service-banner-main:after {
+    position: absolute;
+    content: '';
+    width: 1039px;
+    height: 701px;
+/*    background-image: url(../public/banner-shap-2.png);*/
+    background-size: 100%;
+    background-repeat: no-repeat;
+    right: 0;
+    bottom: -300px;
+    z-index: -1;
+}
+.service-banner-main .service-title h2 {
+    color: #F7F9FC;
+    text-align: center;
+    font-family: Kallisto;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    margin: 0;
+}
+.service-banner-main .service-title h2>span {
+    background: var(--Soft-White, linear-gradient(92deg, #FF2093 34.12%, #00C2FF 74.47%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Services Banner Section CSS End */
+
+/* Identity Section CSS Start */
+
+.identity-main-sec {
+    width: 100%;
+    position: relative;
+    z-index: 9;
+    padding: 70px 0 100px 0;
+}
+.identity-main-sec .title-sec {
+    display: flex;
+    align-items: center;
+    margin-bottom: 45px;
+}
+.identity-main-sec .title-sec .title-part {
+    width: 50%;
+    padding-right: 48px;
+}
+.identity-main-sec .title-sec .title-part h3 {
+    color: #F7F9FC;
+    font-family: Kallisto;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 60px;
+    text-transform: uppercase;
+    margin: 0;
+}
+.identity-main-sec .title-sec .content-part {
+    width: 50%;
+}
+.identity-main-sec .title-sec .content-part p {
+    color: #F7F9FC;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    margin: 0 0 10px 0;
+}
+.identity-main-sec .title-sec .content-part a.learn-btn {
+    font-family: Kallisto;
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 20px;
+    letter-spacing: 1.6px;
+    text-decoration: none;
+    position: relative;
+    text-transform: uppercase;
+}
+.identity-main-sec .title-sec .content-part a.learn-btn:before {
+    position: absolute;
+    content: '';
+    width: 41px;
+    height: 14px;
+    background-image: url(../public/yellow-arrow.png);
+    right: -55px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    transition: all 0.2s linear;
+}
+/* .identity-main-sec .title-sec .content-part a.learn-btn:hover:before {
+    right: -65px;
+} */
+.identity-main-sec .service-list {
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+.identity-main-sec .service-list .list-box {
+    width: 33.3%;
+}
+.identity-main-sec .service-list ul {
+    padding: 0;
+    width: 100%;
+}
+.identity-main-sec .service-list h2 {
+    color: #F7F9FC;
+    font-family: Kallisto;
+    font-size: 26.25px;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    margin: 0 0 18px 0;
+}
+.identity-main-sec .service-list ul li {
+    margin: 0 0 5px 20px;
+    list-style: disc;
+    color: #F7F9FC;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+/* Identity Section CSS End */
+
+/* Marketing Section CSS Start */
+
+.marketing-sec {
+    position: relative;
+}
+.marketing-sec:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+/*    background-image: url(../public/marketing-shap.png);*/
+    background-repeat: no-repeat;
+    bottom: 0;
+    background-position: bottom left;
+}
+
+/* Marketing Section CSS End */
+
+/* Development Section CSS Start */
+
+.development-sec {
+    position: relative;
+}
+.development-sec:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+/*    background-image: url(../public/development-shap.png);*/
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    bottom: 0;
+}
+
+/* Development Section CSS End */
+
+/* Social Media Section CSS Start */
+
+.social-media-sec .title-sec .title-part h3,
+.social-media-sec .title-sec .content-part p,
+.social-media-sec .service-list h2,
+.social-media-sec .service-list ul li {
+    color: #1F1F1F;
+}
+.social-media-sec .title-sec .content-part a.learn-btn {
+    color: #FF2093;
+}
+.social-media-sec .title-sec .content-part a.learn-btn:before {
+    background-image: url(../public/pink-arrow.png);
+}
+
+/* Social Media Section CSS End */
+
+/* Search Engine Section CSS Start */
+
+.search-engine-sec {
+    position: relative;
+}
+.search-engine-sec:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+/*    background-image: url(../public/search-enginr-shap.png);*/
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    bottom: 0;
+}
+
+/* Search Engine Section CSS End */
+
+/* Visual Identity Banner Section CSS Start */
+
+.identity-banner-sec {
+    width: 100%;
+    position: relative;
+    padding: 150px 0;
+    background-color: #1F1F1F;
+}
+.identity-banner-inner {
+    display: flex;
+    align-items: center;
+}
+.identity-banner-inner .identity-content-sec {
+    width: 70%;
+    padding-right: 50px;
+}
+.identity-banner-inner .identity-content-sec h2 {
+    color: #F7F9FC;
+    font-family: Kallisto;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    margin: 0 0 50px 0;
+}
+.identity-banner-inner .identity-content-sec p {
+    color: #F7F9FC;
+    font-family: 'Proxima Nova Rg';
+    font-size: 20px;
+    font-weight: 200;
+    line-height: 30px;
+    margin: 0;
+}
+.identity-banner-inner .identity-image-sec {
+    width: 30%;
+}
+.identity-banner-inner .identity-image-sec img {
+    width: 100%;
+}
+
+/* Visual Identity Banner Section CSS End */
+
+/* Identity Info Section Start */
+
+.identity-info-sec {
+    width: 100%;
+    position: relative;
+    padding: 100px 0 100px 0;
+    z-index: 9;
+}
+.identity-info-sec:before {
+    position: absolute;
+    content: '';
+    width: 531px;
+    height: 396px;
+    background-image: url(../public/identity-info-bg.png);
+    background-repeat: no-repeat;
+    bottom: 0;
+    z-index: -1;
+}
+.identity-info-sec .info-content {
+    display: flex;
+    margin-bottom: 80px;
+}
+.identity-info-sec .info-content:last-child {
+    margin-bottom: 0px;
+}
+.identity-info-sec .info-content .icon-part {
+    width: 15%;
+    padding-right: 80px;
+    margin-top: -30px;
+}
+.identity-info-sec .info-content .icon-part img {
+    width: 100%;
+}
+.identity-info-sec .info-list-sec {
+    width: 85%;
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 4px solid #1F1F1F;
+    padding: 30px 0 30px 40px;
+    justify-content: space-between;
+}
+.identity-info-sec .info-list-sec .list-sec h3 {
+    color: #1F1F1F;
+    font-family: Kallisto;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    margin: 0 0 16px 0;
+    max-width: 300px;
+}
+.identity-info-sec .info-list-sec ul {
+    padding: 0;
+}
+.identity-info-sec .info-list-sec ul li {
+    color: #1F1F1F;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 48px;
+    list-style: none;
+}
+.identity-info-sec .info-list-sec .paragraph-sec {
+    width: 55%;
+}
+.identity-info-sec .info-list-sec .paragraph-sec p {
+    color: var(--Off-Black, #1F1F1F);
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    margin: 0;
+}
+.identity-info-sec .info-list-sec .button-sec {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+.identity-info-sec .info-list-sec .button-sec a.btn-cust {
+    color: #FF2093;
+}
+.identity-info-sec .info-list-sec .button-sec a.btn-cust:hover {
+    color: #1F1F1F !important;
+}
+.identity-info-sec .info-list-sec .button-sec a.btn-cust:before {
+    left: -35px;
+    width: 220px;
+    height: 70px;
+    top: -17px;
+}
+
+/* Identity Info Section End */
+
+/* FAQ Section CSS Start */
+
+.faq-main-sec {
+    width: 100%;
+    position: relative;
+    padding: 100px 0 10px 0;
+    background-color: #1F1F1F;
+}
+.faq-main-sec .faq-title {
+    margin-bottom: 50px;
+}
+.faq-main-sec .faq-title h2 {
+    color: #F7F9FC;
+    text-align: center;
+    font-family: Kallisto;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 60px;
+    margin: 0;
+}
+.faq-main-sec .accordion {
+    width: 90%;
+    max-width: 1000px;
+    margin: 2rem auto;
+}
+.faq-main-sec .accordion-item {
+    background-color: #fff;
+    margin: 0 0 18px 0;
+}
+.faq-main-sec .accordion-item:last-child {
+    margin: 0;
+}
+.faq-main-sec .accordion-item-header {
+    padding: 30px 62px 30px 40px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    color: #1F1F1F;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: normal;
+}
+.faq-main-sec .accordion-item.active {
+    background-color: #FF2093;
+}
+.faq-main-sec .accordion-item-header::after {
+    content: "\002B";
+    font-size: 2rem;
+    position: absolute;
+    right: 36px;
+    color: #1F1F1F;
+}
+.faq-main-sec .accordion-item-header.active::after {
+    content: "\2212";
+    color: #fff;
+}
+.faq-main-sec .accordion-item-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+.faq-main-sec .accordion-item-header.active {
+    color: #fff;
+}
+.faq-main-sec .accordion-item-body-content {
+    color: #F7F9FC;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    padding: 0 62px 42px 40px;
+}
+
+/* FAQ Section CSS End */
+
+/* Famlity Law Banner Section CSS Start */
+
+.family-law-banner {
+    width: 100%;
+    position: relative;
+    height: 100%;
+}
+.family-law-banner .image-sec img {
+    width: 100%;
+}
+.family-law-banner .banner-title-sec h2 {
+    color: #F7F9FC;
+    font-family: Kallisto;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    margin: 0;
+    position: absolute;
+    bottom: 80px;
+}
+
+/* Famlity Law Banner Section CSS End */
+
+/* Dedicated Section CSS Start */
+
+.dedicated-main-sec {
+    width: 100%;
+    position: relative;
+    padding: 100px 0 140px 0;
+    background-color: #1F1F1F;
+    margin-top: -4px;
+}
+.dedicated-title-sec {
+    margin-bottom: 60px;
+}
+.dedicated-title-sec h2 {
+    color: #F7F9FC;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 50px;
+    font-weight: 300;
+    line-height: normal;
+    margin: 0;
+}
+.dedicated-content-sec {
+    display: flex;
+}
+.dedicated-content-sec .left-part {
+    width: 50%;
+    padding-right: 100px;
+}
+.dedicated-content-sec .left-part h3 {
+    color: #F7F9FC;
+    font-family: Kallisto;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0 0 14px 0;
+}
+.dedicated-content-sec .left-part p {
+    color: #F7F9FC;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    margin: 0;
+}
+.dedicated-content-sec .right-part {
+    width: 50%;
+    padding-left: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+.dedicated-content-sec .right-part .service-menu-sec h4 {
+    color: #F7F9FC;
+    font-family: Kallisto;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0 0 14px 0;
+}
+.dedicated-content-sec .right-part .service-menu-sec ul {
+    padding: 0;
+}
+.dedicated-content-sec .right-part .service-menu-sec ul li {
+    list-style: none;
+}
+.dedicated-content-sec .right-part .service-menu-sec ul li a {
+    color:  #F7F9FC;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    text-decoration: none;
+    transition: all 0.2s linear;
+}
+.dedicated-content-sec .right-part .service-menu-sec ul li a:hover {
+    color: #FF2093;
+}
+.dedicated-content-sec .right-part .second-menu h5 {
+    color: #F7F9FC;
+    font-family: Kallisto;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0 0 14px 0;
+}
+.dedicated-content-sec .right-part .second-menu p {
+    color: #F7F9FC;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 30px;
+    margin: 0 0 50px 0;
+}
+.dedicated-content-sec .right-part .second-menu>.second-menu p {
+    margin: 0;
+}
+
+/* Dedicated Section CSS End */
+
+/* Brand Section CSS Start */
+
+.brand-main-sec {
+    width: 100%;
+    position: relative;
+    padding: 160px 0;
+    background-color: #F7F9FC;
+}
+.brand-inner-sec {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -18px;
+}
+.brand-inner-big {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -9px;
+}
+.brand-inner-sec .brand-box {
+    width: 50%;
+    padding: 9px;
+}
+.brand-inner-sec .brand-box img {
+    width: 100%;
+}
+.brand-inner-sec .brand-box .box-content {
+    height: 100%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.brand-inner-sec .brand-box .box-content h2 {
+    color: #1F1F1F;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 45px;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0 0 20px 0;
+}
+.brand-inner-sec .brand-box .box-content p {
+    color: var(--Off-Black, #1F1F1F);
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 33px;
+    margin: 0;
+}
+
+/* Brand Section CSS End */
+
+/* Functionality Section CSS Start */
+
+.functionality-main-sec {
+    width: 100%;
+    position: relative;
+    padding: 160px 0 230px 0;
+    background-color: #1F1F1F;
+}
+.functionality-title {
+    margin-bottom: 120px;
+    display: flex;
+}
+.functionality-title .title {
+    width: 50%;
+    padding-right: 80px;
+}
+.functionality-title .title h2 {
+    color: #F7F9FC;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 45px;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+}
+.functionality-title .content {
+    width: 50%;
+}
+.functionality-title .content p {
+    color: #F7F9FC;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 36px;
+    margin: 0;
+}
+.functionality-info-sec {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -18px;
+}
+.functionality-info-sec .functionality-image {
+    width: 50%;
+    padding: 9px;
+}
+.functionality-info-sec .functionality-image.w-full {
+    width: 100%;
+}
+.functionality-info-sec .functionality-image img {
+    width: 100%;
+}
+
+/* Functionality Section CSS End */
+
+/* Takeaways Section CSS Start */
+
+.takeaways-main-sec {
+    width: 100%;
+    position: relative;
+    padding: 70px 0 120px 0;
+    background-color: #F7F9FC;
+}
+.takeaways-main-sec .takeaways-title {
+    margin-bottom: 100px;
+}
+.takeaways-main-sec .takeaways-title h2 {
+    color: #1F1F1F;
+    text-align: center;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 45px;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0 0 20px 0;
+}
+.takeaways-main-sec .takeaways-title p {
+    color: #1F1F1F;
+    text-align: center;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 36px;
+    padding: 0 100px;
+}
+.takeaways-main-sec .takeaways-content-sec {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -18px;
+}
+.takeaways-main-sec .takeaways-image-wrap.w-full {
+    width: 100%;
+}
+.takeaways-main-sec .takeaways-image-wrap {
+    width: 50%;
+    padding: 9px;
+}
+.takeaways-main-sec .takeaways-image-wrap img {
+    width: 100%;
+}
+.takeaways-main-sec .takeaways-image-wrap .slider-sec {
+    padding: 100px 0;
+    background-color: #312334;
+    overflow: hidden;
+}
+.takeaways-main-sec .takeaways-image-wrap .slider-sec .swiper-slide {
+    padding: 0 4px;
+}
+.takeaways-main-sec .takeaways-image-wrap .slider-sec .swiper-slide img {
+    width: 100%;
+}
+.takeaways-main-sec .takeaways-image-wrap .slider-sec .swiper {
+    margin: 0 -30px;
+}
+
+/* Takeaways Section CSS End */
+
+/* Project Section CSS Start */
+
+.project-main-sec {
+    width: 100%;
+    position: relative;
+}
+.project-inner-sec {
+    display: flex;
+}
+.project-inner-sec .left-part,
+.project-inner-sec .right-part {
+    width: 50%;
+    position: relative;
+    padding: 120px;
+    background-color: #777777;
+}
+.project-inner-sec .left-part h2,
+.project-inner-sec .right-part h2 {
+    margin: 0;
+}
+.project-inner-sec .right-part {
+    background-color: #535353;
+}
+.project-inner-sec .left-part h2 a,
+.project-inner-sec .right-part h2 a {
+    color: #FF2093;
+    text-align: right;
+    font-family: Kallisto;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    margin: 0 0 24px auto;
+    position: relative;
+    display: table;
+    text-decoration: none;
+}
+.project-inner-sec .left-part h2 a>span,
+.project-inner-sec .right-part h2 a>span {
+    position: absolute;
+    left: -100px;
+    bottom: 0;
+}
+.project-inner-sec .left-part h3,
+.project-inner-sec .right-part h3 {
+    color: #F7F9FC;
+    text-align: right;
+    font-family: Kallisto;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    margin: 0 0 10px 0;
+}
+.project-inner-sec .left-part p,
+.project-inner-sec .right-part p {
+    color: #F7F9FC;
+    text-align: right;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    margin: 0;
+}
+.project-inner-sec .right-part h2 a {
+    text-align: left;
+    margin: 0 auto 24px 0;
+}
+.project-inner-sec .right-part h2 a>span {
+    left: auto;
+    right: -100px;
+}
+.project-inner-sec .right-part h3,
+.project-inner-sec .right-part p {
+    text-align: left;
+}
+
+/* Project Section CSS End */
+
+/* Talk About Section CSS Start */
+
+.talk-about-main-sec {
+    width: 100%;
+    position: relative;
+    padding: 160px 0 40px 0;
+    background-color: #1F1F1F;
+}
+.talk-about-title {
+    margin: 0 0 70px 0;
+}
+.talk-about-title h2 {
+    color: #F7F9FC;
+    font-family: Kallisto;
+    font-size: 60px;
+    font-style: normal;
+    line-height: normal;
+    text-transform: uppercase;
+    margin: 0;
+}
+.talk-about-title h2 span {
+    background: var(--Soft-White, linear-gradient(90deg, #FF2093 49.75%, #00C2FF 92.27%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.hide {
+    display: none;
+}
+.filter-inner-sec .buttons {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-bottom: 80px;
+}
+.filter-inner-sec .buttons button.button {
+    padding: 0;
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+}
+.filter-inner-sec .buttons button.button a {
+    position: relative;
+    color: #ABABAB;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 34px;
+    text-decoration: none;
+}
+.filter-inner-sec .buttons button.button a:before {
+    position: relative;
+    content: '•';
+    margin: 0 40px;
+    color: #ABABAB !important;
+}
+.filter-inner-sec .buttons button.button:first-child a:before {
+    display: none;
+}
+.filter-inner-sec .buttons button.button a span {
+    color: #ABABAB;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+    position: absolute;
+    right: -24px;
+    top: -8px;
+}
+.filter-inner-sec .buttons button.button.active a,
+.filter-inner-sec .buttons button.button.active a span {
+    color: #FF2093;
+}
+.item-list .featured-inner {
+    display: flex;
+    align-items: flex-end;
+}
+.item-list .featured-inner .image-sec {
+    width: 50%;
+    padding-right: 55px;
+}
+.item-list .featured-inner .image-sec img {
+    width: 100%;
+}
+.item-list .featured-inner .content-sec {
+    width: 50%;
+}
+.item-list .featured-inner .content-sec h2 {
+    color: #F7F9FC;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 23px;
+    letter-spacing: 6.4px;
+    margin: 0 0 10px 0;
+}
+.item-list .featured-inner .content-sec h3 {
+    color: #F7F9FC;
+    font-family: Kallisto;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    margin: 0 0 10px 0;
+}
+.item-list .featured-inner .content-sec p {
+    color: #F7F9FC;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    margin: 0 0 50px 0;
+}
+.item-list .featured-inner .content-sec a.btn-cust,
+.filter-inner-sec .button-sec a.btn-cust {
+    margin: 0px 0 0 25px !important;
+    text-transform: uppercase;
+    color: #FF2093;
+}
+.item-list .featured-inner .content-sec a.btn-cust:hover,
+.filter-inner-sec .button-sec a.btn-cust:hover {
+    color: #fff !important;
+}
+.item-list .featured-inner .content-sec a.btn-cust:before,
+.filter-inner-sec .button-sec a.btn-cust:before {
+    left: -25px;
+}
+.filter-inner-sec .item.all {
+    margin-bottom: 80px;
+}
+.filter-inner-sec .item-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -11px;
+}
+.filter-inner-sec .item-wrap .item {
+    width: 33.3%;
+    padding: 0 11px;
+    margin-bottom: 80px;
+}
+.filter-inner-sec .item-wrap .item .image-sec {
+    margin-bottom: 25px;
+}
+.filter-inner-sec .item-wrap .item .image-sec img {
+    width: 100%;
+}
+.filter-inner-sec .item-wrap .item .content-sec h3 {
+    color: #F7F9FC;
+    font-family: Kallisto;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    margin: 0 0 25px 0;
+}
+.filter-inner-sec .item-wrap .item .content-sec p {
+    color: var(--Soft-White, #F7F9FC);
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    margin: 0 0 20px 0;
+}
+.filter-inner-sec .item-wrap .item .content-sec a {
+    color: #00C2FF;
+    text-align: center;
+    font-family: Kallisto;
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 20px;
+    letter-spacing: 1.6px;
+    text-decoration-line: underline;
+    margin: 0;
+}
+.filter-inner-sec .button-sec {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+/* Talk About Section CSS End */
+
+
+
+/* Responsive CSS Start */
+
+@media screen and (min-width: 1300px) {
+    .header {
+        padding: 23px 20px 0 20px;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .footer-main {
+        /* padding: 80px 20px 400px 20px; */      
+        padding: 80px 20px 40px 20px;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .footer-main {
+        /* padding: 80px 20px 360px 20px; */
+        padding: 80px 20px 30px 20px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .header.sticky {
+        padding: 10px 20px 10px 0px;
+    }
+    .container, .container2, .about-container {
+        padding: 0 20px;
+    }
+    .client-inner-sec .intro-box {
+        /* padding: 0 18px; */  /* redundant */
+    }
+    .client-intro-sec .client-inner-sec {
+        /* margin: 0 -18px; */ /* redundant */
+    }
+    .header .menu-sec ul li {
+        margin: 0 28px;
+    }
+    .banner-main {
+        padding: 80px 0 320px 0;
+    }
+    .banner-title h1 {
+        font-size: 70px;
+    }
+    .we-are-inner .title-part h3,
+    .service-main-sec .service-title h3,
+    .client-title .client-count h4,
+    .client-title .client-count h4,
+    .testi-box-inner .testi-content h3,
+    .core-values-sec .core-title .left-part h3,
+    .limits-main-sec .limits-title h3 {
+        font-size: 35px;
+        line-height: 43px;
+    }
+    .service-slider .service-box-inner .box-title h5 {
+        font-size: 20px;
+    }
+    .service-slider .service-box-inner {
+        min-height: 350px;
+        padding: 40px 40px 30px 30px;
+    }
+    .client-title .client-count h3 {
+        font-size: 130px;
+        line-height: 160px;
+        margin: -10px 0 0 0;
+    }
+    .client-main-sec {
+        padding: 70px 0 80px 0;
+    }
+    .testi-box-inner .testi-content p {
+        font-size: 16px;
+        line-height: 26px;
+    }
+    .footer-main .footer-title h3 {
+        font-size: 80px;
+        line-height: 90px;
+    }
+    .footer-menu-inner .menu-item p {
+        font-size: 18px;
+        line-height: 26px;
+        margin: 0 0 20px 0;
+    }
+    .footer-menu-inner .menu-item .social ul li {
+        margin-right: 20px;
+    }
+    .menu-item ul.menu {
+        padding: 0 20px 0 20px;
+    }
+    .menu-item ul.menu li a.menu-btn:before {
+        width: 18px;
+        height: 9px;
+        background-size: 100%;
+    }
+    .footer-main {
+        /* padding: 80px 20px 300px 20px; */
+        padding: 60px 0px 20px 0px;
+    }
+    .about-banner .banner-title h2,
+    .service-banner-main .service-title h2,
+    .identity-main-sec .title-sec .title-part h3,
+    .project-inner-sec .left-part h2 a, 
+    .project-inner-sec .right-part h2 a,
+    .family-law-banner .banner-title-sec h2,
+    .talk-about-title h2,
+    .identity-banner-inner .identity-content-sec h2,
+    .faq-main-sec .faq-title h2 {
+        font-size: 50px;
+    }
+    .limits-boxes-inner .boxes-wrap .boxes-wrap-inner h4 {
+        font-size: 40px;
+        line-height: 50px;
+    }
+    .dedicated-title-sec h2 {
+        font-size: 45px;
+    }
+    .dedicated-title-sec {
+        margin-bottom: 40px;
+    }
+    .brand-inner-sec .brand-box .box-content h2,
+    .functionality-title .title h2,
+    .takeaways-main-sec .takeaways-title h2 {
+        font-size: 40px;
+    }
+    .project-inner-sec .left-part, 
+    .project-inner-sec .right-part {
+        width: 50%;
+        position: relative;
+        padding: 60px;
+        background-color: #777777;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .banner-main {
+        padding: 60px 0 320px 0;
+    }
+    .banner-title h1 {
+        font-size: 50px;
+        margin: 0 auto 15px auto;
+    }
+    .banner-title p {
+        font-size: 18px;
+        line-height: 30px;
+    }
+    .limits-boxes-inner .boxes-wrap {
+        padding: 0 10px 55px 10px;
+        width: 33.3%;
+    }
+    .limits-boxes-inner {
+        margin: 0 -10px;
+    }
+    .filter-inner-sec .button-sec a.btn-cust:before {
+        left: -20px;
+    }
+    .filter-inner-sec .button-sec a.btn-cust {
+        margin: 0 !important;
+        width: 100%;
+    }
+    .filter-inner-sec .button-sec a.btn-cust:before {
+        left: 0;
+        right: 0;
+        margin: 0 auto !important;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .header {
+        padding: 23px 0px 0 0px;
+        background-color: #161616;
+    }
+    .header.sticky {
+        padding: 10px 0px 10px 0px;
+    }
+    .transparent-header .header.sticky {
+        background-color: #161616;
+    }
+    .header .toggle-button {
+        display: block;
+    }
+    .header .menu-sec {
+        display: none;
+    }
+    .header .menu-sec {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 100px;
+        background-color: #fff;
+        z-index: 9;
+    }
+    .header .menu-sec ul {
+        flex-direction: column;
+        margin: 0;
+        padding: 15px;
+        box-shadow: 0px 2px 10px rgb(0 0 0 / 20%);
+    }
+    .header .menu-sec ul li {
+        margin: 10px 0px;
+    }
+    .header .menu-sec ul li a {
+        color: #000;
+    }
+    .header.sticky .menu-sec {
+        top: 70px;
+    }
+    .header .menu-sec ul li.button {
+        margin: 20px 0 20px 45px;
+    }
+    .banner-main {
+        position: relative;
+        z-index: 0;
+        padding: 60px 0 220px 0;
+    }
+    .banner-main:before {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: rgb(0 0 0 / 30%);
+        z-index: -1;
+        top: 0;
+        left: 0;
+    }
+    /* .blank-part {
+        z-index: 9;
+    } */
+    .blank-part {
+        margin-top: -140px;
+    }
+    .we-are-inner .title-part,
+    .client-title .client-count,
+    .core-values-sec .core-title .left-part,
+    .identity-main-sec .title-sec .title-part {
+        padding-right: 30px;
+    }
+    .we-are-inner .title-part h2,
+    .client-title .client-count h2,
+    .core-values-sec .core-title .left-part h2 {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .we-are-inner .title-part h3, 
+    .service-main-sec .service-title h3, 
+    .client-title .client-count h4, 
+    .client-title .client-count h4, 
+    .testi-box-inner .testi-content h3,
+    .core-values-sec .core-title .left-part h3,
+    .limits-main-sec .limits-title h3 {
+        font-size: 25px;
+        line-height: 35px;
+    }
+    .we-are-inner .discription-part p,
+    .client-title .client-description p,
+    .core-values-sec .core-title .right-part p {
+        font-size: 16px;
+        line-height: 26px;
+    }
+    a.btn-cust {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    a.btn-cust:before {
+        left: -50px;
+    }
+    .service-main-sec,
+    .client-main-sec,
+    .we-are-sec,
+    .testimonial-main,
+    .core-values-sec,
+    .limits-main-sec,
+    .dedicated-main-sec,
+    .brand-main-sec,
+    .functionality-main-sec,
+    .takeaways-main-sec,
+    .takeaways-main-sec .takeaways-image-wrap .slider-sec,
+    .identity-banner-sec,
+    .identity-info-sec,
+    .faq-main-sec {
+        padding: 60px 0 60px 0;
+    }
+    .identity-main-sec {
+        padding: 60px 0 30px 0;
+    }
+    .service-slider .service-box-inner {
+        min-height: 280px;
+        padding: 30px 30px 20px 20px;
+    }
+    .service-slider {
+        padding-bottom: 40px;
+    }
+    .service-slider .service-box-inner .box-title h5,
+    .about-banner .banner-title p {
+        font-size: 18px;
+    }
+    .service-slider .service-box-inner .box-title h4,
+    .footer-main .footer-title h2 {
+        font-size: 14px;
+    }
+    .client-title .client-count h3 {
+        font-size: 100px;
+        line-height: 120px;
+        margin: 0;
+    }
+    .client-title .client-description a.btn-cust:before {
+        left: -34px;
+    }
+    .client-title {
+        margin-bottom: 90px;
+    }
+    .client-intro-sec .client-inner-sec .intro-box:first-child, 
+    .client-intro-sec .client-inner-sec .intro-box:nth-child(3),
+    .client-intro-sec .client-inner-sec .intro-box:nth-child(5), 
+    .client-intro-sec .client-inner-sec .intro-box:nth-child(8) {
+        margin-top: 0;
+    }
+    .client-inner-sec .intro-box {
+        width: 50%;
+    }
+    .client-intro-sec a.btn-cust {
+        margin: 40px auto 0 auto;
+        width: 100%;
+    }
+    .client-intro-sec a.btn-cust:before {
+        left: 0px;
+        margin: 0 auto;
+    }
+    .testi-box-inner .testi-content {
+        z-index: 2;
+    }
+    .logo-inner .logo-box-main .logo-box-inner img {
+        width: 100%;
+    }
+    .footer-main .footer-title h3 {
+        font-size: 50px;
+        line-height: 60px;
+        margin: 0 0 50px 0;
+    }
+    .footer-menu-inner .menu-item {
+        width: 33.3%;
+        padding: 0 20px;
+        margin-bottom: 20px;
+    }
+    .footer-menu-inner {
+        flex-wrap: wrap;
+    }
+    .menu-item ul.menu {
+        padding: 0;
+    }
+    .footer-main {
+        padding: 60px 0px 250px 0px;
+    }
+    .home-page .header {
+        background-color: #161616;
+    }
+    .banner-title p {
+        color: #fff;
+    }
+    .about-banner .banner-title h2,
+    .service-banner-main .service-title h2,
+    .project-inner-sec .left-part h2 a, 
+    .project-inner-sec .right-part h2 a,
+    .family-law-banner .banner-title-sec h2,
+    .talk-about-title h2,
+    .identity-banner-inner .identity-content-sec h2,
+    .faq-main-sec .faq-title h2 {
+        font-size: 45px;
+    }
+    .identity-main-sec .title-sec .title-part h3 {
+        font-size: 40px;
+        line-height: normal;
+    }
+    .limits-boxes-inner .boxes-wrap {
+        width: 50%;
+    }
+    .value-box-inner .box-wrap {
+        width: 50%;
+        padding: 0 10px 20px 10px;
+    }
+    .value-box-inner {
+        margin: 0 -10px;
+    }
+    .about-banner {
+        padding: 60px 0;
+    }
+    .about-banner .banner-title {
+        margin-bottom: 40px;
+    }
+    .about-banner .banner-title p {
+        line-height: 30px;
+    }
+    /* .about-banner {
+        background-color: #161616;
+    } */
+    .limits-main-sec .limits-title {
+        margin-bottom: 40px;
+    }
+    .core-values-sec .core-title .right-part a.btn-cust {
+        margin-left: 50px;
+    }
+    .service-banner-main {
+        padding: 60px 0 60px 0;
+        /* background-color: #161616; */
+    }
+    .service-banner-main:after {
+        width: 610px;
+        height: 550px;
+    }
+    .service-banner-main:before {
+        width: 362px;
+        height: 624px;
+    }
+    .identity-main-sec .service-list {
+        flex-wrap: wrap;
+    }
+    .identity-main-sec .service-list .list-box {
+        width: 50%;
+        margin-bottom: 20px;
+    }
+    .dedicated-title-sec h2 {
+        font-size: 40px;
+    }
+    .dedicated-content-sec .left-part {
+        padding-right: 0px;
+    }
+    .dedicated-content-sec .right-part {
+        padding-left: 30px;
+    }
+    .brand-inner-sec .brand-box .box-content {
+        padding: 20px;
+    }
+    .project-inner-sec .left-part {
+        padding: 60px 30px 60px 30px;
+    }
+    .project-inner-sec .right-part {
+        padding: 60px 30px 60px 30px;
+    }
+    .project-inner-sec .left-part h2 a, .project-inner-sec .right-part h2 a {
+        font-size: 35px;
+    }
+    .functionality-title .title {
+        width: 50%;
+        padding-right: 30px;
+    }
+    .functionality-title .title h2,
+    .brand-inner-sec .brand-box .box-content h2,
+    .takeaways-main-sec .takeaways-title h2 {
+        font-size: 35px;
+    }
+    .functionality-title .title h2 br,
+    .brand-inner-sec .brand-box .box-content h2 br {
+        display: none;
+    }
+    .functionality-title .content p,
+    .brand-inner-sec .brand-box .box-content p,
+    .takeaways-main-sec .takeaways-title p {
+        font-size: 18px;
+        line-height: 28px;
+    }
+    .functionality-title,
+    .takeaways-main-sec .takeaways-title {
+        margin-bottom: 60px;
+    }
+    .takeaways-main-sec .takeaways-title p {
+        margin: 0;
+        padding: 0;
+    }
+    .family-law-banner .banner-title-sec h2 {
+        bottom: 60px;
+    }
+    .talk-about-main-sec {
+        padding: 60px 0 40px 0;
+    }
+    .talk-about-title {
+        margin: 0 0 40px 0;
+    }
+    .filter-inner-sec .buttons button.button a {
+        text-wrap: nowrap;
+    }
+    .filter-inner-sec .buttons {
+        justify-content: flex-start;
+        margin-bottom: 40px;
+        overflow-y: scroll;
+        padding-bottom: 20px;
+    }
+    .filter-inner-sec .item-wrap .item {
+        width: 50%;
+        margin-bottom: 40px;
+    }
+    .filter-inner-sec .buttons button.button a {
+        font-size: 20px;
+    }
+    .item-list .featured-inner .content-sec h3 {
+        font-size: 22px;
+        line-height: 30px;
+    }
+    .item-list .featured-inner .content-sec p {
+        font-size: 18px;
+        line-height: 26px;
+    }
+    .item-list .featured-inner .image-sec {
+        padding-right: 30px;
+    }
+    .item-list .featured-inner {
+        align-items: center;
+    }
+    .item-list .featured-inner .content-sec a.btn-cust {
+        margin: 0px 0 0 30px !important;
+    }
+    .item-list .featured-inner .content-sec a.btn-cust:before {
+        left: -32px;
+    }
+    .identity-info-sec .info-content {
+        flex-direction: column;
+    }
+    .identity-info-sec .info-content .icon-part {
+        width: 100px;
+        padding-right: 0;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+    .identity-info-sec .info-list-sec {
+        width: 100%;
+        padding: 30px 0 30px 0px;
+    }
+    .identity-info-sec .info-content {
+        margin-bottom: 40px;
+    }
+    .identity-info-sec:before {
+        width: 300px;
+        height: 216px;
+        background-size: 100%;
+    }
+    .identity-info-sec .info-list-sec .button-sec {
+        margin-top: 60px;
+    }
+    .identity-banner-inner .identity-content-sec h2 {
+        margin: 0 0 20px 0;
+    }
+    .faq-main-sec {
+        padding-top: 0;
+        padding-bottom: 1px;
+    }
+    .faq-main-sec .accordion-item-header {
+        padding: 25px 45px 25px 25px;
+        font-size: 20px;
+    }
+    .faq-main-sec .accordion-item-body-content {
+        font-size: 20px;
+        line-height: 28px;
+        padding: 0 52px 25px 25px;
+    }
+    .faq-main-sec .accordion-item-header::after {
+        right: 28px;
+    }
+    .faq-main-sec .accordion {
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    .faq-main-sec .faq-title {
+        margin-bottom: 30px;
+    }
+    .identity-info-sec .info-list-sec .button-sec a.btn-cust:before {
+        left: -40px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .footer-main {
+        /* padding: 60px 0px 200px 0px; */
+        padding: 60px 0px 20px 0px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .we-are-inner,
+    .client-title,
+    .testi-box-inner,
+    .core-values-sec .core-title,
+    .identity-main-sec .title-sec,
+    .dedicated-content-sec,
+    .functionality-title,
+    .functionality-info-sec,
+    .project-inner-sec,
+    .dedicated-content-sec .right-part,
+    .item-list .featured-inner,
+    .identity-info-sec .info-list-sec {
+        flex-direction: column;
+    }
+    .identity-banner-inner {
+        flex-direction: column-reverse;
+    }
+    .we-are-inner .title-part, .client-title .client-count, .core-values-sec .core-title .left-part, .identity-main-sec .title-sec .title-part, .dedicated-content-sec .left-part, .functionality-title .title,
+    .item-list .featured-inner .image-sec, .identity-banner-inner .identity-content-sec {
+        padding-right: 0px;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .dedicated-content-sec .right-part {
+        width: 100%;
+        padding: 0;
+    }
+    .identity-banner-inner .identity-image-sec img {
+        width: auto;
+        margin: 0 auto;
+        display: block;
+    }
+    .we-are-inner .discription-part,
+    .client-title .client-description,
+    .testi-box-inner .testi-content,
+    .core-values-sec .core-title .right-part,
+    .identity-main-sec .title-sec .content-part,
+    .brand-inner-sec .brand-box,
+    .functionality-title .content,
+    .functionality-info-sec .functionality-image,
+    .takeaways-main-sec .takeaways-image-wrap,
+    .project-inner-sec .left-part, .project-inner-sec .right-part,
+    .item-list .featured-inner .content-sec,
+    .filter-inner-sec .item-wrap .item,
+    .identity-banner-inner .identity-image-sec,
+    .identity-info-sec .info-list-sec .paragraph-sec {
+        width: 100%;
+    }
+    .identity-banner-inner .identity-image-sec {
+        margin-bottom: 40px;
+    }
+    .identity-main-sec .service-list .list-box {
+        width: 100%;
+    }
+    .identity-info-sec .info-content {
+        margin-bottom: 20px;
+    }
+    .identity-info-sec .info-list-sec .list-sec h3 {
+        font-size: 30px;
+        margin: 0 0 12px 0;
+    }
+    .identity-info-sec .info-list-sec ul li {
+        font-size: 20px;
+        line-height: 36px;
+    }
+    .identity-info-sec .info-list-sec .paragraph-sec p,
+    .identity-banner-inner .identity-content-sec p {
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .service-banner-main:before {
+        display: none;
+    }
+    .core-values-sec .core-title .right-part a.btn-cust {
+        margin-left: 50px;
+    }
+    .client-inner-sec .intro-box {
+        width: 100%;
+    }
+    .client-title {
+        margin-bottom: 70px;
+    }
+    .testi-box-inner .testi-img {
+        width: 100%;
+        margin: 0 0 20px 0;
+    }
+    .logo-inner {
+        flex-wrap: wrap;
+    }
+    .logo-inner .logo-box-main {
+        width: 50%;
+    }
+    .footer-main {
+        /* padding: 60px 0px 200px 0px; */
+        padding: 60px 0px 20px 0px;
+    }
+    .footer-main .footer-title h3>br {
+        display: none;
+    }
+    .footer-main .footer-title h3 {
+        font-size: 35px;
+        line-height: 45px;
+        margin: 0 0 40px 0;
+    }
+    .footer-menu-inner .menu-item {
+        width: 50%;
+        padding: 0 10px;
+    }
+    .testimonial-main .swiper-scrollbar {
+        width: 100%;
+        right: 0px;
+    }
+    .banner-title h1 {
+        font-size: 40px;
+        margin: 0 auto 15px auto;
+    }
+    .banner-main {
+        background-repeat: no-repeat;
+        background-position: bottom;
+        /* padding: 60px 0 180px 0; */
+        padding: 150px 0 180px 0;
+    }
+    .blank-part {
+        margin-top: -100px;
+    }
+    .about-banner .banner-title h2,
+    .service-banner-main .service-title h2,
+    .identity-main-sec .title-sec .title-part h3,
+    .project-inner-sec .left-part h2 a, 
+    .project-inner-sec .right-part h2 a,
+    .family-law-banner .banner-title-sec h2,
+    .talk-about-title h2,
+    .identity-banner-inner .identity-content-sec h2,
+    .faq-main-sec .faq-title h2 {
+        font-size: 40px;
+    }
+    .service-banner-main .service-title h2 br {
+        display: none;
+    }
+    .identity-main-sec .title-sec .title-part h3 br {
+        display: none;
+    }
+    .dedicated-title-sec h2 {
+        font-size: 35px;
+    }
+    .functionality-title .title h2, .brand-inner-sec .brand-box .box-content h2, .takeaways-main-sec .takeaways-title h2 {
+        font-size: 30px;
+    }
+    .brand-inner-sec .brand-box .box-content {
+        padding: 0;
+    }
+    .functionality-title, .takeaways-main-sec .takeaways-title {
+        margin-bottom: 40px;
+    }
+    .project-inner-sec .left-part h2 a, .project-inner-sec .right-part h2 a {
+        font-size: 35px;
+    }
+    .dedicated-title-sec h2 br {
+        display: none;
+    }
+    .project-inner-sec .left-part {
+        padding: 60px 20px 40px 20px;
+    }
+    .project-inner-sec .right-part {
+        padding: 0px 20px 60px 20px;
+    }
+    .family-law-banner .banner-title-sec h2 {
+        bottom: 40px;
+    }
+    .dedicated-content-sec .right-part .second-menu p {
+        margin: 0 0 20px 0;
+    }
+    .family-law-banner {
+        height: 50vh;
+    }
+    .family-law-banner .image-sec {
+        height: 100%;
+    }
+    .family-law-banner .image-sec img {
+        height: 100%;
+        object-fit: cover;
+    }
+    .project-inner-sec .left-part h2 a>span, .project-inner-sec .right-part h2 a>span {
+        left: -70px;
+        width: 50px;
+    }
+    .project-inner-sec .right-part h2 a>span {
+        left: auto;
+        right: -70px;
+    }
+    .project-inner-sec .left-part h2 a>span img, .project-inner-sec .right-part h2 a>span img {
+        width: 100%;
+    }
+    .identity-banner-inner .identity-content-sec h2 br {
+        display: none;
+    }
+    .faq-main-sec .accordion-item-header {
+        padding: 20px 40px 20px 20px;
+        font-size: 16px;
+    }
+    .faq-main-sec .accordion-item-body-content {
+        font-size: 16px;
+        line-height: 24px;
+        padding: 0 25px 20px 20px;
+    }
+    .faq-main-sec .accordion-item-header::after {
+        right: 18px;
+    }
+    .identity-info-sec .info-list-sec .button-sec a.btn-cust:before {
+        left: -45px;
+    }
+
+    .teammemberpop {
+        grid-template-columns: repeat(1,  1fr) !important;
+        gap: 20px;
+    }
+    .teampoptext h3 {
+        margin-top: 15px;
+    }
+}
+@media screen and (max-width: 640px) {
+
+    .team-pop-container {
+        top: 85% !important;
+      }
+
+    .teampoptext h4 {
+        font-size: 12px !important;
+    }
+
+    .teampoptext h3 {
+        font-size: 35px !important;
+        line-height: 1 !important;
+    }
+
+    .teampoptext p {
+        font-size: 12px !important;
+     }
+
+    .value-box-inner .box-wrap {
+        width: 100%;
+        padding: 0 0px 20px 0px;
+    }
+    .value-box-inner {
+        margin: 0 0px;
+    }
+    .limits-boxes-inner .boxes-wrap {
+        width: 100%;
+        padding: 0 0px 50px 0px;
+    }
+    .limits-boxes-inner {
+        margin: 0 0px;
+    }
+    .value-box-inner .box-wrap .box-wrap-inner {
+        padding: 20px;
+    }
+    .service-banner-main .service-title h2 {
+        font-size: 35px;
+    }
+    .identity-main-sec .title-sec .title-part h3 {
+        font-size: 30px;
+    }
+    .service-banner-main:after {
+        width: 410px;
+        height: 350px;
+        bottom: -180px;
+    }
+    .identity-main-sec .title-sec .content-part p {
+        font-size: 18px;
+        line-height: 28px;
+    }
+}
+@media screen and (max-width: 575px) {
+    /* .header .menu-sec {
+        top: 75px;
+    } */
+    .footer-main {
+        /* padding: 60px 0px 150px 0px; */
+        padding: 60px 0px 20px 0px;
+    }
+    .homeportfoliobtn {
+        margin: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 480px) {
+    .footer-main {
+        /* padding: 60px 0px 120px 0px; */
+        padding: 60px 0px 20px 0px;
+    }
+    .footer-menu-inner .menu-item {
+        width: 100%;
+        padding: 0 0px;
+    }
+    .footer-menu-inner .menu-item a img {
+        width: auto;
+    }
+    .menu-item ul.menu li a.menu-btn:before {
+        right: auto;
+        left: 135px;
+    }
+}
+@media screen and (max-width: 414px) {
+    .about-banner .banner-title h2,
+    .banner-title h1,
+    .project-inner-sec .left-part h2 a, 
+    .project-inner-sec .right-part h2 a,
+    .family-law-banner .banner-title-sec h2,
+    .talk-about-title h2,
+    .identity-banner-inner .identity-content-sec h2,
+    .faq-main-sec .faq-title h2 {
+        font-size: 35px;
+    }
+    .we-are-inner .title-part h3, .service-main-sec .service-title h3, .client-title .client-count h4, .client-title .client-count h4, .testi-box-inner .testi-content h3, .core-values-sec .core-title .left-part h3, .limits-main-sec .limits-title h3 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .limits-boxes-inner .boxes-wrap .boxes-wrap-inner h4 {
+        font-size: 35px;
+        line-height: 44px;
+        margin-bottom: 10px;
+    }
+    .limits-boxes-inner .boxes-wrap {
+        padding: 0 0px 40px 0px;
+    }
+    .footer-main .footer-title h3 {
+        font-size: 30px;
+        line-height: 40px;
+        margin: 0 0 30px 0;
+    }
+    .client-title .client-count h3 {
+        font-size: 80px;
+        line-height: 100px;
+        margin: 0;
+    }
+    .about-banner .banner-title p, .banner-title p {
+        font-size: 16px;
+        line-height: 26px !important;
+    }
+    .identity-main-sec .title-sec .title-part h3 {
+        font-size: 28px;
+    }
+}
+.team-slider .team-slide .image-sec img {
+  object-fit: cover;
+  height: 410px;
+}
+.servicedescbx {
+  display: none;
+  transition: width 2s;
+}
+.servicedescbx p {
+  color: #fff;
+  font-family: 'Lexend Deca', sans-serif;
+  line-height: 26px;
+}
+.service-box:hover .servicedescbx {
+  display: block;
+  transition: 0.30s all ease;
+}
+.service-box .box-title {
+  margin-top: 200px;
+  transition: 0.30s all ease;
+}
+.service-box:hover .box-title {
+  margin-top: 100px;
+}
+.service-slider .service-box-inner {
+  max-height: 450px;
+  overflow: hidden;
+}
+.we-are-inner .title-part h3>span:before {
+    background: linear-gradient(90deg, #E72F9D 0%, #6D7DD1 60%, #02C1FE 100%);
+}
+a.home-btn {
+    color: #1F1F1F;
+}
+a.home-btn:hover {
+    background: linear-gradient(90deg, #00C2FF 0%, #FF2093 99.88%);
+}
+a.home-btn.banner-btn {
+    box-shadow: 6px 6px #929292;
+}
+a.home-btn.banner-btn:hover {
+    box-shadow: 2px 2px #929292;
+}
+a.home-btn:hover {
+    box-shadow: 2px 2px #1F1F1F;
+}
+.homeportfoliobtn {
+	text-align: center;
+	/* width: 150px; */
+	/* margin: auto; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.client-inner-sec .intro-box-inner .image img {
+   
+    height: 250px;
+    object-fit: cover;
+  }
+/* Responsive CSS Start */
+
+
+

@@ -1,0 +1,327 @@
+
+@media screen and (min-width: 1280px) and (max-width: 1550px) {
+  .blank-part{
+    padding: 0 20px;
+  }
+
+  
+}
+
+@media screen and (max-width: 1023px) {
+  .mergeimage1 {
+    top: 47.55px;
+    width: 150px;
+    height: auto;
+    left: -32px;
+    transform: rotate(353deg);
+  }
+  .mergeimage4 {
+    top: 95.62px;
+    width: 100px;
+    height: auto;
+    right: -15px;
+  }
+  .merch-header h2 {
+    font-size: 55px;
+    margin-bottom: 26px;
+  }
+  .merch-header p {
+    max-width: 240px;
+    margin: 0 auto;
+    margin-bottom: 26px;
+  }
+  .mergeimage3 {
+    position: absolute;
+    bottom: -40px;
+    right: -45px;
+    width: 150px;
+    height: auto;
+  }
+  .mergeimage2 {
+    position: absolute;
+    bottom: -40px;
+    left: -30px;
+    width: 150px;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 575px) {
+
+  a.home-btn {
+    min-width: 196px;
+    font-size: 18px;
+  }
+  /*temp class our service */
+  .service-slider {   
+    width: 1050vw;
+  }
+  .portclmn1 {
+   
+    height: 100%;
+    width: 100%;
+    min-width: 100%;
+    padding: 0px 20px;
+    
+  }
+    /*temp class our service end */
+
+    .logo-inner .logo-box-main {
+      width: 100%;
+    }
+    .logo-inner .logo-box-main .logo-box-inner img{      
+      height: auto;
+      width: 170px;
+    }
+    .overlaylogo {
+      top: 106px;
+
+    }
+    .client-inner-sec:not(.mobileportfolio){
+
+       display: none;;
+    }
+    .client-inner-sec.mobileportfolio{
+      display: flex !important;
+      overflow: visible;
+      height: auto;
+    }
+    .mobileportfolio .portclmn1:nth-of-type(3), .mobileportfolio .portclmn1:nth-of-type(2), .mobileportfolio .portclmn1:nth-of-type(1) { 
+      top: 0%;
+    }
+    .client-inner-sec.mobileportfolio {
+      height: auto;
+      overflow: visible;
+    }
+
+    .dedicated-title-sec h2 {
+      font-size: 20px;
+    }
+    .brand-inner-sec .brand-box img {  
+      height: auto;
+    }
+    .functionality-info-sec .functionality-image img{height: auto;}
+    .takeaways-main-sec .takeaways-image-wrap img {
+     
+      height: auto;
+    }
+    .team-slider {
+      width: 400vw;
+    }
+    .formstepinner h3 {
+      font-size: 18px;
+    }
+    .singlepost-title {
+      font-size: 15px;
+      line-height: 35px;
+    }
+    .singlepostmain {
+      padding: 50px 0 40px 0;
+    }
+    .contact-header h2 {
+      line-height: 46px;
+      font-size: 40px;
+    }
+    .contact-main-sec {
+
+      padding: 50px 0 160px 0;
+    }
+    .contactformlinks ul li h3.headnewpro, .contactformlinks ul li h3.headsomething, .contactformlinks ul li h3.headcollabs, .contactformlinks ul li h3.headmedia{
+      font-size: 26px;
+    }
+    .contactformlinks ul li h3.headnewpro::before, 
+    .contactformlinks ul li h3.headsomething::before, 
+    .contactformlinks ul li h3.headcollabs::before, .contactformlinks ul li h3.headmedia::before {
+
+      width: 35px;
+  height: 35px;right: -50px;
+    }
+    .talk-about-title h2{
+      font-size: 26px;
+    }
+    .mergeimage1 {
+      top: 47.55px;
+      width: 150px;
+      height: auto;
+      left: -32px;
+      transform: rotate(353deg);
+    }
+    .mergeimage4 {
+      top: 95.62px;
+      width: 100px;
+      height: auto;
+      right: -15px;
+    }
+    .merch-header h2 {
+      font-size: 55px;
+      margin-bottom: 26px;
+    }
+    .merch-header p {
+      max-width: 240px;
+      margin: 0 auto;
+      margin-bottom: 26px;
+    }
+    .mergeimage3 {
+      position: absolute;
+      bottom: -40px;
+      right: -45px;
+      width: 150px;
+      height: auto;
+    }
+    .mergeimage2 {
+      position: absolute;
+      bottom: -40px;
+      left: -30px;
+      width: 150px;
+      height: auto;
+    }
+    .client-inner-sec .intro-box-inner .image img {
+      height: 400px;
+    }
+    .contatpgmain {
+      display: block;
+    }
+    .contactpgright{
+
+      margin-top: 60px;
+    }
+    .cnform_wtrow{
+      display: block;;
+    }
+    .cnform_wtrow div:last-child{
+      margin-top: 60px;
+    }
+    .teamintromain{
+      display: block;      
+    }
+    .serviceintromain{
+      display: block;     
+    }
+    .MuiBox-root{
+      width: 90%!important;
+    }
+    .newspop_head h2 {
+      font-size: 22px;
+    }
+    .newspop_head h3 {
+      font-size: 18px;
+    }
+    a.btn-cust::before {
+      left: -40px;
+    }
+    .newspop_content {
+      padding: 20px;
+    }
+    
+    .team-slider {
+      width: 1554vw;
+    }
+  
+}
+/****NP CSS*****/
+@media screen and (max-width: 1550px) {
+  .video.blank-part {
+    padding: 0 60px;
+}
+.video.blank-part .container {
+  padding: 0px;
+}
+.testimonial-inner .swiper-button-prev {
+  left: 20px;
+}
+.testimonial-inner .swiper-button-prev:after {
+  right: 20px;
+}
+
+}
+@media screen and (max-width: 1400px) {
+.testi-box.container2 {
+  max-width: 1080px;
+}
+}
+@media screen and (max-width: 1200px) {
+  .testi-box.container2 {
+    max-width: 920px;
+  }
+  }
+  @media screen and (max-width: 1024px) {
+    .testi-box.container2 {
+      max-width: 670px;
+    }
+    .testi-box-inner .testi-img {
+      margin-right: 48px;
+      justify-content: start;
+      min-height: unset;
+  }
+  .testi-box-inner {
+    align-items: start;
+    padding-top: 50px;
+}
+  .testi-box-inner .testi-img img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+.testi-box-inner .testi-img::after {
+  top: 10px;
+  right: -10px;
+  width: 200px;
+  height: 200px;
+}
+.testi-box-inner .testi-img::before {
+  left: -46px;
+  width: 118px;
+  height: 96px;
+  top: -50px;
+}
+    }
+
+@media screen and (max-width: 767px) {
+  .testi-box-inner {
+    align-items: center;
+    gap: 34px;
+}
+.testi-box-inner .testi-img{
+  margin: 0;
+}
+.testimonial-inner .swiper-button-prev,
+.testimonial-inner .swiper-button-next{
+  top: 30%;
+}
+.logo-inner .logo-box-main .logo-box-inner {
+  height: unset;
+}
+.logo-box-main:hover .overlaylogo{
+  position: unset;
+}
+}
+
+@media screen and (max-width: 575px) {
+  .video.blank-part {
+    padding: 0 35px;
+}
+.serviceitem {
+  width: 315px;
+}
+.service-slider .service-box-inner {
+  width: 315px;
+  max-height: unset;
+  height: 360px;
+}
+.service-main-sec .service-title {
+  margin-bottom: 40px;
+}
+.service-slider .service-box-inner img {
+  height: 77px;
+}
+.service-box .box-title {
+  margin-top: 170px;
+}
+.service-box:hover .box-title {
+  margin-top: 68px;
+}
+.testimonial-inner .swiper-button-prev,
+.testimonial-inner .swiper-button-next{
+  top: 22%;
+}
+}
