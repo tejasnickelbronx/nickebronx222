@@ -7,8 +7,9 @@ import SiteFooter from '../../components/sitefooter.js';
 // import useScript from '../../hooks/useScript.js';
 import {getServicesSections} from '../../lib/getServicesSection.js';
 // import Lenis from '@studio-freight/lenis';
-
-
+import ServicePDFDownloadPopup from '../../components/servicePdf.js';
+import Modal from '@mui/material/Modal';
+import Box from '@mui/material/Box';
 
 
 export async function getStaticProps(){
@@ -28,14 +29,18 @@ export async function getStaticProps(){
 
 export default function About({servicesData}) {
   // console.log(servicesData);
+  const [open, setOpen] = React.useState(false);
+
+    
+  const handleOpen = (e) => {
+    e.preventDefault();
+    setOpen(true)
+  };
+  const handleClose = () => setOpen(false);
+
   const topheading = servicesData.data.pageBy.servicePageFieldTest.topHeading;
   const servicesections = servicesData.data.pageBy.servicePageFieldTest.serviceItems;
 
-  
-    // useScript('https://code.jquery.com/jquery-3.7.0.min.js');
-    // useScript('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js');
-    // useScript('https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.min.js');
-    // useScript('./custominit.js');
     return(
         <div>
         <Head>
@@ -59,7 +64,7 @@ export default function About({servicesData}) {
             <div className='pricingbannerpdf'>
                 <h3>Questions about our pricing? Download our PDF.</h3>
                 <p>At NickelBronx, we believe in transparency and clarity when it comes to pricing. Our straightforward pricing packages are tailored to suit your needs, ensuring you receive top-notch design services without hidden costs or surprises. Explore our pricing options below and find the perfect fit for your project.</p>
-                <a href="#" className="home-btn banner-btn">Download PDF</a>
+                <a href="javascript:void(0)" onClick={handleOpen} className="home-btn banner-btn">Download PDF</a>
             </div>
           </div>
         </section>
@@ -103,7 +108,19 @@ export default function About({servicesData}) {
           </div>
         </section>
   ))}
-        <SiteFooter className="footercls"/>  
+        <SiteFooter className="footercls"/>
+        <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description">  
+        <Box>
+          
+          {open && (
+            <ServicePDFDownloadPopup closeModal={handleClose} />
+            )}
+        </Box>  
+      </Modal>   
       </div>
     )
 }
