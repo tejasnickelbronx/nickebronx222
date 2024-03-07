@@ -54,11 +54,6 @@ export default function Merch() {
           Soon
         </h2>
         <p>We’re cooking up some sick new merch for our brand rollout</p>
-        <div className="merch-btn">
-          <a className="home-btn banner-btn" herf="#">
-            Notify Me
-          </a>
-        </div>
       </div>
     </div>
     <Image src="/merch1.png" width={300} height={300} className="mergeimage1" alt="merchtext" />
