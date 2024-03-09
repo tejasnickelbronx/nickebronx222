@@ -2159,7 +2159,7 @@ border-radius: 0;font-family: "Lexend Deca", sans-serif;box-shadow: 5px 7px 0px 
 letter-spacing: 1.6px;text-transform: uppercase;font-family: "Lexend Deca", sans-serif;display: inline-block;vertical-align: middle;text-align: center;
 box-shadow: 8px 8px 0px 0px rgba(31,31,31,1);-webkit-box-shadow: 8px 8px 0px 0px rgba(31,31,31,1);-moz-box-shadow: 8px 8px 0px 0px rgba(31,31,31,1);
 cursor: pointer;transition: all ease 0.3s;}
-.newPopupBoxSecSearch input[type="submit"]:hover {background-color: #1F1F1F;border-color: #1F1F1F;box-shadow: 8px 8px 0px 0px #00C2FF;-webkit-box-shadow: 8px 8px 0px 0px #00C2FF;
+.newPopupBoxSecSearch input[type="submit"]:hover {background-color: #1F1F1F;border-color: #1F1F1F;box-shadow: 8px 8px 0px 0px #929292;-webkit-box-shadow: 8px 8px 0px 0px #929292;
 -moz-box-shadow: 8px 8px 0px 0px #00C2FF;}
 .shape-s { position: absolute;bottom: 0;height: auto;z-index: 1;right: 0;line-height: 0;}
 .shape-s svg {width: 100%;height: auto;}
