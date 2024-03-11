@@ -65,7 +65,7 @@ export default function ServicePDFDownloadPopup(props){
         if (document.querySelector("iframe") && document.querySelector("iframe").contentWindow && 
         document.querySelector("iframe").contentWindow.document.querySelector('.submitted-message')) {
           let message = document.querySelector("iframe").contentWindow.document.querySelector('.submitted-message').innerText;
-          let pdfUrl = 'https://nickelbronx.com/hubfs/Pricing%20document/Pricing%20PDF.pdf';
+          let pdfUrl = 'https://blog.nickelbronx.com/hubfs/Pricing%20document/Pricing%20PDF.pdf';
           window.open(pdfUrl, '_blank').focus();
           setIsFormSubmitted(true);
         }
