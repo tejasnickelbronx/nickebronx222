@@ -2155,11 +2155,11 @@ border-radius: 0;font-family: "Lexend Deca", sans-serif;box-shadow: 5px 7px 0px 
 .newPopupBoxSecSearch .download-form ::placeholder {color: #1F1F1F;}
 .newPopupBoxSecSearch .download-form {max-width: 413px;padding-top: 24px;}
 .newPopupBoxSecSearch form fieldset {max-width: inherit !important;}
-.newPopupBoxSecSearch input[type="submit"] {background-color: #00C2FF;border: 1px solid #00C2FF;color: #FFFFFF;padding: 11px 51px;font-size: 18px;line-height: 1.22;font-weight: 900;
-letter-spacing: 1.6px;text-transform: uppercase;font-family: "Lexend Deca", sans-serif;display: inline-block;vertical-align: middle;text-align: center;
+.newPopupBoxSecSearch input[type="submit"] {background-color: #00C2FF;font-family: 'Kallisto';border: 1px solid #00C2FF;color: #1F1F1F;padding: 11px 51px;font-size: 18px;line-height: 1.22;font-weight: 900;
+letter-spacing: 1.6px;text-transform: uppercase;display: inline-block;vertical-align: middle;text-align: center;
 box-shadow: 6px 6px 0px 0px rgba(31,31,31,1);-webkit-box-shadow: 6px 6px 0px 0px rgba(31,31,31,1);-moz-box-shadow: 6px 6px 0px 0px rgba(31,31,31,1);
 cursor: pointer;transition: all 0.3s linear;}
-.newPopupBoxSecSearch input[type="submit"]:hover {background-color: #1F1F1F;border-color: #1F1F1F;box-shadow: 2px 2px 0px 0px #929292;-webkit-box-shadow: 2px 2px 0px 0px #929292;
+.newPopupBoxSecSearch input[type="submit"]:hover {background-color: #1F1F1F;font-family: 'Kallisto';color: #FFFFFF;border-color: #1F1F1F;box-shadow: 2px 2px 0px 0px #929292;-webkit-box-shadow: 2px 2px 0px 0px #929292;
 -moz-box-shadow: 8px 8px 0px 0px #00C2FF;}
 .shape-s { position: absolute;bottom: 0;height: auto;z-index: 1;right: 0;line-height: 0;}
 .shape-s svg {width: 100%;height: auto;}

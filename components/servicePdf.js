@@ -135,7 +135,7 @@ export default function ServicePDFDownloadPopup(props){
               
             <div className="hs_submit hs-submit">
                 <div className="actions">
-                    <input type="submit" onClick={submitForm} className="hs-button primary large" value="Kallisto" />
+                    <input type="submit" onClick={submitForm} className="hs-button primary large" value="Submit" />
                 </div>
             </div>
             </form>
