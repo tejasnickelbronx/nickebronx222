@@ -386,7 +386,7 @@ export default function Home({pagefields, testisection,portfolioitems}) {
             <NewsLetterPop />
             )}
         </Box> 
-      </Modal>  */}
+      </Modal>*/}
     </div>
   )
 }
