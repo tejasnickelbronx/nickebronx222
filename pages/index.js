@@ -375,7 +375,7 @@ export default function Home({pagefields, testisection,portfolioitems}) {
   
   
       <SiteFooter className="footercls"/>
-     <Modal
+     {/* <Modal
         open={open}
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
@@ -386,7 +386,7 @@ export default function Home({pagefields, testisection,portfolioitems}) {
             <NewsLetterPop />
             )}
         </Box> 
-      </Modal>
+      </Modal> */}
     </div>
   )
 }
