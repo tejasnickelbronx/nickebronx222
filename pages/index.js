@@ -382,9 +382,9 @@ export default function Home({pagefields, testisection,portfolioitems}) {
         aria-describedby="modal-modal-description">  
         <Box sx={style}>
           <a className='teampopclose' onClick={handleClose}></a>
-          {open && (
-            <!--<NewsLetterPop />-->
-            )}
+          <!--{open && (
+            <NewsLetterPop />
+            )}-->
         </Box>  
       </Modal> 
     </div>
