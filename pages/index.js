@@ -383,7 +383,7 @@ export default function Home({pagefields, testisection,portfolioitems}) {
         <Box sx={style}>
           <a className='teampopclose' onClick={handleClose}></a>
           {open && (
-            <NewsLetterPop />
+            <!--<NewsLetterPop />-->
             )}
         </Box>  
       </Modal> 
