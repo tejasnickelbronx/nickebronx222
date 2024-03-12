@@ -82,7 +82,8 @@ export default function Home({pagefields, testisection,portfolioitems}) {
    useScript('https://code.jquery.com/jquery-3.7.0.min.js');   
    
    useScript('./custominit.js');
-   useScript('./newletterinit.js');
+  
+   <!--useScript('./newletterinit.js');-->
    
   
    const recordcount = allportfolioarr.length/5;
