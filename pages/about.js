@@ -64,7 +64,7 @@ export default function About({allteams,aboutfields, alltestiitems}) {
             
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" async="true"/>
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" async="true"/>
-            
+        
         </Head>
         <SiteHeader className="headercls"/>
         
