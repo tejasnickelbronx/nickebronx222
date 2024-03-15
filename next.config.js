@@ -13,7 +13,16 @@ const nextConfig = {
       ]
 
   },
-  transpilePackages: ['gsap'],
+  	transpilePackages: ['gsap'],
+	async redirects() {
+		return [
+		  {
+			source: '/portfolio',
+			destination: '/portfolios',
+			permanent: true,
+		  },
+		]
+	  }
   
 }
 
