@@ -375,18 +375,18 @@ export default function Home({pagefields, testisection,portfolioitems}) {
   
   
       <SiteFooter className="footercls"/>
-      <Modal
+     {/* <Modal
         open={open}
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description">  
         <Box sx={style}>
           <a className='teampopclose' onClick={handleClose}></a>
-          {open && (
+         {open && (
             <NewsLetterPop />
             )}
-        </Box>  
-      </Modal> 
+        </Box> 
+      </Modal> */}
     </div>
   )
 }
