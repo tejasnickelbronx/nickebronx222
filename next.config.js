@@ -344,7 +344,7 @@ const nextConfig = {
 		},
 		{
 		source: '/demand-and-lead-gen',
-		destination: '/sub-service/lead-generation.',
+		destination: '/sub-service/lead-generation',
 		permanent: true,
 		},
 		{
@@ -352,6 +352,49 @@ const nextConfig = {
 		destination: '/contact',
 		permanent: true,
 		},
+
+		
+		{
+		source: '/portfolio-cadre',
+		destination: '/portfolios',
+		permanent: true,
+		},
+		{
+		source: '/portfolio-phin',
+		destination: '/portfolios',
+		permanent: true,
+		},
+		{
+		source: '/portfolio-doyen-consulting',
+		destination: '/portfolios',
+		permanent: true,
+		},
+		{
+		source: '/portfolio-arkra',
+		destination: '/portfolios',
+		permanent: true,
+		},
+		{
+		source: '/portfolio-arthur-brooks',
+		destination: '/portfolios',
+		permanent: true,
+		},
+		{
+		source: '/bam-hospitality',
+		destination: '/portfolios',
+		permanent: true,
+		},
+		{
+		source: '/blog/get-noticed-on-linkedin-15-prompts-to-elevate-your-personal-brand',
+		destination: '/blogs',
+		permanent: true,
+		},
+		{
+		source: '/blog/unleashing-the-power-of-social-media-expert-tips-and-tricks-for-success',
+		destination: '/blogs',
+		permanent: true,
+		},
+
 		]
 	  }
   
