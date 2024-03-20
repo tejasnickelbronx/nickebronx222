@@ -30,7 +30,7 @@ export default function Document() {
               y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
           })(window, document, "clarity", "script", "ld3c0259be");`,
           }}
-        /> 
+        />
       </Head >
       <body>
       <noscript
