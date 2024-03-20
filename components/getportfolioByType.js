@@ -128,14 +128,7 @@ export function getPortfolioLongPage(singlePortfolio){
           <div className="functionality-image w-full">
               <img src={websitedesign.bigImage.sourceUrl} height={600} width={400} alt={headertitle} />
           </div>
-          { takeaways.sideImage1 !== null 
-            ?  <div className="functionality-image"><img src={takeaways.sideImage1.sourceUrl} height={600} width={400} alt={headertitle} /></div>
-            : null
-          }
-          { takeaways.sideImage2 !== null 
-            ?  <div className="functionality-image"><img src={takeaways.sideImage2.sourceUrl} height={600} width={400} alt={headertitle} /></div>
-            : null
-          }
+          
         </div>
       </div>
     </section>
