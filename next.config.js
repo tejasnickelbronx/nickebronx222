@@ -356,12 +356,12 @@ const nextConfig = {
 		
 		{
 		source: '/portfolio-cadre',
-		destination: '/portfolios',
+		destination: '/portfolios/cadre/1295',
 		permanent: true,
 		},
 		{
 		source: '/portfolio-phin',
-		destination: '/portfolios',
+		destination: '/phin-security/1287',
 		permanent: true,
 		},
 		{
@@ -376,7 +376,7 @@ const nextConfig = {
 		},
 		{
 		source: '/portfolio-arthur-brooks',
-		destination: '/portfolios',
+		destination: '/portfolios/arthur-brooks/1279',
 		permanent: true,
 		},
 		{
