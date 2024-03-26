@@ -361,7 +361,7 @@ const nextConfig = {
 		},
 		{
 		source: '/portfolio-phin',
-		destination: '/phin-security/1287',
+		destination: '/portfolios/phin-security/1287',
 		permanent: true,
 		},
 		{
