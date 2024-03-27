@@ -175,7 +175,7 @@ export default function SiteFooter({className, globalsettings}){
                 <div className="menu-item">
                   <ul className="menu">
                     <li>
-                      <Link href="/contact">Lets's work together</Link>
+                      <Link href="/contact">Let's work together</Link>
                       <a href="/contact" className="menu-btn">
                         Get Started
                       </a>
