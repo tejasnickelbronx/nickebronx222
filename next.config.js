@@ -394,12 +394,7 @@ const nextConfig = {
 		destination: '/blogs',
 		permanent: true,
 		},
-		{
-		source: '/e3t/Ctc/RI+113/cZNwq04/VVVjGl3FPqXWW1C0wnS4n0DZ3W46ZLVZ59LRKZN1xVmYT3lYMRW69sMD-6lZ3pdVGQLhn6tJ4GBW1N5qXh1Y6h87N6Y98yl8ZCmnW5pPT-q76VWk_W7-GZyr772R88W3BvvNv4Hj6kZW2Wz5Jx2QLBwDVtxqg89j2RcCW3Kp_886MGGqbW2KRwKW6lPSdRW4yy8xf1GQYgRW186xNP3JhW9WW1LsQP44SyBjMN4PxBkyZFQwGW5R2Pz23_QgYgW7qd-gs8N2x1tW3mWdYZ6_ffX3W40gsYK5nQf9vW8BT9vf5r6tz-N5nWg83JGySXf930Mfl04',
-		destination: 'https://vimeo.com/914580179/4400dd7ff9',
-		permanent: false,
-       		basePath: false
-		},	
+			
 
 		]
 	  }
